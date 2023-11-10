@@ -1,0 +1,1 @@
+/home/mbahng/.bashrc
