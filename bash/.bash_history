@@ -1,103 +1,3 @@
-ls
-cd kbd/consolefonts/
-ls
-showconsolefont
-cd /etc/
-vim vconsole.conf 
-wiki
-df
-vim vconsole.conf 
-sudo setfont iso01-12x22.psfu.gz
-ls
-history
-sudo setfont iso05.08.gz
-sudo setfont iso01-12x22.psfu.gz
-sudo setfont iso02-12x22.psfu.gz
-fc-list
-setfont lat2-16 -m 8859-2
-sudo setfont lat2-16 -m 8859-2
-htop
-settings
-help
-cd /etc/vconsole.conf 
-cd /etc
-vim vconsole.conf 
-bluetoothctl
-htop
-htop
-nvidia-smi
-nvidia-smi
-nvidia-smi
-htop
-sudo pacman -S nvtop
-htop
-nvtop
-nvtop
-pipewire
-pamixer -i 5
-pactl
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-neofetch
-xrandr
-vim .bashrc
-ls
-xrandr
-xrandr --output "HDMI-1" 
-xrandr --help
-man xrandr
-man
-man grep
-sudo pacman -S man-db
-snap
-wiki
-yay -S snapd
-wiki
-picom
-pacman -S caprine
-sudo pacman -S caprine
-yay -S skypeforlinux-stable-bin
-skype
-skypeforlinux
-yay -S snapd
-n
-pacman -Qdt
-simplenote
-cd .config
-ls
-cd /etc/
-ls
-cd xdg/
-ls
-vim picom.conf
-wiki
-shutdown now
-xrandr
-arandr
-sudo pacman -S cmatrix
-cmatrix
-bluetoothctl
-arandr
-arandr
-bluetoothctl
-bluetoothctl
-ls
-cd Downloads/n
-cd Downloads/
-ls
-mv HW4\ template.zip ~/cls/Fa23/ECE685/HW4
-cd ~/cls/Fa23/ECE685
-cd HW4
-ls
-unzip HW4\ template.zip 
-history
-htop
-nvtop
-cmatrix
 bluetoothctl
 wiki
 conda activate
@@ -498,3 +398,200 @@ ls
 shutdown now
 arandr
 r
+sudo pacman -S gamemode
+cd 
+ls
+cd Config
+ls
+ls -l
+ls -al
+cd ..
+rm -r Config
+rm -rf Config
+ls
+mkdir dotfiles
+ls
+cd ..
+cd
+rm dotfiles/
+rmdir dotfiles/
+ls
+git clone git@github.com:mbahng/dotfiles.git
+ls
+cd dotfiles/
+ls
+rm lutris
+rm nemo
+rm neofetch nitrogen nvtop picom qtile 
+ls
+git add --all
+git commit -m "delete all symlinks"
+git push
+ls -a
+rm .bashrc  .screenlayout .vimrc 
+git commit -m "delete all symlinks"
+git add --all
+git commit -m "delete all symlinks"
+git push
+clear
+ls
+mkdir bash
+ls
+ls
+ls
+cd bash
+ls
+ls -a
+ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
+vim .bashrc 
+ls -a
+ls
+ls -a
+ln -s ~/dotfiles/bash/.bash_history ~/.bash_history
+ln -s ~/dotfiles/bash/.bash_logout ~/.bash_logout
+vim .bash_logout
+vim .bash_history 
+ls -a
+ln -s ~/dotfiles/bash/.bash_profile ~/.bash_profile
+ls
+ls -a
+cd ..
+git add --all
+git commit -m "added bash config files"
+git push
+cd bash/
+ls -a
+cd 
+vim .bashrc~
+cd dotfiles/
+ls
+cd bash
+ls
+ls -a
+vim .bashrc
+vim .bash_profile 
+vim .bashrc
+vim .bashrc
+vim .bash_history 
+ls
+ls -a
+mv .bashrc ~/dotfiles/bash/.bashrc
+ls -a
+ls
+ls -al
+vim .bash
+vim .bashrc
+ls
+vim .bashrc
+ls -a
+ ~/dotfiles/bash/.bash_history
+lsdf
+ls -a
+mv .bash_history ~/dotfiles/bash/.bash_history
+mv .bash_profile ~/dotfiles/bash/.bash_profile
+ls -a
+mv .bash_profile ~/dotfiles/bash/.bash_profile
+ls -a
+cd
+cd dotfiles/
+cd bash
+ls
+vim .bash_history 
+vim .bashrc
+ls
+cd
+cd dotfiles/bash/
+vim .bash_history
+ln -s ~/dotfiles/bash/.bash_profile ~/.bash_profile
+git add --all
+git commit -m "added bash config files"
+git push
+cd bash/
+cd 
+vim .bashrc~
+cd dotfiles/
+cd bash
+vim .bashrc
+vim .bash_profile 
+vim .bashrc
+vim .bashrc
+vim .bash_history 
+mv .bashrc ~/dotfiles/bash/.bashrc
+vim .bash
+vim .bashrc
+vim .bashrc
+ ~/dotfiles/bash/.bash_history
+lsdf
+mv .bash_history ~/dotfiles/bash/.bash_history
+mv .bash_profile ~/dotfiles/bash/.bash_profile
+mv .bash_profile ~/dotfiles/bash/.bash_profile
+cd
+cd dotfiles/
+cd bash
+vim .bash_history 
+vim .bashrc
+cd
+cd dotfiles/bash/
+vim .bash_history
+vim dotfiles/bash/.bash_history
+vim .git
+cd .vscode/
+cd cli
+vim argv.json 
+cd extensions/
+cd .config 
+cd nemo
+cd picom
+mv picom/ ~/dotfiles/
+mv qtile ~/dotfiles
+ls 
+mv neofetch/ ~/dotfiles
+mv nemo ~/dotfiles
+mv nitrogen/ ~/dotfiles/
+mv lutris/ ~/dotfiles
+mv htop ~/dotfiles
+mv spotify/
+cd spotify/
+vim prefs
+mv nvtop ~/dotfiles
+vim zoom.conf
+cd Zulip/
+vim Preferences 
+:q
+cd .config
+cd autostart/
+ls -a
+vim .viminfo
+cd .vim
+cd autoload/
+ls
+vim plug.vim 
+cd ..
+mv .vimrc ~/dotfiles/vim
+ls -al
+vim
+vim .vimrc
+cd
+vim .bashrc
+cd
+cd dotfiles/bash/
+vim .bash_history
+cd dotfiles/
+cd bash
+vim .bash_history 
+cd .
+cd ..
+ln -s ~/dotfiles/picom ~/.config/picom
+ln -s ~/dotfiles/qtile ~/.config/qtile
+ln -s ~/dotfiles/neofetch/ ~/.config/neofetch
+ln -s ~/dotfiles/nemo/ ~/.config/nemo
+ln -s ~/dotfiles/nitrogen/ ~/.config/nitrogen
+ln -s ~/dotfiles/lutris/ ~/.config/lutris
+ln -s ~/dotfiles/htop/ ~/.config/htop
+ln -s ~/dotfiles/nvtop/ ~/.config/nvtop
+mkdir vim
+cd vim
+ls -a
+ln -s .vimrc ~/.vimrc
+ls
+ls -al

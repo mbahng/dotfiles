@@ -17,3 +17,10 @@ export PS1="\e[1;36m\w >\e[0m"              # just directory name with cyan
 
 # add /bin/custom_scripts to PATH
 export PATH="/bin/custom_scripts:$PATH"
+
+# history size 
+HISTSIZE=3000 
+HISTFILESIZE=5000
+
+# do not store duplicate commands
+export HISTCONTROL=ignoreboth:erasedups
