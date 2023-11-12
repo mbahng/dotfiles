@@ -595,3 +595,49 @@ ls -a
 ln -s .vimrc ~/.vimrc
 ls
 ls -al
+ln -s ~/dotfiles/picom ~/.config/picom
+ln -s ~/dotfiles/qtile ~/.config/qtile
+ln -s ~/dotfiles/neofetch/ ~/.config/neofetch
+ln -s ~/dotfiles/nemo/ ~/.config/nemo
+ln -s ~/dotfiles/nitrogen/ ~/.config/nitrogen
+ln -s ~/dotfiles/lutris/ ~/.config/lutris
+ln -s ~/dotfiles/htop/ ~/.config/htop
+ln -s ~/dotfiles/nvtop/ ~/.config/nvtop
+mkdir vim
+cd vim
+ln -s .vimrc ~/.vimrc
+ls -al
+cd dotfiles/
+cd vim/
+vim .vimrc
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+git add --all
+git commit -m "more config files" 
+git push
+ln -s ~/dotfiles/.xprofile ~/.xprofile
+ls -a
+ln -s ~/dotfiles/.screenlayout/ ~/.screenlayout
+cd neofetch/
+vim config.conf 
+neofetch
+cd ..
+cd bash
+ls
+vim .bashrc
+cd vim
+ln -s .vimrc ~/.vimrc
+ls -al
+ls 
+rm .vimrc
+vim .vimrc
+vim .xprofile 
+vim .xsession-errors
+vim .yarnrc
+mv .xprofile ~/dotfiles/
+vim .Xauthority 
+mv .screenlayout/
+mv .screenlayout/ ~/dotfiles
+ls -a
+cd .ssh
+ls
+vim config
