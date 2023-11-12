@@ -62,11 +62,15 @@ Now you also probably want to configure your bash terminal. This can be done thr
 
 ## Additional Packages & Setup 
 
-While you on this just download `htop`, `tree`, `nvtop`. 
+While you on this just download `htop`, `tree`, `nvtop`, `cmatrix`, `pactl` (to control audio),  
 
-### Media 
-PDF Viewer, Image viewer, video player 
+### Media
 
+To me, the most important traits of these programs is that it is lightweight, fast, good keyboard shortcuts, and is aesthetic.  
+  1) PDF Viewer: zathura (nice CLI like Vim, good with vimtex) 
+  2) Image Viewer: feh (may try out qimgv)  
+  3) Video Player: mpv 
+  4) Screenshot Tool: 
 
 ### Browser 
 You can download whatever, but my preferences in order are: Nightly, Firefox, Brave, Chrome, Edge. 
@@ -85,7 +89,7 @@ The next thing to do is to install Python, which you can do using yay or apt. It
 
 
 ### Julia 
-
+This can be easily done in with the default package manager (e.g. yay for Arch). 
 
 
 ### C++ 
@@ -111,7 +115,7 @@ Spotify does the job for me.
 
 ### Gaming 
 Lutris with Overwatch, and make sure you can connect it to the GPU driver. Additional gaming software packages would be good.
-
+https://www.reddit.com/r/wine_gaming/comments/bkvhdx/play_overwatch_on_archlinux_with_3_steps/
 
 ### Virtual Machines
 

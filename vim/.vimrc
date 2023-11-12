@@ -13,6 +13,7 @@ set ignorecase
 set textwidth=0 " previously set to 100 
 set shiftwidth=4
 set linebreak 
+set relativenumber
 
 " restore cursor to last position in file:
 autocmd BufReadPost *
@@ -103,5 +104,4 @@ inoremap <silent><expr> <Tab>
 set termguicolors
 colo gruvbox
 
-inoremap <c-F1> <Esc>:NERDTreeToggle<cr>
 nnoremap <c-x> <Esc>:NERDTreeToggle<cr>

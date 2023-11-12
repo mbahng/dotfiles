@@ -653,3 +653,152 @@ ls
 cd dotfiles/
 vim README.md 
 wiki
+cd dotfiles/
+ls
+vim README.md 
+git add --all 
+git commit -m "neofetch updated and README started" 
+nvtop
+cd dotfiles/
+vim README.md 
+git add --all
+git commit -m "updated readme"
+git push
+history
+mpv
+meh
+feh
+qimgv
+cd ..
+cd Downloads/
+feh IMG_0849.mov 
+mpv IMG_0849.mov 
+unzip Photos.zip 
+ls
+mpv Lecture\ 15\ Part\ 1.mp4 
+ssh tarokhlab-02
+meh
+feh
+qimgv
+cd Downloads/
+feh IMG_0849.mov 
+mpv IMG_0849.mov 
+unzip Photos.zip 
+mpv Lecture\ 15\ Part\ 1.mp4 
+cd Research/
+ls 
+git clone git@github.com:MatthiasSachs/JuLang.jl.git
+cd JuLang.jl/
+vim .
+g++
+g++ --version
+clang --version
+cd ..
+touch test.cpp
+vim test.
+:q
+vim test.cpp
+g++ test.cpp 
+./a.out 
+git clone git@github.com:mbahng/CCover.git
+ls
+cmatrix
+cmatrix
+pactl set-sink-volume @DEFAULT_SINK@ +5%
+pactl set-sink-volume @DEFAULT_SINK@ -5%
+cd dotfiles/
+ls
+wiki
+cd dotfiles/df
+pactl set-sink-volume @DEFAULT_SINK@ -5%
+pactl set-sink-volume @DEFAULT_SINK@ -5%
+cd dotfiles/
+cd picom/
+ls
+vim picom.conf 
+conda env list
+cd dotfiles/
+ls
+cd bash
+vim .bashrc
+cd dotfiles/bash/
+vim .bashrc
+vim .bashrc
+cd Class/
+ls
+escrotum
+shutter
+sudo pacman -S flameshot
+flameshot
+ls
+ssh tarokhlab-02
+shutter
+sudo pacman -S flameshot
+flameshot
+ssh tarokhlab-02
+cd config/vim
+cd dotfiles/
+cd vim
+vim .vimrc
+cd 
+cd Research/CCover/
+cd ..
+cd ParticleCover/
+ls
+vim .
+:q
+cd Research/
+ls
+vim test.
+vim test.cpp 
+cd Research/ParticleCover/
+ls
+vim .
+cd dotfiles/bash/
+vim .bashrc
+vim .bashrc
+cd Class/
+escrotum
+shutter
+sudo pacman -S flameshot
+flameshot
+ssh tarokhlab-02
+cd Research/
+mkdir src
+cd sr
+touch data_structs.cpp
+cd ..
+cd CCover/
+ls
+mv data_structs.cpp src/
+vim .
+vim .vimrc
+cd Research/
+ls
+cd Cookbook/
+vim .
+vim .
+vim practice.py
+vim practice.py 
+python practice.py 
+rm practice.py 
+ls
+vim .
+cd Research/
+cd Cookbook/
+ls 
+cd MLP
+ls
+cp Pipeline.py vim_playground.py
+vim vim_playground.py 
+shutdown now
+vim vim_playground.py 
+shutdown now
+arandr
+cd dotfiles/
+cd picom/
+ls
+vim picom.conf 
+cd dotfiles/picom/
+ls
+vim picom.conf 
