@@ -17,7 +17,7 @@ I've only had experience with Ubuntu and Arch, but others include PopOS, Kali Li
 
 ### Arch Linux
 
-For my Arch installation I used the Sep 1 ISO version and followed https://www.youtube.com/watch?v=8oCHxzJky4U)). 
+For my Arch installation I used the Sep 1 ISO version and followed https://www.youtube.com/watch?v=8oCHxzJky4U. 
 
 ### Ubuntu 22.04
 
@@ -35,48 +35,75 @@ In this context, the DE and WM are the same thing. If the installation package d
 
 ### Audio 
 
-
+There are mainly 2 sound software drivers: pulseAudio and pipewire. I've had a few problems with pulseAudio on Ubuntu so I currently use pipewire for Arch.   
 
 ### Bluetooth 
 
-
+Install blueman for audio. Watch this video: https://www.youtube.com/~D_RdJjCU&t=298s for bluetooth on Arch. Should be straightforward to connect. 
 
 ### Monitor Control 
 
-
+You should install xrandr and arandr, which provide both graphical and command line interfaces to switch monitor configurations. 
 
 ### File Manager
 
 Note that this is not the same thing as a file system. This includes nemo, nautilus. 
 
 ### Additional Package Managers 
-
-For Arch, yay is very important to download from the AUR and flatpak/snapd are good for Ubuntu. 
+All the packages that you need should be available within the default package manager (apt, pacman, etc.). For Arch, yay is very important to download from the AUR and flatpak/snapd are good for Ubuntu. Also follow the video above to get the top 10 fastest routes for downloading, and allow parallel downloading. 
 
 
 ### SSH, Bash, and Git 
+You can first download git but to git clone with ssh, you need to set up some default configuration files.  
+
+You first make a key using ssh-keygen and just accept defaults. Now you want to activate the ssh-agent, so you do the eval "$(ssh-agent -s)" and then you do ssh-add ~/.ssh/id_ed2551 and then you do ssh-add ~/.ssh/id_ed25519. You paste the public key on github and whatever other organization sites you may need to ssh into. Then you can edit the ~/.ssh/config file to make things a bit easier. 
+
+Now you also probably want to configure your bash terminal. This can be done through the .bashrc file, where you can change the color and prompt for your terminal. It is also needed for permanently adding stuff to the $PATH. 
 
 ## Additional Packages & Setup 
+
+While you on this just download `htop`, `tree`, `nvtop`. 
 
 ### Media 
 PDF Viewer, Image viewer, video player 
 
 
 ### Browser 
-
+You can download whatever, but my preferences in order are: Nightly, Firefox, Brave, Chrome, Edge. 
 
 ### Vim/Neovim & Vimtex 
+You should have vim installed already. Now you install vim-plug by going on the github page and running their commands. Then you take the config file and run everything. You may have problems installing coc and vimtex. coc you need to install nodejs. For vimtex you need to make sure zathura (plus the other plugins that helps it render pdfs, epub, etc) are installed, and finally make sure that when you run. 
+
+### VScode
+
+First you want to install VScode (for Arch make sure to install the proprietary version by Microsoft since for the Arch one the ssh doesn't work). Then if you sign in you should have all your configurations and extensions loaded, which is good. 
 
 
-### Program Development
+### Python & Conda 
 
-Install VScode, with Python, set up Conda, then Julia.
+The next thing to do is to install Python, which you can do using yay or apt. It's not hard. Now I like to use the conda package manager since I do a lot of machine learning. I install miniconda3 from the website (prefer to do it over the apt or yay repository, and check where it is saved (could be in /opt/miniconda3 or /mbahng/miniconda3 or ~/.conda). You want your base environment to be minimial and almost never used. I personally don't install anything on there. I create one environment called `torch-base` which contains just a working installation of PyTorch. You must be very careful to check these dependencies (as of Nov 2023, PyTorch completely supports up to Python 3.10, though Python 3.12 is out). You want this env to be the rock solid deep learning package you can always fall back to or copy in case other ones break (which has happened to me quite often). The environment yaml and txt files are in this repo.  
 
 
-### Connect to GPU  Driver
+### Julia 
+
+
+
+### C++ 
+
+
+### JavaScript 
+
+
+### Flutter & Dart 
+
+
+### Connect to Nvidia GPU  Driver
+
+Then run nvidia-smi to see if it's working. Then install pytorch and see if it detects cuda.
+https://github.com/~rnel-parameter.
 
 ### Work & Social Applications 
-
+I'll list some that I use: Zulip, Slack, Caprine (Facebook Messenger), Bluebubbles (iMessage), Whatsapp, Simplenote, Zoom, Skype
 
 ### Music Players 
 
@@ -92,8 +119,20 @@ Install VirtualBox
 
 ### Custom Scripts 
 
+'mkdir /bin/custom_scripts' and put it into PATH in ~/.bashrc. 
+Get the wiki, vimtex, and vstex commands all ready.
+
+### Organizing Dotfiles  
+
+Set up configuration folders with symbolic links and update it with the stuff in this repository.
 
 
-### 
+### Startup Programs
+The ~./xprofile file runs everything when X loads up. 
 
-Set up configuration folders with symbolic links and update it with the stuff in this repository. 
+
+## Ricing 
+
+### Conky 
+
+

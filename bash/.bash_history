@@ -641,3 +641,15 @@ ls -a
 cd .ssh
 ls
 vim config
+wiki
+cd dotfiles/
+vim README.md 
+git status
+git add --all 
+git commit -m "neofetch updated and README started" 
+git push
+nvtop
+ls
+cd dotfiles/
+vim README.md 
+wiki
