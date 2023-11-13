@@ -802,3 +802,168 @@ vim picom.conf
 cd dotfiles/picom/
 ls
 vim picom.conf 
+cd Cookbook/
+vim practice.py
+vim practice.py 
+python practice.py 
+rm practice.py 
+cd Cookbook/
+ls 
+cd MLP
+cp Pipeline.py vim_playground.py
+vim vim_playground.py 
+shutdown now
+vim vim_playground.py 
+shutdown now
+arandr
+cd picom/
+vim picom.conf 
+cd dotfiles/picom/
+vim picom.conf 
+cd Research/
+cd CCover/ls
+cd CCover/
+cd
+wiki
+cd Research/CCover/
+cd dotfiles/
+cd vim
+git status
+git add --all 
+git commit -m "picom fade speed changed" 
+git push
+sudo pacman -S neovim
+nvim
+ls -a
+cd .nv
+cd ..
+cd .config
+mkdir nvim
+cd 
+cd .config/nvim
+ls
+vim .
+vim
+echo SXDG_CONFIG_HOME
+echo $XDG_CONFIG_HOME
+vim picom.conf 
+cd dotfiles/picom/
+vim picom.conf 
+cd Research/
+vim test.cpp
+nvim test.cpp
+cd 
+cd .config/nv
+cd .config/nvim
+ls
+nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+nvim .
+ssh taroklab-02
+ssh tarokhlab-02
+nitrogen
+cd dotfiles/
+ls
+cd picom/
+vim picom.conf 
+cd Research/
+cd ParticleCover/
+vim .
+nvim .
+cd Research/
+cls
+ls
+cd Cookbook/
+git status
+nvim .
+git status
+cd Research/ParticleCover/
+cd Py
+cd python/
+ls
+cd ..
+nvim .
+clear
+clear
+cd .config/nvim
+ls
+nvim .
+cd .config/nvim
+cd Research/
+cd Cookbook/
+ls
+nvim .
+cd Research/Cookbook/
+nvim .
+cd Research/Cookbook/
+ls
+nvim .
+cd Coo
+cd Research/
+ls
+cd Cookbook/
+nvim .
+cd Coo
+cd Research/
+cd Cookbook/
+cd .config/
+mv nvim ~/dotfiles/
+history
+clear
+cd ~/Research/ParticleCover/
+ls
+nvim .
+vimtex sup
+cd dotfiles/
+ls
+ln -s ~/dotfiles/nvim ~/.config/nvim
+cd dotfiles/
+ls
+cd vim
+vim .vimrc
+vimtex sup
+cd Coo
+cd Research/
+cd Cookbook/
+nvim .
+cd Notes/
+cd /bin/custom_scripts/
+ls
+vimtex sup
+sudo nvim vimtex
+echo SXDG_CONFIG_HOME
+echo $XDG_CONFIG_HOME
+cd .config
+cd nvim
+ls
+vim .
+fzf
+nvim .
+vim .
+fzf
+cd dotfiles/
+cdnvim
+cd nvim
+ls
+nvim .
+vimtex sup
+cd dotfiles/vim/
+nvim .vimrc
+zathura
+vimtex sup
+vimtex sup
+cd Research/
+cd ParticleCover/
+ls
+nvim .
+ls
+nvim .
+sudo pacman -S nodejs
+npm
+nvm
+npm
+npm
+which node
+cd /usr/bin
+node
+sudo pacman -S npm
