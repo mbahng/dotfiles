@@ -1752,3 +1752,25 @@ cd ..
 cd picom/
 nvim picom.conf 
 htop
+cd ..
+cd picom/
+nvim picom.conf 
+htop
+cd dotfiles/
+ls
+nvim .gitignore
+clear
+git status
+git add --all
+git commit -m "got rid of shared memory leak problem due to rounded-corners in picom"
+git push
+htop
+bluetoothctl
+htop
+nvtop
+shutdown now
+desk
+free -m
+cd dotfiles/
+nvim .
+htop
