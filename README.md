@@ -137,6 +137,9 @@ The ~./xprofile file runs everything when X loads up.
 
 ## Ricing 
 
+### Qtile & Picom 
+
+WARNING: Do not change under section `Corners`, the variable `corner-radius` to anything other than 0 (or whatever the default is). Doing this led to extremely large memory leaks in the shared RAM in my comptuer, which led to a huge headache solving it.  
 ### Conky 
 
 

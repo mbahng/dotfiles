@@ -156,15 +156,6 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ), 
-                # widget.WifiIcon(
-                #    interface = "wlan0", 
-                #    wifi_arc = 100, 
-                #    update_interval = 1
-                #),
-                # widget.CheckUpdates(
-                #     distro = "Arch", 
-                #     update_interval = 10
-                # ),
                 # widget.CPU(),
                 # widget.Volume(
                 #    fmt= "{}",
@@ -173,19 +164,40 @@ screens = [
                     # foreground=catppuccin["black"],
                     # background=catppuccin["sky"],
                    # ),
-
-                # widget.Bluetooth("000000"), 
-                widget.Battery(), 
-                widget.BatteryIcon(
-                    scale = 1, 
-                    update_interval = 3 
+                widget.Bluetooth(
+                    background = "#00ff00", 
+                    foreground = "#000000", 
+                    padding = 8, 
                 ), 
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f", background = "#168756"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                widget.Wlan(
+                    background = "#ffff00", 
+                    foreground = "#000000", 
+                    padding = 8, 
+                ), 
+                widget.Volume(
+                    background = "#ffa500", 
+                    foreground = "#000000", 
+                    fmt = "Volume {}",
+                    padding = 8,
+                    emoji = False, 
+                ), 
+                widget.Battery(
+                    background = "#ff0000", 
+                    foreground = "#000000",
+                    charge_char = "", 
+                    discharge_char = "", 
+                    empty_char = "",
+                    full_char = "0", 
+                    fmt = "Battery {}",  
+                    padding = 8, 
+                    update_interval = 60
+                ), 
+                widget.Clock(
+                    background = "#800080", 
+                    foreground = "#000000",
+                    format="[%m/%d/%Y] - [%H:%M]", 
+                    
+                ),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders

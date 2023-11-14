@@ -1682,3 +1682,73 @@ shutdown now
 desk
 htop
 yay -S slack-desktop
+cd dotfiles/
+git status
+git add --all
+git commit -m "same"
+git push
+bluetoothctl
+htop
+shutdown now
+free -m
+cd dotfiles/
+git add --all
+git commit -m "checkpoint for when shared RAM doesn't explode"
+git push
+cd qtile/
+mv config.py config2.py
+my config3.py config.py
+mv config3.py config.py
+ls
+nvim .
+iwlib
+pacman -S iwlib
+sudo pacman -S iwlib
+sudo pacman -S python-iwlib
+nvim .
+desk
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py
+nvim
+conda
+iwlib
+python-iwlib
+ls
+cd dotfiles/
+git status
+touch .gitignore 
+nvim .
+cd dotfiles/
+ls
+cd qtile/
+nvim .
+htop
+cd dotfiles/
+ls
+cd picom
+cd ..
+code .
+desk
+htop
+cd qtile/
+nvim .
+htop
+free -m
+cd ..
+cd 
+cd dotfiles/
+ls
+nvim README.md 
+git status
+htop
+cd dotfiles/
+cd qtile/
+ls
+nvim config
+nvim config.py
+cd ..
+cd picom/
+nvim picom.conf 
+htop
