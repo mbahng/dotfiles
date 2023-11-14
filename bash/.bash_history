@@ -1679,3 +1679,6 @@ free -m
 bluetoothctl
 htop
 shutdown now
+desk
+htop
+yay -S slack-desktop

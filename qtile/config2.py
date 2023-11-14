@@ -29,11 +29,8 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-# from qtile_extras import widget 
-# from qtile_extras.widget.decorations import PowerLineDecoration
-
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "alacritty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -110,12 +107,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(
-        border_focus = "#36c3d6",
-        border_normal = "#082e70", 
-        margin=5, 
-        border_width = 2
-    ),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -139,15 +131,10 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top  = bar.Bar(
+        bottom=bar.Bar(
             [
-                # The boxes that indicate the workspaces
-                widget.GroupBox(
-                    borderwidth=1, 
-                    rounded = True, 
-                    padding_x = 10, 
-                    padding_y = 8
-                ),
+                widget.CurrentLayout(),
+                widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -155,32 +142,9 @@ screens = [
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
-                ), 
-                # widget.WifiIcon(
-                #    interface = "wlan0", 
-                #    wifi_arc = 100, 
-                #    update_interval = 1
-                #),
-                # widget.CheckUpdates(
-                #     distro = "Arch", 
-                #     update_interval = 10
-                # ),
-                # widget.CPU(),
-                # widget.Volume(
-                #    fmt= "{}",
-                  #   emoji=True,
-                  #   volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-                    # foreground=catppuccin["black"],
-                    # background=catppuccin["sky"],
-                   # ),
-
-                # widget.Bluetooth("000000"), 
-                widget.Battery(), 
-                widget.BatteryIcon(
-                    scale = 1, 
-                    update_interval = 3 
-                ), 
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f", background = "#168756"),
+                ),
+                widget.TextBox("default config", name="default"),
+                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
@@ -189,7 +153,7 @@ screens = [
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["222222", "000000", "ff00ff", "000000"]  # Borders are magenta
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
