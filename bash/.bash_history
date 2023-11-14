@@ -967,3 +967,715 @@ which node
 cd /usr/bin
 node
 sudo pacman -S npm
+sudo nvim vimtex
+echo SXDG_CONFIG_HOME
+echo $XDG_CONFIG_HOME
+cd .config
+vim .
+fzf
+vim .
+fzf
+cdnvim
+cd dotfiles/
+nvim 
+vimtex sup
+df nvim
+du -sh nvim
+cd ..
+git status
+git add --all 
+git commit -m "added neovim configuration"
+git push
+cd nvim 
+ls
+cd nvim
+nvim .
+cd Research/ParticleCover/
+nvim .
+cd Research/
+ls
+cd Cookbook/
+nvim .
+cd Cookbook/
+nvim .
+cd dotfiles/
+nvim README.md 
+cd qtile/
+cd ~
+cd .config
+ls 
+cd qtile
+ls
+cd ~/dotfiles/qtile/
+alacritty
+vimtex sup
+wiki
+cd dotfiles/
+ls
+cd qtile
+nvim .
+du -sh
+df -h
+df -h
+cd Downloads/
+unzip NerdFontsSymbolsOnly.zip 
+ls
+mv NerdFontsSymbolsOnly.zip /usr/share/fonts/nerd-fonts/
+sudo mv NerdFontsSymbolsOnly.zip /usr/share/fonts/nerd-fonts/
+sudo mv NerdFontsSymbolsOnly.zip /usr/share/fonts/nerd-fonts/
+cd dotfiles/
+ls -a
+nvim .xprofile 
+cd .screenlayout/
+ls
+nvim desktop.sh 
+./laptop.sh 
+./desktop.sh 
+./desktop.sh 
+cd .config
+cd picom
+ls
+cd Media/Pictures/wallpaper/
+ls
+feh 
+feh --bg-fill ~/Media/Pictures/wallpaper/1.jpg
+htop
+cd /usr/bin
+node
+sudo pacman -S npm
+sudo nvim vimtex
+echo SXDG_CONFIG_HOME
+echo $XDG_CONFIG_HOME
+vim .
+fzf
+vim .
+fzf
+cdnvim
+nvim 
+vimtex sup
+df nvim
+du -sh nvim
+git status
+git add --all 
+git commit -m "added neovim configuration"
+git push
+cd nvim 
+cd Research/ParticleCover/
+cd Research/
+cd Cookbook/
+cd Cookbook/
+nvim README.md 
+ls 
+cd qtile
+cd ~/dotfiles/qtile/
+alacritty
+vimtex sup
+wiki
+cd qtile
+sudo pacman -S python-dbus-next
+yay -S qtile-extras
+which skype
+cd /usr/local/share
+cd .config
+cd skypeforlinux/
+cd 
+cd nvim
+nvim .
+yay -S paru
+paru nerd-font
+cd ~
+cd .local
+cd share
+cd /usr/local/share/fonts
+cd /usr/local/share/f
+cd /usr/local/share/
+cd /usr/share/
+cd fonts
+cd apple/
+pacman -S noto-fonts-emoji
+sudo pacman -S noto-fonts-emoji
+cd notol
+cd noto
+mkdir nerd-fonts
+sudo mkdir nerd-fonts
+cd nerd-fonts/
+sudo unzip NerdFontsSymbolsOnly.zip 
+vim readme.md 
+cd ..
+sudo rm -rf nerd-fonts/
+sudo pacman -S ttf-nerd-fonts-symbols
+cd TTF
+vim SymbolsNerdFont-Regular.ttf 
+cd
+cd dotfiles/
+cd qtile/
+nvim config.py
+touch autostart.sh
+ls
+nvim autostart.sh 
+cd dotfiles/picom/
+ls
+nvim picom.conf 
+wiki
+cd qtile
+cd dotfiles/
+cd qtile/
+vim .
+mv config.py config2.py
+mv ~/Downloads/config.py .
+ls
+sudo pacman -S noto-fonts noto-fonts-cjk
+nvim .
+shutdown now
+nvtop
+cd dotfiles
+ls
+cd .screenlayout/
+./desktop.sh 
+cd .screenlayout/
+./desktop.sh 
+cd dotfiles
+cd qtile/
+rm config.py
+mv config2.py config.py
+cd ..
+cd picom
+ls
+vim picom.conf 
+shutdown now
+cd /bin
+cd custom_scripts/
+ls
+sudo touch desk
+sudo touch lap
+chmod +x desk
+sudo chmod +x desk
+sudo chmod +x lap
+sudo nvim desk
+sudo nvim lap
+ping www.google.com
+cd dotfiles
+cd qtile/
+rm config.py
+mv config2.py config.py
+vim picom.conf 
+shutdown now
+cd picom
+htop
+nvim picom.conf 
+cd ..
+cd dotfiles/ls
+cd dotfiles/
+cd .screenlayout/
+./desktop.sh 
+ls
+ls -a
+cd /bin/custom_scripts/
+ls
+sudo vim desk
+cd /bin/custom_scripts/
+ls
+vim lap
+sudo vim lap 
+lap
+desk
+desktop
+cd dotfiles/.screenlayout/
+ls
+./desktop.sh 
+./desktop.sh 
+lap
+desk
+ping 127.0.0.1
+wiki
+ifconfig
+ip addr
+ip
+networkmanager
+lspci -k
+ping www.google.com
+shutdown now
+desk
+desk
+cd dotfiles/
+cd picom
+ls
+nvim picom.conf 
+desk
+cd dotfiles/
+cd qtile/
+ls
+nvim autostart.sh 
+sudo restart
+shutdown now
+nvim picom.conf 
+sudo restart
+desk
+cd qtile
+cd dotfiles/
+cd qtile/
+ls
+cd autostart.sh 
+nvim autostart.sh 
+shutdown now
+feh --bg-fill ~/Media/Pictures/wallpaper/1.jpg 
+picom --config ~/.config/picom/picom.conf 
+desk
+cd /bin/cu
+cd /bin/custom_scripts/
+ls
+sudo nvim desk
+lap
+desk
+history
+cd /bin/custom_scripts/
+ls
+sudo nvim lap 
+lap
+lap
+desk
+tcp
+cd dotfiles/
+cd qtile
+ls
+nvim config.py 
+cd qtile
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+sudo pacman -Syu
+yay -S qtile-extras
+cd qtile/
+qtile cmd-obj -o -f reload_config
+qtile cmd-obj -o cmd -f reload_config
+cd .config
+cd qtile
+ls
+nvim config.py 
+shutdown now
+cd /etc/bluetooth/
+ls
+sudo nvim main.conf
+shutdown now
+desktop
+desk
+cd dotfiles/
+ls
+cd qtile/
+nvim .
+desk
+cd dotfiles/
+cd qtile/
+ls
+nvim .
+restart now
+shutdown now
+desk
+desk
+restart now
+shutdown now
+desk
+cd dotfiles/
+nvim .
+cd picom/
+nvim picom.conf 
+cd ..
+cd qtile/
+ls
+nvim config.py 
+sudo pacman -S axmixer
+sudo pacman -S amixer
+amixer
+alsamixer
+history | grep pactl
+neofetch
+htop
+neofetch
+desk
+shutdown now
+desk
+udev
+htop
+desk
+htop
+htop
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+htop
+python
+bluetoothctl
+bluetoothctl
+clear
+cd /sys/module/zswap/
+cd parameters/
+ls
+nvim enabled 
+cd ..
+grep -r . parameters/
+lap
+desk
+nvtop
+nvim .
+nvtop
+nvim .
+cd dotfiles/
+cd qtile
+nvim config.py 
+cd ..
+pic
+pic --help
+cd picom/
+ls
+nvim picom.conf 
+nvim enabled 
+grep -r . parameters/
+lap
+desk
+nvtop
+nvtop
+cd dotfiles/
+cd qtile
+nvim config.py 
+pic
+pic --help
+cd picom/
+nvim picom.conf 
+wiki
+cd Class/
+clear
+ls 
+cd De
+cd Development/
+nvim .
+cd 
+cd Research/
+cd C
+cd Cookbook/
+cd CV
+cd CNN
+cd ..
+tree
+cd NLP/
+ls
+code .
+cd CNN
+tree
+cd NLP/
+code .
+conda activate
+conda env list
+cd dotfiles/
+ls -l
+cd ..
+cd Class/
+Fa23/
+cd Fa23/
+cd ECE685/
+cd HW4
+ls
+nvim .
+vimtex sup
+desk
+htop
+desk
+htop
+cd dotfiles/
+ls
+cd picom/
+nvim picom.conf 
+shutdown now
+cd dotfiles/
+cd picom/
+nvim picom.conf 
+shutdown now
+lap
+htop
+cd /sys
+cd class
+cd backlight
+cd intel_backlight
+ls
+cat brightness 
+cat max_brightness 
+echo 200 > brightness 
+sudo echo 200 > brightness 
+nvim brightness 
+sudo nvim brightness
+free
+htop
+swapoff -a
+sudo swapoff -a
+sudo swapon -a
+sudo swapon
+bluetoothctl
+tree
+free
+free
+udev
+cd dotfiles/
+cd bash
+ls
+ls -a
+cd .bashrc
+nvim .bashr
+nvim .bashrc
+free -m
+lap
+htop
+cd dotfiles/
+ls
+cd qtile
+nvim .
+shutdown now
+cat /proc/meminfo 
+htop
+lap
+lap
+mv Downloads/
+mv Downloads/config.py dotfiles/qtile/config3.py
+cd dotfiles/
+cd qtile/
+mv config3.py config2.py
+mv config.py config3.py
+mv config2.py config.py
+ls
+nvim config3.py
+nvim config.py
+htop
+shutdown now
+firefox
+ls
+sudo swapoff -a
+htop
+nvidia-smi
+free -m
+htop
+lap
+neofetch
+cat /proc/meminfo 
+history
+history | grep pacman
+history | grep yay
+history | grep paru
+wiki
+sudo pacman -S Rncs noto-fonts-emoji
+sudo pacman -Rncs noto-fonts-emoji
+yay -R qtile-extras
+sudo pacman -Rncs ttf-nerd-fonts-symbols
+sudo pacman -Rncs noto-fonts noto-fonts -cjk
+sudo pacman -Rncs noto-fonts noto-fonts-cjk
+sudo pacman -Rncs amixer
+sudo pacman -Rncs gamemode
+paru -h
+paru -R nerd-font
+paru nerd-font
+yay -R paru
+pacman -Qdt
+sudo pacman -Scc
+lap
+htop
+ipcs -mp
+history
+ipcs -mp
+history
+cd /sys/module/
+chistory
+history | grep /sys/module
+cd zswap/
+cd parameters/
+ls
+nvim enabled
+sudo nvim enabled
+cd parameters/df
+cd /sys/module
+cd zswap/parameters/
+ls
+cat *
+vim enabled 
+sudo vim enabled
+htop
+vim enabled 
+sudo vim enabled
+htop
+dfdfsa
+free -h
+df -h | grep tmphfs
+df -h | grep tmpfs
+icps -m 
+ipcs -m 
+tmpfs
+ipcs -m 
+sudo ipcs -m
+sudo ipcs -m --human
+free -h
+df -h 
+cd 
+cd /
+ls
+wiki
+du -sh tmp
+sudo du -sh tmp
+sudo du -sh usr
+ipcs -m 
+history
+free -h
+cd /dev/shm
+ls -a
+tmpfs
+cd var
+cd /var
+ls
+tmpfs
+cd var
+cd /var
+cd log
+nvim pacman.log 
+cat pacman.log | -S
+cat pacman.log | grep '-S'
+cat pacman.log | grep pacman
+cd lightdm/
+ls
+sudo ls
+htop
+cat pacman.log | grep '-S'
+cat pacman.log | grep pacman
+cd lightdm/
+sudo ls
+htop
+px aux
+ps aux
+ps aux -m
+top
+clear
+ps dump
+ps --help
+ps --help list
+free -m
+cat /proc/meminfo
+sync
+echo 1>/proc/sys/vm/drop_caches
+sudo echo 1>/proc/sys/vm/drop_caches
+sync; echo
+sync; echo 1>/proc/sys/vm/drop_caches
+sudo sync; echo 1>/proc/sys/vm/drop_caches
+sudo sync; sudo echo 1>/proc/sys/vm/drop_caches
+cd /proc/sys/vm
+nvim drop_caches 
+egrep -i 'killed process' var/log/messages
+egrep -i 'killed process' /var/log/messages
+cd /
+cd var
+cd log
+nvim lastlog 
+cd private/
+cd archinstall/
+ls
+nvim install.log 
+sudo pacman -R alacritty
+cd archinstall/
+nvim install.log 
+sudo pacman -R alacritty
+sudo pacman -S alacritty
+htop
+clear
+cd /sys
+cd class
+cd power_supply
+ls
+cd BAT0 
+cat capacity
+xit
+exit
+firefox
+ls
+quit
+exit
+ls
+exit
+exit
+cd dotfiles/
+ls
+cd qtie
+cd qtile
+nvim config.py
+swapon --show
+ls
+htop
+cat /proc/meminfo 
+cat /proc/meminfo
+clear
+mem -f
+free -m
+clear
+mem -f
+free -m
+cd dotfiles/
+cd qtile
+cd __pycache__/
+ls
+ls -l
+cd ..
+rm autostart.sh 
+htop
+bluetoothctl
+inxi --bluetooth -z
+desk
+htop
+htop
+ipcs
+ipcs -a
+df -h
+free -m
+desk
+htop
+ssh tarokhlab-02
+ssh i3t
+nvtop
+htop
+ssh tarokhlab-02
+ssh i3t
+cd dotfiles/
+git status
+cd htop
+ls
+cd htoprc 
+nvim htoprc 
+bluetoothctl
+desk
+htop
+nvtop
+free -m
+qtile check
+cd dotfiles/
+ls
+cd ..
+desk
+free -m
+htop
+desk
+free -m
+dmesg | grep oom-killer
+sudo dmesg | grep oom-killer
+mount
+mount | grep tmpfs
+df
+sudo lsof -n | egrep "/tmp|/dev/shm
+sudo lsof -n | egrep "/tmp|/dev/shm" | grep delted
+qtile quit
+desk
+desk
+free -m
+cd dotfiles/
+ls
+nvim bash/.bashrc
+git status
+nvim picom/picom.conf 
+nvim lutris/lutris.conf 
+code .
+free -m
+bluetoothctl
+htop
+shutdown now

@@ -70,7 +70,7 @@ To me, the most important traits of these programs is that it is lightweight, fa
   1) PDF Viewer: zathura (nice CLI like Vim, good with vimtex) 
   2) Image Viewer: feh (may try out qimgv)  
   3) Video Player: mpv 
-  4) Screenshot Tool: 
+  4) Screenshot Tool: flameshot 
 
 ### Browser 
 You can download whatever, but my preferences in order are: Nightly, Firefox, Brave, Chrome, Edge. 
