@@ -1919,3 +1919,84 @@ ls
 rm fast_rcnn.jpg
 neofetch
 vimtex deep
+flameshot config
+flameshot config
+cd Notes/
+cd mbahng-com/STEM/Data_Science/
+cd Deep_Learning/
+cd Images/
+mv faster_rcnn.jpg fast_rcnn.jpg
+cd Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Images/
+rm fast_rcnn.jpg
+neofetch
+vimtex deep
+cd dotfiles/
+mkdir conda
+cd conda
+conda activate
+conda env list
+conda activate pytorch-base
+conda export env --from-history
+conda env export
+conda env export > pytorch-base.yml
+nvim pytorch-base.yml 
+conda env export --from-history
+cd ..
+ls
+git status
+git add --all
+git commit -m "added conda"
+git push
+cd Images/
+mv faster_rcnn.jpg fast_rcnn.jpg
+cd Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Images/
+rm fast_rcnn.jpg
+neofetch
+vimtex deep
+cd .conda
+nvim env
+rm env
+nvim environments.txt 
+cd ..
+df -sh envs
+df -h envs
+du -sh envs
+cd env
+cd envs
+cd pytorch-base/
+ls
+shutdown now
+lap
+sudo pacman -S inkscape
+lap
+sudo pacman -S inkscape
+cd CLas
+cd Class/
+cd Fa23/
+cd ECE685/HW3
+ls
+code .
+vimtex nlp[
+vimtex nlp
+wiki
+desk
+cd Notes/
+ls
+zathura Automate_the_boring_stuff.pdf 
+python
+cd Notes/
+zathura Automate_the_boring_stuff.pdf 
+python
+cd /bin/cu
+cd /bin/custom_scripts/
+sudo mv custom_scripts ~/dotfiles
+sudo ln -s ~/dotfiles/custom_scripts/ /bin/custom_scripts
+ls | grep custom
+cd custom_scripts
+ls
+cd ..
+cd
+cd dotfiles/
+ls
+history | grep 'ln -s'
+vimtex deep
