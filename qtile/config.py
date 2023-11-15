@@ -191,6 +191,9 @@ screens = [
                     fmt = "Battery {}",  
                     padding = 8, 
                     update_interval = 60
+                ),
+                widget.Systray(     # needed for app icons
+
                 ), 
                 widget.Clock(
                     background = "#800080", 

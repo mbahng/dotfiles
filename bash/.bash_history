@@ -1774,3 +1774,148 @@ free -m
 cd dotfiles/
 nvim .
 htop
+captine
+caprine
+htop
+cd dotfiles/
+ls
+git add --all
+git commit -m "removed shared memory leak"
+git push 
+git add --all
+git commit -m "removed shared memory leak"
+git push 
+cd Downloads/
+cd Desktop/
+cd ..
+cd Note
+cd Notes/
+ls
+feh Muchang\ Bahng\ -\ Resume.pdf 
+qimgv Muchang\ Bahng\ -\ Resume.pdf 
+zathura Muchang\ Bahng\ -\ Resume.pdf 
+zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
+cd Notes
+zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
+zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
+cd Notes/
+cd mbahng-com/
+cd STEM/
+cd Data_Science/
+cd Deep_Learning/
+ls
+cd Notes
+zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
+wiki
+cd /bin/custom_scripts/
+ls
+sudo nvim wiki
+sudo nvim vstex
+sudo nvim vimtex 
+vimtex deep
+vimtex deep
+cd /bin/custom_scripts/
+ls
+sudo nvim wiki
+cd 
+wiki
+du
+wiki
+df
+shutdown now
+desk
+bluetoothctl
+blueman
+pactl | list
+pactl list
+pactl list | grep bluetooth
+lap
+skypeforlinux-stable-bin
+shutdown now
+desk
+neofetch
+sudo systemctl restart bluetooth
+bluetoothctl
+desk
+cd /etc/bluetooth/
+cd main.conf 
+ls
+nvim main.conf 
+lsmod
+sudo systemctl start bluetooth
+sudo systemctl restart bluetooth
+bluetuith
+pacman -S blueman
+sudo pacman -S blueman
+blueman
+df
+shutdown now
+desk
+nvtop
+cd neofetch/
+nvim config.conf 
+cd
+cd dotfiles/
+ls
+cd qtile/
+nvim config.py
+nvim config.py
+cd dotfiles/
+cd vim
+ls
+nvim .vimrc
+flameshot
+neofetch
+htop
+nvtop
+lap
+desk
+vimtex deep
+desk
+nvtop
+lap
+desk
+vimtex deep
+desk
+cd mbah
+cd Notes/mbahng-com/
+ls
+nvim .gitignore
+git add .gitignore
+git commit -m "updated gitignore to exclude latex"
+git add --all
+git commit -m "updating DL and ML"
+git push
+git status
+vimtex deep
+desk
+cd Notes/mbahng-com/
+ls
+ls -a
+nvim .gitignore
+cd dotfiles/
+git status
+flameshot --help
+flameshot --help
+cd dotfiles/
+cd qtile/
+ls
+nvim config
+rm config
+nvim config.py
+flameshot
+flameshot quit
+flameshot --help
+flameshot config
+flameshot config
+cd Notes/
+cd mbahng-com/STEM/Data_Science/
+cd Deep_Learning/
+ls
+cd Images/
+mv faster_rcnn.jpg fast_rcnn.jpg
+cd Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Images/
+ls
+rm fast_rcnn.jpg
+neofetch
+vimtex deep
