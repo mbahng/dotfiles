@@ -137,6 +137,18 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+colors = {
+    "red" : "#edc9d4",  
+    "orange" : "#ffd3c9",  
+    "yellow" : "#fff7cf", 
+    "green" : "#e4f0c9", 
+    "blue" : "#c7e0ff",  
+    "purple" : "#cfcfff", 
+    "violet" : "#bac3ff", 
+    "white" : "#ffffff",  
+    "black" : "#000000" 
+} 
+
 screens = [
     Screen(
         top  = bar.Bar(
@@ -164,25 +176,28 @@ screens = [
                     # foreground=catppuccin["black"],
                     # background=catppuccin["sky"],
                    # ),
+                widget.Systray(     # needed for app icons
+                    background = colors["red"], 
+                ),  
                 widget.Bluetooth(
                     background = "#00ff00", 
                     foreground = "#000000", 
                     padding = 8, 
                 ), 
                 widget.Wlan(
-                    background = "#ffff00", 
+                    background = colors["green"], 
                     foreground = "#000000", 
                     padding = 8, 
                 ), 
                 widget.Volume(
-                    background = "#ffa500", 
+                    background = colors["blue"], 
                     foreground = "#000000", 
                     fmt = "Volume {}",
                     padding = 8,
                     emoji = False, 
                 ), 
                 widget.Battery(
-                    background = "#ff0000", 
+                    background = colors["purple"], 
                     foreground = "#000000",
                     charge_char = "", 
                     discharge_char = "", 
@@ -192,11 +207,8 @@ screens = [
                     padding = 8, 
                     update_interval = 60
                 ),
-                widget.Systray(     # needed for app icons
-
-                ), 
                 widget.Clock(
-                    background = "#800080", 
+                    background = colors["violet"], 
                     foreground = "#000000",
                     format="[%m/%d/%Y] - [%H:%M]", 
                     
@@ -222,7 +234,7 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
-follow_mouse_focus = True
+follow_mouse_focus = False 
 bring_front_click = False
 floats_kept_above = True
 cursor_warp = False
