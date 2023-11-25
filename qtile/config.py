@@ -44,7 +44,9 @@ keys = [
     Key([mod], "k", lazy.spawn("skypeforlinux"), desc="Launch skype (k - sKype)"), 
     Key([mod], "w", lazy.spawn("whatsapp-for-linux"), desc="Launch whatsapp (w - whatsapp)"), 
     Key([mod], "g", lazy.spawn("google-chrome-stable"), desc="Launch chrome (g - google chrome)"),
-    Key([mod], "i", lazy.spawn("bluebubbles"), desc="Launch iMessage (i - imessage)"), 
+    Key([mod], "i", lazy.spawn("bluebubbles"), desc="Launch iMessage (i - imessage)"),
+    Key([mod], "x", lazy.spawn("virtualbox"), desc="Launch VirtualBox (x - boX)"),
+    Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
    
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     
@@ -126,8 +128,8 @@ layouts = [
 
 widget_defaults = dict(
     font="sans",
-    fontsize=12,
-    padding=3,
+    fontsize=13,
+    padding=2,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -162,16 +164,18 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-
-
+                
                 widget.Systray(     # needed for app icons
                     background = colors["red"], 
+                    padding = 8, 
                 ), 
                 widget.Backlight(
                    backlight_name = "intel_backlight",
-                   fmt="Brightness {}",
+                #    fmt="Brightness {}",
+                   fmt="\u263C {}",
                    background=colors["yellow"],
                    foreground="#000000", 
+                   padding = 8
                 ), 
                 widget.Bluetooth(
                     background = "#00ff00", 
@@ -186,7 +190,11 @@ screens = [
                 widget.Volume(
                     background = colors["blue"], 
                     foreground = "#000000", 
-                    fmt = "Volume {}",
+                    # fmt = "Volume {}", 
+                    fmt = "\N{SPEAKER} {}",
+                    get_volume_command = "pactl get-sink-volume @DEFAULT_SINK@", 
+                    volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%", 
+                    volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%", 
                     padding = 8,
                     emoji = False, 
                 ), 
@@ -197,20 +205,23 @@ screens = [
                     discharge_char = "-", 
                     empty_char = "",
                     full_char = "0", 
-                    format = "Battery : {char}{percent:2.0%} [{hour:d}:{min:02d} / {watt:.2f}W]", 
+                    format = "\N{BATTERY} {char}{percent:2.0%} [{hour:d}:{min:02d} / {watt:.2f}W]", 
                     padding = 8, 
                     update_interval = 15, 
                 ),
                 widget.Clock(
                     background = colors["violet"], 
                     foreground = "#000000",
-                    format="[%m/%d/%Y] - [%H:%M]", 
+                    format="%m/%d/%Y - %H:%M:%S", 
                     
                 ),
             ],
             24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["222222", "000000", "ff00ff", "000000"]  # Borders are magenta
+            # border_width=[2, 2, 2, 2],  # Draw top and bottom borders
+            # border_color=["FFFFFF", "FFFFFF", "FFFFFF", "FFFFFF"], 
+            background = "#222a38", 
+            margin = [4, 4, 2, 4], 
+            opacity = 1.0, 
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

@@ -956,3 +956,52 @@ history
 pactl set-sink-volume 
 pactl --help
 history
+pactl --help
+history
+cd dotfiles/
+ls
+chrome
+clear
+git status
+git add --all
+git commit -m "configure qtile keybindings"
+git push
+yay -S ttf-cascadia-code noto-fonts-emoji ttf-mononoki-nerd ttf-roboto-mono-nerd
+yay -S ttf-cascadia-code
+yay -S noto-fonts-emoji
+yay -S ttf-mononoki-nerd
+yay -S ttf-roboto-mono-nerd
+sudo pacman -S ttf-roboto-mono-nerd
+sudo pacman -Syu ttf-roboto-mono-nerd
+sudo pacman -Syu ttf-mononoki-nerd
+virtualbox
+virtual-box
+sudo pacman -S virtualbox
+cmatrix
+python
+neofetch
+cd dotfiles/qtile/
+ls
+nvim config.py
+code .
+cd dotfiles/qtile/
+nvim config.py
+ls Class/Fa23/
+cd Class/Fa23/
+cd RIS393/
+ls
+cd ying
+code .
+awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master)
+pactl 
+pactl --help
+pactl get-sink-volume @DEFAULT_SINK@
+lap
+pactl get-sink-volume @DEFAULT_SINK@
+lap
+pactl get-sink-volume @DEFAULT_SINK@
+cd dotfiles/
+cd qtile/
+le
+ls
+code .
