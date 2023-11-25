@@ -498,3 +498,461 @@ cd config
 ls
 cd ..
 mv config dotfiles
+cd config
+cd ..
+mv config dotfiles
+cd dotfiles/
+git status
+cd qtile/
+nvim config
+rm config
+ls
+nvim config.py
+git add --all
+git commit -m "adjusted colors schemes for qtile"
+git push
+vimtex deep
+nvim .
+wiki
+wiki
+cd .config
+mkdir alacritty
+cd alacritty/
+mv ~/Downloads/alacritty.yml .
+ls
+nvim alacritty.yml 
+cd ..
+mv config dotfiles
+cd dotfiles/
+cd qtile
+ls
+nvim .
+ls
+yay -S all-repository-fonts
+wiki
+git push
+vimtex deep
+nvim .
+wiki
+wiki
+mkdir alacritty
+mv ~/Downloads/alacritty.yml .
+cd .config/alacritty/
+nvim alacritty.yml 
+cd .config
+history | grep 'ln -s'
+mv alacritty/ ~/dotfiles/alacritty
+sudo ln -s ~/dotfiles/alacritty ~/.config/alacritty
+cd 
+cd alacritty/
+cd
+cd dotfiles/
+cd picom/
+nvim picom.conf 
+cd ..
+cd qtile/
+ls
+nvim config
+nvim config.py
+yay -S bluebubbles-bin
+nvtop
+neofetch
+htop
+vimtex deep
+neofetch
+htop
+vimtex deep
+cd dotfiles/
+cd qtile/
+nvim config.py
+cd 
+cd Class/
+cd Fa23/
+cd RIS393/
+ls
+code .
+lap
+desk
+nemo
+wiki
+conda activate
+conda env list
+conda create -n "image-base" python=3.10
+conda activate image-base
+pip install opencv-python
+conda list
+conda install pandas
+pip install torch torchvision torchaudio matplotlib
+nvtop
+neofetch
+htop
+vimtex deep
+cd Class
+cd Fa23/
+cd RIS393/
+cd ying
+ls
+cd ..
+nvim .
+neofetch
+htop
+vimtex deep
+neofetch
+htop
+vimtex deep
+cd dotfiles/
+cd qtile/
+nvim config.py
+cd 
+cd Fa23/
+cd RIS393/
+code .
+cd Class/
+cd Fa23/RIS393/ying
+conda activate pytorch-base
+conda install pandas
+cd images
+python
+cd labels
+ls
+cd ..
+conda activate image-base
+python projector.py 
+shutdown now
+desk
+yay -S google-chrome
+history
+google-chrome
+which chrome
+google-chrome
+which chrome
+cd dotfiles/
+cd nvim
+ls
+nvim .
+nvim .
+cd Class/
+cd Fa23/
+ls
+cd RIS393/ying/
+code .
+nvim .
+cd Class/Fa23/RIS393/ying/
+ls
+nemo
+conda activate
+conda env list
+conda activate image-base
+python projector.py 
+which chrome
+cd dotfiles/
+cd nvim
+nvim .
+cd Class/
+cd Fa23/
+cd RIS393/
+cd ying/
+ls
+nvim ..
+lap
+lap
+cd .cache/vim
+cd swap
+ls
+rm %home%mbahng%wiki%Interviews%Akuna.wiki.swp 
+wiki
+vimtex deep
+shutdown now
+lap
+flameshot
+htop
+desk
+desk
+cd Class/
+cd Fa23/ECE685/
+cd HW4
+ls
+code .
+which julia
+lap
+l;ap
+which julia
+lap
+l;ap
+cd Notes/mbahng-com/
+cd STEM
+cd Data_Science/
+cd .. 
+cd ..
+ls
+git status
+git add --all
+git commit -m "deep learning midterm stuff"
+git push
+desk
+cd Notes/mbahng-com/
+ls
+git status
+git add --all
+git commit -m "deep learning midterm studying"
+git push
+lap
+desk
+vimtex deep
+lap
+git status
+git add --all
+git commit -m "deep learning midterm studying"
+git push
+lap
+desk
+vimtex deep
+lap
+l
+cd Downloads/
+rm Midterm_
+rm Midterm_Exam_II_Solutions.pdf 
+rm Midterm_II_Practice_Problems.pdf 
+nvim LICENSE 
+rm LICENSE 
+rm bashrc
+rm Photos.zip 
+rm SymbolsNerdFontMono-Regular.ttf 
+rm SymbolsNerdFont-Regular.ttf 
+zathura generative_models.pdf 
+rm generative_models.pdf 
+rm graphical_models.html.pdf 
+rm NerdFontsSymbolsOnly.zip 
+vim readme.md 
+rm readme.md 
+zathura ps5_muchang.pdf 
+mv ps5_muchang.pdf ~/Class/Fa23/CS671/HW5
+rm Lecture\ 15\ Part\ 1.mp4 
+rm linear_factors.pdf 
+rm autoencoders.pdf 
+rm Agave.zip 
+ls
+code .
+git add --all
+git commit -m "deep learning midterm studying"
+git push
+lap
+desk
+vimtex deep
+lap
+cd Class/Fa23/
+cd ECE685/
+cd HW4
+cd .. 
+cd CS671/
+cd HW5
+cd ~
+cd Downloads/
+feh IMG_0849.
+feh IMG_0849.heic
+rm IMG_0849.heic 
+rm IMG_0849.mov 
+ls
+cd ..
+cd dotfiles/
+ls
+ssh tarokhlab-02
+wiki
+snap
+snapd
+lap
+desk
+fetch
+neofetch
+cd dotfiles/
+ls
+git status
+git status
+cd sys/class/bac
+cd /sys/class/backlight
+cd intel_backlight
+ls
+cat max_brightness 
+cat brightness 
+sudo echo 200 brightness 
+sudo echo 200 > brightness
+ls -l
+sudo nvim brightness
+fetch
+neofetch
+cd dotfiles/
+cd qtile/
+ls
+nvim config
+nvim config.py 
+desk
+wiki
+google-chrome
+chrome
+chromium
+sudo pacman -S discord
+sudo pacman -S discord-canary
+yay -S discord-ptb
+yay -S discord-ptb
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py
+shutdown now
+lap
+neofetch
+python
+wiki
+lap
+cd dotfiles/
+ls
+nvim .
+xrandr
+arandr
+nmcli
+nmgui
+iwd
+nmcli device show
+nmtui
+xrandr
+adrandr
+arandr
+shutdown how
+shutdown now
+lap
+arandr
+exit
+shutdown now
+lap
+shutdown now
+lap
+cd Class/
+cd Fa23/
+cd RIS393/
+ls
+cd ying/
+code .
+wiki
+/home/mbahng/.conda/envs/image-base/bin/python -u "/home/mbahng/Class/Fa23/RIS393/ying/projector.py"
+conda activate image-base
+wiki
+arandr
+lap
+wiki
+arandr
+lap
+cd Class/
+cd Fa23/
+cd ECE588
+git clone git@github.com:SultanMo/FLABnet.git
+cd FLABnet/
+ls
+code .
+cd Downloads/
+ls
+rm Demo.rar 
+exit
+rm Demo.rar 
+cd dotfiles/
+ls
+cd qtile/
+nvim config.py
+d
+wiki
+shutdown now
+wiki
+history
+history | grep chrome
+pacman -Qqe | grep chrome
+sudo pacman -Rcns google-chrome
+sudo pacman -S google-chrome
+yay -S google-chrome
+exit
+google-chrome-stable
+yay -S google-chrome
+exit
+cd dotfiles/
+cd custom_scripts/
+ls
+nvim desk
+sudo pacman -S google-chrome
+yay -S google-chrome
+exit
+cd dotfiles/
+cd custom_scripts/
+touch chrome
+sudo touch chrome
+sudo nvim chrome
+chmod +x chrome
+sudo chmod +x chrome
+ls
+which flameshot
+cd /usr/bin
+nvim flameshot 
+exit
+which skype
+neofetch
+sudo pacman -S virtualbox
+neofetch
+yay -S  	com.qq.weixin.deepin 
+history 
+yay -Rns com.qq.weixin.deepin
+yay -Rns com.qq.weixin.deepin
+cd dotfiles/
+ls
+ls -a
+nvim .xprofile 
+wiki
+shutdown now
+lap
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py
+lap
+xbacklight
+sudo pacman -S xbacklight
+yay -S xbacklight
+sudo pacman -S xbacklight
+yay -S xbacklight
+xbacklight -dec 10
+sudo pacman -S xorg-xbacklight
+xbacklight --help
+xbacklight -get
+xbacklight -d
+xbacklight -inc 10
+xbacklight -set 50
+sudo pacman -Rcns xorg-xbacklight
+sudo pacman -S brightnessctl
+brightnessctl -l
+brightnessctl -i
+brightnessctl --device=intel_backlight set 100%
+brightnessctl --device=intel_backlight set 50%
+brightnessctl --device=intel_backlight set 5+
+brightnessctl --device=intel_backlight set 10+
+brightnessctl --device=intel_backlight set 20+
+historu
+historyu
+history
+brightnessctl --device=intel_backlight set 20+
+brightnessctl
+brightnessctl -l
+brightnessctl --device=kbd_backlight set 1+
+brightnessctl --device=dell::kbd_backlight set 1+
+brightnessctl --help
+ls
+wiki
+exit
+lap
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py
+exit
+shutdown now
+lap
+wiki
+history
+pactl set-sink-volume 
+pactl --help
+history

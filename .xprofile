@@ -1,4 +1,5 @@
 # This script is executed at the beginning of X user session, butefore window manager is started 
 
 nitrogen --restore # to restore wallpapers when booting machine 
+lap
 picom -f &    # picom for fading and opacity for focused and unfocused windows 
