@@ -47,7 +47,7 @@ keys = [
     Key([mod], "i", lazy.spawn("bluebubbles"), desc="Launch iMessage (i - imessage)"),
     Key([mod], "x", lazy.spawn("virtualbox"), desc="Launch VirtualBox (x - boX)"),
     Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
-   
+    Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     
     # Extra utilities
@@ -156,65 +156,217 @@ screens = [
                     padding_x = 10, 
                     padding_y = 8
                 ),
+                widget.Sep(), 
+                widget.StockTicker(
+                    apikey="S8TMOKO9BYQ38JXO", 
+                    symbol="SPY", 
+                    update_interval = 3600, 
+                    padding = 2, 
+                ), 
+                widget.TextBox("/"), 
+                widget.CryptoTicker(
+                    crypto="ETH", 
+                    padding = 2, 
+                    update_interval = 600, 
+                ), 
+                widget.Sep(), 
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowName(
+                    format = "{state} {name}", 
+                    max_chars = 50, 
+                    padding = 8,     
+                ),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
-                    },
+                    },start_opened = True, 
                     name_transform=lambda name: name.upper(),
                 ),
-                
+                 
                 widget.Systray(     # needed for app icons
                     background = colors["red"], 
                     padding = 8, 
-                ), 
-                widget.Backlight(
-                   backlight_name = "intel_backlight",
-                #    fmt="Brightness {}",
-                   fmt="\u263C {}",
-                   background=colors["yellow"],
-                   foreground="#000000", 
-                   padding = 8
-                ), 
-                widget.Bluetooth(
-                    background = "#00ff00", 
-                    foreground = "#000000", 
-                    padding = 8, 
-                ), 
-                widget.Wlan(
-                    background = colors["green"], 
-                    foreground = "#000000", 
-                    padding = 8, 
-                ), 
-                widget.Volume(
-                    background = colors["blue"], 
-                    foreground = "#000000", 
-                    # fmt = "Volume {}", 
-                    fmt = "\N{SPEAKER} {}",
-                    get_volume_command = "pactl get-sink-volume @DEFAULT_SINK@", 
-                    volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%", 
-                    volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%", 
-                    padding = 8,
-                    emoji = False, 
-                ), 
-                widget.Battery(
-                    background = colors["purple"], 
-                    foreground = "#000000",
-                    charge_char = "+", 
-                    discharge_char = "-", 
-                    empty_char = "",
-                    full_char = "0", 
-                    format = "\N{BATTERY} {char}{percent:2.0%} [{hour:d}:{min:02d} / {watt:.2f}W]", 
-                    padding = 8, 
-                    update_interval = 15, 
                 ),
-                widget.Clock(
-                    background = colors["violet"], 
-                    foreground = "#000000",
-                    format="%m/%d/%Y - %H:%M:%S", 
-                    
+                widget.WidgetBox(
+                    widgets = [
+                        widget.CheckUpdates(
+                            distro = "Arch",
+                            initial_text = "Updates", 
+                            no_update_string = "0 Updates", 
+                            background = "#AA78A6",
+                            foreground = "#000000", 
+                            padding = 3, 
+                        )
+                    ], 
+                    text_closed = "\N{CANADIAN SYLLABICS CARRIER TTA}", 
+                    text_open = "\N{CANADIAN SYLLABICS CARRIER TTA}", 
+                    background = "#AA78A6", 
+                    padding = 5, 
+                    close_button_location = "right", 
+                ), 
+                widget.WidgetBox(
+                    widgets = [
+                        widget.CPU(
+                            background = "#AC80A0", 
+                            foreground = "#000000", 
+                            format = "CPU: {freq_current} GHz ({load_percent}%)",
+                            mouse_callbacks = {"Button1" : lazy.spawn("alacritty -e htop")},
+                            padding = 5, 
+                        ), 
+                        widget.NvidiaSensors(
+                            background = "#AC80A0", 
+                            foreground = "#000000", 
+                            format = "GPU: {temp} C {perf}",
+                            mouse_callbacks = {"Button1" : lazy.spawn("alacritty -e nvtop")}, 
+                            padding = 5
+                        )
+                    ], 
+                    background = "#AC80A0", 
+                    text_closed = "\N{PERSONAL COMPUTER} ", 
+                    text_open = "\N{PERSONAL COMPUTER} ", 
+                    padding = 2, 
+                    close_button_location = "right", 
                 ),
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Memory(
+                            background = "#89AAE6", 
+                            foreground = "#000000",
+                            format = "{MemUsed:.0f}/{MemTotal:.0f}{mm}B",
+                            padding = 4, 
+                        )    
+                    ],   
+                    text_closed = "\N{RAM} ", 
+                    text_open = "\N{RAM} ", 
+                    background = "#89AAE6", 
+                    close_button_location = "right", 
+                ), 
+                widget.WidgetBox(
+                    widgets = [
+                        widget.DF(
+                            background = "#89AAE6", 
+                            foreground = "#000000",
+                            warn_color = "#000000",
+                            measure = "G",
+                            mouse_callbacks = {"Button1" : lazy.spawn("nemo")}, 
+                            format = "{f}/{s}{m}B [{r:.2f}% Used]", 
+                            warn_space = 1e9, 
+                            padding = 4, 
+                        )
+                    ], 
+                    text_closed = "\N{FILE FOLDER} ", 
+                    text_open = "\N{FILE FOLDER} ", 
+                    background = "#89AAE6", 
+                    close_button_location = "right", 
+                ),  
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Bluetooth(
+                            background = "#00ff00", 
+                            foreground = "#000000", 
+                            padding = 4, 
+                        ),
+                        widget.Net(
+                            background = "#3685B5", 
+                            foreground = "#000000", 
+                            format = "{interface} {down:6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}", 
+                            padding = 4, 
+                        ), 
+                        widget.Wlan(
+                            background = "#3685B5", 
+                            foreground = "#000000",
+                            format = "{essid} {percent:2.0%}", 
+                            padding = 4, 
+                            mouse_callbacks = {"Button3" : lazy.spawn("nm-connection-editor"), 
+                                            "Button1" : lazy.spawn("alacritty -e 'nmtui'")}, 
+                        )
+                    ], 
+                    text_closed = "\N{GLOBE WITH MERIDIANS} ", 
+                    text_open = "\N{GLOBE WITH MERIDIANS} ", 
+                    background = "#3685B5", 
+                    close_button_location = "right", 
+                ),
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Backlight(
+                            backlight_name = "intel_backlight",
+                            #    fmt="Brightness {}",
+                            fmt="{}",
+                            background= "#0471A6",
+                            foreground="#FFFFFF", 
+                            padding = 4, 
+                            mouse_callbacks = {"Button1" : lazy.spawn("alacritty -e 'nvtop'")}, 
+                            )
+                    ], 
+                    background = "#0471A6", 
+                    text_closed = "\N{GLOWING STAR}", 
+                    text_open = "\N{GLOWING STAR}", 
+                    close_button_location = "right", 
+                    start_opened = True, 
+                ), 
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Volume(
+                            background = "#0471A6", 
+                            foreground = "#FFFFFF", 
+                            # fmt = "Volume {}", 
+                            fmt = "{}",
+                            get_volume_command = "pactl get-sink-volume @DEFAULT_SINK@", 
+                            volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%", 
+                            volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%", 
+                            padding = 0,
+                            emoji = False, 
+                        )
+                    ], 
+                    background = "#0471A6", 
+                    text_closed = "\N{SPEAKER WITH THREE SOUND WAVES}", 
+                    text_open = "\N{SPEAKER WITH THREE SOUND WAVES}", 
+                    close_button_location = "right", 
+                    start_opened = True, 
+                ), 
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Battery(
+                            background = "#0471A6", 
+                            foreground = "#FFFFFF",
+                            charge_char = "+", 
+                            discharge_char = "-", 
+                            empty_char = "",
+                            full_char = "", 
+                            # format = "{char}{percent:2.0%}",  
+                            format = "{char}{percent:2.0%} [{hour:d}:{min:02d} / {watt:.2f}W]", 
+                            padding = 3, 
+                            show_short_text = False, 
+                            update_interval = 1, 
+                        )
+                    ], 
+                    background = "#0471A6", 
+                    text_closed = "\N{BATTERY} ", 
+                    text_open = "\N{BATTERY} ", 
+                    close_button_location = "right", 
+                    start_opened = True, 
+                ),
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Clock(
+                            background = "#061826", 
+                            # background = colors["violet"], 
+                            foreground = "#FFFFFF",
+                            format="%m/%d/%Y - %H:%M:%S", 
+                            padding = 5,  
+                        )
+                    ], 
+                    background = "#061826", 
+                    text_closed = "\N{CALENDAR} ", 
+                    text_open = "\N{CALENDAR} ", 
+                    close_button_location = "right", 
+                    start_opened = True, 
+                ),
+                widget.Wallpaper(
+                    background = "#000000", 
+                    label = "\N{MOUNTAIN}",
+                    directory = "~/Media/Pictures/wallpaper/"
+                ), 
             ],
             24,
             # border_width=[2, 2, 2, 2],  # Draw top and bottom borders

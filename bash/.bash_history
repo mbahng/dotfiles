@@ -1005,3 +1005,568 @@ cd qtile/
 le
 ls
 code .
+code .
+cd dotfiles/
+ls
+git status
+git add --all
+git commit -m "keybindings to qtile"
+git push
+wiki
+df
+df -H
+df -H grep nvme0n1p9
+df -H | grep nvme0n1p9
+df -H /dev/nvme0n1p9
+du -H /dev/nvme-n1p9
+du -H /dev/nvme0n1p9
+2d
+du -H 
+du -H 
+cd Downloads/
+mv wallpaper1.jpg ~/Media/Pictures/wallpaper/
+mv wallpaper5.jpg ~/Media/Pictures/wallpaper/
+cd ~/Media/Pictures/wallpaper/
+ls
+mv 1.jpg 5.jpg
+mv wallpaper1.jpg 1.jpg
+mv wallpaper5.jpg 2.jpg
+feh 1.jpg
+feh 2.jpg
+mv 1.jpg 3.jpg
+mv 2.jpg 1.jpg
+shutdown now
+lap
+ls
+feh 2.jpg
+mv 1.jpg 3.jpg
+mv 2.jpg 1.jpg
+lap
+cd picom
+cd dotfiles/
+cd picom/
+nvim picom.conf 
+cd 
+cd Media/Pictures/wallpaper/
+mv 3.jpg 2.jpg
+mv 2.jpg 3.jpg
+mv 1.jpg 2.jpg
+ls
+mv 3.jpg 1.jpg
+shutdown now
+lap
+ls
+shutdown now
+lap
+sudo pacman -S discord
+lap
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py
+pacman -Q 
+pacman -Q | grep discrod
+pacman -Q | grep discord
+pacman -Rcns discord-ptb
+sudo pacman -Rcns discord-ptb
+reset
+shutdown now
+sudo pacman -Rcns discord-ptb
+cd dotfiles/
+cd alacritty/
+ls
+nvim alacritty.yml 
+lap
+lap
+cd dotfiles/
+cd alacritty/
+ls
+nvim alacritty.yml 
+nvim alacritty.yml 
+lap
+lap
+cd dotfiles/
+cd alacritty/
+nvim alacritty.yml 
+cd /home
+cd ..
+cd hom
+cd home
+cd mbahng
+cd Desktop/
+rm Cookbook/
+rm -rf Cookbook/
+ls
+rm -rf Cookbook/
+cd Class/Fa23/ECE588/
+cd FLABnet/
+ls
+cd Class/
+cd Fa23/
+cd ECE588/
+ls
+cd FLABnet/
+nvim .
+lap
+lap
+cd dotfiles/
+cd alacritty/
+nvim alacritty.yml 
+cd FA
+cd Flas
+cd Class/Fa23/ECE588/FLABnet/
+conda activate
+conda activate pytorch-base
+python preprocessing.py
+python preprocessing.py 
+cd data
+cd ..
+touch .gitignore
+nvim .git
+git status
+git add .gitignore
+git commit -m "added gitignore to prevent pushing data files"
+git push
+rm .gitignore
+git config pull.rebase false
+ls
+nvim .gitignore
+git pull
+code .
+git commit -m "added gitignore to prevent pushing data files"
+git push
+rm .gitignore
+git config pull.rebase false
+nvim .gitignore
+git pull
+code .
+cd Downloads/
+ls -l
+unp
+yay -S rar 
+clear
+mv S90_RAW.rar ~/Class/Fa23/ECE588/FLABnet/
+cd ~/Class/Fa23/ECE588/FLABnet/
+mv S90_RAW.rar data
+cd data/
+unrar S90_RAW.rar 
+unar
+unrar
+unrar x S90_RAW.rar 
+ls
+nemo
+yay -S nomacs
+nomacs
+unrar x S90_RAW.rar 
+nemo
+cd Class/Fa23/ECE588/FLABnet/
+cd data
+unrar S90_Aligned.rar 
+unrar x S90_Aligned.rar 
+ls
+unrar x T3i_RAW.rar 
+sudo pacman -Rcns feh
+nomacs --help
+nomacs --pong
+cd Class/Fa23/ECE588/FLABnet/
+cd data
+unrar S90_Aligned.rar 
+unrar x S90_Aligned.rar 
+unrar x T3i_RAW.rar 
+sudo pacman -Rcns feh
+cd Class/
+cd ~
+cd Downloads/
+mv T3i_Aligned.rar ~/Class/Fa23/ECE588/FLABnet/data/
+cd 
+cd Class/Fa23/ECE588/FLABnet/data
+unrar x T3i_Aligned.rar 
+nemo 
+nemo .
+cd T3i_Aligned
+cd Batch_001
+ls
+nomacs IMG_7796Reference.bmp 
+cd dotfiles/
+ls
+nvim README.md 
+history
+unrar x T3i_Aligned.rar 
+nemo 
+nemo .
+cd T3i_Aligned
+cd Batch_001
+nomacs IMG_7796Reference.bmp 
+nvim README.md 
+feh arch_logo.png 
+history
+nomacs arch_logo.png 
+cd dotfiles/
+cd nemo
+cd bookmark-metadata 
+nvim bookmark-metadata 
+cd 
+cd Downloads/
+zathura Akuna_Capital_Offer_Letter.pdf 
+cd /user/sh
+cd /usr
+cd share
+cd applications/
+ls
+nvim org.pwmt.zathura.desktop 
+nvim nemo.desktop 
+cd .xprofile 
+nvim .xprofile 
+picom --help
+shutdown now
+nvim .xprofile 
+picom --help
+shutdown now
+sudo pacman -S feh
+lap
+cd Desktop/
+ls
+touch hi.txt
+sudo pacman -S perl-file-mimeinfo
+cd Down
+cd Downloads/
+ls
+mimetype arch_logo.png 
+mimeopen -d arch_logo.png 
+mimeopen -d arch_logo.png 
+cd Downloads/
+mimetype 1804.08598.pdf 
+ls
+mimeopen -d 1804.08598.pdf 
+sudo pacman -S feh
+lap
+touch hi.txt
+cd Desktop/
+rm hi.txt 
+cd Class/
+cd ..
+cd Downloads/
+ls
+zathura 1804.08598.pdf 
+nemo .
+wiki
+cd Class/
+cd ..
+zathura 1804.08598.pdf 
+nemo .
+cd Downloads/
+tar -xvzf com.qq.weixin.deepin.tar.gz 
+cd com.qq.weixin.deepin
+ls
+nvi PKGBUILD 
+nvim PKGBUILD 
+cd
+snapd
+yay -S snapd
+sudo snap
+snap
+snap install
+snap list | grep wechat
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install electronic-wechat
+cd dotfiles/
+ls
+nvim README.md 
+shutdown now
+wiki
+lap
+sudo snap install electronic-wechat
+wechat
+yay -S hamseket-bin
+yay -S hamsket-bin
+yay -Rcns hamsket-bin
+history
+sudo snap remove electronic-wechat
+shutdown now
+history
+lap
+python list
+venv
+conda activate
+conda list
+history
+yay -Rcns snapd
+yay -S waydroid
+waydroid
+waydroid -h
+nmtui
+wiki
+history
+waydroid first-launch
+waydroid
+nmtui
+wiki
+waydroid first-launch
+waydroid
+history
+yay -Rncs waydroid
+sudo pacman -S docker
+docker
+docker start
+docker info
+sudo systemctl start docker
+docker run -it --rm archlinux bash -c "echo hello world"
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh | bash
+cd snap
+ls
+cd ..
+snap
+snapd
+rm -rf snap
+bluetoothctl
+bluetoothctl
+history
+ls -a
+cd Downloads/
+ls
+cd ..
+cd ..
+sudo usermod -a -G docker mbahng
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh | bash
+htop
+htop
+groups mbahng
+systemctl start docker.service
+docker info
+shutdown now
+lap
+bluetoothctl
+systemctl start docker.service
+shutdown now
+lap
+bluetoothctl
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+docker info
+docker run -it --rm archlinux bash -c "echo hello world"
+cd /var/lib
+ls
+cd docker/
+sudo cd docker/
+ls docker
+sudo cd docker
+alacritty -s
+cd -s
+ls -l
+du -sh docker
+bluetoothctl
+df
+bluetoothctl
+history
+neofetch
+yay -S kakaotalk
+yay -S kiwitalk-bin
+kiwitalk-bin
+pnpm install
+kiwitalk
+ls
+kiwi
+storybook
+kakao-talk
+kakaotalk
+kiwitalk
+ls -l
+du -sh docker
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh | bash
+docker info
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh   | DOCHAT_SKIP_PULL=true bash
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh   | DOCHAT_WECHAT_VERSION=3.3.0.110 bash
+docker pull zixia/wechat:0.15
+docker pull zixia/wechat:latest
+shutdown now
+lap
+htop
+history
+history | grep "kakaotalk"
+yay -Rcns kakaotalk
+pacman -Qdt
+pacman -Sc
+sudo pacman -Sc
+sudo pacman -Rs $(pacman -Qtdq)  
+ls
+df
+history
+history | grep kiwi
+yay -Rcns kiwitalk-bin
+shutdown now
+lap
+bluetoothctl
+lap
+docker
+sudo pacman -S docker
+docker --version
+docker version
+cd Downloads/
+ls
+mv kali-linux-2023.3-virtualbox-amd64.7z ~/Development/
+cd dotfiles/
+cd qtile/
+ls
+rm config2.py 
+nvim config.py 
+docker info
+sudo systemctl start docker
+docker run -it --rm archlinux bash -c "echo hello world"
+cd snap
+snap
+snapd
+rm -rf snap
+bluetoothctl
+bluetoothctl
+cd Downloads/
+sudo usermod -a -G docker mbahng
+htop
+htop
+groups mbahng
+systemctl start docker.service
+docker info
+shutdown now
+lap
+bluetoothctl
+systemctl start docker.service
+shutdown now
+lap
+bluetoothctl
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+docker info
+docker run -it --rm archlinux bash -c "echo hello world"
+cd /var/lib
+cd docker/
+sudo cd docker/
+ls docker
+sudo cd docker
+alacritty -s
+cd -s
+du -sh docker
+bluetoothctl
+df
+bluetoothctl
+neofetch
+yay -S kakaotalk
+yay -S kiwitalk-bin
+kiwitalk-bin
+pnpm install
+kiwitalk
+kiwi
+storybook
+kakao-talk
+kakaotalk
+kiwitalk
+du -sh docker
+docker info
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh   | DOCHAT_SKIP_PULL=true bash
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh   | DOCHAT_WECHAT_VERSION=3.3.0.110 bash
+docker pull zixia/wechat:0.15
+docker pull zixia/wechat:latest
+shutdown now
+lap
+htop
+history | grep "kakaotalk"
+yay -Rcns kakaotalk
+pacman -Qdt
+pacman -Sc
+sudo pacman -Sc
+sudo pacman -Rs $(pacman -Qtdq)  
+df
+history | grep kiwi
+yay -Rcns kiwitalk-bin
+shutdown now
+lap
+bluetoothctl
+lap
+docker
+sudo pacman -S docker
+docker --version
+docker version
+cd Do
+cd DoChat/
+cd Applcation\ Data/
+cd Tencent/
+cd WeChat/
+cd A1
+cd 1
+cd .. 
+curl -sL https://raw.githubusercontent.com/huan/docker-wechat/master/dochat.sh | bash
+cd WeChat\ Files/
+cd All\ Users/
+cd config/
+tree
+rm -rf Do
+rm -rf DoChat
+ls -l
+ls VirtualBox\ VMs/
+cd Vi
+cd Windows10/
+mv ~/Downloads/Win10_22H2_English_x64v1.iso .
+mv Win10_22H2_English_x64v1.iso ~
+mv Win10_22H2_English_x64v1.iso ls
+cd ls
+mv ls Win10_22H2_English_x64v1.iso
+mkdir VirtualBoxes
+cd
+mv Win10_22H2_English_x64v1.iso Development
+mv Windows10/ ~/Development/VirtualBoxes/
+ls -a
+rm -rf VirtualBox\ VMs/
+lsc
+rm kali-linux-2023.3-virtualbox-amd64.7z 
+history
+cd 
+cd VirtualBox\ VMs/
+rm VirtualBox\ VMs/
+rmdir VirtualBox\ VMs/
+cd De
+cd Development/
+rm Windows10
+rm -rf Windows10/
+cd VirtualBoxes/
+mv ~/Down
+mv ~/Downloads/kali-linux-2023.3-installer-amd64.iso .
+cd ..
+ls
+arandr
+lap
+arandr
+df
+wiki
+sudo pacman -S nm-connection-editor 
+ls
+feh help
+feh --help
+nvim .xprofile 
+picom --help
+sudo pacman -S python-psutil
+wiki
+pacman -Qu
+checkupdates
+wiki
+pacman -Qu
+checkupdates
+wiki
+cd Media
+cd Pictures/
+cd wallpaper/
+ls
+lap
+arandr
+cd Development/
+cd ..
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+code .
+alacritty -e "nvtop"
+nvim config.py 
+alacritty -e "nvtop"
+cd dotfiles/
+cd qtile
+ls
+code .

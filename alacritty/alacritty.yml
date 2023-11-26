@@ -62,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  #  decorations: full
 
   # Background opacity
   #
@@ -82,7 +82,7 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  #title: Alacritty
+  # title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
   #dynamic_title: true
@@ -197,11 +197,11 @@ window:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+# colors:
   # Default colors
   #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+    # background: '#1d1f21'
+    # foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #

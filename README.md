@@ -68,9 +68,11 @@ While you on this just download `htop`, `tree`, `nvtop`, `cmatrix`, `pactl` (to 
 
 To me, the most important traits of these programs is that it is lightweight, fast, good keyboard shortcuts, and is aesthetic.  
   1) PDF Viewer: zathura (nice CLI like Vim, good with vimtex) 
-  2) Image Viewer: feh (may try out qimgv)  
+  2) Image Viewer: nomacs (feh is too lightweight and has too little functionality, but I still need it since it's needed to set a background wallpaper for picom) 
   3) Video Player: mpv 
   4) Screenshot Tool: flameshot 
+
+You then want to set up default applications for when you're opening files by double clicking on them. To set them, install `perl-file-mimeinfo` and look at the Arch Wiki guide here (https://wiki.archlinux.org/title/default_applications) to set them. 
 
 ### Browser 
 You can download whatever, but my preferences in order are: Nightly, Firefox, Brave, Chrome, Edge. 
@@ -107,7 +109,7 @@ Then run nvidia-smi to see if it's working. Then install pytorch and see if it d
 https://github.com/~rnel-parameter.
 
 ### Work & Social Applications 
-I'll list some that I use: Zulip, Slack, Caprine (Facebook Messenger), Bluebubbles (iMessage), Whatsapp, Simplenote, Zoom, Skype
+I'll list some that I use: Zulip, Slack, Caprine (Facebook Messenger), Bluebubbles (iMessage), Whatsapp, Simplenote, Zoom, Skype, Discord. 
 
 ### Music Players 
 
