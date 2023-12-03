@@ -45,6 +45,10 @@ Install blueman for audio. Watch this video: https://www.youtube.com/~D_RdJjCU&t
 
 You should install xrandr and arandr, which provide both graphical and command line interfaces to switch monitor configurations. 
 
+### Touchpad 
+
+If you have a touchpad and are running on X11, then you should install xinput, which is the `xorg-xinput` package. Then follow the steps in the Arch Wiki to set up custom settings like right clicking, scroll direction, touch to click, etc. 
+
 ### File Manager
 
 Note that this is not the same thing as a file system. This includes nemo, nautilus. 

@@ -49,7 +49,11 @@ keys = [
     Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "a", lazy.spawn("cisco-anyconnect"), desc="Launch cisco anyconnect (a - Anyconnect)"), 
     
+    Key([mod, "shift"], "s", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"), 
+
+
     # Extra utilities
     # actual print screen key is "Print" 
     Key([], "F10", lazy.spawn("flameshot gui"), desc="Print Screen Selection"), 

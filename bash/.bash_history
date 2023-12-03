@@ -1570,3 +1570,934 @@ cd dotfiles/
 cd qtile
 ls
 code .
+cd dotfiles/
+ls
+git status
+git add --all 
+git commit -m "configured qtile, 90% done"
+git push
+kaggle competitions download -c duke-cs671-fall23-airbnb-competition
+arandr
+arandr
+cd Class/Fa23/CS671/
+mkdir Final
+cd Final
+ls
+code .
+cd Downloads/
+ls
+rm com.qq.weixin.deepin
+rm -rf com.qq.weixin.deepin
+rm com.qq.weixin.deepin.tar.gz 
+unzip duke-cs671-fall23-airbnb-competition.zip 
+mv train.csv ~/Class/Fa23/CS671/Final/
+mv test.csv ~/Class/Fa23/CS671/Final/
+mv sample_submission.csv ~/Class/Fa23/CS671/Final/
+pacman -Q | grep code
+pacman -S visual-studio-code-bin
+sudo pacman -S visual-studio-code-bin
+sudo pacman -S code
+visual-studio-code-bin -Syu
+yay -S visual-studio-code-bin
+sudo pacman -S libreoffice-still
+conda activate
+conda activate pytorch-base
+conda install scikit-learn
+python
+shutdown now
+arandr
+cd Class/Fa23/ECE685/HW5
+ls
+code .
+wiki
+nvidia-smi
+code .
+conda activate
+conda env list
+language-base
+conda activate image-base
+conda activate pytorch-base
+python --version
+conda create -n "language-base" python=3.10
+pip install nltk bs4
+pip3 install torch torchvision torchaudio
+pip remove nltk bs4
+pip uninstall nltk bs4
+pip install pip-autoremove
+pip-autoremove
+pip uninstall regex
+conda activate language-base
+pip install nltk bs4 torch torchvision torchaudio
+conda install scikit-learn
+conda install scikit-learn
+cd nltk_data/
+ls
+cd ..
+conda activate
+conda env list
+conda activate language-base
+pip install matplotlib
+cmatrix
+conda activate language-base
+pip install tqdm
+pip install tqdm
+cd Class/Fa23/
+cd CS671/
+ls
+cd Final/
+code .
+conda activate language-ase
+conda activate language-base
+conda install pandas scikit-learn
+conda activate pytorch-base
+python
+lap
+python
+lap
+cd Class/Fa23/
+cs CS671/
+cd CS671/
+ls
+cd Final/
+code .
+cd Class/Fa23/ECE685/HW5
+ls
+code .
+cd Class/Fa23/ECE685/HW5
+cd Class/Fa23/
+cd ECE685/
+cd HW5
+ls
+code .
+htop
+cd Class/Fa23/ECE685/HW5
+htop
+cd Class/Fa23/
+cd ECE685/
+cd HW5
+ls
+code .
+code --version
+cd Class/Fa23/ECE685/
+ls
+cd HW5
+code .
+code
+htop
+cd Class/
+ls
+cd Fa23/ECE685/
+code .
+cd Fa23/ECE685/
+cd Class/Fa23/
+cd CS671/
+ls
+cd Final/
+code .
+arandr
+arandr
+cd Class/
+cd Fa23/ECE685/HW5
+ls
+cd ..
+code .
+shutdown now
+lap
+arandr
+lap
+arandr
+cd Class/Fa23/
+cd ECE685/
+cd HW5
+ls
+code .
+cd Class/Fa23/CS671/
+ls
+cd Final/
+code .
+wiki
+cd ECE685/
+cd HW5
+code .
+cd Class/Fa23/CS671/
+cd Final/
+code .
+wiki
+cd /opt
+history
+ls -a
+sudo rm -rf .cisco
+cd /usr
+cd share/icons/
+cd hicolor/
+cd 128x128/
+cd apps/
+cd ..
+cd 48x48/apps/
+ls
+sudo rm cisco-anyconnect.png 
+cd dotfiles/
+ls
+cd qtile/
+nvim config.py 
+cd CS671/
+cd Final/
+code .
+cd Class/
+cd Fa23/ECE685/HW5
+code .
+shutdown now
+lap
+lap
+cd Class/Fa23/
+cd ECE685/
+cd HW5
+code .
+tar -xvzf anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+cd anyconnect-linux64-4.10.07073
+./configure
+ls -a
+cd vpn
+sudo sh vpn_install.sh 
+cisco
+cd /opt/cisco/
+cd ..
+sudo rm -rf cisco/
+cd 
+cd Downloads/
+rm anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+rm -rf anyconnect-linux64-4.10.07073/
+ls
+arandr
+history
+yay -S cisco-anyconnect
+cisco-anyconnect
+wiki
+cd Class/
+cd Fa23/ECE685/HW5
+code .
+shutdown now
+lap
+lap
+cd Class/Fa23/
+cd ECE685/
+cd HW5
+code .
+cd anyconnect-linux64-4.10.07073
+./configure
+cd vpn
+sudo sh vpn_install.sh 
+cd /opt/cisco/
+sudo rm -rf cisco/
+cd 
+rm anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+rm -rf anyconnect-linux64-4.10.07073/
+arandr
+yay -S cisco-anyconnect
+yay -Rcns cisco-anyconnect
+cd /opt
+sudo rm -rf cisco
+ls -a
+cd share
+cd /share
+histroy
+history
+cd cd /usr
+cd /usr/share/
+history | share
+history | grep share
+cd icons
+cd hicolor/
+cd 48x48/
+cd apps/
+cd ..
+cd 128x128/
+cd apps
+cd
+cd Downloads/
+tar -xvzf anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+cd anyconnect-linux64-4.10.07073/vpn/
+./vpn_install.sh 
+nvim vpn_install.sh 
+sudo ./vpn_install.sh
+anyconnect-linux
+anyconnect-linux64
+sudo pacman -S fzf
+fzf anyconnect
+anyconnect
+cisco
+cisco-anyconnect
+/opt/cisco
+cd /opt/cisco/anyconnect/bin
+ls
+cd vpnui
+./vpnui
+anyconnect-linux64
+sudo pacman -S fzf
+fzf anyconnect
+anyconnect
+cisco
+cisco-anyconnect
+/opt/cisco
+cd /opt/cisco/anyconnect/bin
+cd vpnui
+./vpnui
+pacman -Q | grep anyconnect
+cd /opt
+sudo rm -rf cisco/
+ls -a
+rm .rf .cisco
+rm -rf .cisco
+sudo rm -rf .cisco
+cd /usr/share
+cd app
+history
+cd icons
+ls 
+cd 128x128/
+cd .. 
+cd 48x48/
+cd apps
+sudo rm cisco-anyconnect.png 
+cd ..
+cd
+cd Downloads/
+ls
+sudo ./anyconnect-linux64-4.9.01095-core-vpn-webdeploy-k9.sh 
+sudo bash anyconnect-linux64-4.9.01095-core-vpn-webdeploy-k9.sh 
+/opt/cisco/anyconnect/bin/vpnui
+ping battle.net
+hap
+lap
+ls
+arandr
+lap
+arandr
+cd Class/Fa23/
+cd CS671/
+cd ..
+cd ECE685/
+cd HW5
+ls
+code .
+nvtop
+htop
+wiki
+cd Class/Fa23/CS671/
+ls
+cd Final
+code .
+nvtop
+htop
+wiki
+cd Final
+code .
+cd Class/Fa23/CS671/
+cd ..
+ls
+lap
+wiki
+bluetoothctl
+cd ..
+lap
+wiki
+bluetoothctl
+cd Downloads/
+rm -rf anyconnect-linux64-4.10.07073
+rm anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+rm anyconnect-linux64-4.9.01095-core-vpn-webdeploy-k9.sh 
+rm Akuna_Capital_Offer_Letter.pdf 
+rm game_night.png 
+rm Game_night.png 
+rm arch_logo.png 
+tar -xzvf discord-0.0.36.tar.gz 
+cd Discord/
+ls
+sudo bash postinst.sh 
+wiki
+cd wiki
+ls
+vim To_Do.wiki 
+ls 0a
+ls -a
+nvim To_Do.wiki 
+sudo pacman -S discord
+discord
+sudo pacman -Syu 
+sudo pacman -Syu 
+wiki
+cd wiki
+nvim To_Do.wiki 
+sudo pacman -S gedit
+gedit To_Do.wiki 
+cd wiki
+gedit To_Do.wiki 
+cd wiki
+ls
+gedit To_Do.wiki 
+gedit To_Do.wiki 
+cd wiki
+gedit To_Do.wiki 
+cd Downloads/
+rm discord-0.0.36
+rm -rf discord-0.0.36
+rm discord-0.0.36.tar.gz 
+rm discord-0.0.36\(1\).tar.gz 
+ls
+ping mbahng.com
+ping mbahng.com
+cd Class/Fa23/
+cd CS671/
+ls
+zip Final/
+sudo pacman -S zip
+ping mbahng.com
+cd Class/Fa23/
+cd CS671/
+sudo pacman -S zip
+cd Class/Fa23/Cs
+cd Class/Fa23/CS671/
+zip Final/
+cp Final/ Sara
+cp -r Final/ Sara
+cd Sara/
+cd ..
+zip -r Sara
+zip -r Sara Sara
+ls
+arandr
+bluetoothctl
+arandr
+bluetoothctl
+cd Class/Fa23/RIS393/ying/
+ls
+cd images
+feh 00001.png
+feh .
+cd Downloads/
+ls 
+mv knn_and_gbm.ipynb ~/Class/Fa23/CS671/Final/
+cd ~/Class/Fa23/CS671/Final/
+ls
+code .
+htop
+nvtop
+nvtop
+cd Class/Fa23/ECE685/
+git clone git@github.com:ngungu46/Adversarial-Black-Box-Attacker.git
+cd Fin
+cd Adversarial-Black-Box-Attacker/
+ls
+code .
+lap
+cd Adversarial-Black-Box-Attacker/
+lap
+cd Class/
+cd Fa23/
+cd ECE588/
+ls
+cd FLABnet/
+code .
+git pull
+git status
+curl ftp://sidd_user:sidd_2018@130.63.97.225/SIDD_Medium_Srgb.zip
+git status
+cd Downloads/
+ls
+cd FLABnet/
+code .
+git pull
+git status
+curl ftp://sidd_user:sidd_2018@130.63.97.225/SIDD_Medium_Srgb.zip
+s
+zip -FF SIDD_Medium_Srgb_Parts.zip --out combined.zip
+cd 
+cd Downloads/
+ls
+lap
+cd Downloads/
+ls
+bluetoothctl
+sudo pacman -S acpi
+acpi -i
+htop
+lap
+htop
+lap
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+sudo bluetoothctl
+sudo pacman -Rcns acpi
+bluetoothctl
+hiconfig
+bluetoothctl
+history
+history | grep pacman
+bluetoothctl
+cd dotfiles/
+ls
+nvim README.md 
+cd /etc/X11/xorg.conf.d/
+ls
+nvim 70-synaptics.conf 
+sudo nvim 70-synaptics.conf 
+xinput disable 11
+xinput enable 11
+xinput --help
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" --help
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1 
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1"1"
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" "libinput Tapping Enabledasfd
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" 362 1
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" 362 "1"
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" 362 format --help
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" 362 
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" 8
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" 8 1
+xinput set-int-prop "DELL097D:00 04F3:311C Touchpad" kdf
+xinput set-prop 11 362 1
+xinput set-prop 11 362 0
+xinput set-prop 11 373 =1, 1
+shutdown now
+cd Downloads/
+bluetoothctl
+sudo pacman -S acpi
+acpi -i
+htop
+lap
+htop
+lap
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+sudo bluetoothctl
+sudo pacman -Rcns acpi
+bluetoothctl
+hiconfig
+bluetoothctl
+cd /etc/X11
+cd xinit/
+cd xinitrc.d/
+sudo pacman -S xf86-input-synaptics
+cd ..
+cd /usr/share/
+cd X11
+cd xorg.conf.d/
+sudo cp 70-synaptics.conf /etc/X11/xorg.conf.d/
+cd /etc/X11/xorg.conf.d/
+ls
+sudo nvim 70-synaptics.conf 
+xinput
+sudo pacman -S xinput
+sudo pacman -S xorg-xinput
+xinput list
+xinput list-props "DELL097D:00 )04F3:311C Touchpad"
+xinput list-props "DELL097D:00 04F3:311C Touchpad" | grep Capabilities
+xinput list-props "DELL097D:00 04F3:311C
+
+
+xinput list-props "DELL097D:00 04F3:311C Touchpad" | grep Capabilitiesdfasdf
+xinput list-props "DELL097D:00 04F3:311C Touchpad"
+sudo systemctl status lightdm
+cd /etc
+cd lightdm/
+ls
+sudo nvim lightdm.conf 
+:q
+clear
+shutdown now
+sudo nvim lightdm.conf 
+:q
+clear
+sudo systemctl status lightdm.service
+cd /etc
+history
+cd X11
+cd xorg.conf.d/
+sudo rm 70-synaptics.conf 
+ls
+shutdown now
+lap
+history
+history | grep xinput
+xinput set-prop 11 373 1, 1
+xinput list
+xinput disable 11
+xinput enable 11
+ls
+bluetoothctl
+history
+xinput list
+xinput disable 11
+xinput enable 11
+cd /etc
+cd X11/
+cd xorg.conf.d/
+sudo touch 70-synaptics.conf
+ls
+sudo nvim 70-synaptics.conf 
+xinput enable 11
+bluetoothctl
+cd /usr/share
+cd X11/
+cd xorg.conf.d/
+ls
+sudo nvim 40-libinput.conf 
+ls
+bluetoothctl
+xinput list
+xinput list-props 11
+sudo pacman -Rcns xorg-xinput
+synclient TapButton2=3
+synclient
+synclient TapButton2=2
+synclient TouchpadOff=1
+synclient TouchpadOff=0
+sudo pacman -S libinput
+pacman -Q | grep libinput
+xinput
+sudo pacman -S xorg-xinput
+libiniput list-devices
+libinput list-devices
+shutdown now
+lap
+bluetoothctl
+bluetoothctl
+cd Downloads/
+ls
+zathura 1804.08598.pdf 
+htop
+sudo pacman -S xorg-xinput
+libiniput list-devices
+shutdown now
+lap
+bluetoothctl
+sudo pacman -Syu
+libinput list-devices
+xinpust list
+xinput list
+xinput list-props 11 --help
+xinput set-prop 11 374 = 1, 1
+xinput set-prop 11 374 1
+xinput set-prop 11 374 1,1
+xinput set-prop 11 374 11
+xinput set-prop 11 391 0
+xinput set-prop 11 391 1
+prop 11 "HorizEdgeScroll" 1
+xinput set-prop 11 "HorizEdgeScroll" 1
+xinput set-prop 11 HorizEdgeScroll 1
+xinput list-prop 11
+xinput list-props 11
+xinput set-prop 11 374 "1, 1"
+synclient HorizTwoFingerScroll =1
+synclient HorizTwoFingerScroll=1
+kkj
+synclient PalmDetect=0
+synclient PalmDetect=1
+synclient MinSpeed=1.5
+synclient MinSpeed=1.0
+df
+synclient list-prop 11
+synclient AccelFactor=0.5
+synclient AccelFactor=1.0
+synclient AccelFactor=0.370714
+PalmMinWidth=5
+synclient PalmMinWidth=5
+synclient PalmMinWidth=3
+synclient PalmMinWidth=2
+synclient -l
+synclient PalmMinZ=20
+synclient PalmMinZ=10
+synclient PalmMinZ=10
+cd Class/Fa23/
+cd ECE588/
+ls
+cd FLABnet/
+code .
+cd FLABnet/
+code .
+cd Class/Fa23/ECE588/FLABnet/data
+cd SIDD_Medium_Srgb/
+cd Data/
+ls
+cd 0125_006_S6_00100_00050_4400_L/
+feh .
+cd Data/
+cd 0125_006_S6_00100_00050_4400_L/
+feh .
+cd Class/Fa23/
+cd ECE588/
+cd FLABnet/data
+cd SIDD_Medium_Srgb/
+ls
+nvim ReadMe_sRGB.txt 
+synclient -l
+synclient PalmMinZ=20
+synclient PalmMinZ=10
+cd Down
+cd Downloads/
+ls -a
+ls -l
+zip -FF SIDD_Medium_Srgb_Parts.zip --out combined.zip
+mv combined.zip ~/Class/Fa23/ECE588/FLABnet/data
+cd ~/Class/Fa23/ECE588/FLABnet/data
+unzip combined
+ls
+synclient PalmMinZ=20
+synclient PalmMinZ=10
+synclient PalmMinZ=10
+cd Class/Fa23/
+cd ECE588/
+cd FLABnet/
+code .
+cd FLABnet/
+code .
+cd Class/Fa23/ECE588/FLABnet/data
+cd SIDD_Medium_Srgb/
+cd Data/
+cd 0125_006_S6_00100_00050_4400_L/
+feh .
+cd Data/
+cd 0125_006_S6_00100_00050_4400_L/
+feh .
+cd Class/Fa23/
+cd ECE588/
+cd FLABnet/data
+cd SIDD_Medium_Srgb/
+nvim ReadMe_sRGB.txt 
+cd .config
+ls -a
+cd flameshot
+nvim flameshot.ini 
+mv flameshot ~/dotfiles
+history | grep "ln -s"
+sudo ln -s ~/dotfiles/flameshot ~/.config/flameshot
+ls -l
+clear
+cd gedit
+nvim accels
+cd discord
+cd settings.json 
+nvim settings.json 
+cd coc
+cd matplotlib/
+cd pulse/
+cd Downloads/
+feh -r .
+mkdir SIDD
+mv SIDD_* SIDD/
+cd SIDD
+cd ..
+ls
+feh -r 
+feh 
+cd Downloads/
+ls
+feh 
+feh
+feh --auto-zoom
+feh --force-aliasing
+cd ..
+feh -r 
+feh 
+feh 
+feh
+feh --auto-zoom
+feh --force-aliasing
+cd Downloads/
+cd 
+cd Class/Fa23/
+ls 
+cd ECE588/
+cd FLABnet/data
+cd SIDD_Medium_Srgb/
+cd Data
+cd 0078_004_G4_00200_00050_3200_N/
+ls
+feh --df
+feh --keep-zoom-vp
+feh --keep-zoom-vp --force-aliasing
+cd Data
+cd 0078_004_G4_00200_00050_3200_N/
+feh --df
+feh --keep-zoom-vp
+feh --keep-zoom-vp --force-aliasing
+cd Class/
+cd Fa23/
+acd ECE685/
+cd ECE685/
+cd HW2
+ls
+nemo .
+acd ECE685/
+cd HW2
+nemo .
+cd Class/
+cd Fa23/
+cd ECE685/
+cd HW4
+cd ..
+cd HW3
+ls
+nvim .
+code .
+cd 0078_004_G4_00200_00050_3200_N/
+feh --df
+feh --keep-zoom-vp
+feh --keep-zoom-vp --force-aliasing
+cd Class/Fa23/
+cd ECE588/
+cd FLABnet/
+cd data
+cd SIDD_Medium_Srgb/
+ls
+cd Data
+tree
+lap
+desk
+lscpu
+ssh i3t
+lap
+ssh i3t
+lap
+cd Class/Fa23/
+cd RIS393/
+cd ying
+ls
+code .
+desk
+lap
+bluetoothctl
+ssh i3t
+ls
+ssh i3t
+cd Fa
+cd Class/Fa23/
+cd ECE685/
+ls
+cd Adversarial-Black-Box-Attacker/
+git pull
+code .
+cd ECE685/
+cd Adversarial-Black-Box-Attacker/
+git pull
+cd Down
+cd Downloads/
+mkdir discussion
+mv Part* discussion/
+cd discussion/
+cd ..
+mv discussion/ ~/Class/Fa23/ECE685/
+cd 
+cd Class/Fa23/ECE685/discussion/
+ls
+code .
+which julia
+code .
+cd Class/Fa23/
+cd ECE685/
+ls
+wiki
+conda activate
+conda create -n "DL_final" python=3.11
+conda activate DL_final
+pip install tensorflow
+conda activate DL_final
+pip install tensorflow
+cd Downloads/
+mv archive.zip ~/Class/Fa23/ECE685/
+cd ~/Class/Fa23/ECE685/
+mv archive.zip Adversarial-Black-Box-Attacker/
+cd Adversarial-Black-Box-Attacker/
+ls
+unzip archive.zip 
+conda activate DL_final
+pip install matplotlib pillow scipy image
+pip install imageio
+bluetoothctl
+systemctl stop pulseaudio.socket
+systemctl stop pulseaudio.service
+suspend
+sudo systemctl suspend
+lap
+lap
+cd Class/Fa23/ECE685/
+mkdir Avdersarial_Playground
+cd Avdersarial_Playground/
+ls
+code .
+cd Downloads/
+ls
+mpv
+mpv Lecture\ 16\ Part\ 2.mp4 
+cd Class/Fa23/ECE685/
+mkdir Avdersarial_Playground
+code .
+mpv
+mpv Lecture\ 16\ Part\ 2.mp4 
+cd Downloads/
+mv lenet_mnist_model.pth.pt ~/Class/F
+cd ~/Class/Fa23/ECE685/
+ls 
+ls -a
+cd Adversarial-Black-Box-Attacker/
+lds
+cd ..
+cd Avdersarial_Playground/
+cd ~/Downloads/
+ls
+conda activate DL_final
+ls
+pip install torch torchvision
+pip install torch torchvision
+cd Class/Fa23/
+cd ECE685/
+ls
+rm -rf data
+nvidia-smi
+conda activate DL_final
+git pull
+wiki
+ssh i3t
+git pull
+wiki
+ssh i3t
+cd Class/Fa23/
+cd ECE685/
+ls
+cd HW3
+nvim .
+code .
+nvim .
+cd Class/Fa23/
+cd ECE685/
+ls
+cd HW3
+code .
+lap
+sudo pacman -S screenkey
+ls
+screenkey
+lw
+ls
+screenkey --hlp
+screenkey --help
+screenkey --help
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+screenkey --help
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+shutdown now
+lap
+cd dotfiles/
+ls
+cd qtile/
+nvim config.py 
+nvim config.py 
+sudo systemctl restart bluetooth
+bluetoothctl
+spt
