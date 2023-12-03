@@ -2501,3 +2501,79 @@ nvim config.py
 sudo systemctl restart bluetooth
 bluetoothctl
 spt
+nvim config.py 
+shutdown now
+lap
+cd qtile/
+nvim config.py 
+nvim config.py 
+sudo systemctl restart bluetooth
+bluetoothctl
+spt
+cd .config
+mv spotify-tui/ ~/dotfiles
+cd dotfiles/
+history | grep "ln -s'
+history | grep "ln -s"
+ln -s ~/dotfiles/spotify-tui/ ~/.config/spotify-tui
+cd spotify-tui/
+ls
+nvim client.yml 
+cd ..
+git status
+git add --all
+git commit -m "added flameshot and spotify-tui" 
+spt
+spotify-tui
+spotify
+yay -S spotify-tui
+spt
+ls
+pwd
+which spotifyd
+/usr/bin/spotifyd --no-daemon
+spotifyd
+spt
+lap
+cd qtile/
+nvim config.py 
+nvim config.py 
+sudo systemctl restart bluetooth
+bluetoothctl
+spt
+mv spotify-tui/ ~/dotfiles
+cd dotfiles/
+history | grep "ln -s'
+history | grep "ln -s"
+ln -s ~/dotfiles/spotify-tui/ ~/.config/spotify-tui
+cd spotify-tui/
+nvim client.yml 
+git status
+git add --all
+git commit -m "added flameshot and spotify-tui" 
+spt
+spotify-tui
+spotify
+yay -S spotify-tui
+spt
+systemctl --user enable spotifyd --now
+cd systemd/
+cd user
+touch spotifyd.service
+nvim
+nvim spotifyd.service 
+cd ..
+cd
+systemctl --user enable spotifyd.service
+cd .config
+mkdir spotifyd
+cd spotifyd
+touch spotifyd.conf
+ls
+nvim spotifyd.conf 
+systemctl --user restart spotifyd.service
+systemctl --user status spotifyd.service
+systemctl --user enable spotifyd --now
+sudo pacman -S obs-studio
+obs
+yay -S qt-recordmydesktop
