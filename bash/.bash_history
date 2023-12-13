@@ -2577,3 +2577,1105 @@ systemctl --user enable spotifyd --now
 sudo pacman -S obs-studio
 obs
 yay -S qt-recordmydesktop
+git commit -m "added flameshot and spotify-tui" 
+spotify
+yay -S spotify-tui
+spotifyd
+sudo pacman -S spotifyd 
+systemctl --user restart spotifyd
+sudo systemctl start spotifyd
+systemctl --user start spotifyd
+spotify-tui
+systemctl --user start spotifyd.service
+cd .config
+ls
+systemctl --user restart spotifyd.service
+spt
+spotifyd --version
+cd 
+cd dotfiles/
+git status
+git add --all
+git commit -m "spotify-tui installed"
+git push
+spt
+spt
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+shutdown now
+lap
+cd dotfiles/qtile/
+ls
+nvim config.py 
+history
+cd dotfiles/qt
+cd dotfiles/qtile/
+ls
+nvim config.py 
+nvim config.py 
+cd Class/Fa23/
+cd CS671/
+cd Final/
+ls
+code .
+desk
+history
+history | grep "sudo pacman -S"
+sudo pacman -S screenkey
+history | grep "yay -S"
+yay -Rcns qt-recordmydesktop
+pacman -Qdt
+pacman -Scc
+sudo pacman -Scc
+neofetch
+pacman -Qe
+pacman -Qm
+LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
+sudo systemctl enable spotifyd.service
+spotifyd --version
+spt
+htop
+cd Class/Fa23/CS671/Final/
+ls
+git init
+git add --all
+git commit -m "first"
+git branch -M main
+git remove add origin git@github.com:mbahng/671_final.git 
+git remote add origin git@github.com:mbahng/671_final.git 
+git push -u origin main
+git status
+touch .gitignore
+nvim .gitit
+nvim .gitig
+nvim .gitignore 
+ssh i3t
+conda activate language-base
+pip install seaborn
+htop
+conda activate langdsf
+conda activate language-base
+pip install xgboost
+lap
+wiki
+desk
+shutdown now
+lap
+ssh i3t
+cd Downloads/
+ls
+ssh i3t
+clear
+scp Kaggle_671.ipynb i3t:~/Desktop/other/test.ipynb
+cd dotfiles/
+cd ..
+cd .ssh
+ls
+cd config
+echo config 
+nvim config 
+git pull
+history
+cd Downloads/
+ls
+rm Kaggle_671.ipynb 
+mv Kaggle_671\ \(1\).ipynb harry.ipynb
+scp harry.ipynb i3t:~/Desktop/other/test.ipynb
+desk
+desk
+cd Class/Fa23/CS671/Final/
+code .
+git pull
+desk
+desk
+cd Class/Fa23/CS671/Final/
+code .
+git pull
+cd Downloads/
+rm TwitchStudioSetup-network_\[usher-988738480\]\[referrer-prospects\].exe 
+rm Lecture\ 16\ Part\ 2.mp4 
+rm Lecture\ 16\ Part\ 3.mp4 
+rm knn_and_gbm2.ipynb 
+rm harry.ipynb 
+mv ML_Final_Report.pdf ~/Class/Fa23/CS671/Final/files/pdf/
+cd Discord/
+rm -rf Discord/
+cd images/
+cd ..
+rmdir images/
+rm -rf SIDD/
+rm archive.zip 
+ls
+cd Downloads/
+ls
+mv pdfjoiner.pdf concat_file_submission.pdf
+mv concat_file_submission.pdf ~/Class/Fa23/CS671/Final/files/
+rm archive.zip 
+cd Class/Fa23/CS671/fil
+cd Class/Fa23/CS671/Final/files/
+zip code
+zip -r code/
+zip -r code.zip code
+ls
+zip code
+zip -r code/
+zip -r code.zip code
+cd ~/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/NESattack/
+conda activate DL_final
+ls
+python main.py --constraint L2 --attack_type untargeted --num_samples 5
+python
+cd ..
+pythoNESattack/n main.py --constraint L2 --attack_type untargeted --num_samples 5
+asdf
+python
+cd ..
+pythoNESattack/n main.py --constraint L2 --attack_type untargeted --num_samples 5
+asdf
+conda activate DL_final
+pytho
+ls
+pip install pillow
+pip install matplotlib
+pip install imageio
+python NESattack/main.py --constraint l2 --attack_type untargeted --num_samples 5
+pip install tf-slim
+zip -r code.zip code
+conda activate DL_final
+pip install python=3.10
+pip install python==3.10
+conda install python=3.10
+pip install tensorflow==2.14
+keras --version
+conda list | grep keras
+pip install keras=2.4.3
+pip install keras==2.4.3
+cd NESattack/
+ls
+zip -r code/
+zip -r code.zip code
+conda activate DL_final
+conda list
+cd NESattack/
+rm imagenet64.tar
+ls
+pip install tensorflow
+python precompute.py 
+tty
+neofetch
+rm imagenet64.tar
+ls
+pip install tensorflow
+conda activate DL_final
+pip install torch torchvision
+conda list
+conda list | grep keras
+conda install keras=2.3.1
+python precompute.py 
+neofetch
+lap
+nvidis-ami
+nvidia-smi
+pip install python=3.10
+pip install python==3.10
+conda install python=3.10
+pip install tensorflow==2.14
+keras --version
+pip install keras=2.4.3
+pip install keras==2.4.3
+zip -r code/
+zip -r code.zip code
+rm imagenet64.tar
+pip install tensorflow
+tty
+neofetch
+cd Class/Fa23/ECE685/
+cd Adversarial-Black-Box-Attacker/
+cd NESattack/
+conda list | grep keras
+pip uninstall tensorflow
+pip uninstall tensorflow-estimator tensorflow-io-gcs-filesystem
+conda list | grep glib
+conda update conda
+conda activate
+conda env remove --name DL_final
+conda create -n "DL_final" python=3.10
+conda activate DL_final
+conda install keras=2.3.1
+conda install keras=2.14.0
+pip install keras=2.14.0
+pip install keras=2=.14.0
+pip install keras==2.14.0
+pip install matplotlib==3.7.1 matplotlib-inline==0.1.6
+pip install tensorflow==2.14.0 
+python -m pip install torch==2.1.0+cu118
+python -m pip install torch==2.1.0+cu118 --index-url
+python -m pip install torch==2.1.0+cu118 --index-url https://download.pytorch.org/whl/cu118
+pip install pillow==9.4.0
+pip install imageio==2.31.6
+pip install tf-slim==1.1.0
+conda list
+echo $CUDA_VISIBLE_DEVICES
+export CUDA_VISIBLE_DEVICES=0
+conda list | grep tensorflow
+pip install tensodasf
+pip install tensdf
+pip install tensorflow-gcs-config==2.14.0
+python precompute.py
+pip3 install tensorflow==2.2 keras==2.3.1
+pip install tensorflow==2.2 keras==2.3.1
+pip install tensorflow==2.8 keras==2.3.1
+pip install tensorflow==2.2.0
+history | grep python
+pip install python==3.8
+pip install python==3.8.*
+pip install python==3.8.0
+conda install python=3.8
+pip install tensorflow=2.2
+pip install tensorflow==2.2
+ls
+python precompute.py 
+pip install protoc==3.19.0
+pip install protoc=3.19.0
+conda install protoc=3.19.0
+cd Class/Fa23/CS671/Final/files/
+zip code
+zip -r code/
+zip -r code.zip code
+cd Down
+cd Downloads/ls
+cd Downloads/
+mv inception_v3_2016_08_28 ~/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/
+mv inception_v3_2016_08_28.tar.gz ~/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/
+rm inception_v3_2016_08_28\(1\).tar.gz 
+wiki
+mv imagenet64.tar ~/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/NESattack/
+ls
+conda activate DL_final
+conda install distutils
+conda activate DL_finaldf
+htop
+conda activate DL_final
+conda install distutils
+conda activate DL_finaldf
+ssh tarokhlab-02
+ssh tarokhlab-02 --verbose
+ssh -vvv tarokhlab-02
+clear
+htop
+cd Class/Fa23/
+cd ECE685/
+cd Adversarial-Black-Box-Attacker/
+ls
+git add NESattack/muchang.ipynb 
+git commit -m "added notebook"
+git push
+git pull
+git status
+rm -rf SIDD/
+rm archive.zip 
+mv pdfjoiner.pdf concat_file_submission.pdf
+mv concat_file_submission.pdf ~/Class/Fa23/CS671/Final/files/
+rm archive.zip 
+cd Class/Fa23/CS671/fil
+cd Class/Fa23/CS671/Final/files/
+zip code
+zip -r code/
+zip -r code.zip code
+cd Downloads/
+cd Class/Fa23/
+cd ECE685/
+cd Adversarial-Black-Box-Attacker/
+code .
+cd NESattack/tools/data
+tar -xzvf inception_v3_2016_08_28.tar.gz 
+rm inception_v3_2016_08_28.tar.gz 
+cd .. 
+ls
+tar -xf imagenet64.tar 
+cd ..
+conda activate DL_final
+python NESattack/main.py --constraint l2 --attack_type untargeted --num_samples 5
+conda install python=3.10
+pip install tensorflow==2.14.0
+conda list | grep tensorflow
+conda list | keras
+conda list | grep keras
+pip install distutils
+sudo pacman -S python-distutils-extra
+ssh i3t
+cd Downloads/
+ls
+zathura 1804.08598.pdf 
+desk
+ssh i3t
+ssh tarokhlab-02
+cd Downloads/
+ls
+nvim kaggle.json 
+cd .ssh
+ls
+nvim config
+zathura 1804.08598.pdf 
+desk
+ssh i3t
+nvim kaggle.json 
+cd .ssh
+nvim config
+mkdir data
+ls
+cd data
+mkdir butterflies_and_moths
+cd butterflies_and_moths/
+cd mkdir test
+mkdir test
+touch "butterflies and moths.csv"
+touch training.csv.csv
+mkdir imagenet64
+cd imagenet64/
+mkdir train
+mkdir valid
+cd ..
+cd 
+cd Downloads/
+tree
+ssh tarokhlab-02
+cd Downloads/
+tree
+ssh tarokhlab-02
+cd Class/Fa23/ECe5
+cd Class/Fa23/ECE588/
+cd FLABnet/
+ls
+code .
+git status
+git remove --all
+git unadd --all
+git reset
+git pull
+cd Class/Fa23/ECE588/FLABnet/
+cd poster/
+ls
+nvim .
+conda activate image-base
+cd poster
+ls
+make
+latexmk poster.tex
+texlive poster.tex
+pacman -Q | grep texlive
+texlive poster.tex
+cd Class/Fa23/ECE588/
+git clone git@github.com:andiac/gemini-cam.git
+cd gemini-cam/
+latexmk
+latexmk --version
+ls
+make
+wiki
+wiki
+cd Research/
+ls
+git clone git@github.com:diaoenmao/Deep-Regularization.git
+code .
+cd Research/
+cd Deep-Regularization/
+ls
+code .
+spt
+cd dotfiles/qtile/
+ls
+nvim config.py 
+ssh tarokhlab-02
+ssh i3t
+python
+cd Downloads/
+ls
+code .
+d
+ssh tarokhlab-02
+ssh tarokhlab-02
+shutdown now
+lap
+shutdown now
+lap
+ssh tarokhlab-02
+lap
+ssh tarokhlab-02
+shutdown now
+lap
+git pull
+lap
+python
+ssh i3t
+ssh tarokhlab-02
+ssh tarokhlab-02
+ssh tarokhlab-02
+desk
+lap
+desk
+ssh tarokhlab-02
+cd Desktop/
+history | grep scp
+scp po_butterflies_0/ tarokhlab-02:/scratch/mb625
+scp -r po_butterflies_0/ tarokhlab-02:/scratch/mb625
+ls
+ssh tarokhlab-02
+ssh i3t
+history | grep kaggle
+history | grep scp
+cd Downloads/
+ls
+scp kaggle.json tarokhlab-02:/scratch/mb625
+history | grep scp
+scp kaggle.json tarokhlab-02:/scratch/mb625
+cd Downloads/
+nvim kaggle.json
+scp kaggle.json i3t:~/Desktop/other
+scp kaggle.json i3t:~/.kaggle/
+ls
+nvim kaggle.json 
+ssh tarokhlab-02
+ssh i3t
+lap
+ssh tarokhlab-02
+ssh i3t
+lap
+ssh tarokhlab-02
+cd Class/
+cd Fa23/
+cd ECE685/
+rm -rf Adversarial-Black-Box-Attacker/
+ls
+git clone git@github.com:ngungu46/Adversarial-Black-Box-Attacker.git
+code .
+cd Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/
+code .
+code .
+conda activate DL_final
+pip install opencv-python torchvision
+git pull
+/home/mbahng/.conda/envs/DL_final/bin/python /home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_nes_defender.py
+conda activate DL_final
+/home/mbahng/.conda/envs/DL_final/bin/python /home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_nes_defender.py
+/home/mbahng/.conda/envs/DL_final/bin/python "/home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_hsj copy.py"
+/home/mbahng/.conda/envs/DL_final/bin/python
+htop
+cd Desktop/
+ls
+history | grep scp
+scp -r po_butterflies_0/ tarokhlab-02:/scratch/mb625
+ssh tarokhlab-02
+cd Class/
+cd Fa23/
+cd ECE685/
+rm -rf Adversarial-Black-Box-Attacker/
+git clone git@github.com:ngungu46/Adversarial-Black-Box-Attacker.git
+code .
+cd Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/
+code .
+code .
+pip install opencv-python torchvision
+/home/mbahng/.conda/envs/DL_final/bin/python
+conda activate DL_final
+/home/mbahng/.conda/envs/DL_final/bin/python "/home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_hsj copy.py"
+ls
+git add def_output/
+git commit -m "defense"
+/home/mbahng/.conda/envs/DL_final/bin/python /home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/AAA/models.py
+/home/mbahng/.conda/envs/DL_final/bin/python /home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_nes_defender.py
+git add eval_nes_defender.py 
+git  add src
+git commit -m "final updates from muchang"
+git push
+git pull
+shutdown now
+lap
+history | grep scp
+scp -r po_butterflies_0/ tarokhlab-02:/scratch/mb625
+ssh tarokhlab-02
+cd Class/
+cd Fa23/
+cd ECE685/
+code .
+cd Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/
+code .
+code .
+pip install opencv-python torchvision
+/home/mbahng/.conda/envs/DL_final/bin/python
+conda activate DL_final
+/home/mbahng/.conda/envs/DL_final/bin/python "/home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_hsj copy.py"
+git add def_output/
+git commit -m "defense"
+/home/mbahng/.conda/envs/DL_final/bin/python /home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/AAA/models.py
+/home/mbahng/.conda/envs/DL_final/bin/python /home/mbahng/Class/Fa23/ECE685/Adversarial-Black-Box-Attacker/eval_nes_defender.py
+git add eval_nes_defender.py 
+git  add src
+git commit -m "final updates from muchang"
+git push
+git pull
+shutdown now
+lap
+git clone git@github.com:ngungu46/Adversarial-Black-Box-Attacker.git
+mv DL_final_report.pdf  Adversarial-Black-Box-Attacker/
+zip Adversarial-Black-Box-Attacker/
+zip submission Adversarial-Black-Box-Attacker/
+mv submission.zip 
+mv submission.zip ~
+cp submission.zip submission2.zip 
+unzip submission2.zip 
+cd 
+zip -r submission Adversarial-Black-Box-Attacker/
+cd
+rm submission2.zip 
+cd Downloads/
+mv DL_final_report.pdf Adversarial-Black-Box-Attacker/
+rm submission.zip 
+zip -r submission.zip Adversarial-Black-Box-Attacker/
+ls -l
+rm -rf Adversarial-Black-Box-Attacker/
+unzip submission.zip 
+cd Adversarial-Black-Box-Attacker/
+cd ..
+zip -r p_y1_gc Adversarial-Black-Box-Attacker/
+ls
+shutdown now
+desk
+cp submission.zip submission2.zip 
+unzip submission2.zip 
+cd 
+zip -r submission Adversarial-Black-Box-Attacker/
+cd
+rm submission2.zip 
+mv DL_final_report.pdf Adversarial-Black-Box-Attacker/
+zip -r submission.zip Adversarial-Black-Box-Attacker/
+ls -l
+unzip submission.zip 
+cd Adversarial-Black-Box-Attacker/
+zip -r p_y1_gc Adversarial-Black-Box-Attacker/
+shutdown now
+desk
+sudo systemctl restart bluetooth
+cd Desktop/
+rm 1*
+rm 2* 3* 
+rm -rf po_*
+rm -rf run_23/
+rm hist_nes_imagenet.png 
+rm kakaotalk.desktop 
+rm -rf Cookbook/
+cd Downloads/
+rm NESAttack-2.ipynb 
+nvim S1047320318300208.txt 
+rm S1047320318300208.txt 
+rm SFHQ_pic.png 
+rm p_y1_gc.zip 
+rm kaggle.json 
+cd data/
+cd ..
+rm -rf data/
+rm -rf Adversarial-Black-Box-Attacker/
+rm submission.zip 
+l
+ls
+bluetoothctl
+spt
+neovim
+nvim
+nvim
+cd dotfiles/nvim/lua/muchang/
+ls
+nvim packer.lua 
+nvim remap.lua 
+nvim set.lua
+nvim set.lua 
+nvim 
+nvim options.lua 
+nvim set.lua
+nvim set.lua 
+nvim 
+nvim options.lua 
+cd .local/
+cd share
+cd nvim
+cd site
+cd pack/packer/start/
+cd packer.nvim/
+ls
+cd ..
+nvim
+ls -l
+rm -rf Adversarial-Black-Box-Attacker/
+unzip submission.zip 
+cd Adversarial-Black-Box-Attacker/
+zip -r p_y1_gc Adversarial-Black-Box-Attacker/
+shutdown now
+desk
+cp submission.zip submission2.zip 
+unzip submission2.zip 
+cd 
+zip -r submission Adversarial-Black-Box-Attacker/
+rm submission2.zip 
+mv DL_final_report.pdf Adversarial-Black-Box-Attacker/
+zip -r submission.zip Adversarial-Black-Box-Attacker/
+ls -l
+unzip submission.zip 
+cd Adversarial-Black-Box-Attacker/
+zip -r p_y1_gc Adversarial-Black-Box-Attacker/
+shutdown now
+desk
+sudo systemctl restart bluetooth
+cd Desktop/
+rm 1*
+rm 2* 3* 
+rm -rf po_*
+rm -rf run_23/
+rm hist_nes_imagenet.png 
+rm kakaotalk.desktop 
+rm -rf Cookbook/
+cd Downloads/
+rm NESAttack-2.ipynb 
+nvim S1047320318300208.txt 
+rm S1047320318300208.txt 
+rm SFHQ_pic.png 
+rm p_y1_gc.zip 
+rm kaggle.json 
+cd data/
+rm -rf data/
+rm -rf Adversarial-Black-Box-Attacker/
+rm submission.zip 
+l
+spt
+neovim
+bluetoothctl
+cd dotfiles/
+cd muchang
+nvim set.lua 
+mv set.lua options.lua
+nvim remap.lua 
+nvim .
+cd .config
+cd nvim
+cd dotfiles/nvim
+cd plugin
+cd lua
+cd ..
+tree
+cd lua/muchang/
+nvim packer.lua 
+nvim plugins.lua 
+cd
+cd dotfiles/nvim/
+ls
+nvim init.lua 
+nvim
+packer
+rm kaggle.json 
+cd data/
+rm -rf data/
+rm -rf Adversarial-Black-Box-Attacker/
+rm submission.zip 
+l
+bluetoothctl
+spt
+neovim
+nvim set.lua
+nvim set.lua 
+nvim 
+cd dotfiles/nvim/lua/muchang/
+cd ~/Downloads/
+mv plugins.lua ~/dotfiles/nvim/lua/muchang/
+cd ~/dotfiles/nvim/lua/muchang/
+nvim packer.lua 
+nvim
+nvim options.lua 
+nvim remap.lua 
+nvim plugins.lua 
+cd ~
+cd Downloads/
+unzip Neovim-from-scratch-03-plugins.zip 
+cd Neovim-from-scratch-03-plugins
+cd ..
+mv Neovim-from-scratch-03-plugins nvim
+mv nvim/ ~/dotfiles/
+ls
+nvim S1047320318300208.txt 
+rm S1047320318300208.txt 
+rm SFHQ_pic.png 
+rm p_y1_gc.zip 
+rm kaggle.json 
+cd data/
+rm -rf data/
+rm -rf Adversarial-Black-Box-Attacker/
+rm submission.zip 
+l
+spt
+neovim
+bluetoothctl
+cd muchang
+nvim set.lua 
+mv set.lua options.lua
+nvim remap.lua 
+nvim .
+cd dotfiles/nvim
+cd plugin
+tree
+cd lua/muchang/
+nvim packer.lua 
+cd
+cd dotfiles/nvim/
+packer
+mv nvim nvim_old
+ls -l
+cd .config
+ls 
+nvim options.lua 
+nls
+touch cmp.lua
+nvim cmp.lua 
+cd 
+cd dotfiles/
+cd nvim
+cd ..
+nvim init.lua 
+cd lua
+cd user
+ls
+nvim
+cd keymaps.lua 
+nvim keymaps.lua 
+cd plugins.lua 
+nvim plugins.lua 
+rm 1*
+rm 2* 3* 
+rm -rf po_*
+rm -rf run_23/
+rm hist_nes_imagenet.png 
+rm kakaotalk.desktop 
+rm -rf Cookbook/
+rm NESAttack-2.ipynb 
+nvim S1047320318300208.txt 
+rm S1047320318300208.txt 
+rm SFHQ_pic.png 
+rm p_y1_gc.zip 
+rm kaggle.json 
+cd data/
+rm -rf data/
+rm -rf Adversarial-Black-Box-Attacker/
+rm submission.zip 
+l
+bluetoothctl
+spt
+neovim
+nvim
+nvim
+nvim set.lua
+nvim set.lua 
+nvim 
+nvim set.lua
+nvim set.lua 
+nvim 
+cd .local/
+cd share
+cd nvim
+cd site
+cd pack/packer/start/
+cd packer.nvim/
+nvim
+cd dotfiles/nvim/lua/muchang/
+vim packer.lua 
+nvim packer.lua 
+tree
+cd after/plugin/
+rm *
+cd .. 
+rm packer.lua 
+cd .
+nvim init.lua 
+cd mu
+cd after/
+cd plugin/
+cd ..
+rm -rf after/
+cd plugin
+nvim packer_compiled.lua 
+rm packer_compiled.lua 
+cd dotfiles/nvim_old/
+cd lua/muchang/
+gedit plugins.lua 
+nvim options.lua 
+nvim remap.lua 
+nvim plugins.lua 
+cd Down
+cd Downloads/
+git clone git@github.com:LunarVim/Neovim-from-scratch.git
+cd Neovim-from-scratch
+cd lua/
+cd user/
+mv lsp/ ~/dotfiles/nvim/lua/user/
+cd 
+cd Class/
+cd Fa23/
+cd ECE685/
+cd Adversarial-Black-Box-Attacker/
+ls
+nvim eval_nes.py 
+shutdown now
+desk
+cd Downloads/
+nvim HW6\ 2023.tex 
+gedit HW6\ 2023.tex 
+lap
+bluetoothctl
+bluetoothctl
+cd Notes/
+ls
+cd mbahng-com/
+git status
+git add --all
+git commit -m "updates"
+git push
+desk
+ssh i3t
+git status
+git add --all
+git commit -m "updates"
+git push
+desk
+ssh i3t
+cd Class/Fa23/ECE588/
+cd gemini-cam/
+cd ..
+rm -rf gemini-cam/
+cd FLABnet/
+ls
+code .
+conda activate image-base
+git pull
+rm -rf gemini-cam/
+cd FLABnet/
+code .
+conda activate image-base
+git pull
+cd Downloads/
+rm scheme.png 
+rm SFHQ_pic.png 
+rm Neovim-from-scratch-03-plugins.zip 
+rm FLABnet-1.pdf 
+rm FLABnet
+rm FLABnet.pdf 
+rm PS_6.pdf 
+rm HW6\ 2023.tex 
+rm 1804.08598.pdf 
+rm 1904.02144.pdf 
+rm 2205.12134.pdf 
+unzip submission.zip 
+cd FLABnet
+cd ..
+ls
+rm -rf FLABnet
+rm submission.zip 
+git commit -m "updates"
+git push
+desk
+ssh i3t
+cd Class/Fa23/ECE588/
+cd gemini-cam/
+rm -rf gemini-cam/
+conda activate image-base
+git pull
+cd Class/
+rm F
+cd Fa23/
+cd ECE588/
+rm -rf FLABnet/
+git clone git@github.com:SultanMo/FLABnet.git
+cd FLABnet/
+code .
+rm -rf out
+cd ..
+zip submission FLABnet/
+mv submission.zip 
+mv submission.zip ~/Downloads/
+ls -l
+ls
+rm submission.zip 
+zip -r submission FLABnet/
+zip -r submission FLABnet/
+cd Class/Fa23/ECE588/FLABnet/
+cd ..
+ls
+mv submission.zip ~/Downloads/
+mv submission.zip ~/Downloads/
+cd Downloads/
+unzip submission.zip 
+cd FLABnet
+cd ..
+ls
+rm -rf FLABnet
+shutdown now
+lap
+conda activate pytorch-base
+python
+cd Downloads/
+ls
+mv mall_customers.csv ~/Class/Fa23/CS671/HW6
+conda activate pytorch-base
+python
+cd Class/Fa23/CS671/
+rm Sara
+rm -rf Sara
+rm Sara.zip 
+rm test2.ipynb 
+cd HW6
+ls
+code .
+sudo systemctl restart bluetooth
+rm -rf Sara
+rm Sara.zip 
+rm test2.ipynb 
+sudo systemctl restart bluetooth
+cd Class/
+cd Fa23/CS671/
+cd HW
+cd HW6
+mv ~/Downloads/gaussian-mixture.ipynb .
+ls
+code .
+cd ~/Class/Fa23/CS671/HW6
+ls
+unzip Q5.zip 
+cd Fa23/CS671/
+cd HW
+cd HW6
+mv ~/Downloads/gaussian-mixture.ipynb .
+code .
+cd Downloads/
+cd /tmp/BlueBubbles/
+cd attachments/
+cd at_0_6BEB6081-6B24-4218-A6FC-BD1117DF1D94/
+cd ..
+cd 93E77CCE-07B5-4F86-9526-E3B1A93A71C4/
+unzip Q5.zip 
+ls
+mv Q5.zip ~/Class/Fa23/CS671/HW6/
+shutdown now
+desk
+desk
+cd Class/Fa23/RIS393/
+cd ying
+ls
+nemo .
+lap
+python
+cd Downloads/
+mv HW6_Muchang.zip ~/Class/Fa23/CS671/HW6
+desk
+cd Class/Fa23/RIS393/
+cd ying
+nemo .
+lap
+python
+cd Downloads/
+mv HW6_Muchang.zip ~/Class/Fa23/ECE685/HW6
+cd ~/Class/Fa23/ECE685/HW
+cd ~/Class/Fa23/ECE685/HW6
+cd 
+cd Class/
+cd Fa23/
+cd ECE685/
+HW6
+rm HW6
+cd ..
+cd CS671/
+cd HW6
+ls
+unzip HW6_Muchang.zip 
+desk
+anyconnect
+cisco-anyconnect
+cd qt
+cd dotfiles/qtile/
+ls
+nvim config.py 
+anyconnect
+cisco-anyconnect
+cd qt
+cd dotfiles/qtile/
+nvim config.py 
+cd /usr/share/icons/
+cd hicolor/
+cd 48x48/
+cd apps/
+cd ls
+rm cisco-anyconnect.png 
+cd 128x128/
+cd apps
+sudo rm cisco-anyconnect.png 
+cd ..
+cd ../../..
+cd applications/
+ls
+sudo rm cisco-anyconnect.desktop 
+cd /opt/
+sudo rm -rf .cisco
+HW6
+rm HW6
+cd ..
+cd CS671/
+cd HW6
+unzip HW6_Muchang.zip 
+desk
+pacman -Q | grep anyconnect
+pacman -Q | grep cisco
+cd Downloads/
+tar xf anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+cd anyconnect-linux64-4.10.07073
+cd vpn
+./vpn_install.sh 
+sudo make install
+cd
+cd /opt/cisco/anyconnect/
+cd bin
+vpnui
+./vpnui
+cd /opt
+sudo rm -rf cisco/
+ls
+yay -S cisco-anyconnect
+cisco-anyconnect
+cd /opt
+sudo rm -rf cisco/
+yay -S cisco-anyconnect
+cisco-anyconnect
+cd /opt/
+cd cisco/
+cd anyconnect/
+cd ..
+cd .cisco
+cd certificates/
+ls
+shutdown now
+desk
+shutdown now
+desk
+lap
+ssh 
+ssh i3t
+desk
+shutdown now
+desk
+lap
+cd .ssh
+cd config 
+nvim config 
+mv .ssh ~/dotfiles/
+ls
+cd dotfiles/
+history | grep "ln -s" 
+ln -s ~/dotfiles/.ssh/ ~/.ssh
+cd ..
+ls -a
+ssh tarokhlab-02

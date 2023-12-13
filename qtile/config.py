@@ -27,8 +27,6 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
-  
-
 
 
     # Launching/Closing application shortcuts 
@@ -51,8 +49,8 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "a", lazy.spawn("cisco-anyconnect"), desc="Launch cisco anyconnect (a - Anyconnect)"), 
     
-    Key([mod, "shift"], "s", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"), 
-
+    Key([mod, "shift"], "n", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"),
+    Key([mod, "shift"], "m", lazy.spawn("obs"), desc="Launch obs screen & audio recorder"), 
 
     # Extra utilities
     # actual print screen key is "Print" 
