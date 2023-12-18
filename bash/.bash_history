@@ -4355,3 +4355,15 @@ nvim .
 cd dotfiles/
 ls
 nvim .gitignore
+cd dotfiles/
+ls
+ls -a
+mv .ssh ~/
+nvim .gitignore
+cd .ssh
+cd ..
+ls -l
+ls -al
+rm .ssh
+ls
+ls -a
