@@ -4116,3 +4116,89 @@ cd A
 cd Adversarial-Black-Box-Attacker/
 ls
 nvim .
+cd A
+cd Adversarial-Black-Box-Attacker/
+nvim .
+cd Downloads/
+tar -xf discord-0.0.38.tar.gz 
+cd Discord/
+cd Discord 
+Di
+Discord
+ls
+./Discord 
+Discord
+cd Downloads/
+rm discord-0.0.38.tar.gz 
+cd Discord/
+ls
+./Discord 
+cd dotfiles/
+ls
+cd nvim 
+cd ..
+git add --all
+git commit -m "neovim config mainly finalized"
+git push
+cd HW5
+nvim Q2template.ipynb 
+rm -rf nvim_old
+cd vnim
+cd plugin/
+mkdir plugins
+cd plugins
+touch code-runner.lua
+nvim code-runner.lua 
+cd plugins.lua
+nvim plugins
+wiki
+shutdown now
+desk2
+unzip Final\ Vertices\ Edits_Acceptance.zip 
+zathura GTReview_SLAM.pdf 
+zathura SLAM\ Faculty\ Reviews\ \(1\).pdf 
+nvls
+nvim cmp.lua 
+touch telescope.lua
+touch treesitter.lua
+cd Down
+cd dotfiles/nvim/lua/user/
+conda activate pytorch-base
+python t
+python test.py 
+shutdown now
+lap
+cd Downloads/
+nvim test.py 
+touch test.txt
+nvim test.
+nvim test.txt 
+nvim test.py
+cd 
+cd dotfiles/
+lsc
+cd nvim
+cd user
+nvim options.lua 
+nvim telescope.lua 
+nvim treesitter.lua 
+touch autopairs.lua
+nvim plugins.lua 
+cd lua/user/
+nvim autopairs.lua 
+nvim autopairs.lua q
+nvim
+cd ..
+nvim int
+nvim init.lua 
+cd lua
+cd use
+cd user/
+touch colorscheme.lua
+nvim colorscheme.lua 
+nvim 
+cd ../..
+ls
+nvim .
+cd dotfiles/nvim
+ls
