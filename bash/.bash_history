@@ -4342,3 +4342,16 @@ nvim .
 cd Downloads/
 ls
 nvim test.py
+nvim test.py
+cd dotfiles/
+cd .ssh
+ls
+nvim .
+cd .ssh
+cd dotfiles/.ssh
+ls
+nvim id_ed25519
+nvim .
+cd dotfiles/
+ls
+nvim .gitignore
