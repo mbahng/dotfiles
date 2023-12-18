@@ -49,9 +49,18 @@ return packer.startup(function(use)
   use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
   use "windwp/nvim-autopairs"
   use "mbbill/undotree"
-  use "lervag/vimtex"
-  use "navarasu/onedark.nvim"
+  use "lervag/vimtex" -- latex 
+  use "navarasu/onedark.nvim" -- color theme
+  use "numToStr/Comment.nvim" -- comment stuff out 
 
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+  use "akinsho/toggleterm.nvim"
+  -- git 
+  use "lewis6991/gitsigns.nvim"
+
+  use "nvim-tree/nvim-web-devicons"
+  use "nvim-tree/nvim-tree.lua"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

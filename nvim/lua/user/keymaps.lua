@@ -16,8 +16,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-keymap("n", "<leader>u", ":UndotreeToggle <cr>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>u", ":UndotreeToggle<cr>", opts)
 keymap("n", "<leader>y", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>t", ":Telescope live_grep<cr>", opts)
 
@@ -30,6 +30,8 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-w>", ":Bdelete<CR>", opts)
+
 
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

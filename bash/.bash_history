@@ -4202,3 +4202,143 @@ ls
 nvim .
 cd dotfiles/nvim
 ls
+touch colorscheme.lua
+nvim colorscheme.lua 
+nvim 
+cd ../..
+nvim .
+cd dotfiles/nvim
+cd dotfiles/
+ls -a
+.gitignore
+nvim .git
+nvim .gitignore 
+git add --all
+git commit -m "updates"
+git push
+ls
+nvim .gitignore
+git remove .ssh
+git status
+cd dotfiles/nvim
+cd dotfiles/
+cd .ssh
+ls
+nvim .gitignore
+git remove .ssh
+git status
+cd dotfiles/nvim
+cd dotfiles/
+cd .ssh
+cd .local/share/
+cd nvim
+cd site/pack/packer/
+tree
+nvim start
+cd start
+cd opt
+ls
+cd ..
+cd ..
+cd dotfiles/
+cd nvim
+ls
+nvim init.lua 
+cd Downloads/
+ls
+nvim test.py
+cd ..
+cd ..
+nvim init.lua 
+cd dotfiles/
+cd nvim
+nvim .
+cd lua/user/
+ls
+touch gitsigns.lua
+nvi gitsigns.lua 
+nvim gitsigns.lua 
+cd Class/Fa23/ECE685/
+cd Adversarial-Black-Box-Attacker/
+cd Class/Fa23/ECE685/
+cd A
+cd Adversarial-Black-Box-Attacker/
+cd A
+cd Adversarial-Black-Box-Attacker/
+cd Downloads/
+tar -xf discord-0.0.38.tar.gz 
+cd Discord/
+cd Discord 
+Di
+Discord
+./Discord 
+Discord
+cd Downloads/
+rm discord-0.0.38.tar.gz 
+cd Discord/
+./Discord 
+sudo pacman -Rcns discord
+suco pacman -S discord
+sudo pacman -S discord
+cd dotfiles/
+cd nvim
+tree
+nvim autopairs.lua 
+nvim cmp.lua 
+cd lua
+touch comment.lua
+nvim comment.lua 
+cd lua/
+cd user
+ls
+touch nvim-tree.lua
+nvim nvim-tree.lua 
+cd ..
+nvim .
+cd nvim
+nvim init.lua 
+cd Downloads/
+nvim test.py
+cd Class/Fa23/
+cd ECE685/
+cd Adversarial-Black-Box-Attacker/
+ls
+nvim eval_nes
+nvim eval
+nvim eval_nes.py
+nvim .
+shutdown now
+lap
+shutdown now
+desk
+desk2
+shutdown now
+lap
+shutdown now
+desk
+desk2
+cd dotfiles/
+cd nvim
+ls
+nvim .
+nvim 
+lap
+shutdown now
+desk
+desk2
+cd .local/share/
+cd nvim
+cd site/pack/packer/
+cd start
+cd nvim-tree.lua/
+ls
+cd 
+cd Class/Fa23/ECE685/
+cd Adversarial-Black-Box-Attacker/
+nvim .
+cd dotfiles/nvim
+ls
+nvim .
+cd Downloads/
+ls
+nvim test.py
