@@ -3679,3 +3679,440 @@ ln -s ~/dotfiles/.ssh/ ~/.ssh
 cd ..
 ls -a
 ssh tarokhlab-02
+cd dotfiles/
+git status
+git add --all 
+git commit -m "updates"
+git push
+shutdown now
+desk
+cd Desktop/
+ls
+shutdown now
+lap
+ssh i3t
+shutdown now
+lap
+htop
+lap
+shutdown now
+lap
+htop
+lap
+cd dotfiles/
+cd nvim
+cd lu
+cd plugin
+cd ..
+cd lua
+cd user
+ls'
+ls
+cd plugins.lua 
+nvim plugins.lua 
+wiki
+nmtui
+arandr
+cd Downloads/
+ls
+cd ..
+vimtex deep
+shutdown now
+desk
+arandr
+desk
+arandr
+cd dotfiles/
+cd custom_scripts/
+touch desk2
+sudo touch desk2
+ls
+nvim desk2
+sudo nvim desk2
+arandr
+cd dotfiles/
+cd custom_scripts/
+ls
+nvim desk 
+nvim desk 
+lap
+desk2
+cd dotfiles/
+cd custom_scripts/
+ls
+sudo chmod +x desk2 
+desk2
+shutdown now
+desk2
+desk2
+cd Class/Fa23/
+cd ECE685/
+ls
+cd Adversarial-Black-Box-Attacker/
+nvim .
+shutdown now
+desk2
+vimtex deep
+htop
+lap
+ping google.com
+conda activate pytorch-base
+python
+shutdown now
+desk2
+conda activate image-base
+/home/mbahng/.conda/envs/image-base/bin/python /home/mbahng/Downloads/hi.py
+shutdown now
+desk2
+wiki
+shotdown now
+shoutdown now
+shutown now
+dhutdown now
+shutwodj now
+shutowiwjnow
+sjitmwpdm mpw]
+shutdown now
+lap
+cd Downloads/
+ls
+lap
+cd Downloads/
+cd Class/Fa23/
+cd CS671/
+cd HW6
+ls
+nemo .
+lap
+python
+cd HW6
+nemo .
+lap
+python
+cd Class/
+cd 
+cd Desktop/
+rm -rf A3UnrealSurMini/
+rm -rf yolov7/
+cd Downloads/
+ls
+cd ..
+bluetoothctl
+cd Class/
+cd 
+cd Desktop/
+rm -rf A3UnrealSurMini/
+rm -rf yolov7/
+cd Downloads/
+bluetoothctl
+aconfmgr
+pacman -Qdt
+pacman -Qqdt
+pacman -Rs $(pacman -Qdtdf)
+sudo pacman -Rs $(pacman -Qqdt)
+nvim
+cd dotfiles/
+cd nvim
+cd plugin
+cd ..
+cd lua
+cd user
+ls
+nvim plugins.lua 
+rm -rf yolov7/
+cd Downloads/
+cd ..
+bluetoothctl
+cd dotfiles/
+cd vnim
+cd n
+cd nv
+cd nvim
+cd lua
+cd user
+ls
+cd keymaps.lua 
+nvim keymaps.lua 
+shutdown now
+desk2
+cd Downloads/
+ls
+python test.py 
+python "/home/mbahng/Downloads/test.py"
+python "/home/mbahng/Downloads/test.py"
+:q
+ls
+cd n
+cd nv
+cd nvim
+cd keymaps.lua 
+nvim keymaps.lua 
+shutdown now
+desk2
+cd dotfiles/nvim
+cd plugin/
+nvim packer_compiled.lua 
+cd lua
+cd user
+cd ..
+mkdir ftplugin
+cd ftplugin/
+ls
+touch python.lua
+nvim python.lua 
+python "/home/mbahng/Downloads/test.py"
+:q
+cd dotfiles/nvim
+nvim packer_compiled.lua 
+cd lua
+cd user
+mkdir ftplugin
+cd ftplugin/
+touch python.lua
+nvim python.lua 
+python "/home/mbahng/Downloads/test.py"
+:q
+cd dotfiles/
+cd lua/user/
+cd plugins.lua 
+nvim plugins.lua 
+cd lsp
+cd ../..
+cd plugin/
+cd ..
+rm -rf nvim_old
+ls
+cd nvim
+nvim keymaps.lua 
+shutdown now
+desk2
+cd Downloads/
+ls
+touch test.py
+nvim t
+conda activate pytorch-base
+nvim test.py 
+cd Downloads/
+ls
+conda activate pytorch-base
+python test.py
+cd plugin/
+rm -rf nvim_old
+nvim keymaps.lua 
+shutdown now
+desk2
+cd Downloads/
+touch test.py
+nvim t
+conda activate pytorch-base
+nvim test.py 
+cd Downloads/
+conda activate pytorch-base
+python test.py
+cd dotfiles/
+cd nvim
+rm -rf ftplugin/
+nvim init.lua 
+cd lua/user/
+cd plugins
+rm -rf plugins
+nvim plugins.lua 
+cd ~/.local/share/nvim/
+cd site
+cd pack
+cd packer/
+cd start/
+cd ..
+cd start
+cd packer.nvim/
+cd lua
+ls
+nvim packer
+nvim packer.lua 
+cd dotfiles/nvim
+nvim packer_compiled.lua 
+mkdir ftplugin
+cd ftplugin/
+touch python.lua
+nvim python.lua 
+python "/home/mbahng/Downloads/test.py"
+:q
+cd plugins.lua 
+cd lsp
+cd ../..
+rm -rf nvim_old
+cd dotfiles/
+cd vnim
+cd nvim
+cd plugin/
+cd lua
+cd user
+nvim
+nvim init.lua 
+cd lua/user/
+mkdir plugins
+cd plugins
+touch code-runner.lua
+nvim code-runner.lua 
+cd ..
+ls
+cd plugins.lua
+nvim plugins
+nvim plugins.lua 
+cd Downloads/
+ls
+nvim test.py 
+wiki
+shutdown now
+desk2
+cd dotfiles/
+cd Downloads/
+ls
+unzip Final\ Vertices\ Edits_Acceptance.zip 
+zathura GTReview_SLAM.pdf 
+zathura SLAM\ Faculty\ Reviews\ \(1\).pdf 
+zathura SLAM\ Faculty\ Reviews\ \(1\).pdf 
+sudo pacman -S ripgrep
+rg
+cmatrix
+sudo pacman -S ripgrep
+rg
+cmatrix
+cd Downloads/
+ls 
+mv 4.jpg ~/Media/Pictures/wallpaper/
+cd Media/Pictures/wallpaper/
+cd do
+cd 
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+nvim config.py 
+cd Downloads/
+nvim test.py 
+cd ~/Class/Fa23/CS671/
+cd HW6
+lks
+cd ..
+cd HW5
+ls
+nvim Q2template.ipynb 
+cd ../..
+rm -rf nvim_old
+cd vnim
+cd plugin/
+cd lua/user/
+mkdir plugins
+cd plugins
+touch code-runner.lua
+nvim code-runner.lua 
+cd plugins.lua
+nvim plugins
+wiki
+shutdown now
+desk2
+unzip Final\ Vertices\ Edits_Acceptance.zip 
+zathura GTReview_SLAM.pdf 
+zathura SLAM\ Faculty\ Reviews\ \(1\).pdf 
+cd dotfiles/
+cd nvim
+nvls
+nvim cmp.lua 
+nvim 
+touch telescope.lua
+nvim telescope.lua 
+nvim plugins.lua 
+nvim
+touch treesitter.lua
+nvim options.lua 
+cd Down
+cd Downloads/
+nvim test.py 
+cd 
+cd dotfiles/nvim/lua/user/
+cd ..
+nvim init.lua 
+cd lua
+cd user
+ls
+nvim treesitter.lua 
+cd Downloads/
+conda activate pytorch-base
+python t
+python test.py 
+shutdown now
+lap
+lap
+cd dotfiles/
+cd nvim
+ls
+cd lua
+cd .
+nvim .
+vimtex deep
+cd dotfiles/nvim/
+cd lua/user/
+ls
+nvom options.lua 
+nvim options.lua 
+cd Downloads/
+nvim test.py
+cd Downloads/
+nvim test.py
+nvim options.lua 
+cd Downloads/
+rm Final\ Vertices\ Edits_Acceptance.zip 
+rm GTReview_SLAM.docx 
+rm GTReview_SLAM.pdf 
+rm SLAM_Paper.docx 
+rm SLAM\ Faculty\ Reviews\ \(1\).pdf 
+ls
+nvim test.py
+python test.py 
+shutdown now
+lap
+lap
+cd dotfiles/
+cd .
+nvim .
+vimtex deep
+cd dotfiles/nvim/
+cd lua/user/
+nvom options.lua 
+nvim options.lua 
+nvim options.lua 
+rm Final\ Vertices\ Edits_Acceptance.zip 
+rm GTReview_SLAM.docx 
+rm GTReview_SLAM.pdf 
+rm SLAM_Paper.docx 
+rm SLAM\ Faculty\ Reviews\ \(1\).pdf 
+cd .local/share/
+cd nvim
+cd site
+cd pack/
+cd packer/
+cd start/
+cd packer.nvim/
+nvim packer
+nvim packer.lua
+cd Downloads/
+python test.
+nvim test.py
+python test.py
+cd 
+cd dotfiles/nvim
+nvim init.lua 
+Lls
+cd lua
+ls
+cd ..
+cd Class/Fa23/ECE685/
+ls
+cd Adversarial-Black-Box-Attacker/
+nvim .
+cd Class/Fa23/ECE685/
+cd A
+cd Adversarial-Black-Box-Attacker/
+ls
+nvim .

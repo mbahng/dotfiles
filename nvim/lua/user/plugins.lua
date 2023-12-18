@@ -40,55 +40,18 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-  use { -- Have packer manage itself 
-    "wbthomason/packer.nvim" 
-  }
-  use { -- an implementation of the popup API from vim in neovim
-    "nvim-lua/popup.nvim" 
-  }
 
-  use { -- useful lua functions used by lots of plugins 
-    "nvim-lua/plenary.nvim" 
-  } 
-   
-  use { 
-    "nvim-telescope/telescope.nvim", 
-    tag = "0.1.4", -- or branch = "0.1.x"
-  }
+  -- essentials 
+  use "wbthomason/packer.nvim"
+  use "nvim-lua/popup.nvim"
+  use "nvim-lua/plenary.nvim"
+  use {"nvim-telescope/telescope.nvim", tag = "0.1.4"}
+  use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
+  use "windwp/nvim-autopairs"
+  use "mbbill/undotree"
+  use "lervag/vimtex"
+  use "navarasu/onedark.nvim"
 
-  use {
-    "rose-pine/neovim", 
-    as = "rose-pine", 
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end 
-  }
-  
-  use {
-    "nvim-treesitter/nvim-treesitter", 
-    {run = ':TSUpdate'}
-  }
-
-  use {
-    "nvim-treesitter/playground"
-  }
-
-  use {
-    "mbbill/undotree"
-  }
-
-  use {
-    "theprimeagen/harpoon"
-  } 
-
-  use {
-    "tpope/vim-fugitive"
-  } 
-
-  use {
-    "lervag/vimtex"
-  }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
