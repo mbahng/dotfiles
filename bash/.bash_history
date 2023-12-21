@@ -1,166 +1,3 @@
-ipcs -m 
-tmpfs
-ipcs -m 
-sudo ipcs -m
-sudo ipcs -m --human
-free -h
-df -h 
-cd 
-cd /
-ls
-wiki
-du -sh tmp
-sudo du -sh tmp
-sudo du -sh usr
-ipcs -m 
-history
-free -h
-cd /dev/shm
-ls -a
-tmpfs
-cd var
-cd /var
-ls
-tmpfs
-cd var
-cd /var
-cd log
-nvim pacman.log 
-cat pacman.log | -S
-cat pacman.log | grep '-S'
-cat pacman.log | grep pacman
-cd lightdm/
-ls
-sudo ls
-htop
-cat pacman.log | grep '-S'
-cat pacman.log | grep pacman
-cd lightdm/
-sudo ls
-htop
-px aux
-ps aux
-ps aux -m
-top
-clear
-ps dump
-ps --help
-ps --help list
-free -m
-cat /proc/meminfo
-sync
-echo 1>/proc/sys/vm/drop_caches
-sudo echo 1>/proc/sys/vm/drop_caches
-sync; echo
-sync; echo 1>/proc/sys/vm/drop_caches
-sudo sync; echo 1>/proc/sys/vm/drop_caches
-sudo sync; sudo echo 1>/proc/sys/vm/drop_caches
-cd /proc/sys/vm
-nvim drop_caches 
-egrep -i 'killed process' var/log/messages
-egrep -i 'killed process' /var/log/messages
-cd /
-cd var
-cd log
-nvim lastlog 
-cd private/
-cd archinstall/
-ls
-nvim install.log 
-sudo pacman -R alacritty
-cd archinstall/
-nvim install.log 
-sudo pacman -R alacritty
-sudo pacman -S alacritty
-htop
-clear
-cd /sys
-cd class
-cd power_supply
-ls
-cd BAT0 
-cat capacity
-xit
-exit
-firefox
-ls
-quit
-exit
-ls
-exit
-exit
-cd dotfiles/
-ls
-cd qtie
-cd qtile
-nvim config.py
-swapon --show
-ls
-htop
-cat /proc/meminfo 
-cat /proc/meminfo
-clear
-mem -f
-free -m
-clear
-mem -f
-free -m
-cd dotfiles/
-cd qtile
-cd __pycache__/
-ls
-ls -l
-cd ..
-rm autostart.sh 
-htop
-bluetoothctl
-inxi --bluetooth -z
-desk
-htop
-htop
-ipcs
-ipcs -a
-df -h
-free -m
-desk
-htop
-ssh tarokhlab-02
-ssh i3t
-nvtop
-htop
-ssh tarokhlab-02
-ssh i3t
-cd dotfiles/
-git status
-cd htop
-ls
-cd htoprc 
-nvim htoprc 
-bluetoothctl
-desk
-htop
-nvtop
-free -m
-qtile check
-cd dotfiles/
-ls
-cd ..
-desk
-free -m
-htop
-desk
-free -m
-dmesg | grep oom-killer
-sudo dmesg | grep oom-killer
-mount
-mount | grep tmpfs
-df
-sudo lsof -n | egrep "/tmp|/dev/shm
-sudo lsof -n | egrep "/tmp|/dev/shm" | grep delted
-qtile quit
-desk
-desk
-free -m
 cd dotfiles/
 ls
 nvim bash/.bashrc
@@ -4367,3 +4204,797 @@ ls -al
 rm .ssh
 ls
 ls -a
+ls -a
+cd .ssh
+ls
+ls -l
+chmod 600 id_ed25519
+cd .local/share/
+cd nvim
+cd site/pack/packer/
+cd start
+cd nvim-tree.lua/
+cd 
+cd Class/Fa23/ECE685/
+cd Adversarial-Black-Box-Attacker/
+nvim .
+cd dotfiles/nvim
+nvim .
+cd Downloads/
+nvim test.py
+conda activate pytorch-base
+python 
+git commit -m "nvim config almost done"
+git config pull.rebase false
+git pull
+cd .ssh
+ls
+cat id_ed25519
+cd ..
+clear
+git status
+git add --all
+git commit -m "updates"
+git push
+cd dotfiles/nvim
+ls
+nvim .
+cd dotfiles/nvim 
+nvim .
+nvim
+sudo pacman -S i3lock
+i3lock
+xss-lock
+sudo pacman -S xss-lock
+i3block -f
+i3lock -f
+xset
+xset s
+nvim .
+nvim
+conda activate pytorch-base
+pip install yaml
+pip install PyYAML
+python pipe.py
+pip install yaml
+pip install PyYAML
+python pipe.py
+cd Research/
+cd Deep-Regularization/
+cd src
+ls
+cd dotfiles/nv
+cd dotfiles/
+cd nvim
+ls
+nvim .
+conda activate pytorch-base
+python pipe.py --seed 0 --resume_mode 0 --control_name MNIST_linear_pqiproximal_5.0_SGD_inplace_0.5_False_1.0_2.0
+clear
+clear
+cd Research/Deep-Regularization/
+cd src
+ls
+touch test
+cd dotfiles/nvim
+ls
+nvim .
+cd .local/share/
+cd nvim
+cd site/pack/packer/
+cd start
+cd nvim-tree.lua/
+cd 
+cd Class/Fa23/ECE685/
+cd Adversarial-Black-Box-Attacker/
+cd dotfiles/nvim
+git status
+cd ..
+cd Research/
+ls -l
+cd a.out 
+a.out
+nemo .
+rm a.out 
+rm test.cpp
+rm test.ipynb 
+ls
+cd Deep-Regularization/
+conda activate pytorch-base
+nvim .
+cd dotfiles/nvim
+ls
+nvim .
+cd Research/
+ls
+cd Deep-Regularization/
+nvim .
+cd dotfiles/
+cd nvim
+ls
+nvim .
+cd Deep-Regularization/
+nvim
+cd dotfiles/
+cd nvim
+ls
+nvim init.lua 
+nvim .
+conda activate pytorch-base
+ls
+ls
+
+python pipe.py --seed 0 --resume_mode 0 --control_name MNIST_linear_pqiproximal_5.0_SGD_inplace_0.5_False_1.0_2.0
+clear
+cd Deep-Regularization/
+cd Research/Deep-Regularization/
+conda activate pytorch-base
+nvim .
+cd Research/Deep-Regularization/
+ls
+nvim .
+nvim init.lua 
+cd dotfiles/
+cd nvim
+ls
+cd
+cd Research/Deep-Regularization/
+nvim .
+shutdown now
+desk2
+yay -S deepin-wine6-stable
+ls -a
+cd Downloads/
+cd ..
+cd Research/Deep-Regularization/
+nvim .
+shutdown now
+desk2
+yay -S deepin-wine6-stable
+cd /etc
+nvim pacman.conf
+sudo nvim pacman.conf
+sudo pacman -Sy
+yay -S deepin-wine-wechat
+/opt/apps/com.qq.weixin.deepin/files/run.sh winecfg
+cd /opt/apps/
+cd com.qq.weixin.deepin/
+cd files
+ls
+./run.sh winecfg
+./run.sh 
+git pull
+git add --all
+git commit -m "stuff" 
+git push
+yay -S deepin-wine6-stable
+ls -a
+cd /opt/apps/com.qq.weixin.deepin/files/
+ls
+nvim run.sh 
+desk
+desk2
+desk2
+cd /opt/apps/
+cd com.qq.weixin.deepin/files/
+ls
+./run.sh 
+desk2
+/opt/apps/com.qq.weixin.deepin/files/run.sh winecfg
+cd /opt/apps/com.qq.weixin.deepin/files/
+nvim run.sh 
+desk
+desk2
+desk2
+cd /opt/apps/
+cd com.qq.weixin.deepin/files/
+./run.sh 
+desk2
+ls -a
+cd .deepinwine/
+cd Deepin-WeChat/
+cd drive_c/
+cd deepin/
+cd ls
+cd ..
+tree
+cd 'Program Files'/
+cd Tencent/
+cd WeChat
+ls
+./WeChat.exe
+desk2
+cd deepin/
+cd ls
+cd ..
+tree
+ls -a
+cd .deepinwine/
+cd Deepin-WeChat/
+cd drive_c/
+cd 'Program Files'/
+cd Tencent/
+cd WeChat
+ls
+./WeChat.exe
+/opt/apps/com.qq.weixin.deepin/files/run.sh winecfg
+cd /opt/apps/com.qq.weixin.deepin/files/
+ls
+nvim run.sh 
+sudo nvim run.sh
+./run.sh 
+htop
+cd com.qq.weixin.deepin/files/
+./run.sh 
+desk2
+ls -a
+cd Deepin-WeChat/
+cd drive_c/
+cd deepin/
+cd ls
+tree
+cd .deepinwine/
+cd Deepin-WeChat/drive_c/
+cd 'Program Files'/
+cd Tencent/
+cd WeChat
+cd \[3.9.0.28\]/
+cd ..
+ls
+./WeChat.exe
+cd Deepin-WeChat/drive_c/
+cd \[3.9.0.28\]/
+cd ..
+./WeChat.exe
+./.deepinwine/Deepin-WeChat/drive_c/
+cd .deepinwine/Deepin-WeChat/drive_c/
+cd 'Program Files'/
+cd Tencent/
+cd WeChat
+ls
+pwd
+cd
+./home/mbahng/.deepinwine/Deepin-WeChat/drive_c/Program Files/Tencent/WeChat/WeChat.exe
+./home/mbahng/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+bash ~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+./~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat
+~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+alacritty
+alacritty -e htop
+pwd
+cd
+./home/mbahng/.deepinwine/Deepin-WeChat/drive_c/Program Files/Tencent/WeChat/WeChat.exe
+./home/mbahng/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+bash ~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+./~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat
+~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/WeChat.exe
+alacritty
+alacritty -e htop
+cd dotfiles/
+cd custom_scripts/
+nvim 
+sudo touch wechat
+nvim .
+sudo nvim 
+sudo nvim .
+sudo chmod -x wechat
+sudo chmod +x wechat
+ls
+sudo nvim wechat
+wechat
+cd dotfiles/custom_scripts/
+ls
+nvim .
+alacritty -e wechat
+python3 ~/.config/qtile/config.py && qtile cmd-obj -o cmd -f validate_config
+cd .local/share/qtile/
+ls
+nvim qtile.log 
+wechat
+./WeChat.exe
+cd dotfiles/
+cd qtile/
+ls
+nvim config.py 
+shutdown now
+wechat
+lp
+lap
+wechat
+python
+cd dotfiles/custom_scripts/
+ls
+nvim wechat
+cd dotfiles/qtile/
+ls
+nvim config.py 
+cd dotfiles/nvim/
+ls
+nvim .
+cd dotfiles/nvim
+ls
+nvim .
+ls
+cd dotfiles/nvim
+nvim 
+nvim .
+nvim
+cd dotfiles/nvim
+ls
+nvim .
+cd dotfiles/
+ls
+nvim
+cd Research/Cookbook/
+ls
+nvim
+cd RE
+cd Research/
+ls
+cd Cookbook/
+conda activate pytorch-base
+nvim .
+conda activate pytorch-base
+python MLP/Pipeline.py 
+cd dotfiles/
+cd nvim
+nvim .
+vimtex deep
+:q
+shutdown now
+desk
+desk2
+pnpm install
+wiki
+shutdown now
+desk
+desk2
+pnpm install
+wiki
+cd /opt/
+sudo mkdir kiwitalk
+sudo mv kiwi-talk_0.5.1_amd64.AppImage kiwitalk
+cd kiwitalk/
+ls
+cd ..
+cd /opt/kiwitalk/
+ls
+cd dotfiles/custom_scripts/
+ls
+sudo touch kakaotalk
+sudo chmod +x kakaotalk 
+sudo nvim kakaotalk 
+cd dotfiles/custom_scripts/
+ls
+nvim chrome 
+kakaotalk
+cd dotfiles/
+cd custom_scripts/
+ls
+cd dotfiles/qtile/
+nvim config.py 
+conda activate pytorch-base
+nvim .
+conda activate pytorch-base
+python MLP/Pipeline.py 
+cd dotfiles/
+cd nvim
+nvim .
+vimtex deep
+:q
+shutdown now
+desk
+desk2
+pnpm
+npm
+sudo pacman -S pnpm
+pnpm install
+sudo pacman -Syu
+sudo pacman -S --needed     webkit2gtk     base-devel     curl     wget     openssl     appmenu-gtk-module     gtk3     libappindicator-gtk3     librsvg     libvips
+cd Downloads/
+tar -xf KiwiTalk_x64.app.tar.gz 
+cd Contents/
+cd Resources/
+cd KiwiTalk
+cd KiwiTalk.app/
+tree
+cd ..
+rm -rf KiwiTalk.app/
+tar -xvzf kiwi-talk_0.5.1_amd64.AppImage.tar.gz 
+cd kiwi-talk_0.5.1_amd64.AppImage
+ls -l
+sudo pacman -S fuse2
+pacman -F
+./kiwi-talk_0.5.1_amd64.AppImage 
+ls
+mv kiwi-talk_0.5.1_amd64.AppImage /opt/
+sudo mv kiwi-talk_0.5.1_amd64.AppImage /opt/
+sudo mv kiwi-talk_0.5.1_amd64.AppImage /opt/
+cd dotfiles/
+cd nvim 
+ls
+nvim .
+:q
+cd Research/Deep-Regularization/
+nvim .
+cd dotfiles/
+cd nvim
+ls
+cd lua
+cd ..
+nvim .
+cd lua
+cd dotfiles/nvim
+cd ..
+cd qtile/
+ls
+nvim .
+sudo pacman -Qdt
+cd dotfiles/nvim
+ls
+nvim .
+:q
+cd Downloads/n
+cd Downloads/
+ls
+rm kiwi-talk_0.5.1_amd64.AppImage.tar.gz 
+rm KiwiTalk_x64.app.tar.gz 
+nvim test.py
+nvim text.txt
+cd qtile/
+sudo pacman -Qdt
+cd dotfiles/nvim
+:q
+cd dotfiles/
+cd nvim
+ls
+mkdir ftplugin
+nvim
+nvim .
+sudo pacman -Qdt
+:q
+cd Research/
+cd Deep-Regularization/
+ls
+nvim pipe.py 
+cd 
+cd dotfiles/nvim
+nvim .
+cd dotfiles/nvim
+ls
+nvim .
+vimtex deep
+shutdown now
+desk2
+vimtex deep
+conda activate pytorch-base
+which python
+vimtex deep
+nvim
+ls
+cd Dee
+cd Research/Deep-Regularization/
+ls
+nvim .
+nvim
+desk2
+vimtex deep
+conda activate pytorch-base
+which python
+cd dotfiles/n
+cd dotfiles/
+cd nvim
+s
+cd lua
+cd user
+ls
+touch startify.lua
+cd ../..
+nvim .
+wiki
+nvim
+cd dotfiles/n
+cd dotfiles/
+cd nvim
+s
+cd lua
+cd user
+touch startify.lua
+cd ../..
+nvim .
+wiki
+nvim
+sudo pacman -Rcns cisco-anyconnect
+cd WeChat\ Files/
+cd ..
+cd Downloads/n
+cd Downloads/
+tar -xf anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+cd anyconnect-linux64-4.10.07073
+tree
+cd vpn/
+egrep
+libxml2 -v
+sudo pacman libxml2
+cisco-anyconnect
+anyconnect
+sudo ./vpn_install.sh 
+sudo ./vpn_uninstall.sh 
+sudo pacman -S libxml2=2.11.5
+sudo pacman -S libxml2=2.11.5-1
+sudo pacman -U file:///var/cache/pacman/pkg/libxml2-2.11.5-1-x86_64.pkg.tar.zst
+libxml2 --version
+sudo pacman -S libxml2
+vpnui
+./vpnuio
+./vpnui
+ls
+sudo ./vpnui
+./vpnuio
+./vpnui
+sudo ./vpnui
+cd Downloads/
+cd anyconnect-linux64-4.10.07073
+cd vpn
+ls
+sudo ./vpn_uninstall.sh 
+shutdown now
+ls
+history
+sudo pacman -S libxm12
+sudo pacman -S libxml2
+shutdown now
+sudo pacman -S libxm12
+sudo pacman -S libxml2
+nvim .
+clear
+history | grep pacman
+cd Downloads/
+ls
+cd ..
+sudo pacman -R libxml2
+sudo pacman -Syu
+shutdown now
+lap
+desk2
+cd .ssh
+ls
+nvim config 
+nvim config 
+cd /opt/cisco/anyconnect/
+nvim AnyConnectLocalPolicy.xml 
+:w
+cd ..
+ls
+sudo rm -rf anyconnect/
+history | grep pacman
+cd ..
+sudo pacman -R libxml2
+shutdown now
+lap
+sudo pacman -Syu
+cd Downloads/
+cd anyconnect-linux64-4.10.07073
+cd vpn
+sudo ./vpn_install.sh 
+pacman -Q --info libxml2
+sudo ./vpn_uninstall.sh 
+ls
+./vpnui
+cd 
+sudo pacman -S cisco-anyconnect
+yay -R cisco-anyconnect
+yay -S cisco-anyconnect
+cisco-anyconnect
+htop
+cisco-anyconnect -v
+shutdown now
+desk2
+cd Downloads/
+ls
+yay -Rcns cisco-anyconnect
+desk2
+help 
+help cisco-anyconnect
+man -k cisco-anyconnect
+info cisco-anyconnect
+yay -Rcns cisco-anyconnect
+yay -S cisco-anyconnect
+cisco-anyconnect
+ssh i3t
+ssh tarokhlab-02
+sudo pacman -S networkmanager-openconnect
+resolvectl
+sudo openconnect portal.duke.edu
+shutdown now
+lap
+shutdown now
+lap
+cd /
+ls
+ls -a
+lap
+shutdown now
+lap
+cd /
+ls -a
+cd /opt
+cd /bin
+cd ..
+cd usr/bin/
+cd custom_scripts
+ls
+sudoedit desk
+sudo -e desk
+echo $SUDO_EDITOR
+echo $SUDO_EDITOR
+cd dotfiles/
+ls
+xrandr
+lap
+nvim .
+cd De
+cd Development/
+cd VirtualBoxes/
+ls
+cd Development/
+cd VirtualBoxes/
+alias
+ls --color=auto
+cd dotfiles/
+cd bash
+ls
+cd ..
+ls 
+ls -a
+nvim .bashrc
+vim 
+nvim
+vim
+ls
+kiwitalk
+kakaotalk
+qtile
+cd dotfiles/qtile/
+ls
+nvim config.py 
+cd ..
+ls 
+vim 
+nvim
+vim
+ls -a
+cd .bashrc
+nvim .bashrc
+nvim bash_history
+nvim .bash_logout
+nvim .bash_profile
+cd dotfiles/
+cd custom_scripts/
+nvi m.
+nvim .
+sudo mv kakaotalk kiwitalk
+mv kiwitalk kakaotalk
+sudo mv kiwitalk kakaotalk
+ls
+nvim chrome
+sudo rm chrome
+cd Downloads/
+ls
+rm -rf anyconnect-linux64-4.10.07073
+rm anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+nvim .
+nvim chrome
+sudo rm chrome
+rm -rf anyconnect-linux64-4.10.07073
+rm anyconnect-linux64-4.10.07073-predeploy-k9.tar.gz 
+nvim .
+cd Downloads/
+lw
+rm test.txt
+rm text.txt
+mv ubuntu-22.04.3-desktop-amd64.iso ~/Development/
+cd 
+cd Development/
+mkdir iso
+mv kali-linux-2023.3-installer-amd64.iso iso
+mv ubuntu-22.04.3-desktop-amd64.iso iso
+mv Win10_22H2_English_x64v1.iso iso
+cd iso
+ls
+pacman -Q 
+pacman -Q | code
+pacman -Q | grep code
+history | grep python
+wiki
+ls
+cd /usr/share
+ls
+cd Development/
+cd VirtualBoxes/
+alias
+ls --color=auto
+ls 
+vim 
+nvim
+vim
+cd dotfiles/
+cd bash
+history | grep 'ln -s'
+ls -a
+nvim .bashrc
+cd custom_scripts/
+cd ..
+mkdir setup
+cd setup
+touch ubuntu.sh
+touch arch.sh
+touch kali.sh
+touch mac.sh
+nvim .
+ls
+nvim ubuntu.sh 
+history | grep 'ln -s'
+ls -a
+nvim .bashrc
+cd custom_scripts/
+mkdir setup
+cd setup
+touch ubuntu.sh
+touch arch.sh
+touch kali.sh
+touch mac.sh
+nvim .
+nvim ubuntu.sh 
+cd home
+cd mbahng
+cd Research/
+rm -rf corpora/
+cd nltk_data/
+cd corpora/
+ls
+cd ..
+history | grep python
+wiki
+echo $NLTK_DATA
+conda env list
+conda activate language-base
+ls
+python
+nvim .
+nvim ubuntu.sh 
+cd Development/
+cd
+cd Downloads/
+mv archlinux-2023.12.01-x86_64.iso ~/Development/iso
+cd 
+cd Development/iso
+ls
+touch arch.sh
+touch kali.sh
+touch mac.sh
+nvim .
+nvim ubuntu.sh 
+rm -rf nltk_data/
+cd /usr/share
+sudo mkdir nltk_data
+rmdir nltk_data
+sudo rmdir nltk_data
+cd
+cd Research/
+ls
+wiki
+cd Research/
+ls
+bluetoothctl
+cd Research/
+cd dotfiles/
+cd setup/
+ls
+nvin arch.sh 
+vim arch.sh 
+history | grep connect
+ssh i3t
+sudo openconnect portal.duke.edu

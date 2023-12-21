@@ -31,8 +31,16 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-w>", ":Bdelete<CR>", opts)
-
+keymap("n", "<C-t>", ":Telescope find_files<cr>", opts)
 
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
+-- moving within the same line
+keymap("n", "j", "gj", opts)
+keymap("n", "k", "gk", opts)
+
+-- Vimtex compile 
+keymap("n", "<leader>s", ":VimtexCompile<cr>", opts)
+keymap("n", "<leader>c", ":VimtexTocToggle<cr>", opts)
+keymap("n", "<leader>f", "za", opts)

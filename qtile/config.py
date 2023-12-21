@@ -31,23 +31,38 @@ keys = [
 
     # Launching/Closing application shortcuts 
     Key([mod], "Return", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key(["mod1", "control"], "t", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox (b - browser)"),
-    Key([mod], "m", lazy.spawn("spotify"), desc="Launch spotify (m - music)"), 
-    Key([mod], "c", lazy.spawn("caprine"), desc="Launch caprine (c - caprine)"), 
-    Key([mod], "z", lazy.spawn("zoom"), desc="Launch zoom (z - zoom)"), 
-    Key([mod], "u", lazy.spawn("zulip"), desc="Launch zulip (u - zUlip)"), 
-    Key([mod], "v", lazy.spawn("code"), desc="Launch vscode (v - vscode)"), 
-    Key([mod], "s", lazy.spawn("slack"), desc="Launch slack (s - slack)"),
-    Key([mod], "k", lazy.spawn("skypeforlinux"), desc="Launch skype (k - sKype)"), 
-    Key([mod], "w", lazy.spawn("whatsapp-for-linux"), desc="Launch whatsapp (w - whatsapp)"), 
-    Key([mod], "g", lazy.spawn("google-chrome-stable"), desc="Launch chrome (g - google chrome)"),
-    Key([mod], "i", lazy.spawn("bluebubbles"), desc="Launch iMessage (i - imessage)"),
-    Key([mod], "x", lazy.spawn("virtualbox"), desc="Launch VirtualBox (x - boX)"),
-    Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
-    Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
+    Key(["mod1", "control"], "t", lazy.spawn(terminal), desc="Launch terminal"), 
+    
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "w", lazy.spawn("whatsapp-for-linux"), desc="Launch whatsapp (w - whatsapp)"), 
+    Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
+    Key([mod], "r", lazy.spawn("dotfiles/custom_scripts/wechat"), desc="Launch WeChat"), 
+    Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
+    Key([mod], "y", lazy.spawn("skypeforlinux"), desc="Launch skype (y - skYpe)"),  
+    Key([mod], "u", lazy.spawn("zulip"), desc="Launch zulip (u - zUlip)"), 
+    Key([mod], "i", lazy.spawn("bluebubbles"), desc="Launch iMessage (i - imessage)"),
+    Key([mod], "o", lazy.spawn(""), desc=""),  
+    Key([mod], "p", lazy.spawn(""), desc=""),
+
+
     Key([mod], "a", lazy.spawn("cisco-anyconnect"), desc="Launch cisco anyconnect (a - Anyconnect)"), 
+    Key([mod], "s", lazy.spawn("slack"), desc="Launch slack (s - slack)"),
+    Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
+    Key([mod], "g", lazy.spawn("google-chrome-stable"), desc="Launch chrome (g - google chrome)"),
+    Key([mod], "h", lazy.spawn(""), desc=""),   
+    Key([mod], "j", lazy.spawn(""), desc=""),  
+    Key([mod], "k", lazy.spawn("dotfiles/custom_scripts/kakaotalk"), desc="Launch kakaotalk (aka kiwitalk). "), 
+    Key([mod], "l", lazy.spawn(""), desc=""), 
+   
+
+    Key([mod], "z", lazy.spawn("zoom"), desc="Launch zoom (z - zoom)"), 
+    Key([mod], "x", lazy.spawn("virtualbox"), desc="Launch VirtualBox (x - boX)"),
+    Key([mod], "c", lazy.spawn("caprine"), desc="Launch caprine (c - caprine)"), 
+    Key([mod], "v", lazy.spawn("code"), desc="Launch vscode (v - vscode)"), 
+    Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox (b - browser)"),
+    Key([mod], "n", lazy.spawn("inkscape"), desc=""),   
+    Key([mod], "m", lazy.spawn("spotify"), desc="Launch spotify (m - music)"), 
     
     Key([mod, "shift"], "n", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"),
     Key([mod, "shift"], "m", lazy.spawn("obs"), desc="Launch obs screen & audio recorder"), 
@@ -73,8 +88,6 @@ keys = [
     Key([], "F3", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase volume by 5%"), 
 
 
-    Key([mod, "control"], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
-    Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
 
     # Reloading and quitting Qtile configuration
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),

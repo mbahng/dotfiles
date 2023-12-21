@@ -51,13 +51,18 @@ return packer.startup(function(use)
   use "mbbill/undotree"
   use "lervag/vimtex" -- latex 
   use "navarasu/onedark.nvim" -- color theme
+  use "mhartington/oceanic-next"
   use "numToStr/Comment.nvim" -- comment stuff out 
+
+  use "mhinz/vim-startify"
 
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   -- git 
   use "lewis6991/gitsigns.nvim"
+
+
 
   use "nvim-tree/nvim-web-devicons"
   use "nvim-tree/nvim-tree.lua"

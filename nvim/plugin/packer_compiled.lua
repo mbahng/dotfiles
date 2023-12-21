@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["oceanic-next"] = {
+    loaded = true,
+    path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/oceanic-next",
+    url = "https://github.com/mhartington/oceanic-next"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/onedark.nvim",
@@ -213,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/vim-startify",
+    url = "https://github.com/mhinz/vim-startify"
   },
   vimtex = {
     loaded = true,
