@@ -53,16 +53,18 @@ return packer.startup(function(use)
   use "navarasu/onedark.nvim" -- color theme
   use "mhartington/oceanic-next"
   use "numToStr/Comment.nvim" -- comment stuff out 
-
+  use 'Vigemus/iron.nvim'
   use "mhinz/vim-startify"
-
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   -- git 
   use "lewis6991/gitsigns.nvim"
 
-
+  -- notebook stuff 
+  use "GCBallesteros/NotebookNavigator.nvim" 
+  use "anuvyklack/hydra.nvim"
+  use "GCBallesteros/jupytext.nvim"
 
   use "nvim-tree/nvim-web-devicons"
   use "nvim-tree/nvim-tree.lua"

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mbahng/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?.lua;/home/mbahng/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?/init.lua;/home/mbahng/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?.lua;/home/mbahng/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mbahng/.cache/nvim/packer_hererocks/2.1.1700008891/lib/lua/5.1/?.so"
+local package_path_str = "/home/mbahng/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/mbahng/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/mbahng/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/mbahng/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mbahng/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -83,6 +83,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["NotebookNavigator.nvim"] = {
+    loaded = true,
+    path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/NotebookNavigator.nvim",
+    url = "https://github.com/GCBallesteros/NotebookNavigator.nvim"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -128,6 +133,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["hydra.nvim"] = {
+    loaded = true,
+    path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/hydra.nvim",
+    url = "https://github.com/anuvyklack/hydra.nvim"
+  },
+  ["iron.nvim"] = {
+    loaded = true,
+    path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/iron.nvim",
+    url = "https://github.com/Vigemus/iron.nvim"
+  },
+  ["jupytext.nvim"] = {
+    loaded = true,
+    path = "/home/mbahng/.local/share/nvim/site/pack/packer/start/jupytext.nvim",
+    url = "https://github.com/GCBallesteros/jupytext.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

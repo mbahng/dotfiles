@@ -37,6 +37,8 @@ local options = {
 
 vim.opt.shortmess:append "c"
 
+vim.api.nvim_set_option("clipboard", "unnamedplus") -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end

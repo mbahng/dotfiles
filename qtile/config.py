@@ -2,6 +2,7 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
+import subprocess
 # from qtile_extras import widget 
 # from qtile_extras.widget.decorations import PowerLineDecoration
 
@@ -44,8 +45,8 @@ keys = [
     Key([mod], "o", lazy.spawn(""), desc=""),  
     Key([mod], "p", lazy.spawn(""), desc=""),
 
-
-    Key([mod], "a", lazy.spawn("cisco-anyconnect"), desc="Launch cisco anyconnect (a - Anyconnect)"), 
+    
+    Key([mod], "a", lazy.spawn("alacritty -e 'openconnect protocol=anyconnect --authgroup=l --user=mb625 portal.duke.edu'"), desc=""), 
     Key([mod], "s", lazy.spawn("slack"), desc="Launch slack (s - slack)"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
@@ -160,6 +161,12 @@ colors = {
     "black" : "#000000" 
 } 
 
+def news_parser(dct): 
+    dct = dct["results"]
+    headers = [x["title"] for x in dct][1:]
+    return "          ".join(headers)
+
+
 screens = [
     Screen(
         top  = bar.Bar(
@@ -171,7 +178,7 @@ screens = [
                     padding_x = 10, 
                     padding_y = 8
                 ),
-                widget.Sep(), 
+                widget.Sep(),
                 widget.StockTicker(
                     apikey="S8TMOKO9BYQ38JXO", 
                     symbol="SPY", 
@@ -185,12 +192,27 @@ screens = [
                     update_interval = 600, 
                 ), 
                 widget.Sep(), 
-                widget.Prompt(),
-                widget.WindowName(
-                    format = "{state} {name}", 
-                    max_chars = 50, 
-                    padding = 8,     
+                widget.GenPollUrl(
+                    foreground='#ffffff',
+                    scroll = True, 
+                    scroll_delay = 5, 
+                    width = 560, 
+                    update_interval=1800,
+                    fmt = "{}",
+                    url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0", 
+                    parse = news_parser, 
+                    mouse_callbacks = {"Button1" : lazy.spawn("firefox --new-window 'https://www.wsj.com'")}, 
                 ),
+                widget.Sep(), 
+                widget.Prompt(),
+                widget.Spacer(
+
+                ), 
+                # widget.WindowName(
+                #     format = "{state} {name}", 
+                #     max_chars = 50, 
+                #     padding = 8,     
+                #),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),

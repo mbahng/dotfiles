@@ -44,3 +44,6 @@ keymap("n", "k", "gk", opts)
 keymap("n", "<leader>s", ":VimtexCompile<cr>", opts)
 keymap("n", "<leader>c", ":VimtexTocToggle<cr>", opts)
 keymap("n", "<leader>f", "za", opts)
+
+keymap("n", "gd", "gd", opts)
+

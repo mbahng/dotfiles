@@ -1,339 +1,3 @@
-cd dotfiles/
-ls
-nvim bash/.bashrc
-git status
-nvim picom/picom.conf 
-nvim lutris/lutris.conf 
-code .
-free -m
-bluetoothctl
-htop
-shutdown now
-desk
-htop
-yay -S slack-desktop
-cd dotfiles/
-git status
-git add --all
-git commit -m "same"
-git push
-bluetoothctl
-htop
-shutdown now
-free -m
-cd dotfiles/
-git add --all
-git commit -m "checkpoint for when shared RAM doesn't explode"
-git push
-cd qtile/
-mv config.py config2.py
-my config3.py config.py
-mv config3.py config.py
-ls
-nvim .
-iwlib
-pacman -S iwlib
-sudo pacman -S iwlib
-sudo pacman -S python-iwlib
-nvim .
-desk
-cd dotfiles/
-cd qtile/
-ls
-nvim config.py
-nvim
-conda
-iwlib
-python-iwlib
-ls
-cd dotfiles/
-git status
-touch .gitignore 
-nvim .
-cd dotfiles/
-ls
-cd qtile/
-nvim .
-htop
-cd dotfiles/
-ls
-cd picom
-cd ..
-code .
-desk
-htop
-cd qtile/
-nvim .
-htop
-free -m
-cd ..
-cd 
-cd dotfiles/
-ls
-nvim README.md 
-git status
-htop
-cd dotfiles/
-cd qtile/
-ls
-nvim config
-nvim config.py
-cd ..
-cd picom/
-nvim picom.conf 
-htop
-cd ..
-cd picom/
-nvim picom.conf 
-htop
-cd dotfiles/
-ls
-nvim .gitignore
-clear
-git status
-git add --all
-git commit -m "got rid of shared memory leak problem due to rounded-corners in picom"
-git push
-htop
-bluetoothctl
-htop
-nvtop
-shutdown now
-desk
-free -m
-cd dotfiles/
-nvim .
-htop
-captine
-caprine
-htop
-cd dotfiles/
-ls
-git add --all
-git commit -m "removed shared memory leak"
-git push 
-git add --all
-git commit -m "removed shared memory leak"
-git push 
-cd Downloads/
-cd Desktop/
-cd ..
-cd Note
-cd Notes/
-ls
-feh Muchang\ Bahng\ -\ Resume.pdf 
-qimgv Muchang\ Bahng\ -\ Resume.pdf 
-zathura Muchang\ Bahng\ -\ Resume.pdf 
-zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
-cd Notes
-zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
-zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
-cd Notes/
-cd mbahng-com/
-cd STEM/
-cd Data_Science/
-cd Deep_Learning/
-ls
-cd Notes
-zathura Muchang\ Bahng\ -\ PM\ Resume\ .pdf 
-wiki
-cd /bin/custom_scripts/
-ls
-sudo nvim wiki
-sudo nvim vstex
-sudo nvim vimtex 
-vimtex deep
-vimtex deep
-cd /bin/custom_scripts/
-ls
-sudo nvim wiki
-cd 
-wiki
-du
-wiki
-df
-shutdown now
-desk
-bluetoothctl
-blueman
-pactl | list
-pactl list
-pactl list | grep bluetooth
-lap
-skypeforlinux-stable-bin
-shutdown now
-desk
-neofetch
-sudo systemctl restart bluetooth
-bluetoothctl
-desk
-cd /etc/bluetooth/
-cd main.conf 
-ls
-nvim main.conf 
-lsmod
-sudo systemctl start bluetooth
-sudo systemctl restart bluetooth
-bluetuith
-pacman -S blueman
-sudo pacman -S blueman
-blueman
-df
-shutdown now
-desk
-nvtop
-cd neofetch/
-nvim config.conf 
-cd
-cd dotfiles/
-ls
-cd qtile/
-nvim config.py
-nvim config.py
-cd dotfiles/
-cd vim
-ls
-nvim .vimrc
-flameshot
-neofetch
-htop
-nvtop
-lap
-desk
-vimtex deep
-desk
-nvtop
-lap
-desk
-vimtex deep
-desk
-cd mbah
-cd Notes/mbahng-com/
-ls
-nvim .gitignore
-git add .gitignore
-git commit -m "updated gitignore to exclude latex"
-git add --all
-git commit -m "updating DL and ML"
-git push
-git status
-vimtex deep
-desk
-cd Notes/mbahng-com/
-ls
-ls -a
-nvim .gitignore
-cd dotfiles/
-git status
-flameshot --help
-flameshot --help
-cd dotfiles/
-cd qtile/
-ls
-nvim config
-rm config
-nvim config.py
-flameshot
-flameshot quit
-flameshot --help
-flameshot config
-flameshot config
-cd Notes/
-cd mbahng-com/STEM/Data_Science/
-cd Deep_Learning/
-ls
-cd Images/
-mv faster_rcnn.jpg fast_rcnn.jpg
-cd Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Images/
-ls
-rm fast_rcnn.jpg
-neofetch
-vimtex deep
-flameshot config
-flameshot config
-cd Notes/
-cd mbahng-com/STEM/Data_Science/
-cd Deep_Learning/
-cd Images/
-mv faster_rcnn.jpg fast_rcnn.jpg
-cd Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Images/
-rm fast_rcnn.jpg
-neofetch
-vimtex deep
-cd dotfiles/
-mkdir conda
-cd conda
-conda activate
-conda env list
-conda activate pytorch-base
-conda export env --from-history
-conda env export
-conda env export > pytorch-base.yml
-nvim pytorch-base.yml 
-conda env export --from-history
-cd ..
-ls
-git status
-git add --all
-git commit -m "added conda"
-git push
-cd Images/
-mv faster_rcnn.jpg fast_rcnn.jpg
-cd Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Images/
-rm fast_rcnn.jpg
-neofetch
-vimtex deep
-cd .conda
-nvim env
-rm env
-nvim environments.txt 
-cd ..
-df -sh envs
-df -h envs
-du -sh envs
-cd env
-cd envs
-cd pytorch-base/
-ls
-shutdown now
-lap
-sudo pacman -S inkscape
-lap
-sudo pacman -S inkscape
-cd CLas
-cd Class/
-cd Fa23/
-cd ECE685/HW3
-ls
-code .
-vimtex nlp[
-vimtex nlp
-wiki
-desk
-cd Notes/
-ls
-zathura Automate_the_boring_stuff.pdf 
-python
-cd Notes/
-zathura Automate_the_boring_stuff.pdf 
-python
-cd /bin/cu
-cd /bin/custom_scripts/
-sudo mv custom_scripts ~/dotfiles
-sudo ln -s ~/dotfiles/custom_scripts/ /bin/custom_scripts
-ls | grep custom
-cd custom_scripts
-ls
-cd ..
-cd
-cd dotfiles/
-ls
-history | grep 'ln -s'
-vimtex deep
-ls
-cd config
-ls
-cd ..
 mv config dotfiles
 cd config
 cd ..
@@ -4998,3 +4662,339 @@ vim arch.sh
 history | grep connect
 ssh i3t
 sudo openconnect portal.duke.edu
+cd dotfiles/
+ls
+git status
+git add --all
+git commit -m "neovim config finalized and working on setup files" 
+git push
+ls
+history 
+sudo openconnect --protocol=anyconnect --user=mb625 --usergroup=l portal.duke.edu
+sudo openconnect --protocol=--user=mb625 --usergroup=l portal.duke.edu
+sudo openconnect anyconnect --usergroup=l portal.duke.edu
+sudo openconnect --authgroup=l portal.duke.edu
+sudo openconnect --authgroup=l --user=mb625 portal.duke.edu
+history | grep cisco
+history | grep connect
+sudo openconnect portal.duke.edu 
+openconnect --help
+history
+sudo openconnect portal.duke.edu asdf
+openconnect portal.duke.edu 
+cd dotfiles/qtile/
+ls
+nvim config.py 
+ls
+where conda
+which conda
+echo $PATH
+nvim .bashrc
+cd Research/
+cd dotfiles/
+cd setup/
+ls
+nvim ubuntu.sh 
+yay -Rcns spotify-tui
+spt
+sb-volume
+curl -H "Accept: text/plain" https://icanhazdadjoke.com/
+spt
+cd dotfiles/
+cd qtile
+ls
+nvim config.py 
+shutdown now
+simplenote
+pacman -Q | grep simple
+sudo -Rcns simplenotes-electron-bin
+sudo pacman -Rcns simplenotes-electron-bin
+sudo pacman -Rcns simplenote-electron-bin
+pacman -Q
+openconnect portal.duke.edu 
+cd dotfiles/qtile/
+nvim config.py 
+where conda
+which conda
+echo $PATH
+nvim .bashrc
+cd Research/
+cd dotfiles/
+cd setup/
+nvim ubuntu.sh 
+cd Downloads/
+cd Gam
+cd Games/
+mv Games Media
+cd Media
+cd ..
+wiki
+cd wiki
+ls
+nvim To_Do.wiki 
+desk
+lap
+cd dotfiles/
+ls
+echo hello
+python
+curl dkGrnGNxfmyBquMO2jANZqceWxQyh8jkdf
+curl https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0
+firefix --help
+firefox --help
+firefix --new_window "wsj.com"
+firefox --new_window "wsj.com"
+firefox --new_window "https://www.wsj.com"
+firefox --new-window "https://www.wsj.com"
+cd dotfiles/
+ls
+cd qtile
+nvim .
+curl https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0
+conda env list
+conda activate language-base
+conda list | grep requests
+python
+cd /opt/apps/com.qq.weixin.deepin/files/
+ls
+./run.sh wine
+./run.sh winecfg
+cd setup/
+nvim ubuntu.sh 
+cd Downloads/
+cd Gam
+cd Games/
+mv Games Media
+cd Media
+wiki
+cd wiki
+nvim To_Do.wiki 
+desk
+lap
+cd dotfiles/
+echo hello
+python
+curl dkGrnGNxfmyBquMO2jANZqceWxQyh8jkdf
+curl https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0
+firefix --help
+firefox --help
+firefix --new_window "wsj.com"
+firefox --new_window "wsj.com"
+firefox --new_window "https://www.wsj.com"
+firefox --new-window "https://www.wsj.com"
+cd dotfiles/
+cd qtile
+nvim .
+curl https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0
+conda env list
+conda activate language-base
+conda list | grep requests
+python
+cd .deepinwine/
+cd Deepin-WeChat/
+cd 'Program Files'/
+cd Tencent/
+cd WeChat
+history 
+history | grep "./"
+cd Program
+cd ProgramData/
+cd deepin/
+cd drive_c/
+cd user
+cd users
+cd mbahng
+cd My Doc
+cd 'My Documents'
+cd All\ Users/
+cdcd ..
+cd
+cd WeChat\ Files/
+cd ..
+rm -rf WeChat\ Files/
+ls
+conda env list
+conda activate language-base
+conda list | grep requests
+python
+cd wiki
+nvim To_Do.wiki 
+rm To_Do.wiki 
+wiki
+nvim Arch_Install.wiki 
+cd ..
+ls
+ls
+openconnect
+history | grep connect
+history | grep connect
+conda activate
+pip install snowmachine
+snowmachine snow
+snowmachine
+snowmachine
+cd Downloads/
+chmod +x snowjob.sh 
+./snowjob.sh 
+ls
+./snowjob.sh --stack=pile
+snowmachine snow
+snow
+snowmachine cli
+python
+snowmachine
+ssh tarokhlab-02
+snowmachine cli
+python
+snowmachine
+cd Downloads/
+mv snowjob.sh ~/dotfiles/custom_scripts/
+sudo mv snowjob.sh ~/dotfiles/custom_scripts/
+cd ~/dotfiles/
+cd custom_scripts/
+ls
+sudo mv snowjob.sh snow
+cd
+snow
+nvim .
+snow
+cd dotfiles/
+cd nvim
+ls
+nvim .
+cd dotfiles/
+cd nvim
+cd Development/
+cd playground/
+ls
+code .
+rm first_script_in_arch.ipynb 
+nvim .u
+nvim .
+python global_var.py 
+nvim .u
+nvim .
+python global_var.py 
+cd Research/
+cd nltk_data/
+cd corpora/
+cd brown
+ls
+:q
+gedit
+htop
+htop
+cd dotfiles/
+cd nvim 
+ls
+nvim .
+which xclip
+sudo pacman -S xclip
+nvim
+nvim 
+cd play
+cd Development/playground/
+ls
+nvim .
+conda activate pytorch-base
+ls
+python pipe.py 
+cd custom_scripts/
+sudo mv snowjob.sh snow
+snow
+cd Research/
+cd Deep-Regularization/
+conda activate pytorch-base
+cd
+cd dotfiles/nvim
+ls
+nvim ,.
+nvim .
+vimtex deep
+nvim Arch_Install.wiki 
+cd ..
+cd dotfiles/
+cd custom_scripts/
+sudo touch vpn
+ls
+sudo chmod +x vpn
+sudo nvim vpn
+vpn
+sudo vpn
+shutdown now
+desk2
+cd dotfiles/
+cd custom_scripts/
+ls
+nvim snow
+now
+snow
+vimtex deep
+snow
+vimtex deep
+cd wiki
+wiki
+cd 
+cd dotfiles/nvim
+ls
+nvim .
+cd dotfiles/nvim
+nvim .
+htop
+nvtop
+cd dotfiles/nvim
+nvim ,.
+vimtex deep
+nvim Arch_Install.wiki 
+cd dotfiles/
+cd custom_scripts/
+sudo touch vpn
+sudo chmod +x vpn
+sudo nvim vpn
+vpn
+sudo vpn
+shutdown now
+desk2
+cd dotfiles/
+cd custom_scripts/
+nvim snow
+now
+snow
+vimtex deep
+cd Research/
+cd Deep-Regularization/
+conda activate pytorch-base
+nvim .
+nvim 
+nvim test.py 
+nvim Pipeline.ipynb 
+cd
+cd Desktop/
+cd 
+cd Class/
+Fa
+cd Fa23/
+cd ECE685/
+cd HW1
+cd 675_HW1
+cd 675_HW1_files/
+cd ..
+cd HW5/
+ls
+cd P1.ipynb 
+nvim P1.ipynb 
+conda activate language-base
+history | grep pip
+pip install jupytext
+clear
+nvim P2.ipynb 
+cd dotfiles/nvim
+nvim .
+nvtop
+cd nltk_data/
+cd corpora/
+ls
+htop
+cd dotfiles/nvim
+ls
+nvim .
