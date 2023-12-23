@@ -1,247 +1,3 @@
-mv config dotfiles
-cd config
-cd ..
-mv config dotfiles
-cd dotfiles/
-git status
-cd qtile/
-nvim config
-rm config
-ls
-nvim config.py
-git add --all
-git commit -m "adjusted colors schemes for qtile"
-git push
-vimtex deep
-nvim .
-wiki
-wiki
-cd .config
-mkdir alacritty
-cd alacritty/
-mv ~/Downloads/alacritty.yml .
-ls
-nvim alacritty.yml 
-cd ..
-mv config dotfiles
-cd dotfiles/
-cd qtile
-ls
-nvim .
-ls
-yay -S all-repository-fonts
-wiki
-git push
-vimtex deep
-nvim .
-wiki
-wiki
-mkdir alacritty
-mv ~/Downloads/alacritty.yml .
-cd .config/alacritty/
-nvim alacritty.yml 
-cd .config
-history | grep 'ln -s'
-mv alacritty/ ~/dotfiles/alacritty
-sudo ln -s ~/dotfiles/alacritty ~/.config/alacritty
-cd 
-cd alacritty/
-cd
-cd dotfiles/
-cd picom/
-nvim picom.conf 
-cd ..
-cd qtile/
-ls
-nvim config
-nvim config.py
-yay -S bluebubbles-bin
-nvtop
-neofetch
-htop
-vimtex deep
-neofetch
-htop
-vimtex deep
-cd dotfiles/
-cd qtile/
-nvim config.py
-cd 
-cd Class/
-cd Fa23/
-cd RIS393/
-ls
-code .
-lap
-desk
-nemo
-wiki
-conda activate
-conda env list
-conda create -n "image-base" python=3.10
-conda activate image-base
-pip install opencv-python
-conda list
-conda install pandas
-pip install torch torchvision torchaudio matplotlib
-nvtop
-neofetch
-htop
-vimtex deep
-cd Class
-cd Fa23/
-cd RIS393/
-cd ying
-ls
-cd ..
-nvim .
-neofetch
-htop
-vimtex deep
-neofetch
-htop
-vimtex deep
-cd dotfiles/
-cd qtile/
-nvim config.py
-cd 
-cd Fa23/
-cd RIS393/
-code .
-cd Class/
-cd Fa23/RIS393/ying
-conda activate pytorch-base
-conda install pandas
-cd images
-python
-cd labels
-ls
-cd ..
-conda activate image-base
-python projector.py 
-shutdown now
-desk
-yay -S google-chrome
-history
-google-chrome
-which chrome
-google-chrome
-which chrome
-cd dotfiles/
-cd nvim
-ls
-nvim .
-nvim .
-cd Class/
-cd Fa23/
-ls
-cd RIS393/ying/
-code .
-nvim .
-cd Class/Fa23/RIS393/ying/
-ls
-nemo
-conda activate
-conda env list
-conda activate image-base
-python projector.py 
-which chrome
-cd dotfiles/
-cd nvim
-nvim .
-cd Class/
-cd Fa23/
-cd RIS393/
-cd ying/
-ls
-nvim ..
-lap
-lap
-cd .cache/vim
-cd swap
-ls
-rm %home%mbahng%wiki%Interviews%Akuna.wiki.swp 
-wiki
-vimtex deep
-shutdown now
-lap
-flameshot
-htop
-desk
-desk
-cd Class/
-cd Fa23/ECE685/
-cd HW4
-ls
-code .
-which julia
-lap
-l;ap
-which julia
-lap
-l;ap
-cd Notes/mbahng-com/
-cd STEM
-cd Data_Science/
-cd .. 
-cd ..
-ls
-git status
-git add --all
-git commit -m "deep learning midterm stuff"
-git push
-desk
-cd Notes/mbahng-com/
-ls
-git status
-git add --all
-git commit -m "deep learning midterm studying"
-git push
-lap
-desk
-vimtex deep
-lap
-git status
-git add --all
-git commit -m "deep learning midterm studying"
-git push
-lap
-desk
-vimtex deep
-lap
-l
-cd Downloads/
-rm Midterm_
-rm Midterm_Exam_II_Solutions.pdf 
-rm Midterm_II_Practice_Problems.pdf 
-nvim LICENSE 
-rm LICENSE 
-rm bashrc
-rm Photos.zip 
-rm SymbolsNerdFontMono-Regular.ttf 
-rm SymbolsNerdFont-Regular.ttf 
-zathura generative_models.pdf 
-rm generative_models.pdf 
-rm graphical_models.html.pdf 
-rm NerdFontsSymbolsOnly.zip 
-vim readme.md 
-rm readme.md 
-zathura ps5_muchang.pdf 
-mv ps5_muchang.pdf ~/Class/Fa23/CS671/HW5
-rm Lecture\ 15\ Part\ 1.mp4 
-rm linear_factors.pdf 
-rm autoencoders.pdf 
-rm Agave.zip 
-ls
-code .
-git add --all
-git commit -m "deep learning midterm studying"
-git push
-lap
-desk
-vimtex deep
-lap
-cd Class/Fa23/
 cd ECE685/
 cd HW4
 cd .. 
@@ -4998,3 +4754,247 @@ htop
 cd dotfiles/nvim
 ls
 nvim .
+cd nvim
+cd dotfiles/
+ls
+git status
+git add --all
+git commit -m "integrated jupyter notebook support for neovim & installed snow script & install vpn script with open/any-connect"
+git push
+shutdown now
+desk2
+shutdown now
+desk2
+mkdir Journal
+cd wiki
+ls
+cd dotfiles/
+ls
+nvim README.md 
+cd Journal/
+nvim script.sh 
+shutdown now
+desk2
+mkdir Journal
+cd wiki
+cd dotfiles/
+nvim README.md 
+cd Journal/
+for f in *.txt; do mv -- "$f" "${f%.txt}.text"; done
+nvim ls
+nvim 10.26.2023.wiki 
+touch script.sh
+nvim script.sh 
+chmod +x script.sh 
+bash script.sh 
+clear
+ls
+rm script.sh 
+nvim .
+nvim .
+wiki
+cd dotfiles/
+cd custom_scripts/
+ls
+rm wiki
+sudo rm wiki
+htop
+rm script.sh 
+cd Research/
+cd Deep-Regularization/
+conda activate pytorch-base
+conda env list
+conda env remove --name DL_final
+nvim .
+shutdown now
+desk
+desk2
+sudo pacman -S chafa
+desk2
+cd Media/
+nvim .
+sudo pacman -S kitty
+kitty
+sudo pacman -S chafa
+desk2
+cd Media/
+cd dotfiles/nvim/
+ls
+nvim ftplugin/
+nvim .
+cd dotfiles/nvim
+nvim .
+sudo pacman -Rcns chafa
+cd dotfiles/
+ls
+cd nvim
+nvim .
+ls
+cd dotfiles/nvim
+nvim .
+cd dotfiles/qtile/
+ls
+nvim config.py 
+nvim config.py 
+cd dotfiles/
+cd nvim
+ls
+nvim .
+cd Media/
+nvim .
+ls
+cd dotfiles/
+cd alacritty/
+ls
+nvim alacritty.yml 
+ps -p $$
+neofetch
+zsh
+bash
+nvim config.py 
+nvim config.py 
+nvim .
+nvim .
+cd dotfiles/
+cd nvim
+cd
+cd Media/
+cd Pictures/
+cd we
+cd wallpaper/
+ls
+kitten icat 1.jpg 
+kitten icat 2.jpg 
+clear
+cd Research/
+cd Deep-Regularization/
+ls
+nvim .
+shutdown now
+lap
+l
+ls
+l
+cd dotfiles/
+cd alacritty/
+ls
+nvim alacritty.yml 
+l
+cd .config
+cd kitty/
+ls
+nvim alacritty.yml 
+cd kitty/
+l
+cd .config
+cd kitty
+ls
+nvim .kit
+nvim kitty.conf 
+lap
+l
+cd Downloads/
+unzip 56ffa75c87e1cc2af9a9309d5baeb2ff-bcd06477b32c8c8e1f279ed2d5c1ee4945c27e42.zip 
+cd 56
+cd 56ffa75c87e1cc2af9a9309d5baeb2ff-bcd06477b32c8c8e1f279ed2d5c1ee4945c27e42
+ls
+mv kitty.cjsakdf
+mv kitty.conf ~/.config/kitty
+nvim .kit
+nvim kitty.conf 
+cd dotfiles/
+cd ..
+cd Downloads/
+rmdir 56ffa75c87e1cc2af9a9309d5baeb2ff-bcd06477b32c8c8e1f279ed2d5c1ee4945c27e42
+rm 56ffa75c87e1cc2af9a9309d5baeb2ff-bcd06477b32c8c8e1f279ed2d5c1ee4945c27e42.zip 
+ls
+alacritt
+alacritty
+cd .config
+ls
+cd kitty
+nvim kitty.conf 
+alacritty
+nvim .kit
+nvim kitty.conf 
+cd Downloads/
+rmdir 56ffa75c87e1cc2af9a9309d5baeb2ff-bcd06477b32c8c8e1f279ed2d5c1ee4945c27e42
+rm 56ffa75c87e1cc2af9a9309d5baeb2ff-bcd06477b32c8c8e1f279ed2d5c1ee4945c27e42.zip 
+alacritt
+alacritty
+cd kitty
+nvim kitty.conf 
+alacritty
+mkdir kitty
+rmdir kitty/
+cd .con
+cd .config/
+mv kitty/ ~/dotfiles/
+cd ..
+cd dotfiles/
+history | grep 'ln -s'
+ln -s ~/dotfiles/kitty/ ~/.config/kitty
+cd 
+cd .config
+ls -l
+rmdir Simplenote
+rm -rf Simplenote/
+cd Unknown\ Organization/
+ls
+:q
+tree
+tree
+tree
+tree
+neofetch
+clear
+cd dotfiles/
+cd kitty/
+ls
+nvim kitty.conf 
+ls
+kitten themes
+neofetch
+neofetch
+echo $SHELL
+sudo pacman -S zsh
+zsh
+clear
+nvim kitty.conf 
+cd dotfiles/
+cd kitty/
+ls
+nvim .
+ls
+nvim kitty.conf 
+cd dotfiles/
+cd kitty/
+cd .config
+cd ..
+nvim .
+ls
+ls -a
+touch .zshrc
+nvim .zshrc 
+sudo pacman -S zsh-completions
+autoload -Uz zsh-newuser-install
+zsh
+ls
+zsh
+la -a
+cd dotfiles/
+cd bash
+ls
+ls -a
+nvim .zshrc
+fish
+ls -a
+chsh -l
+sudo pacman -S fish
+ps -p $$-
+ps -p $$
+chsh -s /usr/bin/zsh
+lap
+ls
+conda
+exit

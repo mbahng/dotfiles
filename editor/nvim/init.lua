@@ -14,6 +14,7 @@ require "user.startify"
 require "user.iron"
 require "user.notebook"
 require "user.jupytext"
+require "user.hologram"
 require("nvim-tree").setup({
     disable_netrw = true,
     hijack_netrw = true,

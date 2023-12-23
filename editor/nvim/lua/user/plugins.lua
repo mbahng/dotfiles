@@ -61,8 +61,10 @@ return packer.startup(function(use)
   -- git 
   use "lewis6991/gitsigns.nvim"
 
+  use "edluffy/hologram.nvim"
+
   -- notebook stuff 
-  use "GCBallesteros/NotebookNavigator.nvim" 
+  use "GCBallesteros/NotebookNavigator.nvim"
   use "anuvyklack/hydra.nvim"
   use "GCBallesteros/jupytext.nvim"
 

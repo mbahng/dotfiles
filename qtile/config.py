@@ -7,7 +7,7 @@ import subprocess
 # from qtile_extras.widget.decorations import PowerLineDecoration
 
 mod = "mod4"
-terminal = "alacritty" 
+terminal = "kitty"
 bring_front_click = True
 
 
@@ -46,7 +46,7 @@ keys = [
     Key([mod], "p", lazy.spawn(""), desc=""),
 
     
-    Key([mod], "a", lazy.spawn("alacritty -e 'openconnect protocol=anyconnect --authgroup=l --user=mb625 portal.duke.edu'"), desc=""), 
+    Key([mod], "a", lazy.spawn("kitty -e 'openconnect protocol=anyconnect --authgroup=l --user=mb625 portal.duke.edu'"), desc=""), 
     Key([mod], "s", lazy.spawn("slack"), desc="Launch slack (s - slack)"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
