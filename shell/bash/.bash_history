@@ -1,6 +1,3 @@
-cd ECE685/
-cd HW4
-cd .. 
 cd CS671/
 cd HW5
 cd ~
@@ -4998,3 +4995,6 @@ lap
 ls
 conda
 exit
+conda activate
+conda activate pytorch-base
+ls
