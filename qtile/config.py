@@ -46,7 +46,7 @@ keys = [
     Key([mod], "p", lazy.spawn(""), desc=""),
 
     
-    Key([mod], "a", lazy.spawn("kitty -e 'openconnect --protocol=anyconnect --authgroup=l --user=mb625 portal.duke.edu'"), desc=""), 
+    Key([mod], "a", lazy.spawn("dotfiles/custom_scripts/vpn"), desc=""), 
     Key([mod], "s", lazy.spawn("slack"), desc="Launch slack (s - slack)"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
@@ -285,10 +285,11 @@ screens = [
                             foreground = "#000000",
                             warn_color = "#000000",
                             measure = "G",
-                            mouse_callbacks = {"Button1" : lazy.spawn("nemo")}, 
-                            format = "{f}/{s}{m}B [{r:.2f}% Used]", 
+                            mouse_callbacks = {"Button1" : lazy.spawn(f"{terminal} -e 'du -shc .[^.]* ~/*'")}, 
+                            format = "{uf}/{s}{m}B Free", 
                             warn_space = 1e9, 
                             padding = 4, 
+                            update_interval = 5, 
                         )
                     ], 
                     text_closed = "\N{FILE FOLDER} ", 

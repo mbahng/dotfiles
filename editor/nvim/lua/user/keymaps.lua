@@ -47,3 +47,5 @@ keymap("n", "<leader>f", "za", opts)
 
 keymap("n", "gd", "gd", opts)
 
+-- vertical split 
+keymap("n", "<leader>v", ":vsplit<cr>", opts)

@@ -1,4 +1,3 @@
-cd CS671/
 cd HW5
 cd ~
 cd Downloads/
@@ -4998,3 +4997,4 @@ exit
 conda activate
 conda activate pytorch-base
 ls
+exit
