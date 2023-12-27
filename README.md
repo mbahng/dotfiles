@@ -41,6 +41,10 @@ Now you may want to do some slight customization and really choose which softwar
 5. [JavaScript, Node, npm](guide/javascript.md) 
 6. [Julia](guide/julia.md) 
 7. [Ethereum Blockchain Development with Solidity](guide/solidity.md) 
+8. [Java](guide/)
+9. [Lua](guide/)
+10. [Go](guide/)
+11. [Ruby](guide/)
 
 
 
