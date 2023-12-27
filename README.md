@@ -1,5 +1,47 @@
 # config
-This repository contains all my configuration files and steps to streamline setting up on a new computer. I will go over how to do an ArchInstall in case I ever need it again for future         reference. It's been a great pain for me to install, so at the cost of an hour now at 3am before my machine learning homework is due, I hope that my future uses will reciprocate.  
+This repository serves two purposes: 1) to store all my UNIX configuration files in case I need to set up workspaces on a new personal computer or a computing cluster, and 2) to store mini-guides for setting up and using various programs. 
+
+I first go through disk partitioning and choosing the proper filesystem (ext4, btrfs, ntfs, ...) for preparation of installing a fresh linux operating system on a machine, which is necessary for dual boot systems. Then, you should choose your linux distribution (I personally only have experience with Ubuntu and Arch). Then, for most users you want to choose a desktop environment (floating vs tiling windows manager). After this, you pretty much have a minimal working computer.   
+
+Now you may want to do some slight customization and really choose which software you use. The first thing you want to choose is your shell (e.g. bash, zsh, fish) and also a terminal emulator (kitty, GNOME, alacritty) to access it. Then, you should get used to being able to edit configuration files on your system, which you will need to learn Vim. Before even that, you might also want to install Neovim, so I cover the default package managers first (e.g. `apt`, `pacman`), along with supplemental ones (e.g. `yay`, `snapd`, `flatpak`). Then we can get into Vim and Neovim, including basic configuration and plugins. 
+
+### Preparation
+1. [BIOS vs UEFI Booting](guide/boot.md)
+2. [Disk Partitioning for Multi-Boot Systems](guide/disk.md)
+3. [Init & Systemd](guide/init.md) 
+
+### Linux Distributions and Kernels
+1. [Ubuntu](guide/ubuntu.md) 
+2. [Arch Linux](guide/arch.md) 
+3. [Package Managers](guide/package.md) 
+
+### Desktop Environments
+1. [Display Server](guide/display.md) 
+2. [Windows Manager](guide/windows.md) 
+
+### Essentials Configuration
+1. [Vim and Neovim](guide/vim.md) 
+2. [Shell and Terminal Emulator](guide/shell.md) 
+3. [Networking: NetworkManager, TCP/IP](guide/network.md) 
+4. [Audio Drivers](guide/audio.md) 
+5. [Bluetooth](guide/bluetooth.md) 
+6. [Synaptics](guide/snaptics.md) 
+7. [Monitors](guide/monitors.md) 
+8. [Other Essential Packages](guide/other.md) 
+
+### Note Taking
+1. [LaTeX](guide/latex.md) 
+2. [InkScape](guide/inkscape.md) 
+
+### Development
+1. [SSH](guide/ssh.md) 
+2. [Git](guide/git.md) 
+3. [Python, Pip, Conda](guide/python.md) 
+4. [C++, Cmake, Clang](guide/cpp.md) 
+5. [JavaScript, Node, npm](guide/javascript.md) 
+6. [Julia](guide/julia.md) 
+7. [Ethereum Blockchain Development with Solidity](guide/solidity.md) 
+
 
 
 ## Preparing the Drive and FileSystem

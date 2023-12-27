@@ -46,27 +46,46 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use {"nvim-telescope/telescope.nvim", tag = "0.1.4"}
+
+
+  -- syntax highlighting
   use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
+
+  -- auto pairing "" and {} and ...
   use "windwp/nvim-autopairs"
   use "mbbill/undotree"
   use "lervag/vimtex" -- latex 
-  use "navarasu/onedark.nvim" -- color theme
+
+  -- better visual 
+  use "navarasu/onedark.nvim" 
   use "mhartington/oceanic-next"
-  use "numToStr/Comment.nvim" -- comment stuff out 
+
+  -- Jupyter Notebook and Interactive REPL 
   use 'Vigemus/iron.nvim'
-  use "mhinz/vim-startify"
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
-  use "akinsho/toggleterm.nvim"
-  -- git 
-  use "lewis6991/gitsigns.nvim"
-
-  use "edluffy/hologram.nvim"
-
-  -- notebook stuff 
   use "GCBallesteros/NotebookNavigator.nvim"
   use "anuvyklack/hydra.nvim"
   use "GCBallesteros/jupytext.nvim"
+  use "edluffy/hologram.nvim" -- image viewer for neovim
+
+
+
+  use "numToStr/Comment.nvim" -- comment stuff out 
+  use "mhinz/vim-startify"
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye" -- delete buffers without closing nvim
+  use "akinsho/toggleterm.nvim"
+
+
+  -- git 
+  use "lewis6991/gitsigns.nvim"
+
+-- install without yarn or npm
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   use "nvim-tree/nvim-web-devicons"
   use "nvim-tree/nvim-tree.lua"
