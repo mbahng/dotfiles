@@ -47,7 +47,8 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use {"nvim-telescope/telescope.nvim", tag = "0.1.4"}
 
-
+  -- folding 
+  use "lukas-reineke/indent-blankline.nvim"
   -- syntax highlighting
   use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
 
@@ -84,8 +85,6 @@ return packer.startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
 })
-
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   use "nvim-tree/nvim-web-devicons"
   use "nvim-tree/nvim-tree.lua"

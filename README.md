@@ -1,25 +1,30 @@
 # config
 This repository serves two purposes: 1) to store all my UNIX configuration files in case I need to set up workspaces on a new personal computer or a computing cluster, and 2) to store mini-guides for setting up and using various programs. 
 
-I first go through disk partitioning and choosing the proper filesystem (ext4, btrfs, ntfs, ...) for preparation of installing a fresh linux operating system on a machine, which is necessary for dual boot systems. Then, you should choose your linux distribution (I personally only have experience with Ubuntu and Arch). Then, for most users you want to choose a desktop environment (floating vs tiling windows manager). After this, you pretty much have a minimal working computer.   
-
 Now you may want to do some slight customization and really choose which software you use. The first thing you want to choose is your shell (e.g. bash, zsh, fish) and also a terminal emulator (kitty, GNOME, alacritty) to access it. Then, you should get used to being able to edit configuration files on your system, which you will need to learn Vim. Before even that, you might also want to install Neovim, so I cover the default package managers first (e.g. `apt`, `pacman`), along with supplemental ones (e.g. `yay`, `snapd`, `flatpak`). Then we can get into Vim and Neovim, including basic configuration and plugins. 
 
 ### Preparation
-1. [BIOS vs UEFI Booting](guide/boot.md)
+I first go through disk partitioning and choosing the proper filesystem (ext4, btrfs, ntfs, ...) for preparation of installing a fresh linux operating system on a machine, which is necessary for dual boot systems. 
+
+1. [Booting](guide/boot.md)
 2. [Disk Partitioning for Multi-Boot Systems](guide/disk.md)
 3. [Init & Systemd](guide/init.md) 
 
 ### Linux Distributions and Kernels
+Then, you should choose your linux distribution (I personally only have experience with Ubuntu and Arch). You should then download the proper ISO file online, create a bootable USB drive with Rufus, and boot into the ISO when you restart your computer 
+
 1. [Ubuntu](guide/ubuntu.md) 
 2. [Arch Linux](guide/arch.md) 
 3. [Package Managers](guide/package.md) 
 
 ### Desktop Environments
+Then, for most users you want to choose a desktop environment (floating vs tiling windows manager). After this, you pretty much have a minimal working computer.  
+
 1. [Display Server](guide/display.md) 
 2. [Windows Manager](guide/windows.md) 
 
 ### Essentials Configuration
+Now, you probably want the software that you are familiar with so far. This includes some text editor, configuring your shell, networking, audio, bluetooth, and perhaps hardware control (e.g. touchpads & monitors). I also provide a list of other pacakges like browsers and PDF viewers. 
 1. [Vim and Neovim](guide/vim.md) 
 2. [Shell and Terminal Emulator](guide/shell.md) 
 3. [Networking: NetworkManager, TCP/IP](guide/network.md) 
@@ -30,10 +35,12 @@ Now you may want to do some slight customization and really choose which softwar
 8. [Other Essential Packages](guide/other.md) 
 
 ### Note Taking
+I spend a good portion of my time taking notes in LaTeX. I've tried many other methods, such as taking notes handwritten, in Google docs, in Overleaf, in HTML, but I now settled on taking notes using TeX with Neovim. I also use Inkscape to produce figures. 
 1. [LaTeX](guide/latex.md) 
 2. [InkScape](guide/inkscape.md) 
 
 ### Development
+As for all programming related work, I provide methods in getting all the environments set up (these things can be pretty nontrivial on Linux and especially if you don't have VSCode). 
 1. [SSH](guide/ssh.md) 
 2. [Git](guide/git.md) 
 3. [Python, Pip, Conda](guide/python.md) 
@@ -48,29 +55,9 @@ Now you may want to do some slight customization and really choose which softwar
 
 
 
-## Preparing the Drive and FileSystem
-
-### Partitioning the SSD (for Dual/Triple Boot) 
-
-You should first partition your drive.  You should allocate at minimum 25GB of space for your new computer. For example, on Windows, go to Disk Management, right click on the disks and shrink them so that there's enough allocated disk space for the new operating system. There may be many reasons why you can't shrink, expand, or move around these already existing partitions, and to do that you'll need to use more powerful disk management toosl like DISKPART (especially to delete those annoying EFI partitions). If you are originally on Linux, then I don't know, but you would likely use Gparted, and you may have to modify these partitions from a bootable USB (just download a Ubuntu ISO, create a bootable USB drive with Rufus, and Ubuntu should have Gparted by default). 
-
-### Create Partitions and Choose FileSystem 
-You want to create a /boot, /swap, and / (root) partitions. There are 4 main ones: Ext4, btrfs, XFS, and OpenZFS. 
-
-## Choose Linux Distribution
-
-I've only had experience with Ubuntu and Arch, but others include PopOS, Kali Linux, Debian, etc. You should then download the proper ISO file online, create a bootable USB drive with Rufus, and boot into the ISO when you restart your computer. 
-
-### Arch Linux
-
-For my Arch installation I used the Sep 1 ISO version and followed https://www.youtube.com/watch?v=8oCHxzJky4U. 
-
-### Ubuntu 22.04
 
 
-## Essential Packages
 
-### Network Managers 
 
 At this point you should have already set up your network, probably in the installation boot, since you need a working network to download any packages. I use NetworkManager. 
 
