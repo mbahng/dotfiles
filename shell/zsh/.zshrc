@@ -7,6 +7,7 @@ ZSH=/usr/share/oh-my-zsh/
 # add custom scripts to PATH
 export PATH="/bin/custom_scripts:$PATH"
 export PATH="/home/mbahng/.local/bin:$PATH"
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # set alias for certain commands 
