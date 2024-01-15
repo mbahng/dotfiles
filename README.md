@@ -30,9 +30,8 @@ Now, you probably want the software that you are familiar with so far. This incl
 3. [Networking: NetworkManager, TCP/IP](guide/network.md) 
 4. [Audio Drivers](guide/audio.md) 
 5. [Bluetooth](guide/bluetooth.md) 
-6. [Synaptics](guide/snaptics.md) 
-7. [Monitors](guide/monitors.md) 
-8. [Other Essential Packages](guide/other.md) 
+6. [Hardware Configuration](guide/hardware.md) 
+7. [Other Essential Packages](guide/other.md) 
 
 ### Note Taking
 I spend a good portion of my time taking notes in LaTeX. I've tried many other methods, such as taking notes handwritten, in Google docs, in Overleaf, in HTML, but I now settled on taking notes using TeX with Neovim. I also use Inkscape to produce figures. 
@@ -56,10 +55,6 @@ As for all programming related work, I provide methods in getting all the enviro
 
 
 
-
-
-
-At this point you should have already set up your network, probably in the installation boot, since you need a working network to download any packages. I use NetworkManager. 
 
 ### Desktop Environment / Windows Manager 
 

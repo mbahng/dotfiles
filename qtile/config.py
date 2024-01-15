@@ -62,7 +62,7 @@ keys = [
     Key([mod], "c", lazy.spawn("caprine"), desc="Launch caprine (c - caprine)"), 
     Key([mod], "v", lazy.spawn("code"), desc="Launch vscode (v - vscode)"), 
     Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox (b - browser)"),
-    Key([mod], "n", lazy.spawn("inkscape"), desc=""),   
+    Key([mod], "n", lazy.spawn("inkscape"), desc="Launch iNkscape"),   
     Key([mod], "m", lazy.spawn("spotify"), desc="Launch spotify (m - music)"), 
     
     Key([mod, "shift"], "n", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"),
@@ -201,7 +201,6 @@ screens = [
                     fmt = "{}",
                     url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0", 
                     parse = news_parser, 
-                    mouse_callbacks = {"Button1" : lazy.spawn("firefox --new-window 'https://www.wsj.com'")}, 
                 ),
                 widget.Sep(), 
                 widget.Prompt(),

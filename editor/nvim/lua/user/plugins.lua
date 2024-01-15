@@ -47,19 +47,28 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use {"nvim-telescope/telescope.nvim", tag = "0.1.4"}
 
-  -- folding 
+  -- indent line guides 
   use "lukas-reineke/indent-blankline.nvim"
+
   -- syntax highlighting
   use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
 
+  -- automatic indent format
+  -- use "sbdchd/neoformat"
+
   -- auto pairing "" and {} and ...
   use "windwp/nvim-autopairs"
+  use "windwp/nvim-ts-autotag"
+
   use "mbbill/undotree"
   use "lervag/vimtex" -- latex 
 
   -- better visual 
   use "navarasu/onedark.nvim" 
   use "mhartington/oceanic-next"
+
+  -- python virtual environments
+  use "AckslD/swenv.nvim"
 
   -- Jupyter Notebook and Interactive REPL 
   use 'Vigemus/iron.nvim'

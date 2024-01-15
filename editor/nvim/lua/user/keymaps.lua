@@ -1,8 +1,4 @@
 local opts = { noremap = true, silent = true }
-
-local term_opts = { silent = true }
-
--- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
@@ -40,12 +36,31 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
--- Vimtex compile 
-keymap("n", "<leader>s", ":VimtexCompile<cr>", opts)
-keymap("n", "<leader>c", ":VimtexTocToggle<cr>", opts)
-keymap("n", "<leader>f", "za", opts)
+-- Keep cursor in the middle when page up/down and when searching
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 
+-- folding
+keymap("n", "<leader>f", "za", opts) -- fold where I am currently at
+keymap("n", "<leader>zM", "zM", opts) -- close all folds 
+keymap("n", "<leader>zR", "zR", opts) -- open all folds 
+
+-- go to definition and error
 keymap("n", "gd", "gd", opts)
+keymap("n", "gl", "gl", opts)
 
--- vertical split 
+-- indenting multiples lines
+keymap("v", "<tab>", ">", opts)
+keymap("v", "<S-tab>", "<", opts)
+
+-- yank to system clipboard
+keymap("v", "y", "+y", opts)
+keymap("n", "yy", '"+yy', opts)
+
+-- vertical split
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
+
+-- editing all instance of a word at the same time
+vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

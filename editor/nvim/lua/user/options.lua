@@ -13,6 +13,7 @@ local options = {
   showtabline = 2,                         -- always show tabs
   smartcase = true,                        -- smart case
   smartindent = true,                      -- make indenting smarter again
+  cindent = true,
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
@@ -44,6 +45,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd "set cinkeys-=0#"
+vim.cmd "set indentkeys-=0#"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

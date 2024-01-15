@@ -11,10 +11,13 @@ export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # set alias for certain commands 
+alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
 alias vi='nvim'
+alias lock='i3lock'
+
 
 # set history 
 HISTFILE=~/.zsh_history

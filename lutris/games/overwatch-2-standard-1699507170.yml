@@ -2,7 +2,7 @@ game:
   arch: win64
   args: --exec="launch Pro"
   exe: drive_c/Program Files (x86)/Battle.net/Battle.net.exe
-  prefix: /home/mbahng/Games/overwatch-2
+  prefix: /home/mbahng/Media/Games/overwatch-2
 game_slug: overwatch-2
 name: Overwatch 2
 requires: null
@@ -21,7 +21,7 @@ script:
   installer:
   - task:
       arch: win64
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   - extract:
       dst: $GAMEDIR
@@ -56,12 +56,12 @@ script:
   - task:
       app: arial
       arch: win64
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       silent: 'True'
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   - task:
       arch: win64
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   - write_json:
       data:
@@ -97,30 +97,30 @@ script:
       arch: win64
       key: backend
       path: HKEY_CURRENT_USER\Software\Wine\DXVA2
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       value: va
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   - task:
       arch: win64
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   - task:
       arch: win64
       env:
-        DXVK_CONFIG_FILE: /home/mbahng/Games/overwatch-2/dxvk.conf
-        DXVK_STATE_CACHE_PATH: /home/mbahng/Games/overwatch-2
+        DXVK_CONFIG_FILE: /home/mbahng/Media/Games/overwatch-2/dxvk.conf
+        DXVK_STATE_CACHE_PATH: /home/mbahng/Media/Games/overwatch-2
         STAGING_SHARED_MEMORY: '1'
         __GL_DXVK_OPTIMIZATIONS: '1'
         __GL_SHADER_DISK_CACHE: '1'
-        __GL_SHADER_DISK_CACHE_PATH: /home/mbahng/Games/overwatch-2
+        __GL_SHADER_DISK_CACHE_PATH: /home/mbahng/Media/Games/overwatch-2
       exclude_processes: Battle.net.exe Agent.exe "Battle.net Helper.exe" wineconsole
         explorer.exe conhost.exe svchost.exe
       executable: /home/mbahng/.cache/lutris/installer/overwatch-2/setup/Battle.net-Setup.exe
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   - task:
       arch: win64
-      prefix: /home/mbahng/Games/overwatch-2
+      prefix: /home/mbahng/Media/Games/overwatch-2
       wine_path: /home/mbahng/.local/share/lutris/runners/wine/wine-ge-8-22-x86_64/bin/wine
   system:
     env:
@@ -135,14 +135,16 @@ script:
 slug: overwatch-2-standard
 system:
   env:
-    DXVK_CONFIG_FILE: /home/mbahng/Games/overwatch-2/dxvk.conf
-    DXVK_STATE_CACHE_PATH: /home/mbahng/Games/overwatch-2
+    DXVK_CONFIG_FILE: /home/mbahng/Media/Games/overwatch-2/dxvk.conf
+    DXVK_STATE_CACHE_PATH: /home/mbahng/Media/Games/overwatch-2
     STAGING_SHARED_MEMORY: '1'
     __GL_DXVK_OPTIMIZATIONS: '1'
     __GL_SHADER_DISK_CACHE: '1'
-    __GL_SHADER_DISK_CACHE_PATH: /home/mbahng/Games/overwatch-2
+    __GL_SHADER_DISK_CACHE_PATH: /home/mbahng/Media/Games/overwatch-2
   exclude_processes: Agent.exe "Battle.net Helper.exe"
-  manual_command: /home/mbahng/Games/overwatch-2/state-cache-merge/state-cache-update.sh
+  game_path: /home/mbahng/Media/Games
+  locale: ''
+  manual_command: /home/mbahng/Media/Games/overwatch-2/state-cache-merge/state-cache-update.sh
 variables: {}
 version: Standard
 wine: {}

@@ -16,6 +16,8 @@ require "user.notebook"
 require "user.jupytext"
 require "user.hologram"
 require "user.indent-blankline"
+require "user.swenv"
+
 vim.g.loaded_perl_provider = 0
 
 require("nvim-tree").setup({

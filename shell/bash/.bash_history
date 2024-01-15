@@ -1,7 +1,3 @@
-cd HW5
-cd ~
-cd Downloads/
-feh IMG_0849.
 feh IMG_0849.heic
 rm IMG_0849.heic 
 rm IMG_0849.mov 
@@ -4998,3 +4994,7 @@ conda activate
 conda activate pytorch-base
 ls
 exit
+vulkaninfo
+conda activate pytorch-base
+/home/mbahng/.conda/envs/pytorch-base/bin/python /home/mbahng/Class/Fa23/ECE685/HW4/test.py
+ls

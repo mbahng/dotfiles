@@ -1,22 +1,26 @@
 #!/bin/bash 
 
 if [ "$1" == "sup" ]; then 
-    nvim ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning/Supervised_Learning.tex
+    cd ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning
+    nvim Supervised_Learning.tex
 fi
 if [ "$1" == "deep" ]; then 
-    nvim ~/Notes/mbahng-com/STEM/Data_Science/Deep_Learning/Deep_Learning.tex
+    cd ~/Notes/mbahng-com/STEM/Data_Science/Deep_Learning
+    nvim paper.tex
 fi 
 if [ "$1" == "linalg" ]; then 
-    nvim ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning/Supervised_Learning.tex
+    cd ~/Notes/mbahng-com/STEM/Math/Linear_Algebra
+    nvim Linear_Algebra.tex
 fi 
-if [ "$1" == "nlp" ]; then 
-    nvim ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning/Supervised_Learning.tex
+if [ "$1" == "stocalc" ]; then 
+    cd ~/Notes/mbahng-com/STEM/Math/Stochastic_Calculus
+    nvim Stochastic_Calculus.tex
 fi 
 if [ "$1" == "cv" ]; then 
-    nvim ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning/Supervised_Learning.tex
+
 fi 
 if [ "$1" == "real" ]; then 
-    nvim ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning/Supervised_Learning.tex
+
 fi 
 if [ "$1" == "bayes" ]; then 
     nvim ~/Notes/mbahng-com/STEM/Data_Science/Supervised_Learning/Supervised_Learning.tex
