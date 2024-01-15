@@ -37,7 +37,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
-
+vim.opt.statusline = "%F %h%m%r%=%y [%l/%L,%c] [%p%%]"
 vim.api.nvim_set_option("clipboard", "unnamedplus") -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
 vim.o.colorcolumn = "80"
 

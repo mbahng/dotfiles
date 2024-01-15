@@ -17,6 +17,7 @@ require "user.jupytext"
 require "user.hologram"
 require "user.indent-blankline"
 require "user.swenv"
+require "user.lualine"
 
 vim.g.loaded_perl_provider = 0
 

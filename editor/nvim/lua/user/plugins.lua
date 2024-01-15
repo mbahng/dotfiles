@@ -47,11 +47,20 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use {"nvim-telescope/telescope.nvim", tag = "0.1.4"}
 
+  -- Read/Write with sudo privilge
+  use "lambdalisue/suda.vim"
+
   -- indent line guides 
   use "lukas-reineke/indent-blankline.nvim"
 
   -- syntax highlighting
   use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
+
+  -- configuration of status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   -- automatic indent format
   -- use "sbdchd/neoformat"
