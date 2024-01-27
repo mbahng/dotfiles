@@ -14,9 +14,8 @@ export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias vim='nvim'
-alias vi='nvim'
 alias lock='i3lock'
+alias b2='backblaze-b2'
 
 
 # set history 
@@ -131,3 +130,4 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/nvm/init-nvm.sh

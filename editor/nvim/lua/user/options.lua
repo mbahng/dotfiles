@@ -1,6 +1,6 @@
 local options = {
   backup = false,                          -- creates a backup file
-  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+  -- clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
@@ -37,7 +37,6 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
-vim.opt.statusline = "%F %h%m%r%=%y [%l/%L,%c] [%p%%]"
 vim.api.nvim_set_option("clipboard", "unnamedplus") -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
 vim.o.colorcolumn = "80"
 
@@ -50,3 +49,8 @@ vim.cmd "set indentkeys-=0#"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+vim.cmd "set breakindent"
+vim.cmd "set foldmethod=indent"
+vim.cmd "set foldlevel=10000"
+

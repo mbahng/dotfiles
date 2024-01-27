@@ -122,4 +122,32 @@ case "$1" in
     cd "${MATH}/Stochastic_Processes"
     nvim paper.tex
     ;;
+
+  "linux")
+    cd "${TECH}/Linux"
+    nvim paper.tex
+    ;;
+
+  "block")
+    cd "${TECH}/Blockchain"
+    nvim paper.tex
+    ;;
+
+  "qcomp")
+    cd "${TECH}/Quantum_Computing"
+    nvim paper.tex
+    ;;
+
+  "dsa")
+    cd "${TECH}/Data_Structures_Algorithms"
+    nvim paper.tex
+    ;;
+
+  "system")
+    cd "${TECH}/Systems"
+    nvim paper.tex
+    ;;
+
+  
+
 esac

@@ -62,6 +62,7 @@ return packer.startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use 'unblevable/quick-scope'
   -- automatic indent format
   -- use "sbdchd/neoformat"
 
@@ -79,6 +80,9 @@ return packer.startup(function(use)
   -- python virtual environments
   use "AckslD/swenv.nvim"
 
+  -- copilot 
+  use "github/copilot.vim"
+
   -- Jupyter Notebook and Interactive REPL 
   use 'Vigemus/iron.nvim'
   use "GCBallesteros/NotebookNavigator.nvim"
@@ -86,9 +90,7 @@ return packer.startup(function(use)
   use "GCBallesteros/jupytext.nvim"
   use "edluffy/hologram.nvim" -- image viewer for neovim
 
-
-
-  use "numToStr/Comment.nvim" -- comment stuff out 
+  -- use "numToStr/Comment.nvim" -- comment stuff out 
   use "mhinz/vim-startify"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye" -- delete buffers without closing nvim
@@ -117,8 +119,10 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use {
+    "L3MON4D3/LuaSnip",
+  }
+  -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
