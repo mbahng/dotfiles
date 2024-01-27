@@ -86,7 +86,6 @@ ls.add_snippets(
       }
     ),
 
-
   }
 )
 
@@ -95,39 +94,118 @@ ls.add_snippets(
   {
     s(
       {
-        trig="\\enumerate", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="ti",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{enumerate}", "\t\\item "}), 
-        i(1), 
+        t("\\textit{"),
+        i(1),
+        t("}")
+      }
+    ),
+
+    s(
+      {
+        trig="tb",
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t("\\textbf{"),
+        i(1),
+        t("}")
+      }
+    ),
+
+
+    s(
+      {
+        trig="tt",
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t("\\texttt{"),
+        i(1),
+        t("}")
+      }
+    ),
+
+    s(
+      {
+        trig="mb", 
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t("\\mathbf{"),
+        i(1),
+        t("}")
+      }
+    ),
+
+    s(
+      {
+        trig="bs",
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t("\\boldsymbol{"),
+        i(1),
+        t("}")
+      }
+    ),
+
+    s(
+      {
+        trig="bb",
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t("\\mathbb{"),
+        i(1),
+        t("}")
+      }
+    ),
+
+    s(
+      {
+        trig="\\enumerate",
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t({"\\begin{enumerate}", "\t\\item "}),
+        i(1),
         t({"", "\\end{enumerate}"})
       }
     ), 
 
     s(
       {
-        trig="\\equation", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\equation",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{equation}", "\t"}), 
-        i(1), 
+        t({"\\begin{equation}", "\t"}),
+        i(1),
         t({"", "\\end{equation}"})
       }
     ), 
 
     s(
       {
-        trig="\\align", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\align",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{align*}", "\t"}), 
-        i(1), 
+        t({"\\begin{align*}", "\t"}),
+        i(1),
         t({"", "\\end{align*}"})
       }
     ), 
@@ -135,13 +213,13 @@ ls.add_snippets(
 
     s(
       {
-        trig="\\equation", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\equation",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{equation}", "\t"}), 
-        i(1), 
+        t({"\\begin{equation}", "\t"}),
+        i(1),
         t({"", "\\end{equation}"})
       }
     ), 
@@ -149,13 +227,13 @@ ls.add_snippets(
 
     s(
       {
-        trig="\\definition", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\definition",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{definition}", "\t"}), 
-        i(1), 
+        t({"\\begin{definition}", "\t"}),
+        i(1),
         t({"", "\\end{definition}"})
       }
     ), 
@@ -163,168 +241,195 @@ ls.add_snippets(
 
     s(
       {
-        trig="\\theorem", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\theorem",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{theorem}", "\t"}), 
-        i(1), 
+        t({"\\begin{theorem}", "\t"}),
+        i(1),
         t({"", "\\end{theorem}"})
       }
-    ), 
+    ),
 
 
     s(
       {
-        trig="\\lemma", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\lemma",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{lemma}", "\t"}), 
-        i(1), 
+        t({"\\begin{lemma}", "\t"}),
+        i(1),
         t({"", "\\end{lemma}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\answer", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\answer",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{answer}", "\t"}), 
-        i(1), 
+        t({"\\begin{answer}", "\t"}),
+        i(1),
         t({"", "\\end{answer}"})
       }
     ), 
 
     s(
       {
-        trig="\\example", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\example",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{example}", "\t"}), 
-        i(1), 
+        t({"\\begin{example}", "\t"}),
+        i(1),
         t({"", "\\end{example}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\question", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\question",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{question}", "\t"}), 
-        i(1), 
+        t({"\\begin{question}", "\t"}),
+        i(1),
         t({"", "\\end{question}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\corollary", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\corollary",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{corollary}", "\t"}), 
-        i(1), 
+        t({"\\begin{corollary}", "\t"}),
+        i(1),
         t({"", "\\end{corollary}"})
       }
     ), 
 
     s(
       {
-        trig="\\proof", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\proof",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{proof}", "\t"}), 
-        i(1), 
+        t({"\\begin{proof}", "\t"}),
+        i(1),
         t({"", "\\end{proof}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\proposition", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\proposition",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{proposition}", "\t"}), 
-        i(1), 
+        t({"\\begin{proposition}", "\t"}),
+        i(1),
         t({"", "\\end{proposition}"})
       }
     ), 
 
     s(
       {
-        trig="\\solution", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\solution",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{solution}", "\t"}), 
-        i(1), 
+        t({"\\begin{solution}", "\t"}),
+        i(1),
         t({"", "\\end{solution}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\pmatrix", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\pmatrix",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{pmatrix}", "\t"}), 
-        i(1), 
+        t({"\\begin{pmatrix}", "\t"}),
+        i(1),
         t({"", "\\end{pmatrix}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\bmatrix", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\bmatrix",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t({"\\begin{bmatrix}", "\t"}), 
-        i(1), 
+        t({"\\begin{bmatrix}", "\t"}),
+        i(1),
         t({"", "\\end{bmatrix}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="\\ff", 
-        regTrig=false, 
-        snippetType="snippet", 
+        trig="\\verbatim",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
-        t("\\frac{"), 
-        i(1), 
-        t("}{"), 
-        i(2), 
-        t("}")
+        t({"\\begin{verbatim}", "\t"}),
+        i(1),
+        t({"", "\\end{verbatim}"})
       }
-    ), 
+    ),
 
     s(
       {
-        trig="init", 
+        trig="\\cverbatim",
+        regTrig=false,
+        snippetType="snippet",
+      },
+      {
+        t({"\\begin{cverbatim}", "\t"}),
+        i(1),
+        t({"", "\\end{cverbatim}"})
+      }
+    ),
+
+
+    s(
+      {
+        trig="\\ff",
         regTrig=false, 
-        snippetType="snippet", 
+        snippetType="snippet",
+      },
+      {
+        t("\\frac{"),
+        i(1),
+        t("}{"),
+        i(2),
+        t("}")
+      }
+    ),
+
+    s(
+      {
+        trig="init",
+        regTrig=false,
+        snippetType="snippet",
       },
       {
         t({
@@ -410,7 +515,6 @@ ls.add_snippets(
           t({"", "", "\\end{document}"})
       }
     ),
-
 
   }
 )
