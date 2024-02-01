@@ -1,107 +1,171 @@
+
+" OPTIONS ===========================================
 filetype plugin indent on 
 syntax on 
 set background=dark
-set expandtab ts=2 sw=2 ai
+set autoindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
 set nu
 set cursorline      " Line where cursor is set nocompatible    " Set compatibility to vim only
-set wrap            " Auto wrap text
 set encoding=utf-8  " Encoding
 set spell           " Spell check 
 set scrolloff=10    " Have some lines after final line of text file 
-set ruler
+set colorcolumn=80
+set mouse=a
 set ignorecase 
-set textwidth=0 " previously set to 100 
-set shiftwidth=4
+set textwidth=100 " previously set to 100 
 set linebreak 
 set relativenumber
+set termguicolors
 
-" restore cursor to last position in file:
-autocmd BufReadPost *
-	\ if line("'\"") > 1 && line("'\"") <= line("$") |
-	\   exe "normal! g`\"" |
-	\ endif
+set cinkeys -=0#
+set whichwrap+=<,>,[,],h,l
 
-let g:vimtex_view_method = 'zathura'
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size = 1
+set breakindent
+set foldmethod=indent
+set foldlevel=10000
 
-" Map Ctrl-backspace to delete previous word in insert mode 
-inoremap <C-j> <esc>dvbi
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+let NERDTreeShowHidden=1
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" Trigger a highlight only when pressing f and F.
+let g:qs_highlight_on_keys = ['f', 'F']
+
+let g:floaterm_width=0.8
+let g:floaterm_height=0.9
+
+let g:indentLine_setColors=0
+let g:indentLine_char = '▏'
+
+
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
+
+let g:UltiSnipsExpandTrigger='<Enter>'
+let g:UltiSnipsJumpForwardTrigger='<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'  " use Shift-Tab to move backward through tabstops
+let g:UltiSnipsSnippetDirectories=['UltiSnips'] 
+
+
+
+" REMAPS =============================================
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <space>e :NERDTreeToggle<cr>
+nnoremap <space>u :UndotreeToggle<cr>
+nnoremap <space>y :Files<cr>
+nnoremap <C-\> :FloatermToggle!<cr>
+tnoremap <C-\> <C-d>:FloatermToggle!<cr>
+
+" Resize with arrows 
+nnoremap <C-Up> :resize -2<cr>
+nnoremap <C-Down> :resize +2<cr>
+nnoremap <C-Left> :vertical resize -2<cr>
+nnoremap <C-Right> :vertical resize +2<cr>
+
+" Navigate buffers 
+nnoremap <S-l> :bNext<cr> 
+nnoremap <S-h> :bNext<cr> 
+nnoremap <C-w> :bNext<cr> 
+nnoremap <C-t> :bNext<cr> 
+
+
+" Press jk fast to enter
 inoremap jk <esc>
-nnoremap <C-h> ge
-nnoremap <C-l> w
 
-" Mapping navigation between split windows
-nnoremap <C-Left> <C-W>h
-nnoremap <C-Down> <C-W>j
-nnoremap <C-Up> <C-W>k
-nnoremap <C-Right> <C-W>l
+" Moving within same line
+nnoremap j gj
+nnoremap k gk
 
-" Mapping resizing vertically and horizontally windows 
-nnoremap <C-S-Left> :vertical resize -5<CR> 
-nnoremap <C-S-Right> :vertical resize +5<CR> 
-nnoremap <C-S-Up> : resize +5<CR> 
-nnoremap <C-S-Down> :resize -5<CR> 
+" Keep cursor in the middle when page up/down and when searching 
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-command Toc VimtexTocToggle
+" folding 
+nnoremap <space>f za
+nnoremap <space>zM zM
+nnoremap <space>zR zR
 
-autocmd FileType tex setlocal breakindent
+" go to definition and error 
+nnoremap gd gd 
+nnoremap gl gl 
 
-" lines 
-nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
-nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
-nnoremap <C-S-j> 5j 
-nnoremap <C-S-k> 5k 
+" indenting multiple lines 
+vnoremap <tab> > 
+vnoremap <S-tab> < 
 
-nmap <c-m> <Bslash>lv
+" yank to system clipboard 
+vnoremap y "+y
+nnoremap yy "+yy
+
+" vertical split 
+nnoremap <space>v :vsplit<cr>
+
+
+" PLUGINS ====================================
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+augroup vimrcPlug
+  autocmd!
+  autocmd BufWritePost .vimrc source % | PlugInstall
+augroup END
 
 " Plugins 
 call plug#begin('~/.vim/plugged') 
 
-"Plug 'tpope/vim-fugitive'           " fugitive vim github wrapper 
-Plug 'neoclide/coc.nvim'            " Conquerer of Completion
-Plug 'jiangmiao/auto-pairs'         " Close parantheses, quotes ,etc. 
-Plug 'gruvbox-community/gruvbox'    " Color theme 
+" Essentials 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'SirVer/ultisnips'
+
+" Read/Write with sudo privilege
+Plug 'lambdalisue/suda.vim'
+
+" indent line guides
+Plug 'Yggdroot/indentLine'
+
+" Syntax highlighting
+Plug 'sheerun/vim-polyglot' 
+
+" Configuration of status line 
 Plug 'vim-airline/vim-airline' 
-" Plug 'vim-airline/vim-airline-themes' 
+
+" Quick scope for smooth horizontal navigation  
+Plug 'unblevable/quick-scope'
+
+Plug 'jiangmiao/auto-pairs'         " Close parantheses, quotes ,etc. 
+Plug 'voldikss/vim-floaterm'
+
+Plug 'mbbill/undotree'
+
+Plug 'adrian5/oceanic-next-vim'
+Plug 'joshdick/onedark.vim'
+
+Plug 'bagrat/vim-buffet'
+
 Plug 'preservim/nerdtree'
-Plug 'lervag/vimtex'                " Latex with vim 
-Plug 'nathanaelkane/vim-indent-guides'  " Indenting guides
-"Plug 'terryma/vim-smooth-scroll' 
-Plug 'vimwiki/vimwiki'
-Plug 'sirver/ultisnips'
-Plug 'TaDaa/vimade'         " Fades whatever window you're not working on
-" Plug 'vim-voom/VOoM'        " for tree like structure in file directory
 
 call plug#end()
+colorscheme oceanicnext
 
-let g:UltiSnipsExpandTrigger = '<tab>'
-
-" use <tab> to trigger completion and navigate to the next complete item
-function! CheckBackspace() abort
-let col = col('.') - 1
-return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-\ coc#pum#visible() ? coc#pum#next(1) :
-\ CheckBackspace() ? "\<Tab>" :
-\ coc#refresh()
-
-
-" Need the following code
-" It essentially allows Vim to compile with the --clientserver argument
-" which is needed to compile using \ll on vimtex on zathura 
-" If you do 'vim --version' you can see which features are included 
-" make sure that clientserver is included, which can be
-" https://unix.stackexchange.com/questions/594076/how-do-i-compile-vim-with-clientserver-on-arch-linux
-" You actually need to install gvim rather than vim
-
-"if empty(v:servername) && exists('*remote_startserver')
-"call remote_startserver('VIM')
-"endif
-
-set termguicolors
-colo gruvbox
-
-nnoremap <c-x> <Esc>:NERDTreeToggle<cr>

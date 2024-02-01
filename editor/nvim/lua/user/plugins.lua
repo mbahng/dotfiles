@@ -74,14 +74,9 @@ return packer.startup(function(use)
   use "lervag/vimtex" -- latex 
 
   -- better visual 
-  use "navarasu/onedark.nvim" 
+  use "navarasu/onedark.nvim"
   use "mhartington/oceanic-next"
 
-  -- python virtual environments
-  use "AckslD/swenv.nvim"
-
-  -- copilot 
-  use "github/copilot.vim"
 
   -- Jupyter Notebook and Interactive REPL 
   use 'Vigemus/iron.nvim'
@@ -90,10 +85,12 @@ return packer.startup(function(use)
   use "GCBallesteros/jupytext.nvim"
   use "edluffy/hologram.nvim" -- image viewer for neovim
 
-  -- use "numToStr/Comment.nvim" -- comment stuff out 
+  use "terrortylor/nvim-comment"
   use "mhinz/vim-startify"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye" -- delete buffers without closing nvim
+
+  -- floating terminal window 
   use "akinsho/toggleterm.nvim"
 
 
@@ -119,9 +116,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
-  use {
-    "L3MON4D3/LuaSnip",
-  }
+  use "L3MON4D3/LuaSnip"
   -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP

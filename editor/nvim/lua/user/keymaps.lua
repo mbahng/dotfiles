@@ -56,7 +56,8 @@ keymap("v", "<tab>", ">", opts)
 keymap("v", "<S-tab>", "<", opts)
 
 -- yank to system clipboard
-keymap("v", "y", "+y", opts)
+vim.keymap.set("v", "y", "+y")
+-- keymap("v", "y", "+y", opts)
 keymap("n", "yy", '"+yy', opts)
 
 -- vertical split

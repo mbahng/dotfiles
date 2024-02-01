@@ -1,7 +1,7 @@
 local ls = require("luasnip")
 
 ls.setup({
-  history = true,
+  history = false,
   region_check_events = "CursorMoved",
   delete_check_events = "TextChanged,InsertLeave",
 })
@@ -10,6 +10,29 @@ local fmta = require("luasnip.extras.fmt").fmta
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
+
+-- initialize C 
+
+ls.add_snippets(
+  "c",
+  {
+    s({trig="init", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+          #include<stdio.h>
+
+          int main(void) {
+            
+            return 0; 
+          }
+        ]],
+        {}, 
+        { delimiters = "xz" }
+      )
+    ),
+
+  }
+)
 
 
 -- PyTorch
@@ -82,12 +105,12 @@ ls.add_snippets("tex",
   {
     s({trig="ti", regTrig=false, snippetType="snippet"},
       fmta(
-        "\\texit{<>}",
+        "\\textit{<>}",
         { i(1) }
       )
     ),
 
-    s({trig="ti", regTrig=false, snippetType="snippet"},
+    s({trig="tb", regTrig=false, snippetType="snippet"},
       fmta(
         "\\textbf{<>}",
         { i(1) }
