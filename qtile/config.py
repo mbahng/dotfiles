@@ -7,7 +7,7 @@ import subprocess
 # from qtile_extras.widget.decorations import PowerLineDecoration
 
 mod = "mod4"
-terminal = "kitty"
+terminal = "alacritty"
 bring_front_click = True
 
 
