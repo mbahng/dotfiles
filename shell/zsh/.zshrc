@@ -8,7 +8,7 @@ ZSH=/usr/share/oh-my-zsh/
 export PATH="/bin/custom_scripts:$PATH"
 export PATH="/home/mbahng/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
-
+export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 # set alias for certain commands 
 alias bluebear='kitty +kitten ssh bluebear'

@@ -63,5 +63,8 @@ keymap("n", "yy", '"+yy', opts)
 -- vertical split
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 
+-- Easy access to REPL for Python, Julia, and JavaScript 
+keymap("n", ":repl<cr>", ":IronRepl<cr>", opts)
+
 -- editing all instance of a word at the same time
 vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

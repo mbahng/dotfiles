@@ -1,8 +1,8 @@
 require "user.options"
+require "user.colorscheme"
 require "user.keymaps"
 require "user.snip"
 require "user.plugins"
-require "user.colorscheme"
 require "user.comment"
 require "user.cmp"
 require "user.lsp"
@@ -14,11 +14,9 @@ require "user.gitsigns"
 require "user.vimtex"
 require "user.startify"
 require "user.iron"
-require "user.notebook"
-require "user.jupytext"
-require "user.hologram"
 require "user.indent-blankline"
 require "user.lualine"
+require "user.hologram"
 
 vim.g.loaded_perl_provider = 0
 
@@ -66,4 +64,4 @@ require("nvim-tree").setup({
 
 -- require "user.nvim-tree"
 require "user.bufferline"
-require "user.toggleterm" 
+require "user.toggleterm"

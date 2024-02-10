@@ -41,93 +41,53 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
 
-  -- essentials 
-  use "wbthomason/packer.nvim"
-  use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
-  use {"nvim-telescope/telescope.nvim", tag = "0.1.4"}
+  use "wbthomason/packer.nvim"                -- the packer package manager
+  use "nvim-lua/plenary.nvim"                 -- for async programming
+  use "nvim-telescope/telescope.nvim"         -- quickly find files in pwd
+  use "jesseduffield/lazygit"                 -- all things git 
+  use "lambdalisue/suda.vim"                  -- Read/Write with sudo privilge
+  use "lukas-reineke/indent-blankline.nvim"   -- indent line guides 
+  use "nvim-treesitter/nvim-treesitter"       -- syntax highlighting
+  use 'nvim-lualine/lualine.nvim'             -- configure status line
+  use 'unblevable/quick-scope'                -- highlights letter when pressing f/F
+  use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
+  use "windwp/nvim-ts-autotag"                -- autopairing <html> tags
+  use "mbbill/undotree"                       -- can see undo tree history
+  use "lervag/vimtex"                         -- for compiling tex documents
+  use "navarasu/onedark.nvim"                 -- color scheme
+  use "mhartington/oceanic-next"              -- color scheme
+  use "rcarriga/nvim-notify"                  -- notification manager
+  use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
+  use "Vigemus/iron.nvim"                     -- interactive REPL 
+  use "terrortylor/nvim-comment"              -- comment out visual blocks of line
+  use "mhinz/vim-startify"                    -- start screen when starting neovim
+  use "akinsho/bufferline.nvim"               -- shows the buffer (tab) line
+  use "moll/vim-bbye"                         -- delete buffers without closing nvim
+  use "akinsho/toggleterm.nvim"               -- floating terminal window
+  use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
+  use "L3MON4D3/LuaSnip"                      -- custom snippets 
+  use "nvim-tree/nvim-tree.lua"               -- the left sidebar showing filetree
+  use "nvim-tree/nvim-web-devicons"           -- icons for filetypes
+  use "edluffy/hologram.nvim"                 -- to show pictures within neovim buffers
+  use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
+  run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
 
-  -- Read/Write with sudo privilge
-  use "lambdalisue/suda.vim"
-
-  -- indent line guides 
-  use "lukas-reineke/indent-blankline.nvim"
-
-  -- syntax highlighting
-  use {"nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"}}
-
-  -- configuration of status line
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-
-  use 'unblevable/quick-scope'
-  -- automatic indent format
-  -- use "sbdchd/neoformat"
-
-  -- auto pairing "" and {} and ...
-  use "windwp/nvim-autopairs"
-  use "windwp/nvim-ts-autotag"
-
-  use "mbbill/undotree"
-  use "lervag/vimtex" -- latex 
-
-  -- better visual 
-  use "navarasu/onedark.nvim"
-  use "mhartington/oceanic-next"
-
-
-  -- Jupyter Notebook and Interactive REPL 
-  use 'Vigemus/iron.nvim'
-  use "GCBallesteros/NotebookNavigator.nvim"
-  use "anuvyklack/hydra.nvim"
-  use "GCBallesteros/jupytext.nvim"
-  use "edluffy/hologram.nvim" -- image viewer for neovim
-
-  use "terrortylor/nvim-comment"
-  use "mhinz/vim-startify"
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye" -- delete buffers without closing nvim
-
-  -- floating terminal window 
-  use "akinsho/toggleterm.nvim"
-
-
-  -- git 
-  use "lewis6991/gitsigns.nvim"
-
--- install without yarn or npm
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-})
-
-  use "nvim-tree/nvim-web-devicons"
-  use "nvim-tree/nvim-tree.lua"
+  -- LSP
+  use "williamboman/mason.nvim"               -- LSP: simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim"     -- simple to use language server installer
+  use "neovim/nvim-lspconfig"                 -- enable LSP
+  use 'jose-elias-alvarez/null-ls.nvim'       -- LSP diagnostics and code actions
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/nvim-cmp"                      -- The completion plugin
+  use "hrsh7th/cmp-buffer"                    -- buffer completions
+  use "hrsh7th/cmp-path"                      -- path completions
+  use "hrsh7th/cmp-cmdline"                   -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip"              -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
-  -- snippets
-  use "L3MON4D3/LuaSnip"
-  -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/mason.nvim" -- simple to use language server installer
-  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actionsi
-
-
   -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

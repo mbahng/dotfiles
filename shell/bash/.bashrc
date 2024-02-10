@@ -4,8 +4,6 @@
 # set aliases and shortcuts for commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias vim='nvim'
-alias vi='nvim'
 
 # Customize the bash/terminal input 
 export PS1="\e[1;36m\w>\e[0m"              # just directory name with cyan 

@@ -49,7 +49,6 @@ vim.cmd "set indentkeys-=0#"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-
 vim.cmd "set breakindent"
 vim.cmd "set foldmethod=indent"
 vim.cmd "set foldlevel=10000"

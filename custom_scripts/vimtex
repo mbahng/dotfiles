@@ -8,6 +8,10 @@ PHYSICS="${STEM}/Science"
 
 
 case "$1" in 
+  "qm")
+    cd "${PHYSICS}/Quantum_Mechanics"
+    nvim paper.tex 
+    ;; 
   "ml")
     cd "${DATA_SCIENCE}/MachineLearning"
     nvim paper.tex 

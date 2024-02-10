@@ -2,7 +2,7 @@ local ls = require("luasnip")
 
 ls.setup({
   history = false,
-  region_check_events = "CursorMoved",
+  region_check_events = "CursorMoved, InsertEnter",
   delete_check_events = "TextChanged,InsertLeave",
 })
 
@@ -11,8 +11,35 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
--- initialize C 
+-- initialize HTML 
+ls.add_snippets(
+  "html",
+  {
+    s({trig="init", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>HTML 5 Boilerplate</title>
+            <link rel="stylesheet" href="style.css">
+          </head>
+          <body>
+          <script src="index.js"></script>
+          </body>
+        </html>
+        ]],
+        {}, 
+        { delimiters = "()" }
+      )
+    ),
+  }
+)
 
+-- initialize C 
 ls.add_snippets(
   "c",
   {

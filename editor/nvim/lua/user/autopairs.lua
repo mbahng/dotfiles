@@ -14,6 +14,7 @@ npairs.setup {
   disable_filetype = { "TelescopePrompt" },
 }
 
+-- need this section to autocomplete <html> tags
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
@@ -26,4 +27,5 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   }
 }
+-- 
 

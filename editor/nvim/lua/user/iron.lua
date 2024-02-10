@@ -9,7 +9,7 @@ iron.setup {
       sh = {
         -- Can be a table or a function that
         -- returns a table (see below)
-        command = {"alacritty"}
+        command = {"kitty"}
       }
     },
     -- How the repl window will be displayed
@@ -19,8 +19,8 @@ iron.setup {
   -- Iron doesn't set keymaps by default anymore.
   -- You can set them here or manually add keymaps to the functions in iron.core
   keymaps = {
-    send_motion = "<space>sc",
-    visual_send = "<space>sc",
+    send_motion = "<C-Return>",
+    visual_send = "<C-Enter>",
     send_file = "<space>sf",
     send_line = "<space>sl",
     send_until_cursor = "<space>su",

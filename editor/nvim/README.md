@@ -1,8 +1,17 @@
 # Neovim from scratch
 
+## Commands to run 
+
+```
+ln -s ~/dotfiles/editor/nvim ~/.config/nvim 
+ln -s ~/dotfiles/editor/vim/.vimrc ~/.vimrc 
+```
+
+
+
 ## Try out this config
 
-Make sure to remove or move your current `nvim` directory
+Make sure to remove or move your current `nvim` directory. 
 
 ```
 git clone git@github.com:ChristianChiarulli/Neovim-from-scratch.git ~/.config/nvim
