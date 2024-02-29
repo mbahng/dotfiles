@@ -19,8 +19,8 @@ iron.setup {
   -- Iron doesn't set keymaps by default anymore.
   -- You can set them here or manually add keymaps to the functions in iron.core
   keymaps = {
-    send_motion = "<C-Return>",
-    visual_send = "<C-Enter>",
+    send_motion = "<space>r", 
+    visual_send = "<space>r",
     send_file = "<space>sf",
     send_line = "<space>sl",
     send_until_cursor = "<space>su",

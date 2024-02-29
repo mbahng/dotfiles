@@ -69,6 +69,14 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-tree.lua"               -- the left sidebar showing filetree
   use "nvim-tree/nvim-web-devicons"           -- icons for filetypes
   use "edluffy/hologram.nvim"                 -- to show pictures within neovim buffers
+  use "github/copilot.vim"                    -- copilot 
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
 

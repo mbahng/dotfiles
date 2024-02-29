@@ -59,6 +59,8 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips']
 
 " REMAPS =============================================
 
+imap <C-?> <C-h> 
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -137,13 +139,12 @@ call plug#begin('~/.vim/plugged')
 " Essentials 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'lambdalisue/suda.vim'         " Read/Write with sudo privilege
+Plug 'Yggdroot/indentLine'          " indent line guides
+Plug 'preservim/nerdtree' 
+
 Plug 'SirVer/ultisnips'
 
-" Read/Write with sudo privilege
-Plug 'lambdalisue/suda.vim'
-
-" indent line guides
-Plug 'Yggdroot/indentLine'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot' 
@@ -158,13 +159,12 @@ Plug 'jiangmiao/auto-pairs'         " Close parantheses, quotes ,etc.
 Plug 'voldikss/vim-floaterm'
 
 Plug 'mbbill/undotree'
+Plug 'github/copilot.vim'
 
 Plug 'adrian5/oceanic-next-vim'
 Plug 'joshdick/onedark.vim'
 
 Plug 'bagrat/vim-buffet'
-
-Plug 'preservim/nerdtree'
 
 call plug#end()
 colorscheme oceanicnext

@@ -68,3 +68,7 @@ keymap("n", ":repl<cr>", ":IronRepl<cr>", opts)
 
 -- editing all instance of a word at the same time
 vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- word count 
+keymap("v", "<leader>w", "g<S-g>", opts)
+

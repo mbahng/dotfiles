@@ -52,4 +52,5 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd "set breakindent"
 vim.cmd "set foldmethod=indent"
 vim.cmd "set foldlevel=10000"
+vim.g.copilot_assume_mapped = true 
 
