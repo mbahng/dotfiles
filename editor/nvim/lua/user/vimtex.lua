@@ -1,4 +1,4 @@
-vim.g['vimtex_view_method'] = 'zathura'
+vim.g['vimtex_view_method'] = 'general'
 --  vim.keymap.set("n", "<leader>lv", "<leader>lv") -- forward search 
 vim.g['vimtex_fold_enabled'] = 0
 vim.g['vimtex_fold_levelmarker'] = '>'

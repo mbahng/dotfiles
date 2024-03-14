@@ -40,7 +40,7 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-
+  
   use "wbthomason/packer.nvim"                -- the packer package manager
   use "nvim-lua/plenary.nvim"                 -- for async programming
   use "nvim-telescope/telescope.nvim"         -- quickly find files in pwd
@@ -66,16 +66,16 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"               -- floating terminal window
   use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
   use "L3MON4D3/LuaSnip"                      -- custom snippets 
-  use "nvim-tree/nvim-tree.lua"               -- the left sidebar showing filetree
-  use "nvim-tree/nvim-web-devicons"           -- icons for filetypes
+  use "kyazdani42/nvim-web-devicons"           -- icons for filetypes
+  use "kyazdani42/nvim-tree.lua"               -- the left sidebar showing filetree
   use "edluffy/hologram.nvim"                 -- to show pictures within neovim buffers
   use "github/copilot.vim"                    -- copilot 
   use {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function ()
-      require("copilot_cmp").setup()
-    end
+    -- after = { "copilot.lua" },
+    -- config = function ()
+    --   require("copilot-cmp").setup()
+    -- end
   }
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm

@@ -2,20 +2,20 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=/Users/mbahng/.oh-my-zsh
 
 # add custom scripts to PATH
-export PATH="/bin/custom_scripts:$PATH"
-export PATH="/home/mbahng/.local/bin:$PATH"
-export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
-export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
+export PATH="/Users/mbahng/.custom_scripts:$PATH"
+# export PATH="/Users/mbahng/.local/bin:$PATH"
+export PATH="/usr/local/texlive/2023/bin/universal-darwin:$PATH"
+# export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 # set alias for certain commands 
 alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias lock='i3lock'
-alias b2='backblaze-b2'
+# alias lock='i3lock'
+# alias b2='backblaze-b2'
 
 
 # set history 
@@ -95,8 +95,8 @@ plugins=(
   )
 
 # source for autocompletion and syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -146,4 +146,15 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+source $(brew --prefix nvm)/nvm.sh
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/mbahng/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
 
