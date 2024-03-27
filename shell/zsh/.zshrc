@@ -14,6 +14,7 @@ export PATH="/usr/local/texlive/2023/bin/universal-darwin:$PATH"
 alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias vim='nvim'
 # alias lock='i3lock'
 # alias b2='backblaze-b2'
 

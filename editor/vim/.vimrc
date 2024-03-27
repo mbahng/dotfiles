@@ -143,8 +143,7 @@ Plug 'lambdalisue/suda.vim'         " Read/Write with sudo privilege
 Plug 'Yggdroot/indentLine'          " indent line guides
 Plug 'preservim/nerdtree' 
 
-Plug 'SirVer/ultisnips'
-
+" Plug 'SirVer/ultisnips'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot' 

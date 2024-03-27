@@ -1,157 +1,97 @@
 #!/bin/bash 
 
 STEM=~/Notes/mbahng-com/STEM
-DATA_SCIENCE="${STEM}/Data_Science"
+DATA_SCIENCE="${STEM}/Statistics"
 MATH="${STEM}/Math"
-TECH="${STEM}/Software_Tech"
-PHYSICS="${STEM}/Science"
-
+TECH="${STEM}/Computer_Science"
+PHYSICS="${STEM}/Natural_Sciences"
 
 case "$1" in 
   "qm")
     cd "${PHYSICS}/Quantum_Mechanics"
-    nvim paper.tex 
     ;; 
   "ml")
-    cd "${DATA_SCIENCE}/MachineLearning"
-    nvim paper.tex 
+    cd "${DATA_SCIENCE}/Machine_Learning"
     ;; 
-
   "deep")
     cd "${DATA_SCIENCE}/Deep_Learning"
-    nvim paper.tex 
     ;; 
-
   "sup")
     cd "${DATA_SCIENCE}/Supervised_Learning"
-    nvim paper.tex 
     ;; 
-
   "stats")
     cd "${DATA_SCIENCE}/Statistics"
-    nvim paper.tex 
     ;; 
-
   "cv")
     cd "${DATA_SCIENCE}/CV"
-    nvim paper.tex 
     ;; 
-
   "nlp")
     cd "${DATA_SCIENCE}/NLP"
-    nvim paper.tex 
     ;; 
-
   "alg")
     cd "${MATH}/Abstract_Algebra"
-    nvim paper.tex
     ;;
-
   "algtop")
     cd "${MATH}/Algebraic_Topology"
-    nvim paper.tex
     ;;
-
   "complex")
     cd "${MATH}/Complex_Analysis"
-    nvim paper.tex
     ;;
-
   "concentration")
     cd "${MATH}/Concentration_of_Measure"
-    nvim paper.tex
     ;;
-
   "diffgeo")
     cd "${MATH}/Differential_Geometry"
-    nvim paper.tex
     ;;
-
   "functional")
     cd "${MATH}/Functional_Analysis"
-    nvim paper.tex
     ;;
-
   "linalg")
     cd "${MATH}/Linear_Algebra"
-    nvim paper.tex
     ;;
-
   "measure")
     cd "${MATH}/Measure_Theory"
-    nvim paper.tex
     ;;
-
   "multi")
     cd "${MATH}/Multivariate_Calculus"
-    nvim paper.tex
     ;;
-
   "number")
     cd "${MATH}/Number_Theory"
-    nvim paper.tex
     ;;
-
   "ode")
     cd "${MATH}/Ordinary_Differential_Equations"
-    nvim paper.tex
     ;;
-
   "pde")
     cd "${MATH}/Partial_Differential_Equations"
-    nvim paper.tex
     ;;
-
   "top")
     cd "${MATH}/Point_Set_Topology"
-    nvim paper.tex
     ;;
-
   "prob")
     cd "${MATH}/Probability_Theory"
-    nvim paper.tex
     ;;
-
   "real")
     cd "${MATH}/Real_Analysis"
-    nvim paper.tex
     ;;
-
   "smooth")
     cd "${MATH}/Smooth_Manifolds"
-    nvim paper.tex
     ;;
-
   "stoch")
     cd "${MATH}/Stochastic_Processes"
-    nvim paper.tex
     ;;
-
   "linux")
     cd "${TECH}/Linux"
-    nvim paper.tex
     ;;
-
   "block")
     cd "${TECH}/Blockchain"
-    nvim paper.tex
     ;;
-
   "qcomp")
     cd "${TECH}/Quantum_Computing"
-    nvim paper.tex
     ;;
-
   "dsa")
     cd "${TECH}/Data_Structures_Algorithms"
-    nvim paper.tex
     ;;
-
   "system")
     cd "${TECH}/Systems"
-    nvim paper.tex
-    ;;
-
-  
-
 esac
+nvim paper.tex

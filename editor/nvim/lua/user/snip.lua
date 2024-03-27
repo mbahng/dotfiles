@@ -61,7 +61,6 @@ ls.add_snippets(
   }
 )
 
-
 -- PyTorch
 ls.add_snippets(
   "python",
@@ -188,7 +187,7 @@ ls.add_snippets("tex",
     s({trig="\\figure", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
-          \begin{figure}[hbt!]
+          \begin{figure}[H]
             \centering 
             \includegraphics[scale=0.4]{img/<>}
             \caption{<>} 
@@ -202,7 +201,7 @@ ls.add_snippets("tex",
     s({trig="\\subfigure12", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
-        \begin{figure}[hbt!]
+        \begin{figure}[H]
           \centering
           \begin{subfigure}[b]{0.48\textwidth}
           \centering
@@ -228,7 +227,7 @@ ls.add_snippets("tex",
     s({trig="\\subfigure13", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
-        \begin{figure}[hbt!]
+        \begin{figure}[H]
           \centering
           \begin{subfigure}[b]{0.32\textwidth}
           \centering
@@ -261,7 +260,7 @@ ls.add_snippets("tex",
     s({trig="\\subfigure22", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
-        \begin{figure}[hbt!]
+        \begin{figure}[H]
           \centering
           \begin{subfigure}[b]{0.48\textwidth}
           \centering
@@ -301,7 +300,7 @@ ls.add_snippets("tex",
     s({trig="\\subfigure23", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{figure}[hbt!]
+        \begin{figure}[H]
           \centering 
           \begin{subfigure}[b]{0.32\textwidth}
           \centering
@@ -359,10 +358,40 @@ ls.add_snippets("tex",
 -- latex environments
 ls.add_snippets("tex",
   {
+    s({trig="\\code2", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \noindent\begin{minipage}{.5\textwidth}
+        \begin{lstlisting}[]{Code}
+          <>
+        \end{lstlisting}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{.49\textwidth}
+        \begin{lstlisting}[]{Output}
+          <>
+        \end{lstlisting}
+        \end{minipage}
+      ]],
+      { i(1), i(2) }
+      )
+    ),
+
+    s({trig="\\code1", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{lstlisting}
+          <>
+        \end{lstlisting}
+      ]],
+      { i(1) }
+      )
+    ),
+
     s({trig="\\enumerate", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{enumerate} 
+        \begin{enumerate}
           \item <>
         \end{enumerate}
       ]],
@@ -373,7 +402,7 @@ ls.add_snippets("tex",
     s({trig="\\equation", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{equation} 
+        \begin{equation}
           <>
         \end{equation}
       ]],
@@ -384,7 +413,7 @@ ls.add_snippets("tex",
     s({trig="\\align", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{align} 
+        \begin{align}
           <>
         \end{align}
       ]],
@@ -395,7 +424,7 @@ ls.add_snippets("tex",
     s({trig="\\definition", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{definition} 
+        \begin{definition}
           <>
         \end{definition}
       ]],
@@ -406,7 +435,7 @@ ls.add_snippets("tex",
     s({trig="\\theorem", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{theorem} 
+        \begin{theorem}
           <>
         \end{theorem}
       ]],
@@ -428,9 +457,20 @@ ls.add_snippets("tex",
     s({trig="\\answer", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{answer} 
+        \begin{answer}
           <>
         \end{answer}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\exercise", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{exercise}
+          <>
+        \end{exercise}
       ]],
       { i(1) }
       )
@@ -439,7 +479,7 @@ ls.add_snippets("tex",
     s({trig="\\example", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{example} 
+        \begin{example}
           <>
         \end{example}
       ]],
@@ -450,7 +490,7 @@ ls.add_snippets("tex",
     s({trig="\\question", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{question} 
+        \begin{question}
           <>
         \end{question}
       ]],
@@ -461,7 +501,7 @@ ls.add_snippets("tex",
     s({trig="\\corollary", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{corollary} 
+        \begin{corollary}
           <>
         \end{corollary}
       ]],
@@ -472,7 +512,7 @@ ls.add_snippets("tex",
     s({trig="\\proof", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{proof} 
+        \begin{proof}
           <>
         \end{proof}
       ]],
@@ -483,7 +523,7 @@ ls.add_snippets("tex",
     s({trig="\\proposition", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{proposition} 
+        \begin{proposition}
           <>
         \end{proposition}
       ]],
@@ -494,7 +534,7 @@ ls.add_snippets("tex",
     s({trig="\\pmatrix", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{pmatrix} 
+        \begin{pmatrix}
           <>
         \end{pmatrix}
       ]],
@@ -505,7 +545,7 @@ ls.add_snippets("tex",
     s({trig="\\bmatrix", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{bmatrix} 
+        \begin{bmatrix}
           <>
         \end{bmatrix}
       ]],
@@ -516,7 +556,7 @@ ls.add_snippets("tex",
     s({trig="\\verbatim", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{verbatim} 
+        \begin{verbatim}
           <>
         \end{verbatim}
       ]],
@@ -527,7 +567,7 @@ ls.add_snippets("tex",
     s({trig="\\cverbatim", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{cverbatim} 
+        \begin{cverbatim}
           <>
         \end{cverbatim}
       ]],
@@ -538,7 +578,7 @@ ls.add_snippets("tex",
     s({trig="\\solution", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{solution} 
+        \begin{solution}
           <>
         \end{solution}
       ]],
@@ -554,89 +594,232 @@ ls.add_snippets("tex",
   {
     s({trig="init", regTrig=false, snippetType="snippet"},
       fmta(
-      [[ 
-        \documentclass{article}
+  [[
+\documentclass{article}
 
-          % preamble
-          \usepackage[letterpaper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
-          \usepackage[utf8]{inputenc}
-          \usepackage[english]{babel}
-          \usepackage{amsmath, amssymb, amsthm, mathtools} % necessary
-          \usepackage{lastpage} % insert last page number
-          \usepackage{centernot} % for not slash
+% packages
+  % basic stuff for rendering math
+  \usepackage[letterpaper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
+  \usepackage[utf8]{inputenc}
+  \usepackage[english]{babel}
+  \usepackage{amsmath} 
+  \usepackage{amssymb}
+  % \usepackage{amsthm}
 
-          \usepackage{pgfplots}
-          \pgfplotsset{compat=1.18}
-          \usepackage{hyperref} % hyperlinks
-          \usepackage{fancyhdr} % fancy headers
-          \usepackage{fancyvrb} % verbatim
-          \usepackage{parskip}
+  % extra math symbols and utilities
+  \usepackage{mathtools}        % for extra stuff like \coloneqq
+  \usepackage{mathrsfs}         % for extra stuff like \mathsrc{}
+  \usepackage{centernot}        % for the centernot arrow 
+  \usepackage{bm}               % for better boldsymbol/mathbf 
+  \usepackage{enumitem}         % better control over enumerate, itemize
+  \usepackage{hyperref}         % for hypertext linking
+  \usepackage{fancyvrb}          % for better verbatim environments
+  \usepackage{newverbs}         % for texttt{}
+  \usepackage{xcolor}           % for colored text 
+  \usepackage{listings}         % to include code
+  \usepackage{lstautogobble}    % helper package for code
+  \usepackage{parcolumns}       % for side by side columns for two column code
+  
 
-          \usepackage{subcaption} % captions for figures
-          \definecolor{cverbbg}{gray}{0.93}
+  % page layout
+  \usepackage{fancyhdr}         % for headers and footers 
+  \usepackage{lastpage}         % to include last page number in footer 
+  \usepackage{parskip}          % for no indentation and space between paragraphs    
+  \usepackage[T1]{fontenc}      % to include \textbackslash
+  \usepackage{footnote}
+  \usepackage{etoolbox}
 
-          \setlength{\parindent}{0pt} % set no indent
-          \hfuzz=5.002pt % ignore overfull hbox badness warnings below this limit
+  % for custom environments
+  \usepackage{tcolorbox}        % for better colored boxes in custom environments
+  \tcbuselibrary{breakable}     % to allow tcolorboxes to break across pages
 
-          \DeclareMathOperator{\Tr}{Tr}
-          \DeclareMathOperator{\Sym}{Sym}
-          \DeclareMathOperator{\Span}{span}
-          \DeclareMathOperator{\std}{std}
-          \DeclareMathOperator{\Cov}{Cov}
-          \DeclareMathOperator{\Var}{Var}
-          \DeclareMathOperator{\Corr}{Corr}
-          \DeclareMathOperator*{\argmin}{\arg\!\min}
-          \DeclareMathOperator*{\argmax}{\arg\!\max}
-          \newenvironment{question}{\color{blue}}{\ignorespacesafterend}
+  % figures
+  \usepackage{pgfplots}
+  \pgfplotsset{compat=1.18}
+  \usepackage{float}            % for [H] figure placement
+  \usepackage{tikz}
+  \usepackage{tikz-cd}
+  \usepackage{circuit-tikz}
+  \usetikzlibrary{arrows}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usepackage{graphicx}
+  \usepackage{caption} 
+  \usepackage{subcaption}
 
-          \newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}}
-          \newcommand{\bra}[1]{\ensuremath{\left\langle#1\right|}}
-          \newcommand{\bracket}[2]{\langle #1 | #2 \rangle}
+  % for tabular stuff 
+  \usepackage{dcolumn}
 
-          \theoremstyle{definition}
-          \newtheorem{theorem}{Theorem}[section]
-          \newtheorem{proposition}[theorem]{Proposition}
-          \newtheorem{lemma}[theorem]{Lemma}
-          \newtheorem{example}{Example}[section]
-          \newtheorem{exercise}{Exercise}[section]
-          \newtheorem{corollary}{Corollary}[theorem]
-          \newtheorem{definition}{Definition}[section]
-          \renewcommand{\qed}{\hfill$\blacksquare$}
-          \renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+  \usepackage[nottoc]{tocbibind}
+  \pdfsuppresswarningpagegroup=1
+  \hfuzz=5.002pt                % ignore overfull hbox badness warnings below this limit
 
-          \newenvironment{solution}{\noindent \textit{Solution.}}{}
-          \newenvironment{cverbatim}
-            {\SaveVerbatim{cverb}}
-            {\endSaveVerbatim
-            \flushleft\fboxrule=0pt\fboxsep=.5em
-            \colorbox{cverbbg}{%
-              \makebox[\dimexpr\linewidth-2\fboxsep][l]{\BUseVerbatim{cverb}}%
-            }
-            \endflushleft
-          }
+% New and replaced operators
+  \DeclareMathOperator{\Tr}{Tr}
+  \DeclareMathOperator{\Sym}{Sym}
+  \DeclareMathOperator{\Span}{span}
+  \DeclareMathOperator{\std}{std}
+  \DeclareMathOperator{\Cov}{Cov}
+  \DeclareMathOperator{\Var}{Var}
+  \DeclareMathOperator{\Corr}{Corr}
+  \DeclareMathOperator{\pos}{pos}
+  \DeclareMathOperator*{\argmin}{\arg\!\min}
+  \DeclareMathOperator*{\argmax}{\arg\!\max}
+  \newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}}
+  \newcommand{\bra}[1]{\ensuremath{\left\langle#1\right|}}
+  \newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+  \newcommand{\qed}{\hfill$\blacksquare$}     % I like QED squares to be black
 
-          \renewcommand{\thispagestyle}[1]{} % needed for including header in title page
+% Custom Environments
+  \newtcolorbox[auto counter, number within=section]{question}[1][]
+  {
+    colframe = orange!25,
+    colback  = orange!10,
+    coltitle = orange!20!black,  
+    breakable, 
+    title = \textbf{Question \thetcbcounter ~(#1)}
+  }
 
-        \begin{document}
-        \pagestyle{fancy}
+  \newtcolorbox[auto counter, number within=section]{exercise}[1][]
+  {
+    colframe = teal!25,
+    colback  = teal!10,
+    coltitle = teal!20!black,  
+    breakable, 
+    title = \textbf{Exercise \thetcbcounter ~(#1)}
+  }
+  \newtcolorbox[auto counter, number within=section]{solution}[1][]
+  {
+    colframe = violet!25,
+    colback  = violet!10,
+    coltitle = violet!20!black,  
+    breakable, 
+    title = \textbf{Solution \thetcbcounter}
+  }
+  \newtcolorbox[auto counter, number within=section]{lemma}[1][]
+  {
+    colframe = red!25,
+    colback  = red!10,
+    coltitle = red!20!black,  
+    breakable, 
+    title = \textbf{Lemma \thetcbcounter ~(#1)}
+  }
+  \newtcolorbox[auto counter, number within=section]{theorem}[1][]
+  {
+    colframe = red!25,
+    colback  = red!10,
+    coltitle = red!20!black,  
+    breakable, 
+    title = \textbf{Theorem \thetcbcounter ~(#1)}
+  } 
+  \newtcolorbox[auto counter, number within=section]{proof}[1][]
+  {
+    colframe = orange!25,
+    colback  = orange!10,
+    coltitle = orange!20!black,  
+    breakable, 
+    title = \textbf{Proof. }
+  } 
+  \newtcolorbox[auto counter, number within=section]{definition}[1][]
+  {
+    colframe = yellow!25,
+    colback  = yellow!10,
+    coltitle = yellow!20!black,  
+    breakable, 
+    title = \textbf{Definition \thetcbcounter ~(#1)}
+  } 
+  \newtcolorbox[auto counter, number within=section]{example}[1][]
+  {
+    colframe = blue!25,
+    colback  = blue!10,
+    coltitle = blue!20!black,  
+    breakable, 
+    title = \textbf{Example \thetcbcounter ~(#1)}
+  } 
+  \newtcolorbox[auto counter, number within=section]{code}[1][]
+  {
+    colframe = green!25,
+    colback  = green!10,
+    coltitle = green!20!black,  
+    breakable, 
+    title = \textbf{Code \thetcbcounter ~(#1)}
+  } 
 
-        \lhead{}
-        \chead{Muchang Bahng}
-        \rhead{\date{Spring 2024}}
-        \cfoot{\thepage / \pageref{LastPage}}
+  \BeforeBeginEnvironment{example}{\savenotes}
+  \AfterEndEnvironment{example}{\spewnotes}
+  \BeforeBeginEnvironment{lemma}{\savenotes}
+  \AfterEndEnvironment{lemma}{\spewnotes}
+  \BeforeBeginEnvironment{theorem}{\savenotes}
+  \AfterEndEnvironment{theorem}{\spewnotes}
+  \BeforeBeginEnvironment{corollary}{\savenotes}
+  \AfterEndEnvironment{corollary}{\spewnotes}
+  \BeforeBeginEnvironment{definition}{\savenotes}
+  \AfterEndEnvironment{definition}{\spewnotes}
+  \BeforeBeginEnvironment{exercise}{\savenotes}
+  \AfterEndEnvironment{exercise}{\spewnotes}
+  \BeforeBeginEnvironment{proof}{\savenotes}
+  \AfterEndEnvironment{proof}{\spewnotes}
+  \BeforeBeginEnvironment{solution}{\savenotes}
+  \AfterEndEnvironment{solution}{\spewnotes}
+  \BeforeBeginEnvironment{question}{\savenotes}
+  \AfterEndEnvironment{question}{\spewnotes}
+  \BeforeBeginEnvironment{code}{\savenotes}
+  \AfterEndEnvironment{code}{\spewnotes}
 
-        \title{}
-        \author{Muchang Bahng}
-        \date{Spring 2024}
+  \definecolor{dkgreen}{rgb}{0,0.6,0}
+  \definecolor{gray}{rgb}{0.5,0.5,0.5}
+  \definecolor{mauve}{rgb}{0.58,0,0.82}
+  \definecolor{lightgray}{gray}{0.93}
 
-        \maketitle
-        \tableofcontents
-        \pagebreak
+  % default options for listings (for code)
+  \lstset{
+    autogobble,
+    frame=ltbr,
+    language=C,                           % the language of the code
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=fullflexible,
+    keepspaces=true,
+    basicstyle={\small\ttfamily},
+    numbers=left,
+    firstnumber=1,                        % start line number at 1
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    backgroundcolor=\color{lightgray}, 
+    breaklines=true,                      % break lines
+    breakatwhitespace=true,
+    tabsize=3, 
+    xleftmargin=2em, 
+    framexleftmargin=1.5em, 
+    stepnumber=1
+  }
 
-        <>
+% Page style
+  \pagestyle{fancy}
+  \fancyhead[L]{}
+  \fancyhead[C]{Muchang Bahng}
+  \fancyhead[R]{Spring 2024} 
+  \fancyfoot[C]{\thepage / \pageref{LastPage}}
+  \renewcommand{\footrulewidth}{0.4pt}          % the footer line should be 0.4pt wide
+  \renewcommand{\thispagestyle}[1]{}  % needed to include headers in title page
 
-        \end{document}
-      ]],
+\begin{document}
+
+\title{}
+\author{Muchang Bahng}
+\date{Spring 2024}
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+<>
+
+\end{document}
+]],
       { i(1) }
       )
     ),
