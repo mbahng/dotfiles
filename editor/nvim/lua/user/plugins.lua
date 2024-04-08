@@ -79,6 +79,7 @@ return packer.startup(function(use)
   }
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
+  use "sindrets/diffview.nvim" 
 
   -- LSP
   use "williamboman/mason.nvim"               -- LSP: simple to use language server installer

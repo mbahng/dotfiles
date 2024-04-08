@@ -639,13 +639,14 @@ ls.add_snippets("tex",
   \usepackage{float}            % for [H] figure placement
   \usepackage{tikz}
   \usepackage{tikz-cd}
-  \usepackage{circuit-tikz}
+  \usepackage{circuitikz}
   \usetikzlibrary{arrows}
   \usetikzlibrary{positioning}
   \usetikzlibrary{calc}
   \usepackage{graphicx}
   \usepackage{caption} 
   \usepackage{subcaption}
+  \captionsetup{font=small}
 
   % for tabular stuff 
   \usepackage{dcolumn}
@@ -712,6 +713,22 @@ ls.add_snippets("tex",
     breakable, 
     title = \textbf{Theorem \thetcbcounter ~(#1)}
   } 
+  \newtcolorbox[auto counter, number within=section]{proposition}[1][]
+  {
+    colframe = red!25,
+    colback  = red!10,
+    coltitle = red!20!black,  
+    breakable, 
+    title = \textbf{Proposition \thetcbcounter ~(#1)}
+  } 
+  \newtcolorbox[auto counter, number within=section]{corollary}[1][]
+  {
+    colframe = red!25,
+    colback  = red!10,
+    coltitle = red!20!black,  
+    breakable, 
+    title = \textbf{Corollary \thetcbcounter ~(#1)}
+  } 
   \newtcolorbox[auto counter, number within=section]{proof}[1][]
   {
     colframe = orange!25,
@@ -753,6 +770,8 @@ ls.add_snippets("tex",
   \AfterEndEnvironment{theorem}{\spewnotes}
   \BeforeBeginEnvironment{corollary}{\savenotes}
   \AfterEndEnvironment{corollary}{\spewnotes}
+  \BeforeBeginEnvironment{proposition}{\savenotes}
+  \AfterEndEnvironment{proposition}{\spewnotes}
   \BeforeBeginEnvironment{definition}{\savenotes}
   \AfterEndEnvironment{definition}{\spewnotes}
   \BeforeBeginEnvironment{exercise}{\savenotes}
