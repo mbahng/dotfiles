@@ -63,6 +63,12 @@ keymap("v", "<S-tab>", "<", opts)
 -- vertical split
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 
+-- diffview open 
+keymap("n", "<leader>g", ":DiffviewOpen<cr>", opts)
+keymap("n", "<leader>h", ":DiffviewClose<cr>", opts)
+keymap("n", "<leader>p", ":DiffviewFileHistory<cr>", opts)
+
+
 -- Easy access to REPL for Python, Julia, and JavaScript 
 keymap("n", ":repl<cr>", ":IronRepl<cr>", opts)
 

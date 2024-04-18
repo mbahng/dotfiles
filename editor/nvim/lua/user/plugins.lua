@@ -68,7 +68,6 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"                      -- custom snippets 
   use "kyazdani42/nvim-web-devicons"           -- icons for filetypes
   use "kyazdani42/nvim-tree.lua"               -- the left sidebar showing filetree
-  use "edluffy/hologram.nvim"                 -- to show pictures within neovim buffers
   use "github/copilot.vim"                    -- copilot 
   use {
     "zbirenbaum/copilot-cmp",

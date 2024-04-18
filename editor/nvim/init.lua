@@ -16,7 +16,8 @@ require "user.startify"
 require "user.iron"
 require "user.indent-blankline"
 require "user.lualine"
-require "user.hologram"
+require "user.bufferline"
+require "user.toggleterm"
 
 vim.g.loaded_perl_provider = 0
 
@@ -62,6 +63,3 @@ require("nvim-tree").setup({
 
 })
 
--- require "user.nvim-tree"
-require "user.bufferline"
-require "user.toggleterm"
