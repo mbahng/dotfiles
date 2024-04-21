@@ -1,7 +1,3 @@
-nvim ubuntu.sh 
-cd Downloads/
-cd Gam
-cd Games/
 mv Games Media
 cd Media
 wiki
@@ -499,3 +495,8 @@ activate base
 which conda
 ssh i3t
 echo /usr/bin/bash
+ls
+./mystery3 
+ls
+/bin/python /home/mbahng/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/mbahng/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+/bin/python /home/mbahng/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/printEnvVariablesToFile.py /home/mbahng/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/deactivate/bash/envVars.txt
