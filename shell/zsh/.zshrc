@@ -13,6 +13,7 @@ export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
 # set alias for certain commands 
 alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
+alias lg='lazygit'
 alias grep='grep --color=auto'
 alias lock='i3lock'
 alias b2='backblaze-b2'
