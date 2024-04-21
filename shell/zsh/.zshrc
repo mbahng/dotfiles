@@ -13,6 +13,7 @@ export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
 # set alias for certain commands 
 alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
+alias lg='lazygit'
 alias grep='grep --color=auto'
 alias vim='nvim'
 alias lg='lazygit'

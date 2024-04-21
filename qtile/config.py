@@ -1,6 +1,8 @@
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
+from libqtile import hook
+import os
 
 import subprocess
 # from qtile_extras import widget 
@@ -9,6 +11,12 @@ import subprocess
 mod = "mod4"
 terminal = "kitty"
 bring_front_click = True
+
+# autostart on qtile 
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.Popen([home])
 
 
 keys = [
@@ -63,7 +71,7 @@ keys = [
     Key([mod], "v", lazy.spawn("code"), desc="Launch vscode (v - vscode)"), 
     Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox (b - browser)"),
     Key([mod], "n", lazy.spawn("inkscape"), desc="Launch iNkscape"),   
-    Key([mod], "m", lazy.spawn("spotify"), desc="Launch spotify (m - music)"), 
+    Key([mod], "m", lazy.spawn("kitty -e ncmpcpp"), desc="Launch spotify (m - music)"), 
     
     Key([mod, "shift"], "n", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"),
     Key([mod, "shift"], "m", lazy.spawn("obs"), desc="Launch obs screen & audio recorder"), 
@@ -442,6 +450,12 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        Match(wm_class="sxiv"),
+        Match(wm_class="nemo"),
+        Match(wm_class="zoom"),
+        Match(wm_class="matplotlib"), 
+        Match(wm_class="feh"), 
+
     ]
 )
 auto_fullscreen = True
