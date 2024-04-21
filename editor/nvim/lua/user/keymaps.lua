@@ -12,7 +12,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 keymap("n", "<leader>u", ":UndotreeToggle<cr>", opts)
 keymap("n", "<leader>y", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>t", ":Telescope live_grep<cr>", opts)

@@ -67,18 +67,21 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
   use "L3MON4D3/LuaSnip"                      -- custom snippets 
   use "kyazdani42/nvim-web-devicons"           -- icons for filetypes
-  use "kyazdani42/nvim-tree.lua"               -- the left sidebar showing filetree
   use "github/copilot.vim"                    -- copilot 
-  use {
-    "zbirenbaum/copilot-cmp",
-    -- after = { "copilot.lua" },
-    -- config = function ()
-    --   require("copilot-cmp").setup()
-    -- end
-  }
+  use "zbirenbaum/copilot-cmp"
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
   use "sindrets/diffview.nvim" 
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      requires = { 
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      }
+  }
 
   -- LSP
   use "williamboman/mason.nvim"               -- LSP: simple to use language server installer

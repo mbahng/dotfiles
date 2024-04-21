@@ -15,6 +15,7 @@ alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
+alias lg='lazygit'
 # alias lock='i3lock'
 # alias b2='backblaze-b2'
 
