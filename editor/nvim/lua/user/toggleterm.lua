@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 25,
+	size = 50,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
@@ -20,10 +20,10 @@ toggleterm.setup({
 		border = "curved",
 		winblend = 0,
     width = function()
-      return math.ceil(vim.o.columns * 0.90)
+      return math.ceil(vim.o.columns * 0.95)
     end,
     height = function()
-      return math.ceil(vim.o.lines * 0.85)
+      return math.ceil(vim.o.lines * 0.9)
     end,
 		highlights = {
 			border = "Normal",
