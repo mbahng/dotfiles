@@ -16,7 +16,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock='i3lock'
 alias b2='backblaze-b2'
-
+alias lg='lazygit'
 
 # set history 
 HISTFILE=~/.zsh_history
@@ -129,7 +129,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/nvm/init-nvm.sh
 
 
 # >>> conda initialize >>>
