@@ -1,4 +1,0 @@
-#!/bin/bash 
-
-cd ~/.deepinwine/Deepin-WeChat/drive_c/'Program Files'/Tencent/WeChat/
-./WeChat.exe 
