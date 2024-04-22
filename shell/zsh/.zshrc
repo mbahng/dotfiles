@@ -2,30 +2,21 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-ZSH=/Users/mbahng/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
+export PATH="/home/iotlab/.cargo/bin:$PATH"
 
-# add custom scripts to PATH
-export PATH="/Users/mbahng/.custom_scripts:$PATH"
-# export PATH="/Users/mbahng/.local/bin:$PATH"
-export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
-# export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
 
-# set alias for certain commands 
-alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias lg='lazygit'
 alias grep='grep --color=auto'
 alias vim='nvim'
-alias lg='lazygit'
-# alias lock='i3lock'
-# alias b2='backblaze-b2'
-
 
 # set history 
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=100000
-
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -93,29 +84,26 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-  )
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-# source for autocompletion and syntax highlighting
-source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='vim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -126,38 +114,18 @@ export ARCHFLAGS="-arch x86_64"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
-fi
-
-source $ZSH/oh-my-zsh.sh
-# source /usr/share/nvm/init-nvm.sh
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/iotlab/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/iotlab/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/iotlab/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/miniconda3/bin:$PATH"
+        export PATH="/home/iotlab/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-source $(brew --prefix nvm)/nvm.sh
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/mbahng/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
 
