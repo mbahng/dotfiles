@@ -1,9 +1,9 @@
 local servers = {
   "clangd", 
-  "gopls",
-  "julials",
-	"cssls",
-	"tsserver",
+--   "gopls",
+--   "julials",
+--	"cssls",
+--	"tsserver",
 	"pyright",
 }
 
