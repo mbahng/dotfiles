@@ -19,6 +19,11 @@ require "user.lualine"
 require "user.bufferline"
 require "user.toggleterm"
 require "user.neotree"
+require "user.leetcode"
 
 vim.g.loaded_perl_provider = 0
-
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("Copilot disable")
+	end,
+})

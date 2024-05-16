@@ -6,7 +6,7 @@ ZSH=/Users/mbahng/.oh-my-zsh
 
 # add custom scripts to PATH
 export PATH="/Users/mbahng/.custom_scripts:$PATH"
-# export PATH="/Users/mbahng/.local/bin:$PATH"
+export PATH="/Users/mbahng/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
 # export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
@@ -16,9 +16,7 @@ alias ls='ls --color=auto'
 alias lg='lazygit'
 alias grep='grep --color=auto'
 alias vim='nvim'
-alias lg='lazygit'
-# alias lock='i3lock'
-# alias b2='backblaze-b2'
+alias lc='nvim leetcode.nvim'
 
 
 # set history 

@@ -198,6 +198,26 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="\\table", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[ 
+          \begin{table}[H]
+            \centering
+            \begin{tabular}{@{}ll@{}}
+            \toprule
+            Col A & Col B \\ \midrule
+            & \\
+            & \\
+            & \\ \bottomrule
+            \end{tabular}
+            \caption{<>}
+            \label{table:<>}
+          \end{table}
+        ]],
+        { i(1), i(2)}
+      )
+    ),
+
     s({trig="\\subfigure12", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
@@ -416,6 +436,72 @@ ls.add_snippets("tex",
         \begin{align}
           <>
         \end{align}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\society", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{society}
+          <>
+        \end{society}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\religion", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{religion}
+          <>
+        \end{religion}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\finance", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{finance}
+          <>
+        \end{finance}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\politics", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{politics}
+          <>
+        \end{politics}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\technology", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{technology}
+          <>
+        \end{technology}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\legal", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{legal}
+          <>
+        \end{legal}
       ]],
       { i(1) }
       )

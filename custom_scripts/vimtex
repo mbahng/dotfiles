@@ -5,14 +5,57 @@ MATH="${STEM}/Math"
 STATISTICS="${STEM}/Statistics"
 COMPUTER_SCIENCE="${STEM}/Computer_Science"
 NATURAL_SCIENCES="${STEM}/Natural_Sciences"
+
 BUSINESS_FINANCE=~/Notes/mbahng-com/Business_Finance
 
+HUMANITIES=~/Notes/mbahng-com/Humanities
+HISTORY=${HUMANITIES}/History
+
 case "$1" in 
-  "deri")
-    cd "${BUSINESS_FINANCE}/Derivatives"
+  "meso")
+    cd "${HISTORY}/Mesopotamia"
     ;; 
-  "algo")
-    cd "${BUSINESS_FINANCE}/Algorithmic_Trading"
+  "egypt")
+    cd "${HISTORY}/Egypt"
+    ;; 
+  "china")
+    cd "${HISTORY}/China"
+    ;; 
+  "india")
+    cd "${HISTORY}/India"
+    ;; 
+  "persia")
+    cd "${HISTORY}/Persia"
+    ;; 
+  "greeks")
+    cd "${HISTORY}/Greeks"
+    ;; 
+  "romans")
+    cd "${HISTORY}/Romans"
+    ;; 
+  "middle")
+    cd "${HISTORY}/Middle"
+    ;; 
+  "early")
+    cd "${HISTORY}/Early_Modern"
+    ;; 
+  "late")
+    cd "${HISTORY}/Late_Modern"
+    ;; 
+  "post")
+    cd "${HISTORY}/Postmodern"
+    ;; 
+  "quant")
+    cd "${BUSINESS_FINANCE}/Quantitative_Finance"
+    ;; 
+  "fund")
+    cd "${BUSINESS_FINANCE}/Fundamental_Investing"
+    ;; 
+  "macro")
+    cd "${BUSINESS_FINANCE}/Macroeconomics"
+    ;; 
+  "micro")
+    cd "${BUSINESS_FINANCE}/Microeconomics"
     ;; 
   "qm")
     cd "${NATURAL_SCIENCES}/Quantum_Mechanics"

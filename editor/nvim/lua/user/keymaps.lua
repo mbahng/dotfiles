@@ -47,6 +47,12 @@ keymap("n", "<leader>f", "za", opts) -- fold where I am currently at
 keymap("n", "<leader>zM", "zM", opts) -- close all folds 
 keymap("n", "<leader>zR", "zR", opts) -- open all folds 
 
+-- wrapping 
+keymap("n", "<leader>w", ":set wrap!<cr>", opts)
+
+-- stuff for split keyboards 
+keymap("n", "dn", "db", opts)
+
 -- go to definition and error
 keymap("n", "gd", "gd", opts)
 keymap("n", "gl", "gl", opts)
@@ -64,9 +70,20 @@ keymap("v", "<S-tab>", "<", opts)
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 
 -- diffview open 
-keymap("n", "<leader>g", ":DiffviewOpen<cr>", opts)
-keymap("n", "<leader>h", ":DiffviewClose<cr>", opts)
-keymap("n", "<leader>p", ":DiffviewFileHistory<cr>", opts)
+-- keymap("n", "<leader>g", ":DiffviewOpen<cr>", opts)
+-- keymap("n", "<leader>h", ":DiffviewClose<cr>", opts)
+-- keymap("n", "<leader>p", ":DiffviewFileHistory<cr>", opts)
+
+-- leetcode
+keymap("n", "<leader>ll", ":Leet list<cr>", opts)
+keymap("n", "<leader>ld", ":Leet run<cr>", opts)
+keymap("n", "<leader>ls", ":Leet submit<cr>", opts)
+keymap("n", "<leader>lt", ":Leet tabs<cr>", opts)
+keymap("n", "<leader>la", ":Leet lang<cr>", opts)
+
+--copilot 
+keymap("n", ":ce<cr>", ":Copilot<cr>", opts)
+keymap("n", ":co<cr>", ":Copilot disable<cr>", opts)
 
 
 -- Easy access to REPL for Python, Julia, and JavaScript 

@@ -71,7 +71,6 @@ return packer.startup(function(use)
   use "zbirenbaum/copilot-cmp"
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
-  use "sindrets/diffview.nvim" 
   use {
     "nvim-neo-tree/neo-tree.nvim",
       branch = "v3.x",
@@ -97,6 +96,22 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"              -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
+  -- leetcode 
+  use {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim", -- required by telescope
+      "MunifTanjim/nui.nvim",
+
+      -- optional
+      "nvim-treesitter/nvim-treesitter",
+      "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
+    }, 
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

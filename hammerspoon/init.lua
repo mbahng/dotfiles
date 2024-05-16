@@ -10,9 +10,9 @@ function create_shortcut(hyper, key, name)
 	hs.hotkey.bind(hyper, key, function()
 		local app = hs.application.get(name)
 		if app == nil or app:mainWindow() == nil then
-			hs.application.open(name, 0.2)
+			hs.application.open(name, 1.0)
 		else
-			hs.application.open(name, 0.2)
+			hs.application.open(name, 1.0)
 			hs.eventtap.keyStroke(new_window_hyper, "N")
 		end
 	end)

@@ -1,4 +1,4 @@
-vim.cmd "colorscheme onedark"
+-- vim.cmd "colorscheme onedark"
 
 -- iron also has a list of commands, see :h iron-commands for all available commands
 vim.keymap.set('n', '<space>rs', '<cmd>IronRepl<cr>')
