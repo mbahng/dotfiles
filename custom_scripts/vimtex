@@ -12,6 +12,9 @@ HUMANITIES=~/Notes/mbahng-com/Humanities
 HISTORY=${HUMANITIES}/History
 
 case "$1" in 
+  "resume")
+    cd ~/Notes/resume
+    ;; 
   "meso")
     cd "${HISTORY}/Mesopotamia"
     ;; 

@@ -8,7 +8,8 @@ recentrepos:
 - /Users/mbahng/Development/control-flow
 startuppopupversion: 5
 lastversion: 0.41.0
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: true
 ignorewhitespaceindiffview: true
 diffcontextsize: 3

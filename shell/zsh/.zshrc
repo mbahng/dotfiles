@@ -15,7 +15,7 @@ alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias lg='lazygit'
 alias grep='grep --color=auto'
-alias vim='nvim'
+# alias vim='nvim'
 alias lc='nvim leetcode.nvim'
 
 
