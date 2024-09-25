@@ -101,23 +101,3 @@ keymap("v", "<leader>w", "g<S-g>", opts)
 -- restart Iron Repl 
 keymap("n", "<leader>rr", ":IronRestart<cr>", opts)
 
--- conda activate 
-vim.cmd('cnoreabbrev ca CondaActivate')
-
--- marks for easier navigation 
--- Map g{char} to `{char} for lowercase letters
-for i = string.byte('a'), string.byte('z') do
-    local char = string.char(i)
-    if char == 'g' then
-        -- Empty block/no-op
-    else
-        keymap('n', 'g' .. char, '`' .. char, opts)
-    end
-end
-
--- Map g{char} to `{char} for uppercase letters
-for i = string.byte('A'), string.byte('Z') do
-    local char = string.char(i)
-    keymap('n', 'g' .. char, '`' .. char, opts)
-end
-

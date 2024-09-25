@@ -49,7 +49,6 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"   -- indent line guides 
   use "nvim-treesitter/nvim-treesitter"       -- syntax highlighting
 
-  use "chentoast/marks.nvim"                  -- marks for navigation
   use 'nvim-lualine/lualine.nvim'             -- configure status line
   use 'unblevable/quick-scope'                -- highlights letter when pressing f/F
   use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
@@ -58,7 +57,6 @@ return packer.startup(function(use)
   use "lervag/vimtex"                         -- for compiling tex documents
   use "navarasu/onedark.nvim"                 -- color scheme
   use "mhartington/oceanic-next"              -- color scheme
-  use "catppuccin/nvim"                       -- color scheme
   use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
   use "Vigemus/iron.nvim"                     -- interactive REPL 
   use "terrortylor/nvim-comment"              -- comment out visual blocks of line
@@ -82,6 +80,20 @@ return packer.startup(function(use)
         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
       }
   }
+
+  use({
+    "epwalsh/pomo.nvim",
+    tag = "*",  -- Recommended, use latest release instead of latest commit
+    requires = {
+      -- Optional, but highly recommended if you want to use the "Default" timer
+      "rcarriga/nvim-notify",
+    },
+    config = function()
+      require("pomo").setup({
+        -- See below for full list of options 👇
+      })
+    end,
+  })
 
   -- LSP
   use "williamboman/mason.nvim"               -- LSP: simple to use language server installer
