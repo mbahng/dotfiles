@@ -11,7 +11,8 @@ configs.setup {
     "javascript", 
     "typescript", 
     "json", 
-    "yaml"
+    "yaml", 
+    "latex"
   },
   sync_install = false,
   auto_install = true,

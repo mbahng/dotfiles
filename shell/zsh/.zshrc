@@ -15,6 +15,7 @@ alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias lg='lazygit'
 alias grep='grep --color=auto'
+alias app='nvim ~/Notes/app'
 # alias vim='nvim'
 alias lc='nvim leetcode.nvim'
 
@@ -156,6 +157,9 @@ source $(brew --prefix nvm)/nvm.sh
 
 path=('/Users/mbahng/.juliaup/bin' $path)
 export PATH
-
 # <<< juliaup initialize <<<
 
+export CPATH="/opt/homebrew/include"
+export LIBRARY_PATH="/opt/homebrew/lib"
+export CPLUS_INCLUDE_PATH="/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Headers"
+export C_INCLUDE_PATH="/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Headers"
