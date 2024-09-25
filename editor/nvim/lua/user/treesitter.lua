@@ -14,7 +14,8 @@ configs.setup {
     "jsdoc", 
     "typescript", 
     "json", 
-    "yaml"
+    "yaml", 
+    "latex"
   },
   highlight = {
     enable = true, -- false will disable the whole extension
