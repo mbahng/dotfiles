@@ -11,6 +11,119 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
+-- jsdoc
+ls.add_snippets(
+  "javascriptreact",
+  {
+    s({trig="doc", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+        /**
+        * <> 
+        */
+        ]],
+        { i(1) }
+      )
+    ),
+  }
+)
+
+ls.add_snippets(
+  "javascript",
+  {
+    s({trig="doc", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+        /**
+        * <> 
+        */
+        ]],
+        { i(1) }
+      )
+    ),
+  }
+)
+
+-- initialize setup for python package development
+ls.add_snippets(
+  "toml",
+  {
+    s({trig="pyproject", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[ 
+        [project]
+        name = ""
+        dynamic = [""]
+        description = ""
+
+        requires-python = ">= 3.8"
+        dependencies = [
+          "numpy"
+        ]
+
+        authors = [
+          {name = "Muchang Bahng", email = "bahngmc@gmail.com"},
+        ]
+        maintainers = [
+          {name = "Muchang Bahng", email = "bahngmc@gmail.com"}
+        ]
+
+        [build-system]
+        requires = ["setuptools>=70.0"]
+        build-backend = "setuptools.build_meta"
+
+        [project.scripts]
+        # python cli commands that allow you to run stuff straight from command line
+        # greet = "converters.convert:greet"
+
+        [project.gui-scripts]
+
+        [project.optional-dependencies]
+        gui = []
+        cli = []
+        ]],
+        {}, 
+        { delimiters = "()" }
+      )
+    )
+  }
+)
+
+ls.add_snippets(
+  "python",
+  {
+    s({trig="setup", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+        from setuptools import setup
+
+        setup(
+           name='',
+           description='',
+           author='Muchang Bahng',
+           author_email='bahngmc@gmail.com',
+           packages=[''],  
+           install_requires=[], #external packages as dependencies
+        )
+        ]],
+        {}
+      )
+    ),
+  }
+)
+
+ls.add_snippets(
+  "python",
+  {
+    s({trig="ig", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[# type: ignore]],
+        {}
+      )
+    ),
+  }
+)
+
 -- initialize HTML 
 ls.add_snippets(
   "html",
@@ -157,6 +270,13 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="mc", regTrig=false, snippetType="snippet"},
+      fmta(
+        "\\mathcal{<>}",
+        { i(1) }
+      )
+    ),
+
     s({trig="bs", regTrig=false, snippetType="snippet"},
       fmta(
         "\\boldsymbol{<>}",
@@ -184,6 +304,61 @@ ls.add_snippets("tex",
 -- figures and subfigures
 ls.add_snippets("tex",
   {
+    s({trig="\\table", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[ 
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Column 1} & \textbf{Column 2} \\
+            \hline
+            Data 1 & Data 2 \\
+            \hline
+          \end{tabular}
+          \caption{}
+          \label{tab:}
+        \end{table}
+        ]],
+        {}
+      )
+    ),
+
+    s({trig="\\table2", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[ 
+        \begin{table}[H]
+          \centering
+          \begin{minipage}{.5\textwidth}
+            \centering
+            \begin{tabular}{|c|c|}
+              \hline
+              \textbf{first} & \textbf{second} \\
+              \hline
+              1 & 2 \\
+              \hline
+            \end{tabular}
+            \caption{}
+            \label{tab:}
+          \end{minipage}
+          \begin{minipage}{.5\textwidth}
+            \centering
+            \begin{tabular}{|c|c|}
+              \hline
+              \textbf{first} & \textbf{second} \\
+              \hline
+              1 & 2 \\ 
+              \hline
+            \end{tabular}
+            \caption{}
+            \label{tab:}
+          \end{minipage}
+        \end{table}
+        ]],
+        {}
+      )
+    ),
+
     s({trig="\\figure", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
@@ -362,15 +537,15 @@ ls.add_snippets("tex",
       fmta(
       [[
         \noindent\begin{minipage}{.5\textwidth}
-        \begin{lstlisting}[]{Code}
-          <>
-        \end{lstlisting}
-        \end{minipage}
-        \hfill
-        \begin{minipage}{.49\textwidth}
-        \begin{lstlisting}[]{Output}
-          <>
-        \end{lstlisting}
+          \begin{lstlisting}[]{Code}
+            <>
+          \end{lstlisting}
+          \end{minipage}
+          \hfill
+          \begin{minipage}{.49\textwidth}
+          \begin{lstlisting}[]{Output}
+            <>
+          \end{lstlisting}
         \end{minipage}
       ]],
       { i(1), i(2) }
@@ -644,6 +819,7 @@ ls.add_snippets("tex",
   \usetikzlibrary{positioning}
   \usetikzlibrary{calc}
   \usepackage{graphicx}
+  \usepackage{algorithmic}
   \usepackage{caption} 
   \usepackage{subcaption}
   \captionsetup{font=small}
@@ -761,6 +937,14 @@ ls.add_snippets("tex",
     breakable, 
     title = \textbf{Code \thetcbcounter ~(#1)}
   } 
+  \newtcolorbox[auto counter, number within=section]{algo}[1][]
+  {
+    colframe = green!25,
+    colback  = green!10,
+    coltitle = green!20!black,  
+    breakable, 
+    title = \textbf{Algorithm \thetcbcounter ~(#1)}
+  } 
 
   \BeforeBeginEnvironment{example}{\savenotes}
   \AfterEndEnvironment{example}{\spewnotes}
@@ -784,17 +968,21 @@ ls.add_snippets("tex",
   \AfterEndEnvironment{question}{\spewnotes}
   \BeforeBeginEnvironment{code}{\savenotes}
   \AfterEndEnvironment{code}{\spewnotes}
+  \BeforeBeginEnvironment{algo}{\savenotes}
+  \AfterEndEnvironment{algo}{\spewnotes}
 
   \definecolor{dkgreen}{rgb}{0,0.6,0}
   \definecolor{gray}{rgb}{0.5,0.5,0.5}
   \definecolor{mauve}{rgb}{0.58,0,0.82}
+  \definecolor{darkblue}{rgb}{0,0,139}
   \definecolor{lightgray}{gray}{0.93}
+  \renewcommand{\algorithmiccomment}[1]{\hfill$\triangleright$\textcolor{blue}{#1}}
 
   % default options for listings (for code)
   \lstset{
     autogobble,
     frame=ltbr,
-    language=C,                           % the language of the code
+    language=Python,
     aboveskip=3mm,
     belowskip=3mm,
     showstringspaces=false,
@@ -820,7 +1008,7 @@ ls.add_snippets("tex",
   \pagestyle{fancy}
   \fancyhead[L]{}
   \fancyhead[C]{Muchang Bahng}
-  \fancyhead[R]{Spring 2024} 
+  \fancyhead[R]{Fall 2024} 
   \fancyfoot[C]{\thepage / \pageref{LastPage}}
   \renewcommand{\footrulewidth}{0.4pt}          % the footer line should be 0.4pt wide
   \renewcommand{\thispagestyle}[1]{}  % needed to include headers in title page
@@ -829,7 +1017,7 @@ ls.add_snippets("tex",
 
 \title{}
 \author{Muchang Bahng}
-\date{Spring 2024}
+\date{Fall 2024}
 
 \maketitle
 \tableofcontents
