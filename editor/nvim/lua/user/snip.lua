@@ -281,6 +281,41 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="\\table2", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[ 
+        \begin{table}[H]
+          \centering
+          \begin{minipage}{.5\textwidth}
+            \centering
+            \begin{tabular}{|c|c|}
+              \hline
+              \textbf{first} & \textbf{second} \\
+              \hline
+              1 & 2 \\
+              \hline
+            \end{tabular}
+            \caption{}
+            \label{tab:}
+          \end{minipage}
+          \begin{minipage}{.5\textwidth}
+            \centering
+            \begin{tabular}{|c|c|}
+              \hline
+              \textbf{first} & \textbf{second} \\
+              \hline
+              1 & 2 \\ 
+              \hline
+            \end{tabular}
+            \caption{}
+            \label{tab:}
+          \end{minipage}
+        \end{table}
+        ]],
+        {}
+      )
+    ),
+
     s({trig="\\figure", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
@@ -866,6 +901,7 @@ ls.add_snippets("tex",
   \usetikzlibrary{positioning}
   \usetikzlibrary{calc}
   \usepackage{graphicx}
+  \usepackage{algorithmic}
   \usepackage{caption} 
   \usepackage{subcaption}
   \captionsetup{font=small}
