@@ -3,7 +3,7 @@ local servers = {
   "gopls",
   "julials",
 	"cssls",
-	"tsserver",
+	"ts_ls",
 	"pyright",
 }
 
