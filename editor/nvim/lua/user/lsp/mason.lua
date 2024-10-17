@@ -2,6 +2,7 @@ local servers = {
   "clangd", 
   "gopls",
 	"cssls",
+	"ts_ls",
 	"pyright",
   "ts_ls"
 }
