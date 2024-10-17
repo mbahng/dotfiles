@@ -1,4 +1,4 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+local status_ok, configs = pcall(require, "ts_context_commentstring")
 if not status_ok then
   return
 end
@@ -16,16 +16,13 @@ configs.setup {
     "json", 
     "yaml"
   },
-  sync_install = false,
-  auto_install = true,
-  ignore_install = { "vimdoc" }, -- List of parsers to ignore installing
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
 
   },
-  indent = { enable = true, disable = { "" } },
+  -- indent = { enable = true, disable = { "" } },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
