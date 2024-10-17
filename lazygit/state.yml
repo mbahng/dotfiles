@@ -1,24 +1,25 @@
 lastupdatecheck: 1713758875
 recentrepos:
-- /Users/mbahng/dotfiles
-- /Users/mbahng/Notes/mbahng-com
-- /Users/mbahng/Desktop/nano
-- /Users/mbahng/Class/now/316/final
-- /Users/mbahng/Notes/resume
-- /Users/mbahng/Development/ember
-- /Users/mbahng/Development/aqua
-- /Users/mbahng/Development/blade
-- /Users/mbahng/Research/ORB-SLAM3
-- /Users/mbahng/Development/nuts
-- /Users/mbahng/Class/sp24/CS474/MultiModalProtoPNet
+    - /Users/mbahng/dotfiles
+    - /Users/mbahng/Notes/mbahng-com
+    - /Users/mbahng/Notes/resume
+    - /Users/mbahng/Desktop/mini_transformer
+    - /Users/mbahng/Class/now/316/final
+    - /Users/mbahng/Development/ember
+    - /Users/mbahng/Development/aqua
+    - /Users/mbahng/Development/blade
+    - /Users/mbahng/Research/ORB-SLAM3
+    - /Users/mbahng/Development/nuts
+    - /Users/mbahng/Class/sp24/CS474/MultiModalProtoPNet
 startuppopupversion: 5
-lastversion: 0.41.0
+lastversion: 0.44.1
 customcommandshistory:
-- q
-- ""
+    - q
+    - ""
 hidecommandlog: true
 ignorewhitespaceindiffview: true
 diffcontextsize: 3
+renamesimilaritythreshold: 50
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order
