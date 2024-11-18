@@ -56,7 +56,10 @@ return packer.startup(function(use)
   use "lervag/vimtex"                         -- for compiling tex documents
   use "navarasu/onedark.nvim"                 -- color scheme
   use "mhartington/oceanic-next"              -- color scheme
-  use "rcarriga/nvim-notify"                  -- notification manager
+  use "rose-pine/neovim"                      -- color scheme
+  use "folke/tokyonight.nvim"                 -- color scheme
+  use "catppuccin/nvim"                       -- color scheme
+  -- use "numirias/semshi"                       -- python syntax highlighting
   use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
   use "Vigemus/iron.nvim"                     -- interactive REPL 
   use "terrortylor/nvim-comment"              -- comment out visual blocks of line
@@ -67,8 +70,6 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
   use "L3MON4D3/LuaSnip"                      -- custom snippets 
   use "kyazdani42/nvim-web-devicons"           -- icons for filetypes
-  use "github/copilot.vim"                    -- copilot 
-  use "zbirenbaum/copilot-cmp"
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
   use "sindrets/diffview.nvim" 

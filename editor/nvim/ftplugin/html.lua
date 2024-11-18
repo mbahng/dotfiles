@@ -1,6 +1,4 @@
-vim.cmd "colorscheme onedark"
 vim.cmd "set foldmethod=indent"
-
 
 -- keymaps
 local opts = { noremap = true, silent = true }
