@@ -11,7 +11,38 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
+-- jsdoc
+ls.add_snippets(
+  "jsx",
+  {
+    s({trig="doc", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+        /**
+        * <> 
+        */
+        ]],
+        { i(1) }
+      )
+    ),
+  }
+)
 
+ls.add_snippets(
+  "javascript",
+  {
+    s({trig="doc", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+        /**
+        * <> 
+        */
+        ]],
+        { i(1) }
+      )
+    ),
+  }
+)
 
 -- initialize setup for python package development
 ls.add_snippets(
