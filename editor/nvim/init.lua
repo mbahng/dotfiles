@@ -19,6 +19,9 @@ require "user.lualine"
 require "user.bufferline"
 require "user.toggleterm"
 require "user.neotree"
+require "user.leetcode"
+require "user.dap"
 
 vim.g.loaded_perl_provider = 0
-
+vim.cmd "colorscheme catppuccin-frappe"
+vim.cmd "hi WinSeparator guifg=#ffffff"
