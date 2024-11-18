@@ -24,8 +24,10 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<leader>h", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<leader>l", ":BufferLineMoveNext<CR>", opts)
 keymap("n", "<C-w>", ":Bdelete<CR>", opts)
 keymap("n", "<C-t>", ":Telescope find_files<cr>", opts)
 
@@ -78,13 +80,9 @@ keymap("n", "<leader>v", ":vsplit<cr>", opts)
 keymap("n", "<leader>ll", ":Leet list<cr>", opts)
 keymap("n", "<leader>ld", ":Leet run<cr>", opts)
 keymap("n", "<leader>ls", ":Leet submit<cr>", opts)
+keymap("n", "<leader>lc", ":Leet console<cr>", opts)
 keymap("n", "<leader>lt", ":Leet tabs<cr>", opts)
 keymap("n", "<leader>la", ":Leet lang<cr>", opts)
-
---copilot 
-keymap("n", ":ce<cr>", ":Copilot<cr>", opts)
-keymap("n", ":co<cr>", ":Copilot disable<cr>", opts)
-
 
 -- Easy access to REPL for Python, Julia, and JavaScript 
 keymap("n", ":repl<cr>", ":IronRepl<cr>", opts)
