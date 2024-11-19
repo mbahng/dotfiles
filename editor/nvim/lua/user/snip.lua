@@ -13,7 +13,7 @@ local i = ls.insert_node
 
 -- jsdoc
 ls.add_snippets(
-  "jsx",
+  "javascriptreact",
   {
     s({trig="doc", regTrig=false, snippetType="snippet"},
       fmta(
@@ -106,6 +106,18 @@ ls.add_snippets(
            install_requires=[], #external packages as dependencies
         )
         ]],
+        {}
+      )
+    ),
+  }
+)
+
+ls.add_snippets(
+  "python",
+  {
+    s({trig="ig", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[# type: ignore]],
         {}
       )
     ),
