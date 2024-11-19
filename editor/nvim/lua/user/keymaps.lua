@@ -23,9 +23,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- Navigate and move buffers 
+keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<leader>h", ":BufferLineMovePrev<CR>", opts)
 keymap("n", "<leader>l", ":BufferLineMoveNext<CR>", opts)
 keymap("n", "<C-w>", ":Bdelete<CR>", opts)
@@ -55,13 +55,13 @@ keymap("n", "<leader>w", ":set wrap!<cr>", opts)
 -- stuff for split keyboards 
 keymap("n", "dn", "db", opts)
 
--- go to definition and error
+-- go to definition and error and back
 keymap("n", "gd", "gd", opts)
 keymap("n", "gl", "gl", opts)
+keymap("n", "<C-o>", "<C-o>", opts)
 
 -- indenting multiples lines
-keymap("v", "<tab>", ">", opts)
-keymap("v", "<S-tab>", "<", opts)
+keymap("n", ":t2<cr>", ":%s;^\\(\\s\\+\\);\\=repeat(' ', len(submatch(0))/2);g<cr>", opts)
 
 -- yank to system clipboard
 -- vim.keymap.set("v", "y", "+y")
