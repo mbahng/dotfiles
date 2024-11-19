@@ -83,3 +83,9 @@ vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- word count 
 keymap("v", "<leader>w", "g<S-g>", opts)
 
+-- restart Iron Repl 
+keymap("n", "<leader>rr", ":IronRestart<cr>", opts)
+
+-- conda activate 
+vim.cmd('cnoreabbrev ca CondaActivate')
+
