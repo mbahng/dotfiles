@@ -96,3 +96,6 @@ keymap("v", "<leader>w", "g<S-g>", opts)
 -- restart Iron Repl 
 keymap("n", "<leader>rr", ":IronRestart<cr>", opts)
 
+-- conda activate 
+vim.cmd('cnoreabbrev ca CondaActivate')
+
