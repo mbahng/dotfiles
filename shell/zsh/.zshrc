@@ -18,6 +18,7 @@ alias grep='grep --color=auto'
 alias app='nvim ~/Notes/app'
 # alias vim='nvim'
 alias lc='nvim leetcode.nvim'
+alias ca='conda activate'
 
 
 # set history 
