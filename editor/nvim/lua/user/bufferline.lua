@@ -45,7 +45,7 @@ bufferline.setup {
     show_buffer_close_icons = true,
     show_close_icon = true,
     show_tab_indicators = true,
-    persist_buffer_sort = false, 
+    persist_buffer_sort = true,  
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
     separator_style = "thin",
