@@ -83,8 +83,6 @@ return packer.startup(function(use)
       }
   }
 
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
-
   -- LSP
   use "williamboman/mason.nvim"               -- LSP: simple to use language server installer
   use "williamboman/mason-lspconfig.nvim"     -- simple to use language server installer

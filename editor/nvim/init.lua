@@ -23,7 +23,6 @@ require "user.toggleterm"
 require "user.neotree"
 require "user.ts-autotag"
 require "user.leetcode"
-require "user.dap"
 require "user.marks"
 
 vim.g.loaded_perl_provider = 0
