@@ -24,15 +24,10 @@ require "user.neotree"
 require "user.ts-autotag"
 require "user.leetcode"
 require "user.dap"
+require "user.marks"
 
 vim.g.loaded_perl_provider = 0
 vim.cmd "colorscheme catppuccin-frappe"
 vim.cmd "hi WinSeparator guifg=#ffffff"
 
 
-vim.g.loaded_perl_provider = 0
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		vim.cmd("Copilot disable")
-	end,
-})
