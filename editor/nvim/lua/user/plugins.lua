@@ -48,6 +48,8 @@ return packer.startup(function(use)
   use "lambdalisue/suda.vim"                  -- Read/Write with sudo privilge
   use "lukas-reineke/indent-blankline.nvim"   -- indent line guides 
   use "nvim-treesitter/nvim-treesitter"       -- syntax highlighting
+
+  use "chentoast/marks.nvim"                  -- marks for navigation
   use 'nvim-lualine/lualine.nvim'             -- configure status line
   use 'unblevable/quick-scope'                -- highlights letter when pressing f/F
   use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
@@ -56,10 +58,7 @@ return packer.startup(function(use)
   use "lervag/vimtex"                         -- for compiling tex documents
   use "navarasu/onedark.nvim"                 -- color scheme
   use "mhartington/oceanic-next"              -- color scheme
-  use "rose-pine/neovim"                      -- color scheme
-  use "folke/tokyonight.nvim"                 -- color scheme
   use "catppuccin/nvim"                       -- color scheme
-  -- use "numirias/semshi"                       -- python syntax highlighting
   use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
   use "Vigemus/iron.nvim"                     -- interactive REPL 
   use "terrortylor/nvim-comment"              -- comment out visual blocks of line
@@ -69,7 +68,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"               -- floating terminal window
   use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
   use "L3MON4D3/LuaSnip"                      -- custom snippets 
-  use "kyazdani42/nvim-web-devicons"           -- icons for filetypes
+  use "kyazdani42/nvim-web-devicons"          -- icons for filetypes
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
   use "sindrets/diffview.nvim" 
@@ -83,6 +82,8 @@ return packer.startup(function(use)
         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
       }
   }
+
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 
   -- LSP
   use "williamboman/mason.nvim"               -- LSP: simple to use language server installer
