@@ -63,6 +63,11 @@ keymap("v", "<S-tab>", "<", opts)
 -- vertical split
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 
+-- LSP helpers 
+keymap("n", "K", "K", opts) -- hover over  
+keymap("n", "gd", "gd", opts) -- go to definition
+keymap("n", "gD", "gD", opts) -- go to declaration
+
 -- diffview open 
 keymap("n", "<leader>g", ":DiffviewOpen<cr>", opts)
 keymap("n", "<leader>h", ":DiffviewClose<cr>", opts)
