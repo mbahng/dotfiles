@@ -34,12 +34,17 @@ toggleterm.setup({
 
 local Terminal = require('toggleterm.terminal').Terminal
 
--- Create three fixed terminals
+-- Create four fixed terminals with different border colors
 local term1 = Terminal:new({
   count = 1,
   direction = 'float',
   float_opts = {
-    border = 'curved'
+    border = 'curved',
+  },
+  highlights = {
+    FloatBorder = {
+      guifg = "#ff9999"
+    }
   }
 })
 
@@ -47,7 +52,12 @@ local term2 = Terminal:new({
   count = 2,
   direction = 'float',
   float_opts = {
-    border = 'curved'
+    border = 'curved',
+  },
+  highlights = {
+    FloatBorder = {
+      guifg = "#ffff99"
+    }
   }
 })
 
@@ -55,42 +65,88 @@ local term3 = Terminal:new({
   count = 3,
   direction = 'float',
   float_opts = {
-    border = 'curved'
+    border = 'curved',
+  },
+  highlights = {
+    FloatBorder = {
+      guifg = "#99ff99"
+    }
+  }
+})
+
+local term4 = Terminal:new({
+  count = 4,
+  direction = 'float',
+  float_opts = {
+    border = 'curved',
+  },
+  highlights = {
+    FloatBorder = {
+      guifg = "#99ccff"
+    }
   }
 })
 
 -- Function to cycle right (next terminal)
 function _G.cycle_terminal_right()
-  local current_term = vim.b.toggle_number
-  local next_term = current_term + 1
-  if next_term > 3 then
-    next_term = 1
-  end
-  vim.cmd('close')
-  vim.cmd(next_term .. 'ToggleTerm')
+  local current_term = vim.b.toggle_number or 1
+  -- Force current_term to be between 1 and 4
+  current_term = ((current_term - 1) % 4) + 1
+  
+  -- Calculate next terminal (will always be between 1 and 4)
+  local next_term = (current_term % 4) + 1
+  
+  term1:close()
+  term2:close()
+  term3:close()
+  term4:close()
+  
+  if next_term == 1 then term1:open() end
+  if next_term == 2 then term2:open() end
+  if next_term == 3 then term3:open() end
+  if next_term == 4 then term4:open() end
 end
 
 -- Function to cycle left (previous terminal)
 function _G.cycle_terminal_left()
-  local current_term = vim.b.toggle_number
+  local current_term = vim.b.toggle_number or 1
+  -- Force current_term to be between 1 and 4
+  current_term = ((current_term - 1) % 4) + 1
+  
   local prev_term = current_term - 1
   if prev_term < 1 then
-    prev_term = 3
+    prev_term = 4
   end
-  vim.cmd('close')
-  vim.cmd(prev_term .. 'ToggleTerm')
+  
+  term1:close()
+  term2:close()
+  term3:close()
+  term4:close()
+  
+  if prev_term == 1 then term1:open() end
+  if prev_term == 2 then term2:open() end
+  if prev_term == 3 then term3:open() end
+  if prev_term == 4 then term4:open() end
 end
+
+function _G.toggle_terminal()
+    if vim.b.toggle_number == nil then
+        -- If no terminal is open, open terminal 1
+        term1:open()
+    else
+        -- Otherwise use built-in toggle
+        vim.cmd('ToggleTerm')
+    end
+end
+
+vim.keymap.set({'n', 't'}, '<C-\\>', '<cmd>lua toggle_terminal()<CR>', { noremap = true, silent = true })
 
 -- Set up terminal keymaps
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
-  -- vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-  vim.keymap.set('t', '<C-`>', [[<C-\><C-n>]], opts)
   -- Navigate between terminals
   vim.keymap.set('t', '<C-l>', '<cmd>lua cycle_terminal_right()<CR>', opts)
   vim.keymap.set('t', '<C-h>', '<cmd>lua cycle_terminal_left()<CR>', opts)
 end
 
--- Auto-set keymaps when terminal opens
 vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
-
