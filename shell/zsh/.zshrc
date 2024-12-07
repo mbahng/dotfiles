@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 ZSH=/Users/mbahng/.oh-my-zsh
-
 # add custom scripts to PATH
 export PATH="/Users/mbahng/.custom_scripts:$PATH"
 export PATH="/Users/mbahng/.local/bin:$PATH"
