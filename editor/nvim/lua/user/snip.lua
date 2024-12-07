@@ -557,15 +557,15 @@ ls.add_snippets("tex",
       fmta(
       [[
         \noindent\begin{minipage}{.5\textwidth}
-        \begin{lstlisting}[]{Code}
-          <>
-        \end{lstlisting}
-        \end{minipage}
-        \hfill
-        \begin{minipage}{.49\textwidth}
-        \begin{lstlisting}[]{Output}
-          <>
-        \end{lstlisting}
+          \begin{lstlisting}[]{Code}
+            <>
+          \end{lstlisting}
+          \end{minipage}
+          \hfill
+          \begin{minipage}{.49\textwidth}
+          \begin{lstlisting}[]{Output}
+            <>
+          \end{lstlisting}
         \end{minipage}
       ]],
       { i(1), i(2) }
