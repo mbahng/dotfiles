@@ -48,6 +48,8 @@ return packer.startup(function(use)
   use "lambdalisue/suda.vim"                  -- Read/Write with sudo privilge
   use "lukas-reineke/indent-blankline.nvim"   -- indent line guides 
   use "nvim-treesitter/nvim-treesitter"       -- syntax highlighting
+
+  use "chentoast/marks.nvim"                  -- marks for navigation
   use 'nvim-lualine/lualine.nvim'             -- configure status line
   use 'unblevable/quick-scope'                -- highlights letter when pressing f/F
   use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
@@ -56,7 +58,7 @@ return packer.startup(function(use)
   use "lervag/vimtex"                         -- for compiling tex documents
   use "navarasu/onedark.nvim"                 -- color scheme
   use "mhartington/oceanic-next"              -- color scheme
-  use "rcarriga/nvim-notify"                  -- notification manager
+  use "catppuccin/nvim"                       -- color scheme
   use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
   use "Vigemus/iron.nvim"                     -- interactive REPL 
   use "terrortylor/nvim-comment"              -- comment out visual blocks of line
@@ -66,12 +68,9 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"               -- floating terminal window
   use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
   use "L3MON4D3/LuaSnip"                      -- custom snippets 
-  use "kyazdani42/nvim-web-devicons"           -- icons for filetypes
-  use "github/copilot.vim"                    -- copilot 
-  use "zbirenbaum/copilot-cmp"
+  use "kyazdani42/nvim-web-devicons"          -- icons for filetypes
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
-  use "sindrets/diffview.nvim" 
   use {
     "nvim-neo-tree/neo-tree.nvim",
       branch = "v3.x",
@@ -97,6 +96,22 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"              -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
+  -- leetcode 
+  use {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim", -- required by telescope
+      "MunifTanjim/nui.nvim",
+
+      -- optional
+      "nvim-treesitter/nvim-treesitter",
+      "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
+    }, 
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
