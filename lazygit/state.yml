@@ -1,15 +1,13 @@
 lastupdatecheck: 0
 recentrepos:
-- /Users/mbahng/dotfiles
-- /Users/mbahng/474/MultiModalProtoPNet
-- /Users/mbahng/Development/con
-- /Users/mbahng/Development/control-flow
+    - /Users/mbahng/dotfiles
 startuppopupversion: 5
-lastversion: 0.41.0
+lastversion: 0.44.1
 customcommandshistory: []
 hidecommandlog: true
 ignorewhitespaceindiffview: true
 diffcontextsize: 3
+renamesimilaritythreshold: 50
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order
