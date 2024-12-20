@@ -55,7 +55,6 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
   use "windwp/nvim-ts-autotag"                -- autopairing <html> tags
   use "mbbill/undotree"                       -- can see undo tree history
-  use "lervag/vimtex"                         -- for compiling tex documents
   use "navarasu/onedark.nvim"                 -- color scheme
   use "mhartington/oceanic-next"              -- color scheme
   use "catppuccin/nvim"                       -- color scheme

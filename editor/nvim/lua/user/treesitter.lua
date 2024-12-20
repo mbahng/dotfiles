@@ -8,14 +8,8 @@ configs.setup {
     "cpp", 
     "lua", 
     "bash", 
-    "html", 
-    "css", 
-    "javascript", 
-    "jsdoc", 
-    "typescript", 
     "json", 
     "yaml", 
-    "latex"
   },
   highlight = {
     enable = true, -- false will disable the whole extension

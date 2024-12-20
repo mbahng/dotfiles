@@ -1,9 +1,6 @@
 local servers = {
   "clangd", 
-  "gopls",
-	"cssls",
 	"pyright",
-  "ts_ls"
 }
 
 require("mason").setup(
