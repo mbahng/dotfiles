@@ -79,21 +79,19 @@ return packer.startup(function(use)
         "MunifTanjim/nui.nvim",
       }
   }
-
-  use({
-    "epwalsh/pomo.nvim",
-    tag = "*",  -- Recommended, use latest release instead of latest commit
-    requires = {
-      -- Optional, but highly recommended if you want to use the "Default" timer
-      "rcarriga/nvim-notify",
+  use {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+    dependencies = {
+        "nvim-telescope/telescope.nvim",
+        -- "ibhagwan/fzf-lua",
+        "nvim-lua/plenary.nvim",
+        "MunifTanjim/nui.nvim",
     },
-    config = function()
-      require("pomo").setup({
-        -- See below for full list of options 👇
-      })
-    end,
-  })
-
+    opts = {
+        -- configuration goes here
+    },
+  }
   -- LSP
   use "williamboman/mason.nvim"               -- LSP: simple to use language server installer
   use "williamboman/mason-lspconfig.nvim"     -- simple to use language server installer
