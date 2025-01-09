@@ -21,6 +21,7 @@ alias lg='lazygit'
 # alias b2='backblaze-b2'
 alias lc='nvim leetcode.nvim'
 alias ca='conda activate'
+alias mp='multipass'
 
 
 # set history 
