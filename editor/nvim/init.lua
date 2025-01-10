@@ -1,7 +1,6 @@
 vim.cmd "hi WinSeparator guifg=#ffffff"
 require "user.options"
 require "user.colorscheme"
-vim.cmd "colorscheme catppuccin-frappe"
 require "user.keymaps"
 require "user.snip"
 require "user.plugins"

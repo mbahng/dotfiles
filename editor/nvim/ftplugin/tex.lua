@@ -1,6 +1,8 @@
 vim.cmd "set wrap"
 vim.cmd "set linebreak"
 vim.cmd "setlocal spell spelllang=en_us"
+vim.cmd "colorscheme onedark"
+
 
 vim.g.tex_indent_items = 0
 vim.g.tex_indent_and = 0
