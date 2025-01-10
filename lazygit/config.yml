@@ -159,7 +159,7 @@ keybinding:
         pushFiles: '<c-p>'
         pullFiles: 'p'
         refresh: 'R'
-        createPatchOptionsMenu: ''
+        createPatchOptionsMenu: 'T'
         nextTab: 'l'
         prevTab: 'h'
         nextScreenMode: '+'
