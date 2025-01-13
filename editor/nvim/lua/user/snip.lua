@@ -779,7 +779,6 @@ ls.add_snippets("tex",
   \usepackage[english]{babel}
   \usepackage{amsmath} 
   \usepackage{amssymb}
-  % \usepackage{amsthm}
 
   % extra math symbols and utilities
   \usepackage{mathtools}        % for extra stuff like \coloneqq
