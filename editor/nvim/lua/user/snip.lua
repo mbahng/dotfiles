@@ -1007,7 +1007,7 @@ ls.add_snippets("tex",
   \pagestyle{fancy}
   \fancyhead[L]{}
   \fancyhead[C]{Muchang Bahng}
-  \fancyhead[R]{Fall 2024} 
+  \fancyhead[R]{Spring 2025} 
   \fancyfoot[C]{\thepage / \pageref{LastPage}}
   \renewcommand{\footrulewidth}{0.4pt}          % the footer line should be 0.4pt wide
   \renewcommand{\thispagestyle}[1]{}  % needed to include headers in title page
@@ -1016,7 +1016,7 @@ ls.add_snippets("tex",
 
 \title{}
 \author{Muchang Bahng}
-\date{Fall 2024}
+\date{Spring 2025}
 
 \maketitle
 \tableofcontents
