@@ -607,6 +607,28 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="\\axiom", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{axiom}
+          <>
+        \end{axiom}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\center", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{center}
+          <>
+        \end{center}
+      ]],
+      { i(1) }
+      )
+    ),
+
     s({trig="\\theorem", regTrig=false, snippetType="snippet"},
       fmta(
       [[
