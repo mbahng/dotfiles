@@ -618,6 +618,17 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="\\cd", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{tikzcd}
+          <>
+        \end{tikzcd}
+      ]],
+      { i(1) }
+      )
+    ),
+
     s({trig="\\center", regTrig=false, snippetType="snippet"},
       fmta(
       [[
