@@ -640,6 +640,73 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="\\algorithm", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{algorithm}
+        \caption{Algorithm Name}
+        \label{alg:<>}
+        \begin{algorithmic}[1]  % The [1] adds line numbers
+          % Procedure declaration
+          \Procedure{ProcedureName}{parameter1, parameter2}
+              
+          % Input/Output documentation
+          \Require{Input requirements or preconditions}
+          \Ensure{Output guarantees or postconditions}
+          
+          % Variable initialization
+          \State $variable1 \gets initialValue$
+          \State $variable2 \gets 0$
+          
+          % Control structures
+          \If{condition}
+              \State statement1
+              \State statement2
+          \ElsIf{condition2}
+              \State statement3
+          \Else
+              \State statement4
+          \EndIf
+          
+          % Loops
+          \For{$i \gets 1$ to $n$}
+              \State perform operation
+          \EndFor
+          
+          \While{condition}
+              \State perform operation
+          \EndWhile
+          
+          % Function calls
+          \State $result \gets \Call{SubProcedure}{arg1, arg2}$
+          
+          % Return statement
+          \State \Return $result$
+          \EndProcedure
+
+          % Sub-procedure definition
+          \Procedure{SubProcedure}{arg1, arg2}
+              \State perform operations
+              \State \Return $value$
+          \EndProcedure
+        \end{algorithmic}
+        \end{algorithm}
+      ]],
+      { i(1) }
+      )
+    ),
+
+    s({trig="\\algo", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{algo}
+          <>
+        \end{algo}
+      ]],
+      { i(1) }
+      )
+    ),
+
     s({trig="\\theorem", regTrig=false, snippetType="snippet"},
       fmta(
       [[

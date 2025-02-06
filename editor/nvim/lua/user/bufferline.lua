@@ -10,9 +10,9 @@ bufferline.setup {
     indicator = {
         style = 'underline', 
     },
-    buffer_close_icon = '',
+    -- buffer_close_icon = '',
     modified_icon = "●",
-    close_icon = "",
+    -- close_icon = "",
     -- close_icon = '',
     left_trunc_marker = "",
     right_trunc_marker = "",
@@ -66,16 +66,17 @@ bufferline.setup {
       guibg = { attribute = "bg", highlight = "TabLine" },
     },
   
-    -- buffer_selected = {
-    --   guifg = {attribute='fg',highlight='#ff0000'},
-    --   guibg = {attribute='bg',highlight='#0000ff'},
-    --   gui = 'none'
-    --   },
+    buffer_selected = {
+      guifg = { attribute = "fg", highlight = "TabLine" },
+      guibg = { attribute = "bg", highlight = "TabLine" },
+      fg = '#000000', 
+      bg = '#ffc9de',
+    },
     buffer_visible = {
       guifg = { attribute = "fg", highlight = "TabLine" },
       guibg = { attribute = "bg", highlight = "TabLine" },
     },
-  
+     
     close_button = {
       guifg = { attribute = "fg", highlight = "TabLine" },
       guibg = { attribute = "bg", highlight = "TabLine" },
@@ -84,10 +85,10 @@ bufferline.setup {
       guifg = { attribute = "fg", highlight = "TabLine" },
       guibg = { attribute = "bg", highlight = "TabLine" },
     },
-    -- close_button_selected = {
-    --   guifg = {attribute='fg',highlight='TabLineSel'},
-    --   guibg ={attribute='bg',highlight='TabLineSel'}
-    --   },
+    close_button_selected = {
+      guifg = {attribute='fg',highlight='TabLineSel'},
+      guibg ={attribute='bg',highlight='TabLineSel'}
+      },
   
     tab_selected = {
       guifg = { attribute = "fg", highlight = "Normal" },
