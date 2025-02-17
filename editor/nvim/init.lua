@@ -22,10 +22,8 @@ require "user.toggleterm"
 require "user.neotree"
 require "user.ts-autotag"
 require "user.leetcode"
-require "user.marks"
 
 vim.g.loaded_perl_provider = 0
-vim.cmd "colorscheme catppuccin-frappe"
 vim.cmd "hi WinSeparator guifg=#ffffff"
 
 

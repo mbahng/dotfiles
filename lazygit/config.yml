@@ -1,64 +1,64 @@
 gui:
-  # stuff relating to the UI
-  windowSize: 'normal' # one of 'normal' | 'half' | 'full' default is 'normal'
-  scrollHeight: 4 # how many lines you scroll by
-  scrollPastBottom: true # enable scrolling past the bottom
-  scrollOffMargin: 2 # how many lines to keep before/after the cursor when it reaches the top/bottom of the view; see 'Scroll-off Margin' section below
-  scrollOffBehavior: 'margin' # one of 'margin' | 'jump'; see 'Scroll-off Margin' section below
-  sidePanelWidth: 0.25 # number from 0 to 1
-  expandFocusedSidePanel: true
-  mainPanelSplitMode: 'flexible' # one of 'horizontal' | 'flexible' | 'vertical'
-  enlargedSideViewLocation: 'left' 
-  language: 'en' # one of 'auto' | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
-  timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
-  shortTimeFormat: '3:04PM'
-  theme:
-    activeBorderColor:
-      - green
-      - bold
-    inactiveBorderColor:
-      - white
-    searchingActiveBorderColor:
-      - cyan
-      - bold
-    optionsTextColor:
-      - blue
-    selectedLineBgColor:
-      - blue 
-    cherryPickedCommitBgColor:
-      - cyan
-    cherryPickedCommitFgColor:
-      - blue
-    unstagedChangesColor:
-      - red
-    defaultFgColor:
-      - default
-  commitLength:
-    show: true
-  mouseEvents: true
-  skipDiscardChangeWarning: false
-  skipStashWarning: false
-  showFileTree: true # for rendering changes files in a tree format
-  showListFooter: true # for seeing the '5 of 20' message in list panels
-  showRandomTip: true
-  showBranchCommitHash: false # show commit hashes alongside branch names
-  showBottomLine: true # for hiding the bottom information line (unless it has important information to tell you)
-  showPanelJumps: true # for showing the jump-to-panel keybindings as panel subtitles
-  showCommandLog: true
-  showIcons: false # deprecated: use nerdFontsVersion instead
-  nerdFontsVersion: "2" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
-  showFileIcons: true # for hiding file icons in the file views
-  commandLogSize: 8
-  splitDiff: 'always' # one of 'auto' | 'always'
-  skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
-  border: 'single' # one of 'single' | 'double' | 'rounded' | 'hidden'
-  animateExplosion: true # shows an explosion animation when nuking the working tree
-  portraitMode: 'auto' # one of 'auto' | 'never' | 'always'
-  filterMode: 'substring' # one of 'substring' | 'fuzzy'; see 'Filtering' section below
-  spinner:
-    frames: ['|', '/', '-', '\\']
-    rate: 50 # spinner rate in milliseconds
-  statusPanelView: 'dashboard' # one of 'dashboard' | 'allBranchesLog'
+    # stuff relating to the UI
+    screenMode: 'normal' # one of 'normal' | 'half' | 'full' default is 'normal'
+    scrollHeight: 4 # how many lines you scroll by
+    scrollPastBottom: true # enable scrolling past the bottom
+    scrollOffMargin: 2 # how many lines to keep before/after the cursor when it reaches the top/bottom of the view; see 'Scroll-off Margin' section below
+    scrollOffBehavior: 'margin' # one of 'margin' | 'jump'; see 'Scroll-off Margin' section below
+    sidePanelWidth: 0.25 # number from 0 to 1
+    expandFocusedSidePanel: true
+    mainPanelSplitMode: 'flexible' # one of 'horizontal' | 'flexible' | 'vertical'
+    enlargedSideViewLocation: 'left'
+    language: 'en' # one of 'auto' | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
+    timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
+    shortTimeFormat: '3:04PM'
+    theme:
+        activeBorderColor:
+            - green
+            - bold
+        inactiveBorderColor:
+            - white
+        searchingActiveBorderColor:
+            - cyan
+            - bold
+        optionsTextColor:
+            - blue
+        selectedLineBgColor:
+            - blue
+        cherryPickedCommitBgColor:
+            - cyan
+        cherryPickedCommitFgColor:
+            - blue
+        unstagedChangesColor:
+            - red
+        defaultFgColor:
+            - default
+    commitLength:
+        show: true
+    mouseEvents: true
+    skipDiscardChangeWarning: false
+    skipStashWarning: false
+    showFileTree: true # for rendering changes files in a tree format
+    showListFooter: true # for seeing the '5 of 20' message in list panels
+    showRandomTip: true
+    showBranchCommitHash: false # show commit hashes alongside branch names
+    showBottomLine: true # for hiding the bottom information line (unless it has important information to tell you)
+    showPanelJumps: true # for showing the jump-to-panel keybindings as panel subtitles
+    showCommandLog: true
+    showIcons: false # deprecated: use nerdFontsVersion instead
+    nerdFontsVersion: "2" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
+    showFileIcons: true # for hiding file icons in the file views
+    commandLogSize: 8
+    splitDiff: 'always' # one of 'auto' | 'always'
+    skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
+    border: 'single' # one of 'single' | 'double' | 'rounded' | 'hidden'
+    animateExplosion: true # shows an explosion animation when nuking the working tree
+    portraitMode: 'auto' # one of 'auto' | 'never' | 'always'
+    filterMode: 'substring' # one of 'substring' | 'fuzzy'; see 'Filtering' section below
+    spinner:
+        frames: ['|', '/', '-', '\\']
+        rate: 50 # spinner rate in milliseconds
+    statusPanelView: 'dashboard' # one of 'dashboard' | 'allBranchesLog'
 git:
     paging:
         colorArg: always
@@ -102,19 +102,19 @@ git:
     parseEmoji: false
     truncateCopiedCommitHashesTo: 12 # When copying commit hashes to the clipboard, truncate them to this length. Set to 40 to disable truncation.
 os:
-  copyToClipboardCmd: '' # See 'Custom Command for Copying to Clipboard' section
-  editPreset: '' # see 'Configuring File Editing' section
-  edit: ''
-  editAtLine: ''
-  editAtLineAndWait: ''
-  open: ''
-  openLink: ''
+    copyToClipboardCmd: '' # See 'Custom Command for Copying to Clipboard' section
+    editPreset: '' # see 'Configuring File Editing' section
+    edit: ''
+    editAtLine: ''
+    editAtLineAndWait: ''
+    open: ''
+    openLink: ''
 refresher:
-  refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
-  fetchInterval: 60 # Re-fetch interval in seconds. Auto-fetch can be disabled via option 'git.autoFetch'.
+    refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
+    fetchInterval: 60 # Re-fetch interval in seconds. Auto-fetch can be disabled via option 'git.autoFetch'.
 update:
-  method: prompt # can be: prompt | background | never
-  days: 14 # how often an update is checked for
+    method: prompt # can be: prompt | background | never
+    days: 14 # how often an update is checked for
 confirmOnQuit: false
 # determines whether hitting 'esc' will quit the application when there is nothing to cancel/close
 quitOnTopLevelReturn: false
