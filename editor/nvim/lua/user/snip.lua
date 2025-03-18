@@ -379,14 +379,14 @@ ls.add_snippets("tex",
         \begin{figure}[H]
           \centering
           \begin{subfigure}[b]{0.48\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.48\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
@@ -405,21 +405,21 @@ ls.add_snippets("tex",
         \begin{figure}[H]
           \centering
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
@@ -438,28 +438,28 @@ ls.add_snippets("tex",
         \begin{figure}[H]
           \centering
           \begin{subfigure}[b]{0.48\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.48\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
 
           \begin{subfigure}[b]{0.48\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.48\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>.png}
             \caption{<>}
             \label{fig:<>}
@@ -478,42 +478,42 @@ ls.add_snippets("tex",
         \begin{figure}[H]
           \centering 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>}
             \caption{<>}
             \label{fig:<>}
           \end{subfigure}
           \hfill 
           \begin{subfigure}[b]{0.32\textwidth}
-          \centering
+            \centering
             \includegraphics[width=\textwidth]{img/<>}
             \caption{<>}
             \label{fig:<>}
