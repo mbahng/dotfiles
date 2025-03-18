@@ -887,6 +887,7 @@ ls.add_snippets("tex",
     \usepackage{bm}               % for better boldsymbol/mathbf 
     \usepackage{enumitem}         % better control over enumerate, itemize
     \usepackage{hyperref}         % for hypertext linking
+    \usepackage{xr-hyper}
     \usepackage{fancyvrb}          % for better verbatim environments
     \usepackage{newverbs}         % for texttt{}
     \usepackage{xcolor}           % for colored text 
@@ -1086,6 +1087,9 @@ ls.add_snippets("tex",
     \fancyfoot[C]{\thepage / \pageref{LastPage}}
     \renewcommand{\footrulewidth}{0.4pt}          % the footer line should be 0.4pt wide
     \renewcommand{\thispagestyle}[1]{}  % needed to include headers in title page
+
+  % external documents 
+  %  \externaldocument[place-]{../Machine_Learning/paper}[../Machine_Learning/paper.pdf] 
 
 \begin{document}
 
