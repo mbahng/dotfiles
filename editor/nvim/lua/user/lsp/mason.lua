@@ -1,10 +1,12 @@
+require('lspconfig.ui.windows').default_options.border = 'none'
+vim.lsp.set_log_level("OFF") 
+
 local servers = {
   "clangd", 
   "gopls",
 	"cssls",
 	"ts_ls",
 	"pyright",
-  "ts_ls"
 }
 
 require("mason").setup(
@@ -17,12 +19,10 @@ require("mason").setup(
         package_uninstalled = "◍",
       },
     },
-    log_level = vim.log.levels.INFO,
+    log_level = vim.log.levels.WARN,
     max_concurrent_installers = 4,
   }
 )
-
-
 
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
