@@ -1,11 +1,24 @@
 local ls = require("luasnip")
-
 ls.setup({
-  history = false,
-  region_check_events = "CursorMoved, InsertEnter",
-  delete_check_events = "TextChanged,InsertLeave",
+  -- Enable history to prevent some deletion warnings
+  history = true,
+  
+  -- Make the region checks less frequent to reduce warnings
+  region_check_events = "InsertEnter",
+  
+  -- Only check for deletion on InsertLeave rather than any text change
+  delete_check_events = "InsertLeave",
+  
+  -- Add this to ignore VSCode snippet warnings from packages without snippets
+  ext_opts = {
+    store_selection_keys = nil, -- Recommended for less noise
+  },
+  
+  -- Add this to suppress some verbose logging
+  loaders_store_source = false
 })
 
+-- Rest of your configuration
 local fmta = require("luasnip.extras.fmt").fmta
 local s = ls.snippet
 local t = ls.text_node
