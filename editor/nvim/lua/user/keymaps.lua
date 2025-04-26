@@ -53,6 +53,8 @@ keymap("n", "<leader>zR", "zR", opts) -- open all folds
 keymap("n", "<leader>w", ":set wrap!<cr>", opts)
 
 -- stuff for split keyboards 
+keymap("n", "m", "n", opts)
+keymap("n", "n", "b", opts)
 keymap("n", "dn", "db", opts)
 
 -- go to definition and error and back
