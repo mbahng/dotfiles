@@ -8,9 +8,14 @@ vim.g.maplocalleader = " "
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-a>j", "<C-w>j", opts)
+-- keymap("n", "<C-a>k", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+
+keymap("n", "<C-j>", "5j", opts) 
+keymap("n", "<C-k>", "5k", opts)
+keymap("v", "<C-j>", "5j", opts) 
+keymap("v", "<C-k>", "5k", opts)
 
 keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 keymap("n", "<leader>u", ":UndotreeToggle<cr>", opts)
@@ -28,7 +33,7 @@ keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<leader>h", ":BufferLineMovePrev<CR>", opts)
 keymap("n", "<leader>l", ":BufferLineMoveNext<CR>", opts)
-keymap("n", "<C-w>", ":Bdelete<CR>", opts)
+keymap("n", "<C-x>", ":Bdelete<CR>", opts)
 keymap("n", "<C-t>", ":Telescope find_files<cr>", opts)
 
 -- Press jk fast to enter
@@ -55,6 +60,7 @@ keymap("n", "<leader>w", ":set wrap!<cr>", opts)
 -- stuff for split keyboards 
 keymap("n", "m", "n", opts)
 keymap("n", "n", "b", opts)
+keymap("v", "n", "b", opts)
 keymap("n", "dn", "db", opts)
 
 -- go to definition and error and back
@@ -76,7 +82,7 @@ keymap("n", "<leader>v", ":vsplit<cr>", opts)
 -- LSP helpers 
 keymap("n", "K", "K", opts) -- hover over  
 keymap("n", "gd", "gd", opts) -- go to definition
-keymap("n", "gD", "gD", opts) -- go to declaration
+keymap("n", "gd", "gd", opts) -- go to declaration
 
 -- diffview open 
 -- keymap("n", "<leader>g", ":DiffviewOpen<cr>", opts)
