@@ -5,6 +5,7 @@
 ZSH=/Users/mbahng/.oh-my-zsh
 
 # add custom scripts to PATH
+export PATH="/opt/homebrew/bin/hg:$PATH"
 export PATH="/Users/mbahng/.custom_scripts:$PATH"
 # export PATH="/Users/mbahng/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
@@ -140,14 +141,14 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/mbahng/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/mbahng/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/mbahng/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/miniconda3/bin:$PATH"
+        export PATH="/Users/mbahng/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
