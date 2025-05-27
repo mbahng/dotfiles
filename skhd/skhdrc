@@ -23,11 +23,9 @@ shift + alt - 3 : yabai -m window --space 3 --focus
 shift + alt - 4 : yabai -m window --space 4 --focus
 shift + alt - 5 : yabai -m window --space 5 --focus
 
-alt - space : yabai -m window --focus recent
 alt - tab : yabai -m display --focus recent
 ctrl + cmd - t : /opt/homebrew/bin/kitty --single-instance -d "~"
 alt - b : /Applications/Firefox.app/Contents/MacOS/firefox --single-instance
-alt - b : /Applications/Firefox.app/Contents/MacOS/firefox --new-window "https://claude.ai"
 alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window float
