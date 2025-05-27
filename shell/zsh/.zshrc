@@ -5,6 +5,7 @@
 ZSH=/Users/mbahng/.oh-my-zsh
 
 # add custom scripts to PATH
+export PATH="/opt/homebrew/bin/hg:$PATH"
 export PATH="/Users/mbahng/.custom_scripts:$PATH"
 # export PATH="/Users/mbahng/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
