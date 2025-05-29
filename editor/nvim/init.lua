@@ -1,4 +1,3 @@
-vim.cmd "hi WinSeparator guifg=#ffffff"
 require "user.options"
 require "user.colorscheme"
 require "user.keymaps"
