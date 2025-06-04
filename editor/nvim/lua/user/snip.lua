@@ -1,4 +1,9 @@
 local ls = require("luasnip")
+
+require("luasnip.loaders.from_vscode").lazy_load({
+  exclude = { "markdown-preview.nvim" }
+})
+
 ls.setup({
   -- Enable history to prevent some deletion warnings
   history = true,
@@ -252,12 +257,50 @@ ls.add_snippets(
   }
 )
 
+ls.add_snippets(
+  "markdown",
+  {
+    s({trig="rm", regTrig=false, snippetType="snippet"},
+      fmta(
+        "\\mathrm{<>}",
+        { i(1) }
+      )
+    ), 
+
+    s({trig="lit", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[
+          Background. 
+
+          Contribution
+
+          Model Inference. 
+
+          Training. 
+
+          Results. 
+        ]],
+        {}, 
+        { delimiters = "()" }
+      )
+    ),
+
+  }
+)
+
 -- normal math stuff 
 ls.add_snippets("tex",
   {
     s({trig="ti", regTrig=false, snippetType="snippet"},
       fmta(
         "\\textit{<>}",
+        { i(1) }
+      )
+    ),
+
+    s({trig="rm", regTrig=false, snippetType="snippet"},
+      fmta(
+        "\\mathrm{<>}",
         { i(1) }
       )
     ),
@@ -317,6 +360,17 @@ ls.add_snippets("tex",
 -- figures and subfigures
 ls.add_snippets("tex",
   {
+    s({trig="\\tikzpicture", regTrig=false, snippetType="snippet"},
+      fmta(
+        [[ 
+        \begin{tikzpicture}
+
+        \end{tikzpicture}
+        ]],
+        {}
+      )
+    ),
+
     s({trig="\\table", regTrig=false, snippetType="snippet"},
       fmta(
         [[ 
