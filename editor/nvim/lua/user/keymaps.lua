@@ -64,8 +64,9 @@ keymap("v", "n", "b", opts)
 keymap("n", "dn", "db", opts)
 
 -- go to definition and error and back
-keymap("n", "gd", "gd", opts)
-keymap("n", "gl", "gl", opts)
+keymap("n", "gD", "lua vim.lsp.buf.declaration()<cr>", opts)
+keymap("n", "gd", "lua vim.lsp.buf.definition()<cr>", opts)
+keymap("n", "gl", ":lua vim.diagnostic.open_float()<cr>", opts)
 keymap("n", "<C-o>", "<C-o>", opts)
 
 -- indenting multiples lines
