@@ -158,7 +158,6 @@ Plug 'jiangmiao/auto-pairs'         " Close parantheses, quotes ,etc.
 Plug 'voldikss/vim-floaterm'
 
 Plug 'mbbill/undotree'
-Plug 'github/copilot.vim'
 
 Plug 'adrian5/oceanic-next-vim'
 Plug 'joshdick/onedark.vim'
