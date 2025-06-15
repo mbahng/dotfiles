@@ -12,6 +12,10 @@ iron.setup {
         command = {"kitty"}
       }
     },
+    python = {
+      command = { "ipython", "--no-autoindent" },
+      format = require("iron.fts.common").bracketed_paste
+    },
     -- How the repl window will be displayed
     -- See below for more information
     repl_open_cmd = require('iron.view').split.vertical.botright(0.5),
