@@ -68,13 +68,6 @@ return packer.startup(function(use)
   use({ "L3MON4D3/LuaSnip",                   -- custom snippets
     run = "make install_jsregexp"
   })
-  use({
-    "3rd/image.nvim",
-    build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
-    opts = {
-        processor = "magick_cli",
-    }
-  })
   use "kyazdani42/nvim-web-devicons"          -- icons for filetypes
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
