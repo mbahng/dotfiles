@@ -20,7 +20,6 @@ require "user.bufferline"
 require "user.toggleterm"
 require "user.neotree"
 require "user.ts-autotag"
-require "user.leetcode"
 
 vim.g.loaded_perl_provider = 0
 vim.cmd "hi WinSeparator guifg=#ffffff"

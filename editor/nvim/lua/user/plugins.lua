@@ -45,29 +45,23 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"                 -- for async programming
   use "nvim-telescope/telescope.nvim"         -- quickly find files in pwd
   use "jesseduffield/lazygit"                 -- all things git 
-  use "lambdalisue/suda.vim"                  -- Read/Write with sudo privilge
   use "lukas-reineke/indent-blankline.nvim"   -- indent line guides 
   use "nvim-treesitter/nvim-treesitter"       -- syntax highlighting
   
   use 'nvim-lualine/lualine.nvim'             -- configure status line
   use 'unblevable/quick-scope'                -- highlights letter when pressing f/F
   use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
-  use "windwp/nvim-ts-autotag"                -- autopairing <html> tags
   use "mbbill/undotree"                       -- can see undo tree history
-  use "lervag/vimtex"                         -- for compiling tex documents
-  use "navarasu/onedark.nvim"                 -- color scheme
-  use "mhartington/oceanic-next"              -- color scheme
   use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
   use "Vigemus/iron.nvim"                     -- interactive REPL 
+  use "mhartington/oceanic-next"              -- color scheme
   use "terrortylor/nvim-comment"              -- comment out visual blocks of line
-  use "mhinz/vim-startify"                    -- start screen when starting neovim
   use "akinsho/bufferline.nvim"               -- shows the buffer (tab) line
   use "moll/vim-bbye"                         -- delete buffers without closing nvim
   use "akinsho/toggleterm.nvim"               -- floating terminal window
   use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
-  use({ "L3MON4D3/LuaSnip",                   -- custom snippets
-    run = "make install_jsregexp"
-  })
+  use "L3MON4D3/LuaSnip"                      -- custom snippets 
+  use "marko-cerovac/material.nvim" 
   use "kyazdani42/nvim-web-devicons"          -- icons for filetypes
   use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
   run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
