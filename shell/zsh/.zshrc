@@ -18,7 +18,9 @@ alias grep='grep --color=auto'
 alias lc='nvim leetcode.nvim'
 alias ca='conda activate'
 alias mp='multipass'
-alias ssh='kitten ssh'
+
+alias ssh='ps cax | grep lemonade> /dev/null && kitten ssh -R 2489:127.0.0.1:2489'
+alias vim='nvim'
 
 
 # set history 
@@ -108,11 +110,7 @@ source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosugge
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='vim'
-fi
+export EDITOR='nvim'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
