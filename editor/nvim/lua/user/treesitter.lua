@@ -1,4 +1,4 @@
-local status_ok, configs = pcall(require, "ts_context_commentstring")
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   return
 end
@@ -17,10 +17,8 @@ configs.setup {
     "jsdoc", 
     "typescript", 
     "json", 
-    "yaml",
-    "latex",
-    "asm", 
-    "nasm"
+    "yaml", 
+    "python"
   },
   highlight = {
     enable = true, -- false will disable the whole extension
