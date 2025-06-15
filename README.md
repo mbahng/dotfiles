@@ -1,5 +1,12 @@
-# config
+# dotfiles
 This repository serves two purposes: 1) to store all my UNIX configuration files in case I need to set up workspaces on a new personal computer or a computing cluster, and 2) to store mini-guides for setting up and using various programs. 
+
+## Setting Up on Computing Cluster 
+
+1. Install zsh and omz, with autocompletion, suggestions, and highlighting. 
+2. Install lazygit, alias it to lg, and install delta to see outputs. 
+3. Install neovim, ripgrep (rg), mercurial (hd), along with npm/nvm. 
+4. Install miniconda. 
 
 Now you may want to do some slight customization and really choose which software you use. The first thing you want to choose is your shell (e.g. bash, zsh, fish) and also a terminal emulator (kitty, GNOME, alacritty) to access it. Then, you should get used to being able to edit configuration files on your system, which you will need to learn Vim. Before even that, you might also want to install Neovim, so I cover the default package managers first (e.g. `apt`, `pacman`), along with supplemental ones (e.g. `yay`, `snapd`, `flatpak`). Then we can get into Vim and Neovim, including basic configuration and plugins. 
 
