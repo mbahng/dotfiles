@@ -2,26 +2,16 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-ZSH=/Users/mbahng/.oh-my-zsh
+ZSH=/home/users/mb625/.oh-my-zsh
 
 # add custom scripts to PATH
-export PATH="/Users/mbahng/.custom_scripts:$PATH"
-# export PATH="/Users/mbahng/.local/bin:$PATH"
-export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
-# export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 # set alias for certain commands 
-alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias lg='lazygit'
 alias grep='grep --color=auto'
 alias lc='nvim leetcode.nvim'
 alias ca='conda activate'
-alias mp='multipass'
-
-alias ssh='ps cax | grep lemonade> /dev/null && kitten ssh -R 2489:127.0.0.1:2489'
-alias vim='nvim'
-
 
 # set history 
 HISTFILE=~/.zsh_history

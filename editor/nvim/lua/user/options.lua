@@ -55,4 +55,5 @@ vim.cmd "set foldmethod=indent"
 vim.cmd "set foldlevel=10000"
 vim.cmd "set foldignore="
 vim.g.copilot_assume_mapped = true 
+vim.o.shell = "zsh"
 
