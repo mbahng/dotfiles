@@ -100,13 +100,13 @@ keymap("n", "<leader>la", ":Leet lang<cr>", opts)
 
 -- Easy access to REPL for Python, Julia, and JavaScript 
 keymap("n", ":repl<cr>", ":IronRepl<cr>", opts)
+keymap('n', '<space>rf', '<cmd>IronFocus<cr>', opts)
+keymap('n', '<space>rh', '<cmd>IronHide<cr>', opts)
+keymap("n", "<leader>rr", ":IronRestart<cr>", opts)
+keymap("t", "jk", "<C-\\><C-n>", opts)
 
 -- editing all instance of a word at the same time
 vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- word count 
 keymap("v", "<leader>w", "g<S-g>", opts)
-
--- restart Iron Repl 
-keymap("n", "<leader>rr", ":IronRestart<cr>", opts)
-

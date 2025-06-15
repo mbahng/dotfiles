@@ -14,7 +14,7 @@ iron.setup {
     },
     -- How the repl window will be displayed
     -- See below for more information
-    repl_open_cmd = require('iron.view').split.vertical.botright(80),
+    repl_open_cmd = require('iron.view').split.vertical.botright(0.5),
   },
   -- Iron doesn't set keymaps by default anymore.
   -- You can set them here or manually add keymaps to the functions in iron.core
@@ -29,9 +29,9 @@ iron.setup {
     mark_visual = "<space>mc",
     remove_mark = "<space>md",
     cr = "<space>s<cr>",
-    interrupt = "<space>s<space>",
-    exit = "<space>sq",
-    clear = "<space>cl",
+    interrupt = "<space>ri",
+    exit = "<space>rq",
+    clear = "<space>rl",
   },
   -- If the highlight is on, you can change how it looks
   -- For the available options, check nvim_set_hl
