@@ -18,8 +18,6 @@ alias grep='grep --color=auto'
 alias lc='nvim leetcode.nvim'
 alias ca='conda activate'
 alias mp='multipass'
-
-alias ssh='ps cax | grep lemonade> /dev/null && kitten ssh -R 2489:127.0.0.1:2489'
 alias vim='nvim'
 alias tma='tmux attach' 
 alias tml='tmux ls' 
