@@ -1,0 +1,113 @@
+#!/bin/bash 
+
+STEM=~/Notes/mbahng-com/STEM
+MATH="${STEM}/Math"
+STATISTICS="${STEM}/Statistics"
+COMPUTER_SCIENCE="${STEM}/Computer_Science"
+NATURAL_SCIENCES="${STEM}/Natural_Sciences"
+BUSINESS_FINANCE=~/Notes/mbahng-com/Business_Finance
+
+case "$1" in 
+  "deri")
+    cd "${BUSINESS_FINANCE}/Derivatives"
+    ;; 
+  "algo")
+    cd "${BUSINESS_FINANCE}/Algorithmic_Trading"
+    ;; 
+  "qm")
+    cd "${NATURAL_SCIENCES}/Quantum_Mechanics"
+    ;; 
+  "ml")
+    cd "${STATISTICS}/Machine_Learning"
+    ;; 
+  "deep")
+    cd "${STATISTICS}/Deep_Learning"
+    ;; 
+  "rein")
+    cd "${STATISTICS}/Reinforcement_Learning"
+    ;; 
+  "info")
+    cd "${STATISTICS}/Information_Theory_Signal_Processing"
+    ;; 
+  "optim")
+    cd "${STATISTICS}/Sampling_and_Optimization"
+    ;; 
+  "freq")
+    cd "${STATISTICS}/Frequentist_Statistics"
+    ;; 
+  "bayes")
+    cd "${STATISTICS}/Bayesian_Statistics"
+    ;; 
+  "cv")
+    cd "${STATISTICS}/Computer_Vision"
+    ;; 
+  "nlp")
+    cd "${STATISTICS}/Natural_Language_Processing"
+    ;; 
+  "alg")
+    cd "${MATH}/Abstract_Algebra"
+    ;;
+  "algtop")
+    cd "${MATH}/Algebraic_Topology"
+    ;;
+  "complex")
+    cd "${MATH}/Complex_Analysis"
+    ;;
+  "concentration")
+    cd "${MATH}/Concentration_of_Measure"
+    ;;
+  "diffgeo")
+    cd "${MATH}/Differential_Geometry"
+    ;;
+  "functional")
+    cd "${MATH}/Functional_Analysis"
+    ;;
+  "linalg")
+    cd "${MATH}/Linear_Algebra"
+    ;;
+  "measure")
+    cd "${MATH}/Measure_Theory"
+    ;;
+  "multi")
+    cd "${MATH}/Multivariate_Calculus"
+    ;;
+  "number")
+    cd "${MATH}/Number_Theory"
+    ;;
+  "ode")
+    cd "${MATH}/Ordinary_Differential_Equations"
+    ;;
+  "pde")
+    cd "${MATH}/Partial_Differential_Equations"
+    ;;
+  "top")
+    cd "${MATH}/Point_Set_Topology"
+    ;;
+  "prob")
+    cd "${MATH}/Probability_Theory"
+    ;;
+  "real")
+    cd "${MATH}/Real_Analysis"
+    ;;
+  "smooth")
+    cd "${MATH}/Smooth_Manifolds"
+    ;;
+  "stoch")
+    cd "${MATH}/Stochastic_Processes"
+    ;;
+  "linux")
+    cd "${COMPUTER_SCIENCE}/Linux"
+    ;;
+  "block")
+    cd "${COMPUTER_SCIENCE}/Blockchain"
+    ;;
+  "qcomp")
+    cd "${COMPUTER_SCIENCE}/Quantum_Computing"
+    ;;
+  "dsa")
+    cd "${COMPUTER_SCIENCE}/Data_Structures_Algorithms"
+    ;;
+  "system")
+    cd "${COMPUTER_SCIENCE}/Systems"
+esac
+nvim paper.tex

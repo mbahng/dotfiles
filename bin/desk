@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+cd ~/dotfiles/.screenlayout
+./desktop.sh
+feh --bg-fill ~/Media/Pictures/wallpaper/1.jpg
