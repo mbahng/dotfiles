@@ -1,58 +1,61 @@
-local options = {
-  backup = false,                          -- creates a backup file
-  -- clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  cmdheight = 2,                           -- more space in the neovim command line for displaying messages
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0,                        -- so that `` is visible in markdown files
-  fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = true,                         -- highlight all matches on previous search pattern
-  ignorecase = true,                       -- ignore case in search patterns
-  mouse = "a",                             -- allow the mouse to be used in neovim
-  pumheight = 10,                          -- pop up menu height
-  showmode = true,                        -- we don't need to see things like -- INSERT -- anymore
-  showtabline = 2,                         -- always show tabs
-  smartcase = true,                        -- smart case
-  smartindent = true,                      -- make indenting smarter again
-  cindent = true,
-  splitbelow = true,                       -- force all horizontal splits to go below current window
-  splitright = true,                       -- force all vertical splits to go to the right of current window
-  swapfile = false,                        -- creates a swapfile
-  termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 1000,                        -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true,                         -- enable persistent undo
-  updatetime = 300,                        -- faster completion (4000ms default)
-  writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-  expandtab = true,                        -- convert tabs to spaces
-  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-  tabstop = 2,                             -- insert 2 spaces for a tab
-  cursorline = true,                       -- highlight the current line
-  number = true,                           -- set numbered lines
-  relativenumber = true,                   -- set relative numbered lines
-  numberwidth = 4,                         -- set number column width to 2 {default 4}
-  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = false,                            -- display lines as one long line
-  scrolloff = 8,                           -- is one of my fav
-  sidescrolloff = 8,
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  guifontwide = "monospace:h17",               -- the font used in graphical neovim applications
-}
+vim.opt.backup = false                          -- creates a backup file
+vim.opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
+vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
+vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
+vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
+vim.opt.ignorecase = true                       -- ignore case in search patterns
+vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
+vim.opt.pumheight = 10                          -- pop up menu height
+vim.opt.showmode = true                         -- we don't need to see things like -- INSERT -- anymore
+vim.opt.showtabline = 2                         -- always show tabs
+vim.opt.smartcase = true                        -- smart case
+vim.opt.smartindent = true                      -- make indenting smarter again
+vim.opt.cindent = true                          -- C-style indenting
+vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
+vim.opt.splitright = true                       -- force all vertical splits to go to the right of current window
+vim.opt.swapfile = false                        -- creates a swapfile
+vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
+vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.undofile = true                         -- enable persistent undo
+vim.opt.updatetime = 300                        -- faster completion (4000ms default)
+vim.opt.writebackup = false                     -- if a file is being edited by another program, it is not allowed to be edited
+vim.opt.expandtab = true                        -- convert tabs to spaces
+vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
+vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
+vim.opt.cursorline = true                       -- highlight the current line
+vim.opt.number = true                           -- set numbered lines
+vim.opt.relativenumber = true                   -- set relative numbered lines
+vim.opt.numberwidth = 4                         -- set number column width to 4 {default 4}
+vim.opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
+vim.opt.wrap = false                            -- display lines as one long line
+vim.opt.scrolloff = 8                           -- keep 8 lines above/below cursor
+vim.opt.sidescrolloff = 8                       -- keep 8 columns left/right of cursor
+vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+vim.opt.guifontwide = "monospace:h17"           -- the font used for wide characters
 
-vim.opt.shortmess:append "c"
-vim.api.nvim_set_option("clipboard", "unnamedplus") -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
-vim.o.colorcolumn = "80"
+vim.opt.shortmess:append "c"          -- Suppress completion menu messages like "match 1 of 3"
+vim.o.colorcolumn = "80"              -- Set color on column 80
+vim.cmd "set cinkeys-=0#"             -- Don't auto-indent when typing # at line start
+vim.cmd "set indentkeys-=0#"          -- Don't trigger reindent when typing # at line start  
+vim.cmd "set whichwrap+=<,>,[,],h,l"  -- Let cursor keys and h/l wrap to next/prev line
+vim.cmd [[set iskeyword+=-]]          -- Treat - as part of words (affects word motions)
+vim.cmd [[set formatoptions-=cro]]    -- Disable auto-commenting on new lines
+vim.cmd "set breakindent"             -- Visually indent wrapped lines
+vim.cmd "set foldmethod=indent"       -- Fold based on indentation
+vim.cmd "set foldlevel=10000"         -- Start with all folds open
+vim.cmd "set foldignore="             -- Don't ignore any lines when folding
+vim.g.copilot_assume_mapped = true    -- Tell Copilot that mappings are handled
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
+-- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
+vim.api.nvim_set_option("clipboard", "unnamedplus") 
+
+-- Suppress specific warnings
+local notify = vim.notify
+vim.notify = function(msg, ...)
+  if msg:match("WARNING.*deprecated") then
+    return
+  end
+  notify(msg, ...)
 end
-
-vim.cmd "set cinkeys-=0#"
-vim.cmd "set indentkeys-=0#"
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-vim.cmd "set breakindent"
-vim.cmd "set foldmethod=indent"
-vim.cmd "set foldlevel=10000"
-vim.cmd "set foldignore="
-vim.g.copilot_assume_mapped = true 
 

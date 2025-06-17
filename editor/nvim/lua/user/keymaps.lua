@@ -6,12 +6,10 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Better window navigation
+-- Better left/right window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-a>j", "<C-w>j", opts)
--- keymap("n", "<C-a>k", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<bs>", "<C-w>h", opts)
+keymap("n", "<bs>", "<C-w>h", opts) -- need this since for some shells, <C-h> gets mapped to ^?, which is backspace. 
 
 keymap("n", "<C-j>", "5j", opts) 
 keymap("n", "<C-k>", "5k", opts)

@@ -1,116 +1,88 @@
-local fn = vim.fn
-
--- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
+vim.opt.rtp:prepend(lazypath)
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
-
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
-
--- Have packer use a popup window
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+-- Setup lazy.nvim
+require("lazy").setup({
+  "nvim-lua/plenary.nvim",                     -- async programming utilities
+  "nvim-telescope/telescope.nvim",             -- fuzzy finder for files/text
+  "jesseduffield/lazygit",                     -- git TUI integration
+  "lukas-reineke/indent-blankline.nvim",       -- indent guide lines
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }, -- syntax highlighting
+  "nvim-lualine/lualine.nvim",                 -- status line
+  {
+    "unblevable/quick-scope",
+    keys = { "f", "F", "t", "T" },
+    config = function()
+      vim.g.qs_highlight_on_keys = { 'f', 'F', 't', 'T' }
+      vim.cmd "highlight QuickScopePrimary guifg='#00ffff' gui=underline ctermfg=155 cterm=underline"
+      vim.cmd "highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline"
     end,
   },
-}
+  "windwp/nvim-autopairs",                     -- auto-close brackets/quotes
+  "windwp/nvim-ts-autotag",                    -- auto-close HTML/XML tags
+  "mbbill/undotree",                           -- visualize undo history
+  "lervag/vimtex",                             -- LaTeX support
 
--- Install your plugins here
-return packer.startup(function(use)
-  
-  use "wbthomason/packer.nvim"                -- the packer package manager
-  use "nvim-lua/plenary.nvim"                 -- for async programming
-  use "nvim-telescope/telescope.nvim"         -- quickly find files in pwd
-  use "jesseduffield/lazygit"                 -- all things git 
-  use "lambdalisue/suda.vim"                  -- Read/Write with sudo privilge
-  use "lukas-reineke/indent-blankline.nvim"   -- indent line guides 
-  use "nvim-treesitter/nvim-treesitter"       -- syntax highlighting
-  
-  use 'nvim-lualine/lualine.nvim'             -- configure status line
-  use 'unblevable/quick-scope'                -- highlights letter when pressing f/F
-  use "windwp/nvim-autopairs"                 -- autopairing (),[], {}, "", ''
-  use "windwp/nvim-ts-autotag"                -- autopairing <html> tags
-  use "mbbill/undotree"                       -- can see undo tree history
-  use "lervag/vimtex"                         -- for compiling tex documents
-  use "navarasu/onedark.nvim"                 -- color scheme
-  use "mhartington/oceanic-next"              -- color scheme
-  use "kmontocam/nvim-conda"                  -- activate conda envs within neovim
-  use "Vigemus/iron.nvim"                     -- interactive REPL 
-  use "terrortylor/nvim-comment"              -- comment out visual blocks of line
-  use "mhinz/vim-startify"                    -- start screen when starting neovim
-  use "akinsho/bufferline.nvim"               -- shows the buffer (tab) line
-  use "moll/vim-bbye"                         -- delete buffers without closing nvim
-  use "akinsho/toggleterm.nvim"               -- floating terminal window
-  use "lewis6991/gitsigns.nvim"               -- see inline git history modifications
-  use({ "L3MON4D3/LuaSnip",                   -- custom snippets
-    run = "make install_jsregexp"
-  })
-  use "kyazdani42/nvim-web-devicons"          -- icons for filetypes
-  use({"iamcco/markdown-preview.nvim",        -- preview markdown in browser
-  run = function() vim.fn["mkdp#util#install"]() end,})   -- install without yarn or npm
-  use {
-    "nvim-neo-tree/neo-tree.nvim",
-      branch = "v3.x",
-      requires = { 
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons", 
-        "MunifTanjim/nui.nvim",
-      }
-  }
-  use "tree-sitter-grammars/tree-sitter-markdown"
-  use {
-    "kawre/leetcode.nvim",
-    build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+  "navarasu/onedark.nvim",                     -- One Dark colorscheme
+  "mhartington/oceanic-next",                  -- Oceanic Next colorscheme
+
+  "kmontocam/nvim-conda",                      -- conda environment integration
+  "Vigemus/iron.nvim",                         -- interactive REPL
+  "terrortylor/nvim-comment",                  -- commenting functionality
+  "akinsho/bufferline.nvim",                   -- buffer tabs
+  "moll/vim-bbye",                             -- delete buffers without closing windows
+  "akinsho/toggleterm.nvim",                   -- floating terminal
+  "lewis6991/gitsigns.nvim",                   -- git diff indicators
+  { "L3MON4D3/LuaSnip", build = "make install_jsregexp" }, -- snippet engine
+  "kyazdani42/nvim-web-devicons",              -- file type icons
+  {
+    "iamcco/markdown-preview.nvim",            -- markdown preview in browser
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",             -- file explorer
+    branch = "v3.x",
     dependencies = {
-        "nvim-telescope/telescope.nvim",
-        -- "ibhagwan/fzf-lua",
-        "nvim-lua/plenary.nvim",
-        "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  },
+  "tree-sitter-grammars/tree-sitter-markdown", -- enhanced markdown parsing
+  {
+    "kawre/leetcode.nvim",                     -- LeetCode integration
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
     },
-    opts = {
-        -- configuration goes here
-    },
-  }
+    opts = {},
+  },
+  
   -- LSP
-  use "williamboman/mason.nvim"               -- LSP: simple to use language server installer
-  use "williamboman/mason-lspconfig.nvim"     -- simple to use language server installer
-  use "neovim/nvim-lspconfig"                 -- enable LSP
-  -- use 'jose-elias-alvarez/null-ls.nvim'       -- LSP diagnostics and code actions
-
-  -- cmp plugins
-  use "hrsh7th/nvim-cmp"                      -- The completion plugin
-  use "hrsh7th/cmp-buffer"                    -- buffer completions
-  use "hrsh7th/cmp-path"                      -- path completions
-  use "hrsh7th/cmp-cmdline"                   -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip"              -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
-end)
+  "williamboman/mason.nvim",                   -- LSP server installer
+  "williamboman/mason-lspconfig.nvim",         -- mason-lspconfig bridge
+  "neovim/nvim-lspconfig",                     -- LSP configuration
+  
+  -- Completion
+  "hrsh7th/nvim-cmp",                          -- completion engine
+  "hrsh7th/cmp-buffer",                        -- buffer completions
+  "hrsh7th/cmp-path",                          -- file path completions
+  "saadparwaiz1/cmp_luasnip",                  -- snippet completions
+  "hrsh7th/cmp-nvim-lsp",                      -- LSP completions
+})
