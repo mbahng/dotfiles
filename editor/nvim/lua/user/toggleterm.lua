@@ -145,8 +145,8 @@ vim.keymap.set({'n', 't'}, '<C-\\>', '<cmd>lua toggle_terminal()<CR>', { noremap
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
   -- Navigate between terminals
-  vim.keymap.set('t', '<C-l>', '<cmd>lua cycle_terminal_right()<CR>', opts)
-  vim.keymap.set('t', '<C-h>', '<cmd>lua cycle_terminal_left()<CR>', opts)
+  vim.keymap.set('t', '<C-j>', '<cmd>lua cycle_terminal_right()<CR>', opts)
+  vim.keymap.set('t', '<C-k>', '<cmd>lua cycle_terminal_left()<CR>', opts)
 end
 
 vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
