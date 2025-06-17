@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Check if server argument is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <server> [port]"
+    echo "Example: $0 mb625@login.cs.duke.edu"
+    echo "Example: $0 mb625@login.cs.duke.edu 8080"
+    exit 1
+fi
+
+SERVER="$1"
+PORT="${2:-2489}"
+
+ps cax | grep lemonade > /dev/null
+if [ $? -eq 0 ]; then
+    echo "lemonade is running."
+else
+    echo "lemonade is not running."
+    nohup lemonade server &
+fi
+
+echo "Connecting to $SERVER on port $PORT..."
+ssh -R $PORT:127.0.0.1:$PORT "$SERVER"
