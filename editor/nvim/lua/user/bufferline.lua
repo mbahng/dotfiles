@@ -27,7 +27,7 @@ bufferline.setup {
       end
       return buf.name
     end,
-    diagnostics = "nvim_lsp", 
+    diagnostics = "none", 
     diagnostics_update_in_insert = false,
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       return "("..count..")"

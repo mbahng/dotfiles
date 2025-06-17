@@ -9,19 +9,13 @@ configs.setup {
     "cpp", 
     "lua", 
     "bash", 
-    "verilog", 
     "html", 
     "css", 
     "markdown_inline", 
     "markdown", 
-    "javascript", 
     "jsdoc", 
-    "typescript", 
     "json", 
     "yaml",
-    "latex",
-    "asm", 
-    "nasm"
   },
   highlight = {
     enable = true, -- false will disable the whole extension

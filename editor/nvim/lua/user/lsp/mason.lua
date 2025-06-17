@@ -2,9 +2,6 @@ require('lspconfig.ui.windows').default_options.border = 'none'
 vim.lsp.set_log_level("OFF") 
 
 local servers = {
-  "clangd", 
-  "gopls",
-	"cssls",
 	"ts_ls",
 	"pyright",
 }
