@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+sudo openconnect --protocol=anyconnect --authgroup=l --user=mb625 portal.duke.edu
