@@ -13,7 +13,7 @@ iron.setup {
       }
     },
     python = {
-      command = { "ipython", "--no-autoindent" },
+      command = { "python3", "--no-autoindent" },
       format = require("iron.fts.common").bracketed_paste
     },
     -- How the repl window will be displayed
