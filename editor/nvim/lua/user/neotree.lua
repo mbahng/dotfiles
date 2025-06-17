@@ -120,6 +120,7 @@ tree.setup(
           never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
             ".DS_Store",
             "__pycache__",
+            "wandb",
           },
           never_show_by_pattern = { -- uses glob style patterns
             --".null-ls_*",
@@ -170,7 +171,11 @@ tree.setup(
           },
         },
 
-        commands = {} -- Add a custom command or override a global one using the same function name
+        commands = {}, -- Add a custom command or override a global one using the same function name
+        filesystem = {
+          async_directory_scan = "auto", -- Can help with large directories
+          use_libuv_file_watcher = true, -- More efficient file watching
+        }
       },
   }
 )
