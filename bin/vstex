@@ -1,0 +1,146 @@
+#!/bin/bash 
+
+STEM=~/Notes/mbahng-com/STEM
+DATA_SCIENCE="${STEM}/Data_Science"
+MATH="${STEM}/Math"
+TECH="${STEM}/Software_Tech"
+PHYSICS="${STEM}/Science"
+
+
+case "$1" in 
+  "ml")
+    cd "${DATA_SCIENCE}/MachineLearning"
+    code . 
+    ;; 
+
+  "deep")
+    cd "${DATA_SCIENCE}/Deep_Learning"
+    code . 
+    ;; 
+
+  "sup")
+    cd "${DATA_SCIENCE}/Supervised_Learning"
+    code . 
+    ;; 
+
+  "stats")
+    cd "${DATA_SCIENCE}/Statistics"
+    code . 
+    ;; 
+
+  "cv")
+    cd "${DATA_SCIENCE}/CV"
+    code . 
+    ;; 
+
+  "nlp")
+    cd "${DATA_SCIENCE}/NLP"
+    code . 
+    ;; 
+
+  "alg")
+    cd "${MATH}/Abstract_Algebra"
+    code .
+    ;;
+
+  "algtop")
+    cd "${MATH}/Algebraic_Topology"
+    code .
+    ;;
+
+  "complex")
+    cd "${MATH}/Complex_Analysis"
+    code .
+    ;;
+
+  "concentration")
+    cd "${MATH}/Concentration_of_Measure"
+    code .
+    ;;
+
+  "diffgeo")
+    cd "${MATH}/Differential_Geometry"
+    code .
+    ;;
+
+  "functional")
+    cd "${MATH}/Functional_Analysis"
+    code .
+    ;;
+
+  "linalg")
+    cd "${MATH}/Linear_Algebra"
+    code .
+    ;;
+
+  "measure")
+    cd "${MATH}/Measure_Theory"
+    code .
+    ;;
+
+  "multi")
+    cd "${MATH}/Multivariate_Calculus"
+    code .
+    ;;
+
+  "number")
+    cd "${MATH}/Number_Theory"
+    code .
+    ;;
+
+  "ode")
+    cd "${MATH}/Ordinary_Differential_Equations"
+    code .
+    ;;
+
+  "pde")
+    cd "${MATH}/Partial_Differential_Equations"
+    code .
+    ;;
+
+  "top")
+    cd "${MATH}/Point_Set_Topology"
+    code .
+    ;;
+
+  "prob")
+    cd "${MATH}/Probability_Theory"
+    code .
+    ;;
+
+  "real")
+    cd "${MATH}/Real_Analysis"
+    code .
+    ;;
+
+  "smooth")
+    cd "${MATH}/Smooth_Manifolds"
+    code .
+    ;;
+
+  "stoch")
+    cd "${MATH}/Stochastic_Processes"
+    code .
+    ;;
+
+  "linux")
+    cd "${TECH}/Linux"
+    code .
+    ;;
+
+  "block")
+    cd "${TECH}/Blockchain"
+    code .
+    ;;
+
+  "qcomp")
+    cd "${TECH}/Quantum_Computing"
+    code .
+    ;;
+
+  "dsa")
+    cd "${TECH}/Data_Structures_Algorithms"
+    code .
+    ;;
+
+esac
