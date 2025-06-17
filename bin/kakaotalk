@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /opt/kiwitalk
+./kiwi-talk_0.5.1_amd64.AppImage
