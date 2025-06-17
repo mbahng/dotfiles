@@ -36,7 +36,7 @@ require("lazy").setup({
   "windwp/nvim-ts-autotag",                    -- auto-close HTML/XML tags
   "mbbill/undotree",                           -- visualize undo history
   "lervag/vimtex",                             -- LaTeX support
-
+  'ojroques/nvim-osc52',                       -- connecting local clipboard to remote connections 
   "navarasu/onedark.nvim",                     -- One Dark colorscheme
   "mhartington/oceanic-next",                  -- Oceanic Next colorscheme
 

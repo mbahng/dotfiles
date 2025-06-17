@@ -62,32 +62,34 @@ keymap("n", "n", "b", opts)
 keymap("v", "n", "b", opts)
 keymap("n", "dn", "db", opts)
 
+-- yanking both copies to neovim clipboard (normal) and local clipboard (osc52) 
+-- local clipboard is good for when working in remote servers. Must be after plugins.lua
+vim.keymap.set('v', 'y', function()
+  -- Copy to Neovim registers
+  vim.cmd('normal! y')
+  -- Copy to system clipboard via OSC52
+  require('osc52').copy_visual()
+end)
+
+vim.keymap.set('n', 'yy', function()
+  vim.cmd('normal! yy')
+  local line = vim.fn.getline('.')
+  require('osc52').copy(line)
+end)
+
+-- vertical split
+keymap("n", "<leader>v", ":vsplit<cr>", opts)
+
 -- go to definition and error and back
 keymap("n", "gD", "lua vim.lsp.buf.declaration()<cr>", opts)
 keymap("n", "gd", "lua vim.lsp.buf.definition()<cr>", opts)
 keymap("n", "gl", ":lua vim.diagnostic.open_float()<cr>", opts)
 keymap("n", "<C-o>", "<C-o>", opts)
 
--- indenting multiples lines
-keymap("n", ":t2<cr>", ":%s;^\\(\\s\\+\\);\\=repeat(' ', len(submatch(0))/2);g<cr>", opts)
-
--- yank to system clipboard
--- vim.keymap.set("v", "y", "+y")
--- keymap("v", "y", "+y", opts)
--- keymap("n", "yy", '"+yy', opts)
-
--- vertical split
-keymap("n", "<leader>v", ":vsplit<cr>", opts)
-
 -- LSP helpers 
 keymap("n", "K", "K", opts) -- hover over  
 keymap("n", "gd", "gd", opts) -- go to definition
 keymap("n", "gd", "gd", opts) -- go to declaration
-
--- diffview open 
--- keymap("n", "<leader>g", ":DiffviewOpen<cr>", opts)
--- keymap("n", "<leader>h", ":DiffviewClose<cr>", opts)
--- keymap("n", "<leader>p", ":DiffviewFileHistory<cr>", opts)
 
 -- leetcode
 keymap("n", "<leader>ll", ":Leet list<cr>", opts)
