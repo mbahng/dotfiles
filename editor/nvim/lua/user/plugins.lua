@@ -17,41 +17,34 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
+
+  -- Essentials for pretty much all coding 
   "nvim-lua/plenary.nvim",                     -- async programming utilities
   "nvim-telescope/telescope.nvim",             -- fuzzy finder for files/text
   "jesseduffield/lazygit",                     -- git TUI integration
+  "mbbill/undotree",                           -- visualize undo history
   "lukas-reineke/indent-blankline.nvim",       -- indent guide lines
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }, -- syntax highlighting
-  "nvim-lualine/lualine.nvim",                 -- status line
+  'ojroques/nvim-osc52',                       -- connecting local clipboard to remote connections 
+  "mhartington/oceanic-next",                  -- Oceanic Next colorscheme
+  "nvim-lualine/lualine.nvim",                 -- status line at the bottom
+  "terrortylor/nvim-comment",                  -- commenting functionality
+  "akinsho/bufferline.nvim",                   -- buffer tabs
+  "moll/vim-bbye",                             -- delete buffers without closing windows
+  "akinsho/toggleterm.nvim",                   -- floating terminal
+  "lewis6991/gitsigns.nvim",                   -- git diff indicators
   {
-    "unblevable/quick-scope",
+    "L3MON4D3/LuaSnip",                        -- snippet engine
+    build = "make install_jsregexp" 
+  },
+  "kyazdani42/nvim-web-devicons",              -- file type icons
+  {
+    "unblevable/quick-scope",                  --  highlights letters when finding with f or F
     keys = { "f", "F", "t", "T" },
     config = function()
       vim.g.qs_highlight_on_keys = { 'f', 'F', 't', 'T' }
       vim.cmd "highlight QuickScopePrimary guifg='#00ffff' gui=underline ctermfg=155 cterm=underline"
       vim.cmd "highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline"
     end,
-  },
-  "windwp/nvim-autopairs",                     -- auto-close brackets/quotes
-  "windwp/nvim-ts-autotag",                    -- auto-close HTML/XML tags
-  "mbbill/undotree",                           -- visualize undo history
-  "lervag/vimtex",                             -- LaTeX support
-  'ojroques/nvim-osc52',                       -- connecting local clipboard to remote connections 
-  "navarasu/onedark.nvim",                     -- One Dark colorscheme
-  "mhartington/oceanic-next",                  -- Oceanic Next colorscheme
-
-  "kmontocam/nvim-conda",                      -- conda environment integration
-  "Vigemus/iron.nvim",                         -- interactive REPL
-  "terrortylor/nvim-comment",                  -- commenting functionality
-  "akinsho/bufferline.nvim",                   -- buffer tabs
-  "moll/vim-bbye",                             -- delete buffers without closing windows
-  "akinsho/toggleterm.nvim",                   -- floating terminal
-  "lewis6991/gitsigns.nvim",                   -- git diff indicators
-  { "L3MON4D3/LuaSnip", build = "make install_jsregexp" }, -- snippet engine
-  "kyazdani42/nvim-web-devicons",              -- file type icons
-  {
-    "iamcco/markdown-preview.nvim",            -- markdown preview in browser
-    build = function() vim.fn["mkdp#util#install"]() end,
   },
   {
     "nvim-neo-tree/neo-tree.nvim",             -- file explorer
@@ -62,7 +55,40 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
     }
   },
-  "tree-sitter-grammars/tree-sitter-markdown", -- enhanced markdown parsing
+  "windwp/nvim-autopairs",                     -- auto-close brackets/quotes
+
+  -- HTML/XML 
+  "windwp/nvim-ts-autotag",                    -- auto-close HTML/XML tags
+
+  -- LaTeX
+  "lervag/vimtex",                             -- LaTeX support
+
+  -- Python Specific 
+  "kmontocam/nvim-conda",                      -- conda environment integration
+  "Vigemus/iron.nvim",                         -- interactive REPL
+
+  -- Markdown 
+  {
+    "iamcco/markdown-preview.nvim",            -- markdown preview in browser
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+
+  -- Syntax Highlighting, LSP, Completion
+  {
+    "nvim-treesitter/nvim-treesitter",         -- syntax highlighting
+    build = ":TSUpdate"
+  },
+  "tree-sitter-grammars/tree-sitter-markdown", -- enhanced markdown parsing since treesitter doesn't have default markdown parsers
+  "williamboman/mason.nvim",                   -- LSP server installer
+  "williamboman/mason-lspconfig.nvim",         -- mason-lspconfig bridge
+  "neovim/nvim-lspconfig",                     -- LSP configuration
+  "hrsh7th/nvim-cmp",                          -- completion engine
+  "hrsh7th/cmp-buffer",                        -- buffer completions
+  "hrsh7th/cmp-path",                          -- file path completions
+  "saadparwaiz1/cmp_luasnip",                  -- snippet completions
+  "hrsh7th/cmp-nvim-lsp",                      -- LSP completions
+
+  -- Special-purpose plugins 
   {
     "kawre/leetcode.nvim",                     -- LeetCode integration
     build = ":TSUpdate html",
@@ -73,16 +99,5 @@ require("lazy").setup({
     },
     opts = {},
   },
-  
-  -- LSP
-  "williamboman/mason.nvim",                   -- LSP server installer
-  "williamboman/mason-lspconfig.nvim",         -- mason-lspconfig bridge
-  "neovim/nvim-lspconfig",                     -- LSP configuration
-  
-  -- Completion
-  "hrsh7th/nvim-cmp",                          -- completion engine
-  "hrsh7th/cmp-buffer",                        -- buffer completions
-  "hrsh7th/cmp-path",                          -- file path completions
-  "saadparwaiz1/cmp_luasnip",                  -- snippet completions
-  "hrsh7th/cmp-nvim-lsp",                      -- LSP completions
+
 })
