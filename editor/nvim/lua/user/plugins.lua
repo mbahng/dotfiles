@@ -36,6 +36,15 @@ require("lazy").setup({
     "L3MON4D3/LuaSnip",                        -- snippet engine
     build = "make install_jsregexp" 
   },
+  {
+    'stevearc/aerial.nvim',
+    event = "VeryLazy", 
+    opts = {},
+    dependencies = {
+       "nvim-treesitter/nvim-treesitter",
+       "nvim-tree/nvim-web-devicons"
+    },
+  }, 
   "kyazdani42/nvim-web-devicons",              -- file type icons
   {
     "unblevable/quick-scope",                  --  highlights letters when finding with f or F
