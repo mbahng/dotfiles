@@ -20,6 +20,7 @@ require "user.bufferline"
 require "user.toggleterm"
 require "user.neotree"
 require "user.ts-autotag"
+require "user.aerial"
 require "user.leetcode"
 
 vim.g.loaded_perl_provider = 0
