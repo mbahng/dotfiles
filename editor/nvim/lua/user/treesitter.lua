@@ -1,9 +1,10 @@
-local status_ok, configs = pcall(require, "ts_context_commentstring")
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   return
 end
 configs.setup {
   ensure_installed = {
+    "python", 
     "c", 
     "cpp", 
     "lua", 
