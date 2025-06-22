@@ -77,11 +77,15 @@ require("lazy").setup({
   "Vigemus/iron.nvim",                         -- interactive REPL
 
   -- Markdown 
-  {
-    "iamcco/markdown-preview.nvim",            -- markdown preview in browser
-    build = function() vim.fn["mkdp#util#install"]() end,
+  { "toppair/peek.nvim",
+    event = "VeryLazy",
+    build = "deno task --quiet build:fast",
+    config = function()
+        require("peek").setup()
+        vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+        vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    end,
   },
-
   -- Syntax Highlighting, LSP, Completion
   {
     "nvim-treesitter/nvim-treesitter",         -- syntax highlighting
