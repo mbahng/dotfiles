@@ -119,8 +119,7 @@ tree.setup(
           },
           never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
             ".DS_Store",
-            "__pycache__",
-            "wandb",
+            "__pycache__"
           },
           never_show_by_pattern = { -- uses glob style patterns
             --".null-ls_*",
@@ -141,7 +140,7 @@ tree.setup(
                                         -- instead of relying on nvim autocmd events.
         window = {
           mappings = {
-            ["<bs>"] = "navigate_up",
+            ["@"] = "navigate_up",
             ["."] = "set_root",
             ["H"] = "toggle_hidden",
             ["/"] = "fuzzy_finder",
