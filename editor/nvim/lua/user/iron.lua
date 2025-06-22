@@ -7,20 +7,17 @@ iron.setup {
     -- Your repl definitions come here
     repl_definition = {
       sh = {
-        -- Can be a table or a function that
-        -- returns a table (see below)
-        command = {"kitty"}
-      }
+        command = {"bash", "-c", "conda activate " .. os.getenv("CONDA_DEFAULT_ENV") .. " && bash"}
+      },
     },
     python = {
-      command = { "python3", "--no-autoindent" },
+      command = {os.getenv("CONDA_PREFIX") .. "ipython", "--no-autoindent" },
       format = require("iron.fts.common").bracketed_paste
     },
     -- How the repl window will be displayed
     -- See below for more information
     repl_open_cmd = require('iron.view').split.vertical.botright(0.5),
   },
-  -- Iron doesn't set keymaps by default anymore.
   -- You can set them here or manually add keymaps to the functions in iron.core
   keymaps = {
     send_motion = "<space>r", 
