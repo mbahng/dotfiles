@@ -1,5 +1,5 @@
 local iron = require("iron.core")
-
+-- IMPORTANT: You must have ipython installed on your env for this to work! 
 iron.setup {
   config = {
     -- Whether a repl should be discarded or not
@@ -7,11 +7,11 @@ iron.setup {
     -- Your repl definitions come here
     repl_definition = {
       sh = {
-        command = {"bash", "-c", "conda activate " .. os.getenv("CONDA_DEFAULT_ENV") .. " && bash"}
+        command = {"bash", "-c", "'conda init && conda activate $CONDA_DEFAULT_ENV'" }
       },
     },
     python = {
-      command = {os.getenv("CONDA_PREFIX") .. "ipython", "--no-autoindent" },
+      command = { "python", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
       format = require("iron.fts.common").bracketed_paste
     },
     -- How the repl window will be displayed

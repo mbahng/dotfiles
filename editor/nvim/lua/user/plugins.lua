@@ -84,8 +84,7 @@ require("lazy").setup({
   { "kmontocam/nvim-conda",                           -- conda environment integration
     event = "VeryLazy",
   },
-  { "Vigemus/iron.nvim",
-    event =  "VeryLazy"                               -- interactive REPL
+  { "Vigemus/iron.nvim",                              -- interactive REPL
   },
   -- Markdown 
   { "toppair/peek.nvim",
