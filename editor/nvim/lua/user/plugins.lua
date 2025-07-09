@@ -46,6 +46,11 @@ require("lazy").setup({
   },
   { "lewis6991/gitsigns.nvim",                        -- git diff indicators
   },
+  { "unblevable/quick-scope",                        -- git diff indicators
+		init = function()
+			vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
+		end,
+  },
 
   { "L3MON4D3/LuaSnip",                               -- snippet engine
     build = "make install_jsregexp"
@@ -60,8 +65,6 @@ require("lazy").setup({
        "nvim-treesitter/nvim-treesitter",
        "nvim-tree/nvim-web-devicons"
     },
-  },
-  { "folke/flash.nvim",                               -- easy jumping with keybinding 'f', see config
   },
   { "nvim-neo-tree/neo-tree.nvim",                    -- file explorer
     branch = "v3.x",
