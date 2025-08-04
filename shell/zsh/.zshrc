@@ -23,6 +23,7 @@ alias ssh='ssh -t'
 alias tma='tmux attach' 
 alias tml='tmux ls' 
 alias tmx='tmux kill-server' 
+alias which='which -p' 
 
 
 
