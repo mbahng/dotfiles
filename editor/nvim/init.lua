@@ -22,6 +22,7 @@ require "user.neotree"
 require "user.ts-autotag"
 require "user.aerial"
 require "user.leetcode"
+require "user.dadbod"
 
 vim.g.loaded_perl_provider = 0
 vim.cmd "hi WinSeparator guifg=#ffffff"

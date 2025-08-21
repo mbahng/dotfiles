@@ -89,6 +89,12 @@ require("lazy").setup({
   },
   { "Vigemus/iron.nvim",                              -- interactive REPL
   },
+  { "tpope/vim-dadbod",                               -- for SQL
+    dependencies = {
+      "kristijanhusak/vim-dadbod-ui",  -- UI for browsing DB
+      "kristijanhusak/vim-dadbod-completion", -- Autocompletion
+    },
+  },
   -- Markdown 
   { "toppair/peek.nvim",
     event = "VeryLazy",
