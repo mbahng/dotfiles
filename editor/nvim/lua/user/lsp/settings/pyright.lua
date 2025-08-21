@@ -3,8 +3,8 @@ return {
     python = {
       analysis = {
         -- Type checking configuration - optimized for performance
-        typeCheckingMode = "off", -- Should be off or basic
-        diagnosticMode = "openFilesOnly", -- Changed from "workspace" to improve performance
+        typeCheckingMode = "basic", -- Should be off or basic
+        diagnosticMode = "workspace", -- Changed from "workspace" to improve performance
         autoSearchPaths = false, -- Changed to false to reduce indexing
         useLibraryCodeForTypes = false, -- Disabled to prevent deep analysis of libraries
         
