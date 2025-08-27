@@ -32,6 +32,7 @@ keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<leader>h", ":BufferLineMovePrev<CR>", opts)
 keymap("n", "<leader>l", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<C-n>", ":tabnew<CR>", opts)
 keymap("n", "<C-x>", ":Bdelete<CR>", opts)
 keymap("n", "<C-t>", ":Telescope find_files<cr>", opts)
 
