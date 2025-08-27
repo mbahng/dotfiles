@@ -2,7 +2,7 @@
 
 if [ $# -eq 1 ]; then
     # If only one argument is provided, run without --gres
-    srun --nodes=1 --ntasks-per-node=1 --partition=compsci-gpu --time=$1:00:00 --gres=gpu:1 --pty zsh -i
+    srun --nodes=1 --ntasks-per-node=1 --time=$1:00:00 --pty zsh -i
 elif [ $# -eq 2 ]; then
     # If two arguments are provided, include --gres with the second argument
     srun --nodes=1 --ntasks-per-node=1 --partition=compsci-gpu --gres=gpu:1 --time=$1:00:00 --gres=gpu:${2} --pty zsh -i
