@@ -17,13 +17,13 @@ toggleterm.setup({
 	close_on_exit = true,
 	shell = "zsh", 
 	float_opts = {
-		border = "curved",
+		border = "double",
 		winblend = 0,
     width = function()
-      return math.ceil(vim.o.columns * 0.95)
+      return math.ceil(vim.o.columns * 0.99)
     end,
     height = function()
-      return math.ceil(vim.o.lines * 0.9)
+      return math.ceil(vim.o.lines * 0.99)
     end,
 		highlights = {
 			border = "Normal",
@@ -39,7 +39,7 @@ local term1 = Terminal:new({
   count = 1,
   direction = 'float',
   float_opts = {
-    border = 'curved',
+    border = 'single',
   },
   highlights = {
     FloatBorder = {
@@ -52,7 +52,7 @@ local term2 = Terminal:new({
   count = 2,
   direction = 'float',
   float_opts = {
-    border = 'curved',
+    border = 'single',
   },
   highlights = {
     FloatBorder = {
@@ -65,7 +65,7 @@ local term3 = Terminal:new({
   count = 3,
   direction = 'float',
   float_opts = {
-    border = 'curved',
+    border = 'single',
   },
   highlights = {
     FloatBorder = {
@@ -78,7 +78,7 @@ local term4 = Terminal:new({
   count = 4,
   direction = 'float',
   float_opts = {
-    border = 'curved',
+    border = 'single',
   },
   highlights = {
     FloatBorder = {
