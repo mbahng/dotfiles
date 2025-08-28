@@ -714,47 +714,39 @@ ls.add_snippets("tex",
         \caption{Algorithm Name}
         \label{alg:<>}
         \begin{algorithmic}[1]  % The [1] adds line numbers
-          % Procedure declaration
-          \Procedure{ProcedureName}{parameter1, parameter2}
-              
-          % Input/Output documentation
           \Require{Input requirements or preconditions}
           \Ensure{Output guarantees or postconditions}
-          
-          % Variable initialization
-          \State $variable1 \gets initialValue$
-          \State $variable2 \gets 0$
-          
-          % Control structures
-          \If{condition}
-              \State statement1
+          \Procedure{ProcedureName}{parameter1, parameter2}
+            % Variable initialization
+            \State $x \gets 0$
+            
+            % Control structures
+            \If{condition}
               \State statement2
-          \ElsIf{condition2}
+            \ElsIf{condition2}
               \State statement3
-          \Else
+            \Else
               \State statement4
-          \EndIf
-          
-          % Loops
-          \For{$i \gets 1$ to $n$}
+            \EndIf
+            
+            \For{$i \gets 1$ to $n$}
               \State perform operation
-          \EndFor
-          
-          \While{condition}
+            \EndFor
+            \While{condition}
               \State perform operation
-          \EndWhile
-          
-          % Function calls
-          \State $result \gets \Call{SubProcedure}{arg1, arg2}$
-          
-          % Return statement
-          \State \Return $result$
+            \EndWhile
+            
+            % Function calls
+            \State $result \gets \Call{SubProcedure}{arg1, arg2}$
+            
+            % Return statement
+            \State \Return $result$
           \EndProcedure
 
           % Sub-procedure definition
           \Procedure{SubProcedure}{arg1, arg2}
-              \State perform operations
-              \State \Return $value$
+            \State perform operations
+            \State \Return $value$
           \EndProcedure
         \end{algorithmic}
         \end{algorithm}
