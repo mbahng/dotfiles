@@ -710,7 +710,7 @@ ls.add_snippets("tex",
     s({trig="\\algorithm", regTrig=false, snippetType="snippet"},
       fmta(
       [[
-        \begin{algorithm}
+        \begin{algorithm}[H]
         \caption{Algorithm Name}
         \label{alg:<>}
         \begin{algorithmic}[1]  % The [1] adds line numbers
@@ -997,7 +997,7 @@ ls.add_snippets("tex",
     \usetikzlibrary{positioning}
     \usetikzlibrary{calc}
     \usepackage{graphicx}
-    \usepackage{algorithmic}
+    \usepackage{algorithm, algpseudocode}
     \usepackage{caption} 
     \usepackage{subcaption}
     \captionsetup{font=small}
