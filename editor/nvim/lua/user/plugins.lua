@@ -44,6 +44,8 @@ require("lazy").setup({
   },
   { "akinsho/toggleterm.nvim",                        -- floating terminal
   },
+  { "sindrets/diffview.nvim",                        -- git diff indicators
+  },
   { "lewis6991/gitsigns.nvim",                        -- git diff indicators
   },
   { "unblevable/quick-scope",                        -- git diff indicators
