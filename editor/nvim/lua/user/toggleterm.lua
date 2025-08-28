@@ -23,7 +23,7 @@ toggleterm.setup({
       return math.ceil(vim.o.columns * 0.99)
     end,
     height = function()
-      return math.ceil(vim.o.lines * 0.99)
+      return math.ceil(vim.o.lines * 0.9)
     end,
 		highlights = {
 			border = "Normal",
