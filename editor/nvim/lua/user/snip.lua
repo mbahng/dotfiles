@@ -774,6 +774,17 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="\\heuristic", regTrig=false, snippetType="snippet"},
+      fmta(
+      [[
+        \begin{heuristic}
+          <>
+        \end{heuristic}
+      ]],
+      { i(1) }
+      )
+    ),
+
     s({trig="\\theorem", regTrig=false, snippetType="snippet"},
       fmta(
       [[
@@ -1056,14 +1067,6 @@ ls.add_snippets("tex",
       breakable, 
       title = \textbf{Theorem \thetcbcounter ~(#1)}
     } 
-    \newtcolorbox[auto counter, number within=section]{proposition}[1][]
-    {
-      colframe = red!25,
-      colback  = red!10,
-      coltitle = red!20!black,  
-      breakable, 
-      title = \textbf{Proposition \thetcbcounter ~(#1)}
-    } 
     \newtcolorbox[auto counter, number within=section]{corollary}[1][]
     {
       colframe = red!25,
@@ -1079,6 +1082,14 @@ ls.add_snippets("tex",
       coltitle = orange!20!black,  
       breakable, 
       title = \textbf{Proof. }
+    } 
+    \newtcolorbox[auto counter, number within=section]{heuristic}[1][]
+    {
+      colframe = red!25,
+      colback  = red!10,
+      coltitle = red!20!black,  
+      breakable, 
+      title = \textbf{Heuristic \thetcbcounter ~(#1)}
     } 
     \newtcolorbox[auto counter, number within=section]{definition}[1][]
     {
