@@ -116,8 +116,6 @@ keymap("v", "<leader>w", "g<S-g>", opts)
 -- You probably also want to set a keymap to toggle aerial
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
 
-vim.keymap.set("n", "<leader>s", ":PeekOpen<cr>")
-
 -- diffview
 vim.cmd("cnoreabbrev df DiffviewOpen")
 
