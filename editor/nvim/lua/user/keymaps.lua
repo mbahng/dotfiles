@@ -118,7 +118,6 @@ vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
 
 -- diffview
 vim.cmd("cnoreabbrev df DiffviewOpen")
-
-keymap("n", "<leader>dh", ":DiffviewFileHistory<cr>", opts)
+vim.cmd("cnoreabbrev dh DiffviewFileHistory %")
 keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
 
