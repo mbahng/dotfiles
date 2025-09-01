@@ -11,7 +11,7 @@ iron.setup {
       },
     },
     python = {
-      command = { "python", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
+      command = { "ipython", "--no-confirm-exit", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
       format = require("iron.fts.common").bracketed_paste
     },
     -- How the repl window will be displayed
@@ -37,7 +37,7 @@ iron.setup {
   -- If the highlight is on, you can change how it looks
   -- For the available options, check nvim_set_hl
   highlight = {
-    italic = true
+    italic = false 
   },
-  ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
+  ignore_blank_lines = false, -- ignore blank lines when sending visual select lines
 }
