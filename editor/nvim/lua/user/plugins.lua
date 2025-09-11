@@ -112,8 +112,6 @@ require("lazy").setup({
   },
   { "williamboman/mason.nvim",                        -- LSP server installer
   },
-  { "williamboman/mason-lspconfig.nvim",              -- mason-lspconfig bridge
-  },
   { "neovim/nvim-lspconfig",                          -- LSP configuration
   },
   { "hrsh7th/nvim-cmp",                               -- completion engine

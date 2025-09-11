@@ -75,6 +75,7 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
 	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	keymap(bufnr, "n", "<leader>lc", "<cmd>lua print('Active LSP clients:'); for _, client in pairs(vim.lsp.get_clients({bufnr=0})) do print('  ' .. client.name .. ' (id: ' .. client.id .. ')') end<CR>", opts)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 

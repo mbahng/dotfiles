@@ -81,16 +81,9 @@ end)
 -- vertical split
 keymap("n", "<leader>v", ":vsplit<cr>", opts)
 
--- go to definition and error and back
-keymap("n", "gD", "lua vim.lsp.buf.declaration()<cr>", opts)
-keymap("n", "gd", "lua vim.lsp.buf.definition()<cr>", opts)
-keymap("n", "gl", ":lua vim.diagnostic.open_float()<cr>", opts)
-keymap("n", "<C-o>", "<C-o>", opts)
-
 -- LSP helpers 
 keymap("n", "K", "K", opts) -- hover over  
-keymap("n", "gd", "gd", opts) -- go to definition
-keymap("n", "gd", "gd", opts) -- go to declaration
+keymap("n", "<C-o>", "<C-o>", opts) -- jump back
 
 -- leetcode
 keymap("n", "<leader>ll", ":Leet list<cr>", opts)
