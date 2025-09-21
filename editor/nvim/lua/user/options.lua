@@ -35,7 +35,7 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 vim.opt.guifontwide = "monospace:h17"           -- the font used for wide characters
 
 vim.opt.shortmess:append "c"          -- Suppress completion menu messages like "match 1 of 3"
-vim.o.colorcolumn = "80"              -- Set color on column 80
+-- vim.o.colorcolumn = "80"              -- Set color on column 80
 vim.cmd "set cinkeys-=0#"             -- Don't auto-indent when typing # at line start
 vim.cmd "set indentkeys-=0#"          -- Don't trigger reindent when typing # at line start  
 vim.cmd "set whichwrap+=<,>,[,],h,l"  -- Let cursor keys and h/l wrap to next/prev line
