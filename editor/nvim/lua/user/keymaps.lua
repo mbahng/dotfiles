@@ -6,6 +6,10 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- for mistyping 
+keymap("n", ":Q<cr>", ":q<cr>", opts)
+keymap("n", ":W<cr>", ":w<cr>", opts)
+
 -- Better left/right window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
