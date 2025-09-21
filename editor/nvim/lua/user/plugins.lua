@@ -91,6 +91,16 @@ require("lazy").setup({
   },
   { "Vigemus/iron.nvim",                              -- interactive REPL
   },
+  { "mfussenegger/nvim-dap", 
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "rcarriga/nvim-dap-ui",
+      "nvim-neotest/nvim-nio",
+      "mfussenegger/nvim-dap-python",
+      "theHamsta/nvim-dap-virtual-text",
+    }
+  },
   { "tpope/vim-dadbod",                               -- for SQL
     dependencies = {
       "kristijanhusak/vim-dadbod-ui",  -- UI for browsing DB

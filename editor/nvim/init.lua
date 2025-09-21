@@ -24,6 +24,8 @@ require "user.aerial"
 require "user.leetcode"
 require "user.diffview"
 require "user.dadbod"
+require "user.dap"
+
 
 vim.g.loaded_perl_provider = 0
 vim.cmd "hi WinSeparator guifg=#ffffff"
