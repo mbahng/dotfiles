@@ -18,21 +18,15 @@ M.setup = function()
 		{ name = "DiagnosticSignInfo", text = "" },
 	}
 
-	for _, sign in ipairs(signs) do
-    vim.diagnostic.config({
-      signs = {
-        text = {
-          [vim.diagnostic.severity.ERROR] = sign.text,
-          [vim.diagnostic.severity.WARN] = sign.text,
-        }
-      }
-    })
-	end
-
 	local config = {
 		virtual_text = false, -- disable virtual text
 		signs = {
-			active = signs, -- show signs
+			text = {
+				[vim.diagnostic.severity.ERROR] = signs[1].text,
+				[vim.diagnostic.severity.WARN] = signs[2].text,
+				[vim.diagnostic.severity.HINT] = signs[3].text,
+				[vim.diagnostic.severity.INFO] = signs[4].text,
+			}
 		},
 		update_in_insert = true,
 		underline = true,
