@@ -38,4 +38,4 @@ vim.api.nvim_create_autocmd("UILeave", {
   callback = function() io.write("\027]111\027\\") end,
 })
 vim.g.loaded_perl_provider = 0
-vim.cmd "hi WinSeparator guifg=#ffffff"
+
