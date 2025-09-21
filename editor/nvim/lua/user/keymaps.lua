@@ -114,3 +114,6 @@ vim.cmd("cnoreabbrev df DiffviewOpen")
 vim.cmd("cnoreabbrev dh DiffviewFileHistory %")
 keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
 
+-- gitsigns 
+keymap("n", "<leader>wd", ":Gitsigns toggle_word_diff<cr>", opts)
+
