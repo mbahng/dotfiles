@@ -8,20 +8,20 @@ require("dapui").setup({
     {
       elements = {
         -- You can remove any of these you don't want
-        { id = "scopes", size = 0.75 },      -- Variables in current scope
-        -- { id = "breakpoints", size = 0.25 }, -- List of breakpoints
-        { id = "stacks", size = 0.25 },      -- Call stack
-        -- { id = "watches", size = 0.25 },     -- Watch expressions
+        { id = "scopes", size = 0.76 },      -- Variables in current scope
+        { id = "breakpoints", size = 0.12 }, -- List of breakpoints
+        { id = "stacks", size = 0.12 },      -- Call stack
       },
-      size = 80,  -- Width of the sidebar
+      size = 60,  -- Width of the sidebar
       position = "left",
     },
     {
       elements = {
-        { id = "console", size = 1.0 },      -- Program output
+        { id = "console", size = 0.5 },      -- Program output
+        { id = "repl", size = 0.5 },     -- Watch expressions
       },
-      size = 10,  -- Height of bottom panel
-      position = "bottom",
+      size = 80,  -- Height of bottom panel
+      position = "right",
     },
   },
 })
@@ -40,6 +40,41 @@ require("nvim-dap-virtual-text").setup({
 })
 
 dap_python.setup("python3")
+
+table.insert(require('dap').configurations.python, {
+  type = 'python',
+  request = 'launch',
+  name = 'Debug protopnet train-prototree',
+
+  -- Since you're using `python -m protopnet`, use module instead of program
+  module = 'protopnet',
+  
+  args = {
+    'train-prototree',
+    '--no-wandb',
+    '--push',
+    '--dataset=bioscan_genetic',
+    '--dataset-id=smal',
+    '--backbone=genconv',
+    '--warm-up-phase-len=1',
+    '--joint-phase-len=1',
+    '--variability-coef=-1e-8',
+    '--cluster-coef=-0.00',
+    '--orthogonality-coef=0.0',
+    '--latent-dim-multiplier-exp=2',
+    '--phase-multiplier=1',
+    '--phase-relative-lr-multiplier=1.72334',
+    '--num-addon-layers=3',
+    '--batch-size=512',
+    '--depth=10',
+    '--save-every-n-epochs=1',
+    '--backbone-lr=0.0',
+    '--add-on-lr=0.001',
+    '--prototype-lr=0.002',
+  },
+
+  console = "integratedTerminal",
+})
 
 vim.fn.sign_define("DapBreakpoint", {
   text = "",
@@ -112,15 +147,12 @@ vim.keymap.set("n", "<leader>du", function()
   dapui.toggle()
 end, opts)
 
--- Toggle specific element
-vim.keymap.set("n", "<leader>dS", function()
-  require("dapui").toggle({ element = "scopes" })
+-- Navigate up the call stack (to caller)
+vim.keymap.set("n", "<leader>dU", function()
+  dap.up()
 end, opts)
 
-vim.keymap.set("n", "<leader>dR", function()
-  require("dapui").toggle({ element = "repl" })
-end, opts)
-
-vim.keymap.set("n", "<leader>dW", function()
-  require("dapui").toggle({ element = "watches" })
+-- Navigate down the call stack (to callee)
+vim.keymap.set("n", "<leader>dD", function()
+  dap.down()
 end, opts)
