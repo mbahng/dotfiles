@@ -25,6 +25,7 @@ require "user.leetcode"
 require "user.diffview"
 require "user.dadbod"
 require "user.dap"
+-- require "user.oil"
 
 vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
   callback = function()

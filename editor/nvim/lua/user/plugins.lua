@@ -17,7 +17,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  -- Essentials for pretty much all coding 
+  -- Essentials for pretty much all coding  
+  { "stevearc/oil.nvim",
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    lazy = false,
+  }, 
   { "nvim-lua/plenary.nvim",                          -- async programming utilities
   },
   { "MunifTanjim/nui.nvim",                           -- UI component library for nvim 
