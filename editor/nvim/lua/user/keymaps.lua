@@ -116,8 +116,7 @@ vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
 -- diffview
 vim.cmd("cnoreabbrev df DiffviewOpen")
 vim.cmd("cnoreabbrev dh DiffviewFileHistory %")
-keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
-
+vim.cmd("cnoreabbrev dq DiffviewClose")
 -- gitsigns 
 keymap("n", "<leader>wd", ":Gitsigns toggle_word_diff<cr>", opts)
 

@@ -1,8 +1,12 @@
 local actions = require("diffview.actions")
 
+vim.cmd("highlight DiffAdd guibg=#2d4a2b guifg=#a6e3a1")
+vim.cmd("highlight DiffDelete guibg=#4a2d2d guifg=#f38ba8")
+vim.cmd("highlight DiffChange guibg=#3d3a2d guifg=#f9e2af")
+
 require("diffview").setup({
   diff_binaries = false,    -- Show diffs for binaries
-  enhanced_diff_hl = false, -- See |diffview-config-enhanced_diff_hl|
+  enhanced_diff_hl = true, -- See |diffview-config-enhanced_diff_hl|
   git_cmd = { "git" },      -- The git executable followed by default args.
   hg_cmd = { "hg" },        -- The hg executable followed by default args.
   use_icons = true,         -- Requires nvim-web-devicons
