@@ -2,6 +2,24 @@ local dap = require("dap")
 local dapui = require("dapui")
 local dap_python = require("dap-python")
 
+dap_python.setup("python3")
+
+dap.adapters.gdb = {
+  type = "executable",
+  command = "gdb",
+  args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+}
+
+dap.adapters.lldb = {
+  type = 'executable',
+  command = '/opt/homebrew/opt/llvm/bin/lldb-dap',
+  name = 'lldb'
+}
+
+
+
+-- UI and virtual text 
+
 require("dapui").setup({
   expand_lines = false, 
   layouts = {
@@ -39,42 +57,131 @@ require("nvim-dap-virtual-text").setup({
   end,
 })
 
-dap_python.setup("python3")
 
-table.insert(require('dap').configurations.python, {
-  type = 'python',
-  request = 'launch',
-  name = 'Debug protopnet train-prototree',
 
-  -- Since you're using `python -m protopnet`, use module instead of program
-  module = 'protopnet',
-  
-  args = {
-    'train-prototree',
-    '--no-wandb',
-    '--push',
-    '--dataset=bioscan_genetic',
-    '--dataset-id=smal',
-    '--backbone=genconv',
-    '--warm-up-phase-len=1',
-    '--joint-phase-len=1',
-    '--variability-coef=-1e-8',
-    '--cluster-coef=-0.00',
-    '--orthogonality-coef=0.0',
-    '--latent-dim-multiplier-exp=2',
-    '--phase-multiplier=1',
-    '--phase-relative-lr-multiplier=1.72334',
-    '--num-addon-layers=3',
-    '--batch-size=512',
-    '--depth=10',
-    '--save-every-n-epochs=1',
-    '--backbone-lr=0.0',
-    '--add-on-lr=0.001',
-    '--prototype-lr=0.002',
+
+-- Configurations 
+
+dap.configurations.python = {
+  {
+    type = 'python',
+    request = 'launch',
+    name = 'Launch',
+    program = '${file}',
+    args = {},
+    console = "integratedTerminal",
   },
+  {
+    type = 'python',
+    request = 'launch',
+    name = 'Launch file with arguments',
+    program = '${file}',
+    args = function()
+      local args_string = vim.fn.input('Arguments: ')
+      return vim.split(args_string, " +")
+    end,
+    console = "integratedTerminal",
+  },
+  {
+    type = 'python',
+    request = 'launch',
+    name = 'Debug protopnet train-prototree',
+    module = 'protopnet',
+    args = {
+      'train-prototree',
+      '--no-wandb',
+      '--push',
+      '--dataset=bioscan_genetic',
+      '--dataset-id=smal',
+      '--backbone=genconv',
+      '--warm-up-phase-len=1',
+      '--joint-phase-len=1',
+      '--variability-coef=-1e-8',
+      '--cluster-coef=-0.00',
+      '--orthogonality-coef=0.0',
+      '--latent-dim-multiplier-exp=2',
+      '--phase-multiplier=1',
+      '--phase-relative-lr-multiplier=1.72334',
+      '--num-addon-layers=3',
+      '--batch-size=512',
+      '--depth=10',
+      '--save-every-n-epochs=1',
+      '--backbone-lr=0.0',
+      '--add-on-lr=0.001',
+      '--prototype-lr=0.002',
+    },
+    console = "integratedTerminal",
+  },
+}
 
-  console = "integratedTerminal",
-})
+dap.configurations.cpp = {
+  {
+    name = 'Launch',
+    type = 'lldb',
+    request = 'launch',
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+    args = {},
+    runInTerminal = false,
+  },
+  {
+    name = 'Launch with arguments',
+    type = 'lldb',
+    request = 'launch',
+    program = function()
+      local program = vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+      if program == '' then return nil end
+
+      local args_string = vim.fn.input('Arguments: ')
+      if args_string ~= '' then
+        -- Store args in a global variable to be used by the args function
+        _G.dap_temp_args = vim.split(args_string, " +")
+      else
+        _G.dap_temp_args = {}
+      end
+
+      return program
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+    args = function()
+      return _G.dap_temp_args or {}
+    end,
+    runInTerminal = false,
+  },
+  -- {
+  --   name = 'Build and Launch',
+  --   type = 'lldb',
+  --   request = 'launch',
+  --   program = function()
+  --     -- Build first
+  --     local build_cmd = vim.fn.input('Build command: ', 'make', 'shellcmd')
+  --     vim.fn.system(build_cmd)
+  --     if vim.v.shell_error ~= 0 then
+  --       vim.notify('Build failed!', vim.log.levels.ERROR)
+  --       return nil
+  --     end
+  --     return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+  --   end,
+  --   cwd = '${workspaceFolder}',
+  --   stopOnEntry = false,
+  --   args = {},
+  --   runInTerminal = false,
+  -- },
+}
+
+dap.configurations.c = dap.configurations.cpp
+
+
+
+
+
+
+
+-- Signs
 
 vim.fn.sign_define("DapBreakpoint", {
   text = "",
