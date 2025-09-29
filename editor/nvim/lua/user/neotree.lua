@@ -110,6 +110,14 @@ tree.setup( {
         --"node_modules"
       },
       hide_by_pattern = { -- uses glob style patterns
+        "*.aux",
+        "*.fdb_latexmk",
+        "*.fls",
+        "*.log",
+        "*.synctex.gz",
+        "*.synctex.toc",
+        "*.toc",
+        "*.out",
         --"*.meta",
         --"*/src/*/tsconfig.json",
       },
