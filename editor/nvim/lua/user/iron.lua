@@ -11,7 +11,7 @@ iron.setup {
       },
     },
     python = {
-      command = { "ipython", "--no-confirm-exit", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
+      command = { "python", "--no-confirm-exit", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
       format = require("iron.fts.common").bracketed_paste
     },
     -- How the repl window will be displayed
