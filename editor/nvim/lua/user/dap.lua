@@ -2,7 +2,7 @@ local dap = require("dap")
 local dapui = require("dapui")
 local dap_python = require("dap-python")
 
-dap_python.setup("python3")
+dap_python.setup("python")
 
 dap.adapters.gdb = {
   type = "executable",
@@ -20,7 +20,7 @@ dap.adapters.lldb = {
 
 -- UI and virtual text 
 
-require("dapui").setup({
+dapui.setup({
   expand_lines = false, 
   layouts = {
     {

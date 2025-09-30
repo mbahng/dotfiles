@@ -84,7 +84,7 @@ tree.setup( {
       required_width = 110, -- min width of window required to show this column
     },
     symlink_target = {
-      enabled = false,
+      enabled = true,
     },
   },
   -- A list of functions, each representing a global custom command
@@ -147,32 +147,32 @@ tree.setup( {
                                     -- instead of relying on nvim autocmd events.
     window = {
       mappings = {
-        ["."] = "set_root",
-        ["oh"] = "toggle_hidden",
-        ["/"] = "fuzzy_finder",
-        ["D"] = "fuzzy_finder_directory",
-        ["#"] = "fuzzy_sorter", -- fuzzy sorting using the fzy algorithm
+        -- ["."] = "set_root",
+        -- ["oh"] = "toggle_hidden",
+        -- ["/"] = "fuzzy_finder",
+        -- ["D"] = "fuzzy_finder_directory",
+        -- ["#"] = "fuzzy_sorter", -- fuzzy sorting using the fzy algorithm
         -- ["D"] = "fuzzy_sorter_directory",
-        ["f"] = "filter_on_submit",
-        ["<c-x>"] = "clear_filter",
-        ["[g"] = "prev_git_modified",
-        ["]g"] = "next_git_modified",
-        ["o"] = { "show_help", nowait=false, config = { title = "Order by", prefix_key = "o" }},
-        ["oc"] = { "order_by_created", nowait = false },
-        ["od"] = { "order_by_diagnostics", nowait = false },
-        ["og"] = { "order_by_git_status", nowait = false },
-        ["om"] = { "order_by_modified", nowait = false },
-        ["on"] = { "order_by_name", nowait = false },
-        ["os"] = { "order_by_size", nowait = false },
-        ["ot"] = { "order_by_type", nowait = false },
+        -- ["f"] = "filter_on_submit",
+        -- ["<c-x>"] = "clear_filter",
+        -- ["[g"] = "prev_git_modified",
+        -- ["]g"] = "next_git_modified",
+        -- ["o"] = { "show_help", nowait=false, config = { title = "Order by", prefix_key = "o" }},
+        -- ["oc"] = { "order_by_created", nowait = false },
+        -- ["od"] = { "order_by_diagnostics", nowait = false },
+        -- ["og"] = { "order_by_git_status", nowait = false },
+        -- ["om"] = { "order_by_modified", nowait = false },
+        -- ["on"] = { "order_by_name", nowait = false },
+        -- ["os"] = { "order_by_size", nowait = false },
+        -- ["ot"] = { "order_by_type", nowait = false },
         ["H"] = "navigate_up",
         ["L"] = "set_root"
       },
       fuzzy_finder_mappings = { -- define keymaps for filter popup window in fuzzy_finder_mode
-        ["<down>"] = "move_cursor_down",
-        ["<C-n>"] = "move_cursor_down",
-        ["<up>"] = "move_cursor_up",
-        ["<C-p>"] = "move_cursor_up",
+        -- ["<down>"] = "move_cursor_down",
+        -- ["<C-n>"] = "move_cursor_down",
+        -- ["<up>"] = "move_cursor_up",
+        -- ["<C-p>"] = "move_cursor_up",
         -- ['<key>'] = function(state, scroll_padding) ... end,
       },
     },
@@ -185,4 +185,29 @@ tree.setup( {
   },
 })
 
+local events = require("neo-tree.events")
+
+local function handleTreeEvent()
+  local dapui = require("dapui")
+
+  -- Check if any dapui windows are open
+  local dapui_open = false
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    local ft = vim.bo[buf].filetype
+    if ft and ft:match('^dapui_') then
+      dapui_open = true
+      break
+    end
+  end
+
+  if dapui_open then
+    dapui.open({ reset = true })
+  end
+end
+
+events.subscribe({
+    event = events.NEO_TREE_WINDOW_AFTER_CLOSE,
+    handler = handleTreeEvent,
+})
 
