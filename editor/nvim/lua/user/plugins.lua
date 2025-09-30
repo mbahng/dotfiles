@@ -22,6 +22,8 @@ require("lazy").setup({
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     lazy = false,
   }, 
+  { "dhruvasagar/vim-table-mode" 
+  },
   { "nvim-lua/plenary.nvim",                          -- async programming utilities
   },
   { "MunifTanjim/nui.nvim",                           -- UI component library for nvim 
