@@ -151,6 +151,7 @@ dependencies:
       - absl-py==2.2.2
       - aiohttp==3.8.3
       - aiosignal==1.2.0
+      - annotated-types==0.7.0
       - annoy==1.17.3
       - appdirs==1.4.4
       - asttokens==2.2.1
@@ -175,6 +176,7 @@ dependencies:
       - decorator==5.1.1
       - distlib==0.3.6
       - docker-pycreds==0.4.0
+      - eval-type-backport==0.2.2
       - exceptiongroup==1.1.0
       - execnet==1.9.0
       - executing==1.2.0
@@ -234,6 +236,8 @@ dependencies:
       - pyasn1-modules==0.4.2
       - pycodestyle==2.11.0
       - pycryptodome==3.17
+      - pydantic==2.11.7
+      - pydantic-core==2.33.2
       - pyflakes==3.1.0
       - pygments==2.14.0
       - pyparsing==3.0.9
@@ -265,13 +269,14 @@ dependencies:
       - tornado==6.2
       - tqdm==4.64.1
       - traitlets==5.9.0
-      - typing-extensions==4.4.0
+      - typing-extensions==4.15.0
+      - typing-inspection==0.4.1
       - tzdata==2023.3
       - urllib3==1.26.14
       - virtualenv==20.18.0
-      - wandb==0.16.6
+      - wandb==0.21.1
       - wcwidth==0.2.6
       - werkzeug==3.0.6
       - yarl==1.8.2
       - zipp==3.12.1
-prefix: /usr/project/xtmp/mb625/miniconda3/envs/protopnext
+prefix: /home/users/mb625/miniconda3/envs/protopnext
