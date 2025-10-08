@@ -26,19 +26,20 @@ dapui.setup({
     {
       elements = {
         -- You can remove any of these you don't want
-        { id = "scopes", size = 0.76 },      -- Variables in current scope
+        { id = "scopes", size = 0.64 },      -- Variables in current scope
+        { id = "watches", size = 0.12 },     -- Watch expressions
         { id = "breakpoints", size = 0.12 }, -- List of breakpoints
         { id = "stacks", size = 0.12 },      -- Call stack
       },
-      size = 60,  -- Width of the sidebar
+      size = 0.25,  -- Width of the sidebar
       position = "left",
     },
     {
       elements = {
         { id = "console", size = 0.5 },      -- Program output
-        { id = "repl", size = 0.5 },     -- Watch expressions
+        { id = "repl", size = 0.5 },     -- REPL
       },
-      size = 80,  -- Height of bottom panel
+      size = 0.35,  -- Height of bottom panel
       position = "right",
     },
   },
@@ -263,3 +264,16 @@ end, opts)
 vim.keymap.set("n", "<leader>dD", function()
   dap.down()
 end, opts)
+
+
+vim.keymap.set("n", "<leader>de", function()
+  dapui.elements.watches.add(vim.fn.expand('<cword>'))
+end, { silent = true, desc = "DAP: Add to Watch" })
+
+-- Remove watch expression
+vim.keymap.set("n", "<leader>dr", function()
+  local index = vim.fn.input('Watch index to remove: ')
+  if index ~= '' then
+    dapui.elements.watches.remove(tonumber(index))
+  end
+end, { silent = true, desc = "DAP: Remove from Watch" })
