@@ -2,5 +2,5 @@ channels:
   - pytorch
   - conda-forge
   - defaults
-env_prompt: ""
+# env_prompt: ""
 
