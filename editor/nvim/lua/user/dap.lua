@@ -65,6 +65,7 @@ require("nvim-dap-virtual-text").setup({
 
 dap.configurations.python = {
   {
+    justMyCode = false, 
     type = 'python',
     request = 'launch',
     name = 'Launch',
