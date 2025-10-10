@@ -113,7 +113,7 @@ tree.setup( {
         "*.aux",
         "*.fdb_latexmk",
         "*.fls",
-        "*.log",
+        "paper.log",
         "*.synctex.gz",
         "*.synctex.toc",
         "*.toc",
