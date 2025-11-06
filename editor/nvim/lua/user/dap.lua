@@ -76,42 +76,36 @@ dap.configurations.python = {
   {
     type = 'python',
     request = 'launch',
-    name = 'Launch file with arguments',
-    program = '${file}',
-    args = function()
-      local args_string = vim.fn.input('Arguments: ')
-      return vim.split(args_string, " +")
+    name = 'Launch custom file with arguments',
+    program = function()
+      local command = vim.fn.input('Command: ', '')
+      if command == '' or command == 'python ' then return nil end
+
+      -- Parse the command to extract file and arguments
+      local parts = vim.split(command, " +")
+      local program = nil
+      local args = {}
+
+      -- Skip 'python' if present
+      local start_idx = 1
+      if parts[1] == 'python' then
+        start_idx = 2
+      end
+
+      if parts[start_idx] then
+        program = parts[start_idx]
+        -- Collect remaining parts as arguments
+        for i = start_idx + 1, #parts do
+          table.insert(args, parts[i])
+        end
+      end
+
+      _G.dap_python_temp_args = args
+      return program
     end,
-    console = "integratedTerminal",
-  },
-  {
-    type = 'python',
-    request = 'launch',
-    name = 'Debug protopnet train-prototree',
-    module = 'protopnet',
-    args = {
-      'train-prototree',
-      '--no-wandb',
-      '--push',
-      '--dataset=bioscan_genetic',
-      '--dataset-id=smal',
-      '--backbone=genconv',
-      '--warm-up-phase-len=1',
-      '--joint-phase-len=1',
-      '--variability-coef=-1e-8',
-      '--cluster-coef=-0.00',
-      '--orthogonality-coef=0.0',
-      '--latent-dim-multiplier-exp=2',
-      '--phase-multiplier=1',
-      '--phase-relative-lr-multiplier=1.72334',
-      '--num-addon-layers=3',
-      '--batch-size=512',
-      '--depth=10',
-      '--save-every-n-epochs=1',
-      '--backbone-lr=0.0',
-      '--add-on-lr=0.001',
-      '--prototype-lr=0.002',
-    },
+    args = function()
+      return _G.dap_python_temp_args or {}
+    end,
     console = "integratedTerminal",
   },
 }
