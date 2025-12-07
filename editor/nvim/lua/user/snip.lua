@@ -947,8 +947,8 @@ ls.add_snippets("tex",
     \usepackage[letterpaper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
     \usepackage[utf8]{inputenc}
     \usepackage[english]{babel}
-    \usepackage{amsmath} 
-    \usepackage{amssymb}
+    \usepackage{amsmath, amssymb} 
+    \usepackage{bbm}              % for mathbbm
 
     % extra math symbols and utilities
     \usepackage{mathtools}        % for extra stuff like \coloneqq
@@ -956,8 +956,8 @@ ls.add_snippets("tex",
     \usepackage{centernot}        % for the centernot arrow 
     \usepackage{bm}               % for better boldsymbol/mathbf 
     \usepackage{enumitem}         % better control over enumerate, itemize
-    \usepackage{hyperref}         % for hypertext linking
     \usepackage{xr-hyper}
+    \usepackage{hyperref}         % for hypertext linking
     \usepackage{fancyvrb}          % for better verbatim environments
     \usepackage{newverbs}         % for texttt{}
     \usepackage{xcolor}           % for colored text 
@@ -978,23 +978,14 @@ ls.add_snippets("tex",
     \usepackage{tcolorbox}        % for better colored boxes in custom environments
     \tcbuselibrary{breakable}     % to allow tcolorboxes to break across pages
 
-    % figures
+    % figures and tables 
     \usepackage{pgfplots}
     \pgfplotsset{compat=1.18}
     \usepackage{float}            % for [H] figure placement
-    \usepackage{tikz}
-    \usepackage{tikz-cd}
-    \usepackage{circuitikz}
-    \usetikzlibrary{arrows}
-    \usetikzlibrary{positioning}
-    \usetikzlibrary{calc}
+    \usepackage{tikz, tikz-cd}
+    \usetikzlibrary{arrows, positioning, calc}
     \usepackage{graphicx}
-    \usepackage{algorithm, algpseudocode}
-    \usepackage{caption} 
-    \usepackage{subcaption}
-    \captionsetup{font=small}
-
-    % for tabular stuff 
+    \usepackage{caption, subcaption} 
     \usepackage{dcolumn}
 
     \usepackage[nottoc]{tocbibind}
@@ -1002,20 +993,13 @@ ls.add_snippets("tex",
     \hfuzz=5.002pt                % ignore overfull hbox badness warnings below this limit
 
   % New and replaced operators
-    \DeclareMathOperator{\Tr}{Tr}
-    \DeclareMathOperator{\Sym}{Sym}
-    \DeclareMathOperator{\Span}{span}
     \DeclareMathOperator{\std}{std}
-    \DeclareMathOperator{\Cov}{Cov}
-    \DeclareMathOperator{\Var}{Var}
-    \DeclareMathOperator{\Corr}{Corr}
-    \DeclareMathOperator{\pos}{pos}
     \DeclareMathOperator*{\argmin}{\arg\!\min}
     \DeclareMathOperator*{\argmax}{\arg\!\max}
     \newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}}
     \newcommand{\bra}[1]{\ensuremath{\left\langle#1\right|}}
     \newcommand{\braket}[2]{\langle #1 | #2 \rangle}
-    \newcommand{\qed}{\hfill$\blacksquare$}     % I like QED squares to be black
+    \newcommand{\qed}{$\blacksquare \quad$}     % I like QED squares to be black
 
   % Custom Environments
     \tcbset{
@@ -1036,46 +1020,149 @@ ls.add_snippets("tex",
       toprule at break=-1pt,
       fonttitle=\bfseries,
     }
-    \newtcolorbox[auto counter, number within=section]{question}[1][]
-    {
-      title = \textbf{Question \thetcbcounter ~(#1)}
+    \newcounter{question}[section]
+    \renewcommand{\thequestion}{\thesection.\arabic{question}}
+    \NewDocumentEnvironment{question}{O{} o}{%
+      \refstepcounter{question}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Question \thequestion}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Question \thequestion~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Question \thequestion~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
     }
-    \newtcolorbox[auto counter, number within=section]{exercise}[1][]
-    {
-      title = \textbf{Exercise \thetcbcounter ~(#1)}
+
+    \newcounter{exercise}[section]
+    \renewcommand{\theexercise}{\thesection.\arabic{exercise}}
+    \NewDocumentEnvironment{exercise}{O{} o}{%
+      \refstepcounter{exercise}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Exercise \theexercise}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Exercise \theexercise~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Exercise \theexercise~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
     }
+
     \newtcolorbox[auto counter, number within=section]{solution}[1][]
     {
-      title = \textbf{Solution \thetcbcounter}
+      before skip = -7pt,
+      before upper = \textit{Solution. },
     }
-    \newtcolorbox[auto counter, number within=section]{lemma}[1][]
-    {
-      title = \textbf{Lemma \thetcbcounter ~(#1)},
+
+    \newcounter{theorem}[section]
+    \renewcommand{\thetheorem}{\thesection.\arabic{theorem}}
+
+    \NewDocumentEnvironment{lemma}{O{} o}{%
+      \refstepcounter{theorem}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Lemma \thetheorem}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Lemma \thetheorem~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Lemma \thetheorem~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
     }
-    \newtcolorbox[auto counter, number within=section]{theorem}[1][]
-    {
-      title = \textbf{Theorem \thetcbcounter ~(#1)},
-    } 
-    \newtcolorbox[auto counter, number within=section]{corollary}[1][]
-    {
-      title = \textbf{Corollary \thetcbcounter ~(#1)},
-    } 
+
+    \NewDocumentEnvironment{theorem}{O{} o}{%
+      \refstepcounter{theorem}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Theorem \thetheorem}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Theorem \thetheorem~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Theorem \thetheorem~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
+    }
+
+    \NewDocumentEnvironment{corollary}{O{} o}{%
+      \refstepcounter{theorem}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Corollary \thetheorem}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Corollary \thetheorem~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Corollary \thetheorem~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
+    }
+
     \newtcolorbox[auto counter, number within=section]{proof}[1][]
     {
       before skip = -7pt,
       before upper = \textit{Proof. },
-    } 
-    \newtcolorbox[auto counter, number within=section]{definition}[1][]
-    {
-      title = \textbf{Definition \thetcbcounter ~(#1)}
     }
-    \newtcolorbox[auto counter, number within=section]{example}[1][]
-    {
-      title = \textbf{Example \thetcbcounter ~(#1)}
-    } 
-    \newtcolorbox[auto counter, number within=section]{code}[1][]
-    {
-      title = \textbf{Code \thetcbcounter ~(#1)}
+
+    \newcounter{definition}[section]
+    \renewcommand{\thedefinition}{\thesection.\arabic{definition}}
+    \NewDocumentEnvironment{definition}{O{} o}{%
+      \refstepcounter{definition}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Definition \thedefinition}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Definition \thedefinition~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Definition \thedefinition~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
+    }
+
+    \newcounter{example}[section]
+    \renewcommand{\theexample}{\thesection.\arabic{example}}
+    \NewDocumentEnvironment{example}{O{} o}{%
+      \refstepcounter{example}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Example \theexample}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Example \theexample~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Example \theexample~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
+    }
+
+    \newcounter{code}[section]
+    \renewcommand{\thecode}{\thesection.\arabic{code}}
+    \NewDocumentEnvironment{code}{O{} o}{%
+      \refstepcounter{code}%
+      \ifstrempty{#1}{%
+        \begin{tcolorbox}[title=\textbf{Code \thecode}]%
+      }{%
+        \IfValueTF{#2}{%
+          \begin{tcolorbox}[title=\textbf{Code \thecode~(#1)}, label={#2}]%
+        }{%
+          \begin{tcolorbox}[title=\textbf{Code \thecode~(#1)}]%
+        }%
+      }%
+    }{%
+      \end{tcolorbox}%
     } 
 
     \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -1113,7 +1200,7 @@ ls.add_snippets("tex",
     \pagestyle{fancy}
     \fancyhead[L]{}
     \fancyhead[C]{Muchang Bahng}
-    \fancyhead[R]{Spring 2025} 
+    \fancyhead[R]{Fall 2025} 
     \fancyfoot[C]{\thepage / \pageref{LastPage}}
     \renewcommand{\footrulewidth}{0.4pt}          % the footer line should be 0.4pt wide
     \renewcommand{\thispagestyle}[1]{}  % needed to include headers in title page
@@ -1125,7 +1212,7 @@ ls.add_snippets("tex",
 
 \title{}
 \author{Muchang Bahng}
-\date{Spring 2025}
+\date{Fall 2025}
 
 \maketitle
 \tableofcontents

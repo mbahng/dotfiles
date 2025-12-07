@@ -89,7 +89,8 @@ require("lazy").setup({
   },
   -- LaTeX
   { "lervag/vimtex",                                  -- LaTeX support
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    lazy = false,
   },
   -- Python 
   { "kmontocam/nvim-conda",                           -- conda environment integration
