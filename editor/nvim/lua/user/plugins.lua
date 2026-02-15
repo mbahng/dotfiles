@@ -40,6 +40,8 @@ require("lazy").setup({
   },
   { "mhartington/oceanic-next",                       -- Oceanic Next colorscheme
   },
+  { "navarasu/onedark.nvim",
+  },
   { "nvim-lualine/lualine.nvim",                      -- status line at the bottom
   },
   { "terrortylor/nvim-comment",                       -- commenting functionality

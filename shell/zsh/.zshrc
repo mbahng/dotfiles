@@ -14,6 +14,7 @@ export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
 alias bluebear='kitty +kitten ssh bluebear'
 alias ls='ls --color=auto'
 alias lg='lazygit'
+alias oc='opencode'
 alias grep='grep --color=auto'
 alias lc='nvim leetcode.nvim'
 alias ca='conda activate'

@@ -8,8 +8,8 @@ toggleterm.setup({
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
-	shade_terminals = true,
-	shading_factor = 2,
+	shade_terminals = false,
+	shading_factor = 1,
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
@@ -42,6 +42,8 @@ local term1 = Terminal:new({
     border = 'single',
   },
   highlights = {
+    Normal = { link = "Normal" },
+    NormalFloat = { link = "Normal" },
     FloatBorder = {
       guifg = "#ff9999"
     }
@@ -55,6 +57,8 @@ local term2 = Terminal:new({
     border = 'single',
   },
   highlights = {
+    Normal = { link = "Normal" },
+    NormalFloat = { link = "Normal" },
     FloatBorder = {
       guifg = "#ffff99"
     }
@@ -68,6 +72,8 @@ local term3 = Terminal:new({
     border = 'single',
   },
   highlights = {
+    Normal = { link = "Normal" },
+    NormalFloat = { link = "Normal" },
     FloatBorder = {
       guifg = "#99ff99"
     }
@@ -81,6 +87,8 @@ local term4 = Terminal:new({
     border = 'single',
   },
   highlights = {
+    Normal = { link = "Normal" },
+    NormalFloat = { link = "Normal" },
     FloatBorder = {
       guifg = "#99ccff"
     }
