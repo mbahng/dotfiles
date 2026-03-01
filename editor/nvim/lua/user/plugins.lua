@@ -95,9 +95,6 @@ require("lazy").setup({
     lazy = false,
   },
   -- Python 
-  { "kmontocam/nvim-conda",                           -- conda environment integration
-    event = "VeryLazy",
-  },
   { "Vigemus/iron.nvim",                              -- interactive REPL
   },
   { "mfussenegger/nvim-dap", 

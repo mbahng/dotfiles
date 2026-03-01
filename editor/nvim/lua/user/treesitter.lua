@@ -7,6 +7,7 @@ configs.setup {
     "python", 
     "c", 
     "cpp", 
+    "java", 
     "lua", 
     "bash", 
     "verilog", 

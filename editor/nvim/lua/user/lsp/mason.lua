@@ -6,7 +6,8 @@ local servers = {
   "gopls",
 	"cssls",
 	"ts_ls",
-	"pyright",
+	"pyright", 
+  "jdtls"
 }
 
 require("mason").setup(
