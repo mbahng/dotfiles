@@ -3,6 +3,32 @@ hs.alert.show("Config loaded")
 hs.window.animationDuration = 0
 local hyper = { "alt" }
 local new_window_hyper = { "cmd" }
+
+-- Store the last window globally so it can be shared across different shortcuts
+local lastWindow = nil
+
+-- The Reusable Function
+local function toggleApp(appName)
+  local app = hs.application.get(appName)
+  
+  if app and app:isFrontmost() then
+    app:hide()
+    -- Focus the previous window if it still exists
+    if lastWindow and lastWindow:application() then
+      lastWindow:focus()
+    end
+  else
+    -- Store the current window BEFORE switching to the new app
+    lastWindow = hs.window.focusedWindow()
+    hs.application.launchOrFocus(appName)
+  end
+end
+
+-- Your Shortcuts
+hs.hotkey.bind({"alt"}, "m", function() toggleApp("YouTube Music") end)
+hs.hotkey.bind({"alt"}, "o", function() toggleApp("Microsoft Outlook") end)
+hs.hotkey.bind({"alt"}, "b", function() toggleApp("Brave Browser") end)
+
 --
 -- -- Global Application Launcher
 -- function create_shortcut(hyper, key, name)
