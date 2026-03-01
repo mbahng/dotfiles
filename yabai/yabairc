@@ -22,3 +22,5 @@ yabai -m rule --add app="^python.*" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Preview$" manage=off
 yabai -m rule --add app="^KakaoTalk$" manage=off
+yabai -m rule --add app="^Outlook$" manage=off
+yabai -m rule --add app="^Youtube Music$" manage=off
