@@ -117,6 +117,7 @@ tree.setup( {
         "*.synctex.gz",
         "*.synctex.toc",
         "*.toc",
+        "*.class",
         -- "*.out",
         --"*.meta",
         --"*/src/*/tsconfig.json",
