@@ -26,6 +26,8 @@ alias tma='tmux attach'
 alias tml='tmux ls' 
 alias tmx='tmux kill-server' 
 alias which='which -p' 
+alias python='python3' 
+alias pip='pip3' 
 
 
 
