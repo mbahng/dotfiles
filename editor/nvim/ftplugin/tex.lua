@@ -1,17 +1,3 @@
-vim.cmd "set wrap"
-vim.cmd "set linebreak"
-vim.cmd "setlocal spell spelllang=en_us"
-
-
-vim.g.tex_indent_items = 0
-vim.g.tex_indent_and = 0
-vim.g.tex_indent_brace = 0
-
--- keymaps
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
-
 -- keymap("v", "<leader>c", ":s/^/%/<cr>:noh<cr>", opts)
 keymap("n", "<leader>s", ":VimtexCompile<cr>", opts)
 -- keymap("n", "<leader>r", ":VimtexTocToggle<cr>", opts)

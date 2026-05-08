@@ -1,0 +1,18 @@
+return {
+  require("user.core.aerial"),
+  require("user.core.autopairs"),
+  require("user.core.bbye"),
+  require("user.core.bufferline"),
+  require("user.core.comment"), 
+  require("user.core.indent_blankline"), 
+  require("user.core.lualine"), 
+  require("user.core.neotree"), 
+  require("user.core.oceanic_next"), 
+  require("user.core.osc52"), 
+  require("user.core.plenary"), 
+  require("user.core.quickscope"), 
+  require("user.core.telescope"), 
+  require("user.core.toggleterm"), 
+  require("user.core.treesitter"), 
+  require("user.core.undotree"), 
+}

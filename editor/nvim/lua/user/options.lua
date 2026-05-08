@@ -1,4 +1,3 @@
-vim.opt.backup = false                          -- creates a backup file
 vim.opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
@@ -50,11 +49,100 @@ vim.g.copilot_assume_mapped = true    -- Tell Copilot that mappings are handled
 -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
 vim.api.nvim_set_option("clipboard", "unnamedplus") 
 
--- Suppress specific warnings
-local notify = vim.notify
-vim.notify = function(msg, ...)
-  if msg:match("WARNING.*deprecated") then
-    return
-  end
-  notify(msg, ...)
-end
+vim.cmd [[
+try
+  colorscheme OceanicNext
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme default
+  set background=dark
+endtry
+]]
+
+-- Set separator after colorscheme loads
+vim.opt.fillchars = {
+  horiz = '━',
+  horizup = '┻',
+  horizdown = '┳',
+  vert = '┃',
+  vertleft = '┫',
+  vertright = '┣',
+  verthoriz = '╋'
+}
+vim.cmd "hi WinSeparator guifg=#ff8c69 guibg=NONE cterm=NONE"
+vim.cmd "hi VertSplit guifg=#ff8c69 guibg=NONE cterm=NONE"
+
+--Remap space as leader key
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- for mistyping 
+vim.api.nvim_set_keymap("n", ":Q<cr>", ":q<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", ":W<cr>", ":w<cr>", { noremap = true, silent = true })
+
+-- Better left/right window navigation
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<bs>", "<C-w>h", { noremap = true, silent = true }) -- need this since for some shells, <C-h> gets mapped to ^?, which is backspace. 
+
+vim.api.nvim_set_keymap("n", "<C-j>", "5j", { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap("n", "<C-k>", "5k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-j>", "5j", { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap("v", "<C-k>", "5k", { noremap = true, silent = true })
+
+-- Resize with arrows
+vim.api.nvim_set_keymap("n", "<C-Up>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Down>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+
+-- Press jk fast to enter
+vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
+
+-- moving within the same line
+vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true, silent = true })
+
+-- Keep cursor in the middle when page up/down and when searching
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true, silent = true })
+
+-- folding
+vim.api.nvim_set_keymap("n", "<leader>f", "za", { noremap = true, silent = true }) -- fold where I am currently at
+vim.api.nvim_set_keymap("n", "<leader>zM", "zM", { noremap = true, silent = true }) -- close all folds 
+vim.api.nvim_set_keymap("n", "<leader>zR", "zR", { noremap = true, silent = true }) -- open all folds 
+
+-- wrapping 
+vim.api.nvim_set_keymap("n", "<leader>w", ":set wrap!<cr>", { noremap = true, silent = true })
+
+-- stuff for split keyboards 
+vim.api.nvim_set_keymap("n", "m", "n", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "n", "b", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "n", "b", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "dn", "db", { noremap = true, silent = true })
+
+-- vertical split
+vim.api.nvim_set_keymap("n", "<leader>v", ":vsplit<cr>", { noremap = true, silent = true })
+
+-- editing all instance of a word at the same time
+vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- word count 
+vim.api.nvim_set_keymap("v", "<leader>w", "g<S-g>", { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
+  callback = function()
+    local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
+    if not normal.bg then return end
+    io.write(string.format("\027]11;#%06x\027\\", normal.bg))
+  end,
+})
+
+vim.api.nvim_create_autocmd("UILeave", {
+  callback = function() io.write("\027]111\027\\") end,
+})
+vim.g.loaded_perl_provider = 0
+
+
