@@ -1,15 +1,13 @@
-local dap = require("dap")
+local jdtls = require("jdtls")
+vim.env.JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
 
--- Java DAP configuration
--- Note: Most Java DAP features (like Launch) are typically handled by nvim-jdtls.
--- This file can be used for manual configurations like remote attaching.
-
-dap.configurations.java = {
-  {
-    type = "java",
-    request = "attach",
-    name = "Debug (Attach) - Remote",
-    hostName = "127.0.0.1",
-    port = 5005,
-  },
-}
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function()
+    local config = require("user.langtools.lsp.jdtls").get_config()
+    if config then
+      jdtls.start_or_attach(config)
+      jdtls.setup_dap({ hotcodereplace = "auto" })
+    end
+  end,
+})

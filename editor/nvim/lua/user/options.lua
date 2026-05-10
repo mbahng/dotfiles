@@ -47,7 +47,6 @@ vim.cmd "set foldignore="             -- Don't ignore any lines when folding
 vim.g.copilot_assume_mapped = true    -- Tell Copilot that mappings are handled
 
 -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
-vim.api.nvim_set_option("clipboard", "unnamedplus") 
 
 vim.cmd [[
 try
@@ -85,9 +84,9 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<bs>", "<C-w>h", { noremap = true, silent = true }) -- need this since for some shells, <C-h> gets mapped to ^?, which is backspace. 
 
-vim.api.nvim_set_keymap("n", "<C-j>", "5j", { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap("n", "<C-j>", "5j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "5k", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-j>", "5j", { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap("v", "<C-j>", "5j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<C-k>", "5k", { noremap = true, silent = true })
 
 -- Resize with arrows
