@@ -1,13 +1,12 @@
 return {
-  "hrsh7th/nvim-cmp",
+  "hrsh7th/nvim-cmp",           -- completion engine
   dependencies = {
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "saadparwaiz1/cmp_luasnip",
-    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",       -- suggestions for words in buffer 
+    "hrsh7th/cmp-path",         -- suggestions for paths 
+    "saadparwaiz1/cmp_luasnip", -- suggestions for Luasnip snippets 
+    "hrsh7th/cmp-nvim-lsp",     -- suggetsions from LSP
   },
   config = function()
-    print("Initializing nvim-cmp...")
     local cmp = require("cmp")
     local luasnip = require("luasnip")
 
@@ -55,7 +54,7 @@ return {
         { name = "path" },
       }),
       experimental = {
-        ghost_text = true,
+        ghost_text = false,
       },
       formatting = {
         fields = { "kind", "abbr", "menu" },
