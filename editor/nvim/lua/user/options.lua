@@ -8,20 +8,12 @@ vim.opt.mouse = "a"                             -- allow the mouse to be used in
 vim.opt.pumheight = 10                          -- pop up menu height
 vim.opt.showmode = true                         -- we don't need to see things like -- INSERT -- anymore
 vim.opt.showtabline = 2                         -- always show tabs
-vim.opt.smartcase = true                        -- smart case
-vim.opt.smartindent = true                      -- make indenting smarter again
-vim.opt.cindent = true                          -- C-style indenting
-vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
-vim.opt.splitright = true                       -- force all vertical splits to go to the right of current window
 vim.opt.swapfile = false                        -- creates a swapfile
 vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
 vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.undofile = true                         -- enable persistent undo
-vim.opt.updatetime = 300                        -- faster completion (4000ms default)
+vim.opt.updatetime = 4000                       -- faster completion (4000ms default)
 vim.opt.writebackup = false                     -- if a file is being edited by another program, it is not allowed to be edited
-vim.opt.expandtab = true                        -- convert tabs to spaces
-vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
 vim.opt.cursorline = true                       -- highlight the current line
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                   -- set relative numbered lines
@@ -30,8 +22,12 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 8                           -- keep 8 lines above/below cursor
 vim.opt.sidescrolloff = 8                       -- keep 8 columns left/right of cursor
-vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
-vim.opt.guifontwide = "monospace:h17"           -- the font used for wide characters
+vim.cmd "set linebreak"
+
+vim.opt.tabstop = 8                     -- How many spaces the <tab> key takes. Should be 8 always according to neovim docs
+vim.opt.shiftwidth = 4                  -- this is whatever you want it to be
+vim.opt.expandtab = false               -- Replace tabs with spaces? 
+vim.opt.smarttab = true                 -- Smarttab allows you to use shiftwidth to configure the tab key
 
 vim.opt.shortmess:append "c"          -- Suppress completion menu messages like "match 1 of 3"
 -- vim.o.colorcolumn = "80"              -- Set color on column 80
@@ -47,6 +43,7 @@ vim.cmd "set foldignore="             -- Don't ignore any lines when folding
 vim.g.copilot_assume_mapped = true    -- Tell Copilot that mappings are handled
 
 -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
+vim.cmd "set clipboard=unnamedplus"
 
 vim.cmd [[
 try
@@ -125,7 +122,7 @@ vim.api.nvim_set_keymap("n", "dn", "db", { noremap = true, silent = true })
 -- vertical split
 vim.api.nvim_set_keymap("n", "<leader>v", ":vsplit<cr>", { noremap = true, silent = true })
 
--- editing all instance of a word at the same time
+-- editing all instance of a word at the same time, short for :%substitute
 vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- word count 

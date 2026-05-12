@@ -45,18 +45,18 @@ return { "mfussenegger/nvim-dap",
       layouts = {
         {
           elements = {
-            { id = "scopes", size = 0.64 },
-            { id = "watches", size = 0.12 },
-            { id = "breakpoints", size = 0.12 },
-            { id = "stacks", size = 0.12 },
+            { id = "scopes", size = 0.8 },
+            { id = "stacks", size = 0.2 },
+            -- { id = "watches", size = 0.2 },
+            -- { id = "breakpoints", size = 0.12 },
           },
           size = 0.25,
           position = "left",
         },
         {
           elements = {
-            { id = "console", size = 0.5 },
-            { id = "repl", size = 0.5 },
+            { id = "repl", size = 0.8 },
+            { id = "console", size = 0.2 },
           },
           size = 0.35,
           position = "right",
