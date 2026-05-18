@@ -24,7 +24,7 @@ return {
       vim.lsp.config("clangd", require("user.langtools.lsp.clangd"))
       vim.lsp.enable("clangd")
     end
-  }, 
+  },
   {
     "mfussenegger/nvim-jdtls",
   }

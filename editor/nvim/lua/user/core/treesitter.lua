@@ -1,26 +1,26 @@
 return { "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate", 
-  config = function() 
+  build = ":TSUpdate",
+  config = function()
     require("nvim-treesitter").setup {
       ensure_installed = {
-        "python", 
-        "c", 
-        "cpp", 
-        "java", 
-        "lua", 
-        "bash", 
-        "verilog", 
-        "html", 
-        "css", 
-        "markdown_inline", 
-        "markdown", 
-        "javascript", 
-        "jsdoc", 
-        "typescript", 
-        "json", 
+        "python",
+        "c",
+        "cpp",
+        "java",
+        "lua",
+        "bash",
+        "verilog",
+        "html",
+        "css",
+        "markdown_inline",
+        "markdown",
+        "javascript",
+        "jsdoc",
+        "typescript",
+        "json",
         "yaml",
         "latex",
-        "asm", 
+        "asm",
         "nasm"
       },
       highlight = {
@@ -35,5 +35,6 @@ return { "nvim-treesitter/nvim-treesitter",
         enable_autocmd = false,
       },
     }
+   vim.api.nvim_set_keymap("n", "<C-p>", ":TSBufToggle highlight<cr>", { noremap = true, silent = true })
   end
 }
