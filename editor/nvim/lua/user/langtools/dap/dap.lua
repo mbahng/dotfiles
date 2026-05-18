@@ -5,6 +5,7 @@ return { "mfussenegger/nvim-dap",
     "mfussenegger/nvim-dap-python",
     "theHamsta/nvim-dap-virtual-text",
     "mfussenegger/nvim-jdtls",
+    "jbyuki/one-small-step-for-vimkind",
   },
   config = function()
     local dap = require("dap")
@@ -14,6 +15,7 @@ return { "mfussenegger/nvim-dap",
     require("user.langtools.dap.python")
     require("user.langtools.dap.cpp")
     require("user.langtools.dap.java")
+    require("user.langtools.dap.lua")
 
     -- Automatically open/close DAP UI when starting dap
     dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -164,5 +166,22 @@ return { "mfussenegger/nvim-dap",
         dapui.elements.watches.remove(tonumber(index))
       end
     end, { silent = true, desc = "DAP: Remove from Watch" })
+
+    -- OSV server (debuggee-side). Use with the "Attach to Neovim (OSV)" config.
+    vim.keymap.set("n", "<leader>dl", function()
+      local ok, osv = pcall(require, "osv")
+      if ok and osv and osv.launch then
+        osv.launch({ port = 8086 })
+      else
+        vim.notify("osv not available (one-small-step-for-vimkind)", vim.log.levels.WARN)
+      end
+    end, { silent = true, desc = "OSV: Launch server (8086)" })
+
+    vim.keymap.set("n", "<leader>dL", function()
+      local ok, osv = pcall(require, "osv")
+      if ok and osv and osv.stop then
+        osv.stop()
+      end
+    end, { silent = true, desc = "OSV: Stop server" })
   end
 }
