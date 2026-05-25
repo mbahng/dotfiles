@@ -14,6 +14,7 @@ return { "mfussenegger/nvim-dap",
 
     require("user.langtools.dap.python")
     require("user.langtools.dap.cpp")
+    require("user.langtools.dap.c")
     require("user.langtools.dap.java")
     require("user.langtools.dap.lua")
 
