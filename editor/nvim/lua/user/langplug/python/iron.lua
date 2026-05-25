@@ -1,4 +1,5 @@
 return { "Vigemus/iron.nvim",                              -- interactive REPL
+  event = "VeryLazy",
   config = function()
     -- IMPORTANT: You must have ipython installed on your env for this to work! 
     require("iron.core").setup {
