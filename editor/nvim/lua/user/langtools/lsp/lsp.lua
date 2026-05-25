@@ -23,6 +23,9 @@ return {
 
       vim.lsp.config("clangd", require("user.langtools.lsp.clangd"))
       vim.lsp.enable("clangd")
+
+      vim.lsp.config("bash", require("user.langtools.lsp.bash"))
+      vim.lsp.enable("bash")
     end
   },
   {
