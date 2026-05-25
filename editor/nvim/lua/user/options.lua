@@ -1,15 +1,13 @@
-vim.opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.cmdheight = 2
+vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
-vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
-vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
-vim.opt.ignorecase = true                       -- ignore case in search patterns
-vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
+vim.opt.fileencoding = "utf-8"
+vim.opt.ignorecase = true
+-- vim.opt.mouse = "a"
 vim.opt.pumheight = 10                          -- pop up menu height
-vim.opt.showmode = true                         -- we don't need to see things like -- INSERT -- anymore
 vim.opt.showtabline = 2                         -- always show tabs
 vim.opt.swapfile = false                        -- creates a swapfile
-vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
+vim.opt.termguicolors = true
 vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.undofile = true                         -- enable persistent undo
 vim.opt.updatetime = 4000                       -- faster completion (4000ms default)
@@ -17,44 +15,33 @@ vim.opt.writebackup = false                     -- if a file is being edited by 
 vim.opt.cursorline = true                       -- highlight the current line
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                   -- set relative numbered lines
-vim.opt.numberwidth = 4                         -- set number column width to 4 {default 4}
-vim.opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
-vim.opt.wrap = false                            -- display lines as one long line
-vim.opt.scrolloff = 8                           -- keep 8 lines above/below cursor
-vim.opt.sidescrolloff = 8                       -- keep 8 columns left/right of cursor
-vim.cmd "set linebreak"
+-- vim.opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+vim.opt.linebreak = true
+
+-- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.tabstop = 8                     -- How many spaces the <tab> key takes. Should be 8 always according to neovim docs
 vim.opt.shiftwidth = 4                  -- this is whatever you want it to be
 vim.opt.expandtab = false               -- Replace tabs with spaces? 
 vim.opt.smarttab = true                 -- Smarttab allows you to use shiftwidth to configure the tab key
 
-vim.opt.shortmess:append "c"          -- Suppress completion menu messages like "match 1 of 3"
--- vim.o.colorcolumn = "80"              -- Set color on column 80
-vim.cmd "set cinkeys-=0#"             -- Don't auto-indent when typing # at line start
-vim.cmd "set indentkeys-=0#"          -- Don't trigger reindent when typing # at line start  
-vim.cmd "set whichwrap+=<,>,[,],h,l"  -- Let cursor keys and h/l wrap to next/prev line
-vim.cmd [[set iskeyword+=-]]          -- Treat - as part of words (affects word motions)
-vim.cmd [[set formatoptions-=cro]]    -- Disable auto-commenting on new lines
-vim.cmd "set breakindent"             -- Visually indent wrapped lines
-vim.cmd "set foldmethod=indent"       -- Fold based on indentation
-vim.cmd "set foldlevel=10000"         -- Start with all folds open
-vim.cmd "set foldignore="             -- Don't ignore any lines when folding
-vim.g.copilot_assume_mapped = true    -- Tell Copilot that mappings are handled
+vim.opt.shortmess:append("c")
+vim.opt.cinkeys:remove("0#")
+vim.opt.indentkeys:remove("0#")
+vim.opt.whichwrap:append("l")
+vim.opt.whichwrap:append("h")
+vim.opt.iskeyword:append("-")
+vim.opt.shiftwidth = 2
 
--- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
-vim.cmd "set clipboard=unnamedplus"
+vim.opt.breakindent = true
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 10000
+vim.opt.foldignore = ""
 
-vim.cmd [[
-try
-  colorscheme OceanicNext
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
-
--- Set separator after colorscheme loads
 vim.opt.fillchars = {
   horiz = '━',
   horizup = '┻',
@@ -64,8 +51,16 @@ vim.opt.fillchars = {
   vertright = '┣',
   verthoriz = '╋'
 }
-vim.cmd "hi WinSeparator guifg=#ff8c69 guibg=NONE cterm=NONE"
-vim.cmd "hi VertSplit guifg=#ff8c69 guibg=NONE cterm=NONE"
+
+vim.g.loaded_perl_provider = 0
+
+vim.api.nvim_set_hl(0, "WinSeparator", {
+  fg = "#ff8c69",
+})
+
+vim.api.nvim_set_hl(0, "VertSplit", {
+  fg = "#ff8c69",
+})
 
 --Remap space as leader key
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
@@ -136,9 +131,21 @@ vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
   end,
 })
 
+-- Prevent treesitter from starting in ephemeral markdown buffers (LSP hover, etc.).
+-- This avoids a Neovim 0.12.x crash in the treesitter decoration pipeline.
+do
+  local ts_start = vim.treesitter.start
+  vim.treesitter.start = function(bufnr, lang)
+    bufnr = bufnr or vim.api.nvim_get_current_buf()
+    if vim.api.nvim_buf_is_valid(bufnr) then
+      if vim.bo[bufnr].buftype == "nofile" and vim.bo[bufnr].filetype == "markdown" then
+        return
+      end
+    end
+    return ts_start(bufnr, lang)
+  end
+end
+
 vim.api.nvim_create_autocmd("UILeave", {
   callback = function() io.write("\027]111\027\\") end,
 })
-vim.g.loaded_perl_provider = 0
-
-
