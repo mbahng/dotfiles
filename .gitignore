@@ -2,3 +2,5 @@
 .ssh/
 custom_scripts/
 lazygit/state.yml
+opencode/*
+opencode
