@@ -1,6 +1,6 @@
-return { "mhartington/oceanic-next",                       -- Oceanic Next colorscheme
+return { "mhartington/oceanic-next",
   config = function() 
-    vim.cmd "colorscheme OceanicNext"
+    vim.cmd("colorscheme OceanicNext")
   end
 }
 

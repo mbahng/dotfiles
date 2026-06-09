@@ -1,7 +1,9 @@
-return { "nvim-treesitter/nvim-treesitter",
+return {
+  "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+
   config = function()
-    require("nvim-treesitter").setup {
+    require("nvim-treesitter.configs").setup({
       ensure_installed = {
         "python",
         "c",
@@ -21,20 +23,34 @@ return { "nvim-treesitter/nvim-treesitter",
         "yaml",
         "latex",
         "asm",
-        "nasm"
+        "nasm",
       },
-      highlight = {
-        enable = true, -- false will disable the whole extension
-        disable = { "" }, -- list of language that will be disabled
-        additional_vim_regex_highlighting = true,
 
+      sync_install = false,
+      auto_install = false,
+      ignore_install = {},
+
+      modules = {},
+
+      highlight = {
+        enable = true,
+        disable = {},
+        additional_vim_regex_highlighting = true,
       },
-      -- indent = { enable = true, disable = { "" } },
+
+      -- indent = {
+      --   enable = true,
+      --   disable = {},
+      -- },
+
       context_commentstring = {
         enable = true,
         enable_autocmd = false,
       },
-    }
-   vim.api.nvim_set_keymap("n", "<C-p>", ":TSBufToggle highlight<cr>", { noremap = true, silent = true })
-  end
+    })
+
+    vim.keymap.set("n", "<C-p>", "<cmd>TSBufToggle highlight<cr>", {
+      desc = "Toggle Treesitter highlight",
+    })
+  end,
 }
