@@ -652,14 +652,16 @@ ls.add_snippets("tex",
     \usepackage{centernot}        % for the centernot arrow 
     \usepackage{bm}               % for better boldsymbol/mathbf 
     \usepackage{enumitem}         % better control over enumerate, itemize
-    \usepackage{xr-hyper}
+    \usepackage{xr-hyper}	  % for external links
     \usepackage{hyperref}         % for hypertext linking
-    \usepackage{fancyvrb}          % for better verbatim environments
+    \usepackage{fancyvrb}         % for better verbatim environments
     \usepackage{newverbs}         % for texttt{}
     \usepackage{xcolor}           % for colored text 
     \usepackage{listings}         % to include code
     \usepackage{lstautogobble}    % helper package for code
     \usepackage{parcolumns}       % for side by side columns for two column code
+    \usepackage{algorithm} 	  % for algorithm pseudocode
+    \usepackage{algpseudocode}	  % for algorithm pseudocode
     
 
     % page layout
@@ -896,19 +898,19 @@ ls.add_snippets("tex",
     \pagestyle{fancy}
     \fancyhead[L]{}
     \fancyhead[C]{Muchang Bahng}
-    \fancyhead[R]{Fall 2025} 
+    \fancyhead[R]{Fall 2026} 
     \fancyfoot[C]{\thepage / \pageref{LastPage}}
     \renewcommand{\footrulewidth}{0.4pt}          % the footer line should be 0.4pt wide
     \renewcommand{\thispagestyle}[1]{}  % needed to include headers in title page
 
   % external documents 
-  %  \externaldocument[place-]{../Machine_Learning/paper}[../Machine_Learning/paper.pdf] 
+  % \externaldocument[st-]{../../Math/Set\_Theory/paper}[https://mbahng.com/Math/Set\_Theory/paper.pdf] 
 
 \begin{document}
 
 \title{}
 \author{Muchang Bahng}
-\date{Fall 2025}
+\date{Fall 2026}
 
 \maketitle
 \tableofcontents
