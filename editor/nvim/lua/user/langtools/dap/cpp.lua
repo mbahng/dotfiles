@@ -9,6 +9,7 @@ dap.adapters.gdb = {
 dap.adapters.lldb = {
   type = 'executable',
   command = '/opt/homebrew/opt/llvm/bin/lldb-dap',
+  args = { "--repl-mode", "variable" },
   name = 'lldb'
 }
 
