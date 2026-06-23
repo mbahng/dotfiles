@@ -24,8 +24,8 @@ vim.opt.linebreak = true
 -- on X11, make sure to install xclip (sudo pacman -S xclip) for this to work
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.tabstop = 8                     -- How many spaces the <tab> key takes. Should be 8 always according to neovim docs
-vim.opt.shiftwidth = 4                  -- this is whatever you want it to be
+vim.opt.tabstop = 2                     -- How many spaces the <tab> key takes. Should be 8 always according to neovim docs
+vim.opt.shiftwidth = 2                  -- this is whatever you want it to be
 vim.opt.expandtab = false               -- Replace tabs with spaces? 
 vim.opt.smarttab = true                 -- Smarttab allows you to use shiftwidth to configure the tab key
 

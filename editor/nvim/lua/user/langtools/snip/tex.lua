@@ -409,59 +409,47 @@ ls.add_snippets("tex",
       )
     ),
 
-    s({trig="\\algorithm", regTrig=false, snippetType="snippet"},
-      fmta(
-      [[
-        \begin{algorithm}[H]
-        \caption{Algorithm Name}
-        \label{alg:<>}
-        \begin{algorithmic}[1]  % The [1] adds line numbers
-          \Require{Input requirements or preconditions}
-          \Ensure{Output guarantees or postconditions}
-          \Procedure{ProcedureName}{parameter1, parameter2}
-            % Variable initialization
-            \State $x \gets 0$
-            
-            % Control structures
-            \If{condition}
-              \State statement2
-            \ElsIf{condition2}
-              \State statement3
-            \Else
-              \State statement4
-            \EndIf
-            
-            \For{$i \gets 1$ to $n$}
-              \State perform operation
-            \EndFor
-            \While{condition}
-              \State perform operation
-            \EndWhile
-            
-            % Function calls
-            \State $result \gets \Call{SubProcedure}{arg1, arg2}$
-            
-            % Return statement
-            \State \Return $result$
-          \EndProcedure
-
-          % Sub-procedure definition
-          \Procedure{SubProcedure}{arg1, arg2}
-            \State perform operations
-            \State \Return $value$
-          \EndProcedure
-        \end{algorithmic}
-        \end{algorithm}
-      ]],
-      { i(1) }
-      )
-    ),
-
     s({trig="\\algo", regTrig=false, snippetType="snippet"},
       fmta(
       [[
         \begin{algo}
-          <>
+					<>
+					\begin{algorithmic}[1]  % The [1] adds line numbers
+						\Require{Input requirements or preconditions}
+						\Ensure{Output guarantees or postconditions}
+						\Procedure{ProcedureName}{parameter1, parameter2}
+							% Variable initialization
+							\State $x \gets 0$
+							
+							% Control structures
+							\If{condition}
+								\State statement2
+							\ElsIf{condition2}
+								\State statement3
+							\Else
+								\State statement4
+							\EndIf
+							
+							\For{$i \gets 1$ to $n$}
+								\State perform operation
+							\EndFor
+							\While{condition}
+								\State perform operation
+							\EndWhile
+							
+							% Function calls
+							\State $result \gets \Call{SubProcedure}{arg1, arg2}$
+							
+							% Return statement
+							\State \Return $result$
+						\EndProcedure
+
+						% Sub-procedure definition
+						\Procedure{SubProcedure}{arg1, arg2}
+							\State perform operations
+							\State \Return $value$
+						\EndProcedure
+					\end{algorithmic}
         \end{algo}
       ]],
       { i(1) }
