@@ -54,6 +54,20 @@ ls.add_snippets("tex",
       )
     ),
 
+    s({trig="sc", regTrig=false, snippetType="snippet"},
+      fmta(
+        "\\mathscr{<>}",
+        { i(1) }
+      )
+    ),
+
+    s({trig="sr", regTrig=false, snippetType="snippet"},
+      fmta(
+        "\\mathscr{<>}",
+        { i(1) }
+      )
+    ),
+
     s({trig="bb", regTrig=false, snippetType="snippet"},
       fmta(
         "\\mathbb{<>}",
@@ -629,7 +643,6 @@ ls.add_snippets("tex",
   % packages
     % basic stuff for rendering math
     \usepackage[letterpaper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
-    \usepackage[utf8]{inputenc}
     \usepackage[english]{babel}
     \usepackage{amsmath, amssymb} 
     \usepackage{bbm}              % for mathbbm
@@ -675,7 +688,6 @@ ls.add_snippets("tex",
     \usepackage{dcolumn}
 
     \usepackage[nottoc]{tocbibind}
-    \pdfsuppresswarningpagegroup=1
     \hfuzz=5.002pt                % ignore overfull hbox badness warnings below this limit
 
   % New and replaced operators
