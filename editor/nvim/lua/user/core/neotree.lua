@@ -173,6 +173,13 @@ return { "nvim-neo-tree/neo-tree.nvim",                    -- file explorer
             -- ["ot"] = { "order_by_type", nowait = false },
             ["H"] = "navigate_up",
             ["L"] = "set_root",
+						["Y"] = function(state)
+							local node = state.tree:get_node()
+							local path = vim.fn.fnamemodify(node:get_id(), ":.")
+
+							require("osc52").copy(path)
+							vim.notify("Copied: " .. path)
+						end,
 						["O"] = function(state)
 							local node = state.tree:get_node()
 							local path = node:get_id()
