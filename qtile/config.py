@@ -118,6 +118,15 @@ class NetworkStatus:
         return f"{link}|⬇{down:6.1f}Mb/s|⬆{up:6.1f}Mb/s"
 
 
+_mouse_sens_script = os.path.join(os.path.dirname(os.path.realpath(__file__)), "mouse_sens.sh")
+
+def get_mouse_sensitivity():
+    try:
+        return subprocess.check_output([_mouse_sens_script], text=True).strip()
+    except Exception:
+        return "N/A"
+
+
 def glossary(topic):
     """Open a reference in Kitty, followed by an interactive shell."""
     script = os.path.join(os.path.dirname(os.path.realpath(__file__)), "glossary.py")
@@ -193,10 +202,9 @@ keys = [
 
     # Extra utilities
     # actual print screen key is "Print" 
-    Key([], "F10", lazy.spawn("flameshot gui"), desc="Print Screen Selection"), 
-    Key(["shift"], "F10", lazy.spawn("flameshot screen"), desc="Print current screen"), 
-    Key([], "Print", lazy.spawn("flameshot gui"), desc="Print Screen Selection"), 
-    Key(["shift"], "Print", lazy.spawn("flameshot screen"), desc="Print current screen"), 
+    Key([], "F10", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle mute/unmute volume"),
+    Key([], "Print", lazy.spawn("ksnip -r -s"), desc="Print Screen Selection"),
+    Key(["shift"], "Print", lazy.spawn("ksnip -f -s"), desc="Print current screen"),
     
     # Adjust screen brightness keys 
     # Key([], "F6", lazy.spawn("brightnessctl --device=intel_backlight set 20-"), desc="Increase brightness -20/400"), 
@@ -209,7 +217,9 @@ keys = [
     # Volume Adjustment
     Key([], "F1", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle mute/unmute volume"), 
     Key([], "F2", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease volume by 5%"), 
-    Key([], "F3", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase volume by 5%"), 
+    Key([], "F3", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase volume by 5%"),
+    Key([], "F11", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease volume by 5%"),
+    Key([], "F12", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase volume by 5%"),
 
 
     # Reloading and quitting Qtile configuration
@@ -493,6 +503,17 @@ screens = [
                 #     close_button_location = "right", 
                 #     start_opened = True, 
                 # ), 
+                widget.GenPollText(
+                    func = get_mouse_sensitivity,
+                    update_interval = 1,
+                    background = "#0471A6",
+                    foreground = "#FFFFFF",
+                    padding = 6,
+                    mouse_callbacks = {
+                        "Button4": lazy.spawn(f"bash {_mouse_sens_script} up"),
+                        "Button5": lazy.spawn(f"bash {_mouse_sens_script} down"),
+                    },
+                ),
                 glossary_box('audio',
                     widgets = [
                         widget.Volume(
