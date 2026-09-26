@@ -1,0 +1,3 @@
+# Scroll by a full page with Ctrl-j / Ctrl-k.
+map <C-j> scroll full-down
+map <C-k> scroll full-up
