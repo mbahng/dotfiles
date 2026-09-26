@@ -24,6 +24,6 @@ case "$1" in
         xinput set-prop "$DEVICE_ID" "Coordinate Transformation Matrix" "$NEW" 0 0 0 "$NEW" 0 0 0 1
         ;;
     *)
-        echo "${CURRENT}x"
+        printf "%.1fx\n" "$CURRENT"
         ;;
 esac

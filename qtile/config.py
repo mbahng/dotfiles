@@ -20,6 +20,27 @@ terminal = "kitty"
 bring_front_click = True
 
 
+def audio_output_status():
+    """Read the default output in GenPollText's worker thread."""
+    try:
+        def pactl(*args):
+            return subprocess.run(
+                ["pactl", *args], capture_output=True, text=True,
+                timeout=2, check=True, env={**os.environ, "LC_ALL": "C"},
+            ).stdout
+
+        default_sink = pactl("get-default-sink").strip()
+        sinks = json.loads(pactl("--format=json", "list", "sinks"))
+        sink = next((s for s in sinks if s["name"] == default_sink), None)
+        if sink is None:
+            return "Audio: no output"
+        device = sink.get("description") or sink["name"]
+        volume = "0%" if sink["mute"] else next(iter(sink["volume"].values()))["value_percent"]
+        return f"{volume} | {device[:5]}"
+    except (OSError, subprocess.SubprocessError, ValueError, KeyError, StopIteration):
+        return "Audio: unavailable"
+
+
 def format_wifi_link(output, interface):
     """Format iw link data; missing driver fields stay explicitly unavailable."""
     if "Not connected." in output:
@@ -104,7 +125,7 @@ class NetworkStatus:
             link = wifi_link_status(interface)
         else:
             kind = "Ethernet" if os.path.exists(f"/sys/class/net/{interface}/device") else "Network"
-            link = f"{kind} {interface}"
+            link = f"{kind}"
             if kind == "Ethernet":
                 try:
                     with open(f"/sys/class/net/{interface}/speed") as speed_file:
@@ -119,6 +140,29 @@ class NetworkStatus:
 
 
 _mouse_sens_script = os.path.join(os.path.dirname(os.path.realpath(__file__)), "mouse_sens.sh")
+
+
+def _kill_or_minimize(qtile):
+    win = qtile.current_window
+    if win is None:
+        return
+    if Match(wm_class="thunderbird").compare(win):
+        win.minimize()
+    else:
+        win.kill()
+
+
+def _show_thunderbird(qtile):
+    for win in qtile.windows_map.values():
+        if Match(wm_class="thunderbird").compare(win):
+            win.minimized = False
+            win.group.toscreen()
+            win.group.focus(win)
+            return
+    qtile.spawn("thunderbird")
+
+
+show_thunderbird = lazy.function(_show_thunderbird)
 
 def get_mouse_sensitivity():
     try:
@@ -170,7 +214,7 @@ keys = [
     Key([mod], "Return", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key(["mod1", "control"], "t", lazy.spawn(terminal), desc="Launch terminal"), 
     
-    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.function(_kill_or_minimize), desc="Kill focused window (minimize Thunderbird)"),
     Key([mod], "w", lazy.spawn("whatsapp-for-linux"), desc="Launch whatsapp (w - whatsapp)"), 
     Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
     Key([mod], "r", lazy.spawn("dotfiles/custom_scripts/wechat"), desc="Launch WeChat"), 
@@ -373,9 +417,16 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                  
+                widget.TextBox(
+                    text = "\N{ENVELOPE}",
+                    background = colors["red"],
+                    foreground = "#FFFFFF",
+                    padding = 8,
+                    mouse_callbacks = {"Button1": show_thunderbird},
+                ),
                 widget.Systray(     # needed for app icons
-                    background = colors["red"], 
-                    padding = 8, 
+                    background = colors["red"],
+                    padding = 8,
                 ),
                 glossary_box('updates',
                     start_opened = True,
@@ -516,17 +567,18 @@ screens = [
                 ),
                 glossary_box('audio',
                     widgets = [
-                        widget.Volume(
-                            mouse_callbacks={"Button1": glossary('audio')},
+                        widget.GenPollText(
+                            func = audio_output_status,
+                            update_interval = 1,
+                            markup = False,
+                            mouse_callbacks={
+                                "Button1": glossary('audio'),
+                                "Button4": lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"),
+                                "Button5": lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"),
+                            },
                             background = "#0471A6", 
                             foreground = "#FFFFFF", 
-                            # fmt = "Volume {}", 
-                            fmt = "{}",
-                            get_volume_command = "pactl get-sink-volume @DEFAULT_SINK@", 
-                            volume_down_command = "pactl set-sink-volume @DEFAULT_SINK@ -5%", 
-                            volume_up_command = "pactl set-sink-volume @DEFAULT_SINK@ +5%", 
                             padding = 0,
-                            emoji = False, 
                         )
                     ], 
                     background = "#0471A6", 
@@ -622,7 +674,8 @@ floating_layout = layout.Floating(
         Match(wm_class="nemo"),
         Match(wm_class="zoom"),
         Match(wm_class="matplotlib"), 
-        Match(wm_class="feh"), 
+        Match(wm_class="feh"),
+        Match(wm_class="thunderbird"),
 
     ]
 )
