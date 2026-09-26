@@ -3,14 +3,133 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile import hook
 import os
+import math
+import re
+import shlex
+import xml.etree.ElementTree as ET
 
 import subprocess
+import json
+import time
+import psutil
 # from qtile_extras import widget 
 # from qtile_extras.widget.decorations import PowerLineDecoration
 
 mod = "mod4"
 terminal = "kitty"
 bring_front_click = True
+
+
+def format_wifi_link(output, interface):
+    """Format iw link data; missing driver fields stay explicitly unavailable."""
+    if "Not connected." in output:
+        return "Wi-Fi: disconnected"
+    if not output.lstrip().startswith("Connected to "):
+        return "Wi-Fi: unavailable"
+    fields = dict(line.strip().split(":", 1) for line in output.splitlines()
+                  if ":" in line and not line.startswith("Connected to "))
+    try:
+        signal = f"{float(fields['signal'].split()[0]):4.0f}"
+    except (KeyError, ValueError, IndexError):
+        signal = f"{'N/A':>4}"
+    try:
+        frequency = f"{float(fields['freq']):4.0f}"
+    except (KeyError, ValueError):
+        frequency = f"{'N/A':>4}"
+
+    def bitrate(direction):
+        match = re.match(r"\s*([\d.]+)\s+MBit/s", fields.get(f"{direction} bitrate", ""))
+        try:
+            return f"{float(match[1]):6.1f}" if match else f"{'N/A':>6}"
+        except ValueError:
+            return f"{'N/A':>6}"
+
+    return (f"Wi-Fi {interface}|📻{frequency}MHz|📡{signal}dBm|"
+            f"TX{bitrate('tx')}Mb/s|RX{bitrate('rx')}Mb/s")
+
+
+def wifi_link_status(interface):
+    """Called by GenPollText's worker thread so iw cannot block the bar."""
+    try:
+        result = subprocess.run(
+            ["iw", "dev", interface, "link"],
+            capture_output=True, text=True, timeout=2, check=True,
+            env={**os.environ, "LC_ALL": "C"},
+        )
+    except FileNotFoundError:
+        return "Wi-Fi: iw not installed"
+    except (OSError, subprocess.SubprocessError):
+        return "Wi-Fi: unavailable"
+    return format_wifi_link(result.stdout, interface)
+
+
+def active_network_interface():
+    """Ask the kernel which interface carries internet traffic; sends no packets."""
+    for destination in ("1.1.1.1", "2606:4700:4700::1111"):
+        try:
+            result = subprocess.run(
+                ["ip", "-j", "route", "get", destination],
+                capture_output=True, text=True, timeout=2, check=True,
+            )
+            routes = json.loads(result.stdout)
+            if routes and routes[0].get("dev"):
+                return routes[0]["dev"]
+        except (OSError, subprocess.SubprocessError, ValueError):
+            continue
+    return None
+
+
+class NetworkStatus:
+    """Keep link details and throughput on the same routed interface."""
+
+    def __init__(self):
+        self.previous = None
+
+    def __call__(self):
+        interface = active_network_interface()
+        counters = psutil.net_io_counters(pernic=True).get(interface)
+        if interface is None or counters is None:
+            self.previous = None
+            return "Network: disconnected"
+        now = time.monotonic()
+        down = up = 0.0
+        if self.previous and self.previous[0] == interface:
+            _, then, previous = self.previous
+            elapsed = now - then
+            if elapsed > 0:
+                down = max(0, counters.bytes_recv - previous.bytes_recv) * 8 / elapsed / 1e6
+                up = max(0, counters.bytes_sent - previous.bytes_sent) * 8 / elapsed / 1e6
+        self.previous = (interface, now, counters)
+        if os.path.isdir(f"/sys/class/net/{interface}/wireless"):
+            link = wifi_link_status(interface)
+        else:
+            kind = "Ethernet" if os.path.exists(f"/sys/class/net/{interface}/device") else "Network"
+            link = f"{kind} {interface}"
+            if kind == "Ethernet":
+                try:
+                    with open(f"/sys/class/net/{interface}/speed") as speed_file:
+                        speed = int(speed_file.read().strip())
+                    if speed <= 0:
+                        raise ValueError("Unknown link speed")
+                    rate = f"{speed / 1000:g} Gbps" if speed >= 1000 else f"{speed} Mbps"
+                except (OSError, ValueError):
+                    rate = "N/A"
+                link += f"|Link: {rate}"
+        return f"{link}|⬇{down:6.1f}Mb/s|⬆{up:6.1f}Mb/s"
+
+
+def glossary(topic):
+    """Open a reference in Kitty, followed by an interactive shell."""
+    script = os.path.join(os.path.dirname(os.path.realpath(__file__)), "glossary.py")
+    return lazy.spawn(shlex.join([terminal, "--title", f"Commands: {topic}",
+                                 "-e", "python3", script, topic]))
+
+
+def glossary_box(topic, **config):
+    """Left-click for help; right-click to expand/collapse the group."""
+    box = widget.WidgetBox(mouse_callbacks={"Button1": glossary(topic)}, **config)
+    box.add_callbacks({"Button3": box.toggle})
+    return box
 
 # autostart on qtile 
 @hook.subscribe.startup_once
@@ -47,31 +166,27 @@ keys = [
     Key([mod], "e", lazy.spawn("nemo"), desc="Launch file manager nemo (e - nEmo)"), 
     Key([mod], "r", lazy.spawn("dotfiles/custom_scripts/wechat"), desc="Launch WeChat"), 
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
-    Key([mod], "y", lazy.spawn("skypeforlinux"), desc="Launch skype (y - skYpe)"),  
-    Key([mod], "u", lazy.spawn("zulip"), desc="Launch zulip (u - zUlip)"), 
+    Key([mod], "y", lazy.spawn("youtube-music-desktop-app"), desc="Launch Youtube Music (y - Youtube Music)"),  
+    Key([mod], "u", lazy.spawn(""), desc=""), 
     Key([mod], "i", lazy.spawn("bluebubbles"), desc="Launch iMessage (i - imessage)"),
     Key([mod], "o", lazy.spawn(""), desc=""),  
-    Key([mod], "p", lazy.spawn(""), desc=""),
+    Key([mod], "p", lazy.spawn("beeper"), desc="Launch beeper (p - beePer)"),
 
     
     Key([mod], "a", lazy.spawn("dotfiles/custom_scripts/vpn"), desc=""), 
     Key([mod], "s", lazy.spawn("slack"), desc="Launch slack (s - slack)"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord (d - Discord)"), 
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
-    Key([mod], "g", lazy.spawn("google-chrome-stable"), desc="Launch chrome (g - google chrome)"),
-    Key([mod], "h", lazy.spawn(""), desc=""),   
-    Key([mod], "j", lazy.spawn(""), desc=""),  
-    Key([mod], "k", lazy.spawn("dotfiles/custom_scripts/kakaotalk"), desc="Launch kakaotalk (aka kiwitalk). "), 
-    Key([mod], "l", lazy.spawn(""), desc=""), 
+    Key([mod], "g", lazy.spawn(""), desc=""),
    
 
     Key([mod], "z", lazy.spawn("zoom"), desc="Launch zoom (z - zoom)"), 
     Key([mod], "x", lazy.spawn("virtualbox"), desc="Launch VirtualBox (x - boX)"),
     Key([mod], "c", lazy.spawn("caprine"), desc="Launch caprine (c - caprine)"), 
     Key([mod], "v", lazy.spawn("code"), desc="Launch vscode (v - vscode)"), 
-    Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox (b - browser)"),
-    Key([mod], "n", lazy.spawn("inkscape"), desc="Launch iNkscape"),   
-    Key([mod], "m", lazy.spawn("kitty -e ncmpcpp"), desc="Launch spotify (m - music)"), 
+    Key([mod], "b", lazy.spawn("brave"), desc="Launch brave (b - browser)"),
+    Key([mod, "shift"], "i", lazy.spawn("inkscape"), desc="Launch iNkscape"),
+    Key([mod], "m", lazy.spawn("thunderbird"), desc="Launch thunderbird (m - mail)"), 
     
     Key([mod, "shift"], "n", lazy.spawn("screenkey"), desc="Launch screenkey (sk - ScreenKey)"),
     Key([mod, "shift"], "m", lazy.spawn("obs"), desc="Launch obs screen & audio recorder"), 
@@ -84,18 +199,17 @@ keys = [
     Key(["shift"], "Print", lazy.spawn("flameshot screen"), desc="Print current screen"), 
     
     # Adjust screen brightness keys 
-    Key([], "F6", lazy.spawn("brightnessctl --device=intel_backlight set 20-"), desc="Increase brightness -20/400"), 
-    Key([], "F7", lazy.spawn("brightnessctl --device=intel_backlight set 20+"), desc="Increase brightness +20/400"), 
+    # Key([], "F6", lazy.spawn("brightnessctl --device=intel_backlight set 20-"), desc="Increase brightness -20/400"), 
+    # Key([], "F7", lazy.spawn("brightnessctl --device=intel_backlight set 20+"), desc="Increase brightness +20/400"), 
 
     # Adjust keyboard brightness keys 
-    Key([], "F5", lazy.spawn("brightnessctl --device=dell::kbd_backlight set 1+"), desc="Increase keyboard backlight by 1"), 
-    Key(["control"], "F5", lazy.spawn("brightnessctl --device=dell::kbd_backlight set 1-"), desc="Decrease keyboard backlight by 1"), 
+    # Key([], "F5", lazy.spawn("brightnessctl --device=dell::kbd_backlight set 1+"), desc="Increase keyboard backlight by 1"), 
+    # Key(["control"], "F5", lazy.spawn("brightnessctl --device=dell::kbd_backlight set 1-"), desc="Decrease keyboard backlight by 1"), 
     
     # Volume Adjustment
     Key([], "F1", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle mute/unmute volume"), 
     Key([], "F2", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Decrease volume by 5%"), 
     Key([], "F3", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Increase volume by 5%"), 
-
 
 
     # Reloading and quitting Qtile configuration
@@ -169,10 +283,27 @@ colors = {
     "black" : "#000000" 
 } 
 
-def news_parser(dct): 
-    dct = dct["results"]
-    headers = [x["title"] for x in dct][1:]
-    return "          ".join(headers)
+def stock_parser(data):
+    try:
+        price = float(data["Global Quote"]["05. price"])
+        if math.isfinite(price) and price > 0:
+            return f"SPY: ${price:.2f}"
+    except (KeyError, TypeError, ValueError):
+        pass
+    return "SPY: unavailable"
+
+
+def news_parser(body):
+    try:
+        root = ET.fromstring(body)
+    except (ET.ParseError, TypeError, ValueError):
+        return "NYTimes: unavailable"
+    headlines = [
+        title.text.strip()
+        for title in root.findall("./channel/item/title")
+        if title.text and title.text.strip()
+    ]
+    return "          ".join(headlines) or "NYTimes: unavailable"
 
 
 screens = [
@@ -187,27 +318,32 @@ screens = [
                     padding_y = 8
                 ),
                 widget.Sep(),
-                widget.StockTicker(
-                    apikey="S8TMOKO9BYQ38JXO", 
-                    symbol="SPY", 
+                widget.GenPollUrl(
+                    mouse_callbacks={"Button1": glossary('markets')},
+                    # The free quote endpoint provides end-of-day prices.
+                    url="https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=SPY&apikey=S8TMOKO9BYQ38JXO",
+                    parse=stock_parser,
                     update_interval = 3600, 
                     padding = 2, 
                 ), 
                 widget.TextBox("/"), 
                 widget.CryptoTicker(
+                    mouse_callbacks={"Button1": glossary('markets')},
                     crypto="ETH", 
                     padding = 2, 
                     update_interval = 600, 
                 ), 
                 widget.Sep(), 
                 widget.GenPollUrl(
+                    mouse_callbacks={"Button1": glossary('news')},
                     foreground='#ffffff',
                     scroll = True, 
                     scroll_delay = 5, 
                     width = 560, 
                     update_interval=1800,
                     fmt = "{}",
-                    url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=dkGrnGNxfmyBquMO2jANZqceWxQyh8Q0", 
+                    url = "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                    json = False,
                     parse = news_parser, 
                 ),
                 widget.Sep(), 
@@ -231,9 +367,11 @@ screens = [
                     background = colors["red"], 
                     padding = 8, 
                 ),
-                widget.WidgetBox(
+                glossary_box('updates',
+                    start_opened = True,
                     widgets = [
                         widget.CheckUpdates(
+                            mouse_callbacks={"Button1": glossary('updates')},
                             distro = "Arch",
                             initial_text = "Updates", 
                             no_update_string = "0 Updates", 
@@ -248,20 +386,21 @@ screens = [
                     padding = 5, 
                     close_button_location = "right", 
                 ), 
-                widget.WidgetBox(
+                glossary_box('performance',
+                    start_opened = True,
                     widgets = [
                         widget.CPU(
                             background = "#AC80A0", 
                             foreground = "#000000", 
                             format = "CPU: {freq_current} GHz ({load_percent}%)",
-                            mouse_callbacks = {"Button1" : lazy.spawn("alacritty -e htop")},
+                            mouse_callbacks={"Button1": glossary('cpu')},
                             padding = 5, 
                         ), 
                         widget.NvidiaSensors(
                             background = "#AC80A0", 
                             foreground = "#000000", 
                             format = "GPU: {temp} C {perf}",
-                            mouse_callbacks = {"Button1" : lazy.spawn("alacritty -e nvtop")}, 
+                            mouse_callbacks={"Button1": glossary('gpu')}, 
                             padding = 5
                         )
                     ], 
@@ -271,9 +410,11 @@ screens = [
                     padding = 2, 
                     close_button_location = "right", 
                 ),
-                widget.WidgetBox(
+                glossary_box('memory',
+                    start_opened = True,
                     widgets = [
                         widget.Memory(
+                            mouse_callbacks={"Button1": glossary('memory')},
                             background = "#89AAE6", 
                             foreground = "#000000",
                             format = "{MemUsed:.0f}/{MemTotal:.0f}{mm}B",
@@ -285,15 +426,16 @@ screens = [
                     background = "#89AAE6", 
                     close_button_location = "right", 
                 ), 
-                widget.WidgetBox(
+                glossary_box('disk',
+                    start_opened = True,
                     widgets = [
                         widget.DF(
                             background = "#89AAE6", 
                             foreground = "#000000",
                             warn_color = "#000000",
                             measure = "G",
-                            mouse_callbacks = {"Button1" : lazy.spawn(f"{terminal} -e 'du -shc .[^.]* ~/*'")}, 
-                            format = "{uf}/{s}{m}B Free", 
+                            mouse_callbacks={"Button1": glossary('disk')}, 
+                            format = "{uf:.0f}/{s:.0f}{m}B Free", 
                             warn_space = 1e9, 
                             padding = 4, 
                             update_interval = 5, 
@@ -304,54 +446,57 @@ screens = [
                     background = "#89AAE6", 
                     close_button_location = "right", 
                 ),  
-                widget.WidgetBox(
+                glossary_box('networking',
+                    start_opened = True,
                     widgets = [
                         widget.Bluetooth(
-                            background = "#00ff00", 
+                            mouse_callbacks={"Button1": glossary('bluetooth')},
+                            default_text = "ᛒ {connected_devices}",
+                            default_timeout = 5,
+                            separator = ", ",
+                            markup = False,
+                            background = "#0471A6", 
                             foreground = "#000000", 
                             padding = 4, 
                         ),
-                        widget.Net(
-                            background = "#3685B5", 
-                            foreground = "#000000", 
-                            format = "{interface} {down:6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}", 
-                            padding = 4, 
-                        ), 
-                        widget.Wlan(
-                            background = "#3685B5", 
+                        widget.GenPollText(
+                            background = "#3685B5",
                             foreground = "#000000",
-                            format = "{essid} {percent:2.0%}", 
-                            padding = 4, 
-                            mouse_callbacks = {"Button3" : lazy.spawn("nm-connection-editor"), 
-                                            "Button1" : lazy.spawn("alacritty -e 'nmtui'")}, 
-                        )
+                            func = NetworkStatus(),
+                            font = "monospace",
+                            update_interval = 1,
+                            markup = False,
+                            padding = 2,
+                            mouse_callbacks={"Button1": glossary('network')},
+                        ), 
                     ], 
                     text_closed = "\N{GLOBE WITH MERIDIANS} ", 
                     text_open = "\N{GLOBE WITH MERIDIANS} ", 
                     background = "#3685B5", 
                     close_button_location = "right", 
                 ),
-                widget.WidgetBox(
-                    widgets = [
-                        widget.Backlight(
-                            backlight_name = "intel_backlight",
-                            #    fmt="Brightness {}",
-                            fmt="{}",
-                            background= "#0471A6",
-                            foreground="#FFFFFF", 
-                            padding = 4, 
-                            mouse_callbacks = {"Button1" : lazy.spawn("alacritty -e 'nvtop'")}, 
-                            )
-                    ], 
-                    background = "#0471A6", 
-                    text_closed = "\N{GLOWING STAR}", 
-                    text_open = "\N{GLOWING STAR}", 
-                    close_button_location = "right", 
-                    start_opened = True, 
-                ), 
-                widget.WidgetBox(
+                # widget.WidgetBox(
+                #     widgets = [
+                #         widget.Backlight(
+                #             backlight_name = "intel_backlight",
+                #             #    fmt="Brightness {}",
+                #             fmt="{}",
+                #             background= "#0471A6",
+                #             foreground="#FFFFFF", 
+                #             padding = 4, 
+                #             mouse_callbacks = {"Button1" : lazy.spawn(f"{terminal} -e nvtop")}, 
+                #             )
+                #     ], 
+                #     background = "#0471A6", 
+                #     text_closed = "\N{GLOWING STAR}", 
+                #     text_open = "\N{GLOWING STAR}", 
+                #     close_button_location = "right", 
+                #     start_opened = True, 
+                # ), 
+                glossary_box('audio',
                     widgets = [
                         widget.Volume(
+                            mouse_callbacks={"Button1": glossary('audio')},
                             background = "#0471A6", 
                             foreground = "#FFFFFF", 
                             # fmt = "Volume {}", 
@@ -369,31 +514,32 @@ screens = [
                     close_button_location = "right", 
                     start_opened = True, 
                 ), 
-                widget.WidgetBox(
-                    widgets = [
-                        widget.Battery(
-                            background = "#0471A6", 
-                            foreground = "#FFFFFF",
-                            charge_char = "+", 
-                            discharge_char = "-", 
-                            empty_char = "",
-                            full_char = "", 
-                            # format = "{char}{percent:2.0%}",  
-                            format = "{char}{percent:2.0%} [{hour:d}:{min:02d} / {watt:.2f}W]", 
-                            padding = 3, 
-                            show_short_text = False, 
-                            update_interval = 1, 
-                        )
-                    ], 
-                    background = "#0471A6", 
-                    text_closed = "\N{BATTERY} ", 
-                    text_open = "\N{BATTERY} ", 
-                    close_button_location = "right", 
-                    start_opened = True, 
-                ),
-                widget.WidgetBox(
+                # widget.WidgetBox(
+                #     widgets = [
+                #         widget.Battery(
+                #             background = "#0471A6", 
+                #             foreground = "#FFFFFF",
+                #             charge_char = "+", 
+                #             discharge_char = "-", 
+                #             empty_char = "",
+                #             full_char = "", 
+                #             # format = "{char}{percent:2.0%}",  
+                #             format = "{char}{percent:2.0%} [{hour:d}:{min:02d} / {watt:.2f}W]", 
+                #             padding = 3, 
+                #             show_short_text = False, 
+                #             update_interval = 1, 
+                #         )
+                #     ], 
+                #     background = "#0471A6", 
+                #     text_closed = "\N{BATTERY} ", 
+                #     text_open = "\N{BATTERY} ", 
+                #     close_button_location = "right", 
+                #     start_opened = True, 
+                # ),
+                glossary_box('clock',
                     widgets = [
                         widget.Clock(
+                            mouse_callbacks={"Button1": glossary('clock')},
                             background = "#061826", 
                             # background = colors["violet"], 
                             foreground = "#FFFFFF",
@@ -408,6 +554,7 @@ screens = [
                     start_opened = True, 
                 ),
                 widget.Wallpaper(
+                    mouse_callbacks={"Button1": glossary('wallpaper')},
                     background = "#000000", 
                     label = "\N{MOUNTAIN}",
                     directory = "~/Media/Pictures/wallpaper/"
