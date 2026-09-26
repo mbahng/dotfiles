@@ -3,12 +3,7 @@ return {
   lazy = false,
 
   config = function()
-    -- when using skim, in sync, use /opt/homebrew/bin/nvim --headless -c "VimtexInverseSearch %line '%file'" 
-    -- with full path of nvim (see more here: https://github.com/lervag/vimtex/issues/2779)
-
-    vim.g.vimtex_view_method = "skim"
-    vim.g.vimtex_view_skim_sync = 1
-    vim.g.vimtex_view_skim_activate = 1
+    vim.g.vimtex_view_method = "zathura"
 
     -- Compile with LuaLaTeX through latexmk
     vim.g.vimtex_compiler_method = "latexmk"
