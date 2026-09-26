@@ -236,6 +236,7 @@ return { "sindrets/diffview.nvim",                        -- git diff indicators
     vim.api.nvim_set_keymap("n", "<leader>df", ":DiffviewOpen<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "<leader>dh", ":DiffviewFileHistory %<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "<leader>dfq", ":DiffviewClose<cr>", { noremap = true, silent = true })
+    vim.cmd("cnoreabbrev df DiffviewOpen <> -- %")
     vim.cmd("cnoreabbrev dh DiffviewFileHistory %")
   end
 }

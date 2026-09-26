@@ -64,8 +64,8 @@ return { "mfussenegger/nvim-dap",
         },
         {
           elements = {
-            { id = "repl", size = 0.8 },
             { id = "console", size = 0.2 },
+            { id = "repl", size = 0.8 },
           },
           size = 0.35,
           position = "right",

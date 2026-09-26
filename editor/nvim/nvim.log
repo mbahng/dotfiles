@@ -1,0 +1,4 @@
+WRN 2026-09-22T17:19:24.569 c/nvim.7528.0 server_start:197: Failed to start server: operation not permitted: /var/folders/35/0hvkp3v523zbpr_gk85ssrc80000gn/T/nvim.mbahng/fqlA0n/nvim.10880.0
+WRN 2026-09-22T17:19:37.129 c/nvim.7528.0 server_start:197: Failed to start server: operation not permitted: /var/folders/35/0hvkp3v523zbpr_gk85ssrc80000gn/T/nvim.mbahng/hyX8sV/nvim.10943.0
+WRN 2026-09-22T17:19:53.626 c/nvim.7528.0 server_start:197: Failed to start server: operation not permitted: /var/folders/35/0hvkp3v523zbpr_gk85ssrc80000gn/T/nvim.mbahng/vAIDvB/nvim.11017.0
+WRN 2026-09-22T17:20:07.706 c/nvim.7528.0 server_start:197: Failed to start server: operation not permitted: /var/folders/35/0hvkp3v523zbpr_gk85ssrc80000gn/T/nvim.mbahng/KJyHTR/nvim.11078.0

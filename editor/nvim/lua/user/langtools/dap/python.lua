@@ -1,10 +1,11 @@
 local dap = require("dap")
 
 dap.adapters.python = {
-  type = "executable",
-  command = "python",
-  args = { "-m", "debugpy.adapter" },
+	type = "executable",
+	command = vim.fn.getcwd() .. "/.venv/bin/python",
+	args = { "-m", "debugpy.adapter" },
 }
+
 
 dap.configurations.python = {
   {
@@ -15,6 +16,7 @@ dap.configurations.python = {
     program = '${file}',
     args = {},
     console = "integratedTerminal",
+		cwd = vim.fn.getcwd(),
   },
   {
     type = 'python',
