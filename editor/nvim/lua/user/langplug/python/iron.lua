@@ -11,10 +11,11 @@ return { "Vigemus/iron.nvim",                              -- interactive REPL
           sh = {
             command = {"bash", "-c", "'conda init && conda activate $CONDA_DEFAULT_ENV'" }
           },
-        },
-        python = {
-          command = { "ipython", "--no-confirm-exit", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
-          format = require("iron.fts.common").bracketed_paste
+          python = {
+            command = { "ipython", "--no-confirm-exit", "--no-autoindent", "--matplotlib" }, -- must be python or envs don't work
+            -- Send a complete Python block while preserving its source indentation.
+            format = require("iron.fts.common").bracketed_paste_python,
+          },
         },
         -- How the repl window will be displayed
         -- See below for more information
