@@ -5,7 +5,7 @@
 ZSH=/Users/mbahng/.oh-my-zsh
 
 # add custom scripts to PATH
-export PATH="/Users/mbahng/.custom_scripts:$PATH"
+export PATH="/home/mbahng/dotfiles/bin:$PATH"
 # export PATH="/Users/mbahng/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
 # export PATH="/home/mbahng/.local/share/gem/ruby/3.0.0/bin:$PATH"
@@ -25,7 +25,7 @@ alias tma='tmux attach'
 alias tml='tmux ls' 
 alias tmx='tmux kill-server' 
 alias which='which -p' 
-
+export ZSH="$HOME/.oh-my-zsh"
 
 
 # set history 
@@ -102,11 +102,13 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
   )
 
 # source for autocompletion and syntax highlighting
-source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/mbahng/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -152,8 +154,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-source $(brew --prefix nvm)/nvm.sh
 
 # >>> juliaup initialize >>>
 
