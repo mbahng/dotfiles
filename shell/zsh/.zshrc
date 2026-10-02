@@ -25,6 +25,7 @@ alias tma='tmux attach'
 alias tml='tmux ls' 
 alias tmx='tmux kill-server' 
 alias which='which -p' 
+alias vpn="sudo openconnect --background --protocol=anyconnect --authgroup=-Default- --user=mb625 https://vpn.duke.edu"
 export ZSH="$HOME/.oh-my-zsh"
 
 
