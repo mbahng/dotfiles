@@ -6,6 +6,8 @@ dap.adapters.python = {
 	args = { "-m", "debugpy.adapter" },
 }
 
+local _dap_py_program = nil
+local _dap_py_args = {}
 
 dap.configurations.python = {
   {
@@ -23,30 +25,26 @@ dap.configurations.python = {
     request = 'launch',
     name = 'Launch custom file with arguments',
     program = function()
+      _dap_py_args = {}
       local command = vim.fn.input('Command: ', '')
       if command == '' or command == 'python ' then return nil end
 
-      -- Parse the command to extract file and arguments
       local parts = vim.split(command, " +")
-      local program = nil
-      local args = {}
-
-      -- Skip 'python' if present
-      local start_idx = 1
-      if parts[1] == 'python' then
-        start_idx = 2
-      end
+      local start_idx = (parts[1] == 'python') and 2 or 1
 
       if parts[start_idx] then
-        program = parts[start_idx]
-        -- Collect remaining parts as arguments
+        _dap_py_program = parts[start_idx]
         for i = start_idx + 1, #parts do
-          table.insert(args, parts[i])
+          table.insert(_dap_py_args, parts[i])
         end
       end
 
-      return program
+      return _dap_py_program
+    end,
+    args = function()
+      return _dap_py_args
     end,
     console = "integratedTerminal",
+    cwd = vim.fn.getcwd(),
   },
 }
