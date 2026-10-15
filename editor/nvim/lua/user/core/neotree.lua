@@ -198,7 +198,7 @@ return { "nvim-neo-tree/neo-tree.nvim",                    -- file explorer
 							}
 
 							if extension == "pdf" or image_extensions[extension] then
-								local app = extension == "pdf" and "Skim" or "Preview"
+								local app = extension == "pdf" and "zathura"
 								vim.fn.jobstart({ "open", "-a", app, path }, { detach = true })
 							else
 								require("neo-tree.canvas").dispatch("open", state)
